@@ -38,7 +38,7 @@
 <div class="head">
   <h1>"Who Attends" — shortlisted options</h1>
   <p>Each option below is the <b>complete section</b> — eyebrow, headline, sub-copy and all six cards — over a different background photo, with the real dark overlay. Scroll through and judge properly. <b>Reply with the number.</b></p>
-  <p><b>Option 7 is on the homepage right now.</b> Let me know if you'd prefer 3, 4, 9 or 10 instead. All shots are from the edited 2026 selections.</p>
+  <p><b>Option 3 is on the homepage right now.</b> Let me know if you'd prefer 1, 2, 4 or 5 instead. All shots are from the edited 2026 selections.</p>
 </div>
 <div class="nav" id="nav"></div>
 <div id="out"></div>
@@ -60,14 +60,15 @@ var cards=[
  ['🏢','#f6cf6a','Corporate Video Teams','In-house media teams producing at volume for global organizations.']
 ];
 var nav='',out='';
-opts.forEach(function(o){
-  nav+='<a href="#o'+o[0]+'">'+o[0]+'</a>';
+opts.forEach(function(o,i){
+  var n=i+1;
+  nav+='<a href="#o'+n+'">'+n+'</a>';
   var c='';
   cards.forEach(function(k){
     c+='<div class="card"><div class="ibox" style="background:'+k[1]+'22;color:'+k[1]+'">'+k[0]+'</div><h4>'+k[2]+'</h4><p>'+k[3]+'</p></div>';
   });
-  out+='<section class="opt" id="o'+o[0]+'"><div class="bg" style="background-image:url(ppw-assets/who-options/opt-'+o[0]+'.webp)"></div><div class="scrim"></div>'
-    +'<div class="inner"><div style="text-align:center"><span class="tag">Option '+o[0]+' &mdash; '+o[1]+'</span></div>'
+  out+='<section class="opt" id="o'+n+'"><div class="bg" style="background-image:url(ppw-assets/who-options/opt-'+o[0]+'.webp)"></div><div class="scrim"></div>'
+    +'<div class="inner"><div style="text-align:center"><span class="tag">Option '+n+' &mdash; '+o[1]+'</span></div>'
     +'<div class="kick">Conference attendees</div><div class="ttl">Who Attends PPW</div>'
     +'<p class="sub">The editors, artists, producers, and creators who shape what the industry makes &mdash; and who come to PPW to sharpen their craft.</p>'
     +'<div class="grid">'+c+'</div></div></section>';
