@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who Attends — 10 full-section background options</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#080b12;--ink:#eef2fb;--dim:#a3b2d2;--faint:#6b7b9e;--line:#212d49;--cyan:#2dd4ff}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif}
+  .head{max-width:1180px;margin:0 auto;padding:40px 22px 10px}
+  h1{font-size:26px;font-weight:800;margin:0 0 6px}
+  .head p{color:var(--faint);font-size:14px;margin:0 0 4px;max-width:820px}
+  .head b{color:var(--cyan)}
+  .nav{position:sticky;top:0;z-index:50;background:rgba(8,11,18,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:10px 22px;display:flex;gap:8px;flex-wrap:wrap}
+  .nav a{color:var(--dim);text-decoration:none;font-size:12.5px;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:5px 13px}
+  .nav a:hover{color:var(--cyan);border-color:var(--cyan)}
+  /* full section */
+  .opt{position:relative;overflow:hidden;border-top:1px solid var(--line)}
+  .opt .bg{position:absolute;inset:0;background-size:cover;background-position:center 45%}
+  .opt .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,18,32,.90),rgba(12,18,32,.84) 45%,rgba(12,18,32,.93))}
+  .opt .inner{position:relative;max-width:1180px;margin:0 auto;padding:74px 22px 84px}
+  .tag{display:inline-block;background:var(--cyan);color:#04121a;font-weight:800;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:6px 14px;border-radius:6px;margin-bottom:26px}
+  .kick{color:var(--cyan);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700;text-align:center}
+  .ttl{font-size:38px;font-weight:800;text-align:center;margin:8px 0 12px;letter-spacing:-.5px}
+  .sub{color:var(--dim);text-align:center;max-width:600px;margin:0 auto 40px;font-size:15px;line-height:1.55}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:900px){.grid{grid-template-columns:1fr}}
+  .card{background:rgba(18,27,47,.55);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:30px 24px;text-align:center;display:flex;flex-direction:column;align-items:center}
+  .ibox{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:22px}
+  .card h4{margin:0 0 8px;font-size:17px;font-weight:700}
+  .card p{margin:0;color:var(--dim);font-size:13.5px;line-height:1.55}
+  .foot{max-width:1180px;margin:0 auto;padding:40px 22px 90px;color:var(--faint);font-size:13px}
+</style>
+</head>
+<body>
+<div class="head">
+  <h1>"Who Attends" — 10 options, full section</h1>
+  <p>Each option below is the <b>complete section</b> — eyebrow, headline, sub-copy and all six cards — over a different background photo, with the real dark overlay. Scroll through and judge properly. <b>Reply with the number.</b></p>
+  <p>All shots are from Elise's edited 2026 selections. The current live one shows a person on a projector screen, which Elise flagged.</p>
+</div>
+<div class="nav" id="nav"></div>
+<div id="out"></div>
+<div class="foot">Internal preview — localhost:4388/_whoattends.html. Once you pick a number I'll set it as the section background and delete the rest.</div>
+<script>
+var opts=[
+ [1,'Wide audience facing the stage'],
+ [2,'Packed room, energy toward the stage'],
+ [3,'Big standing crowd'],
+ [4,'Lively crowd, hands up'],
+ [5,'Full room, standing / mingling'],
+ [6,'Dense crowd on the show floor'],
+ [7,'Classroom rows, purple stage'],
+ [8,'Classroom rows, wide'],
+ [9,'Seated audience, mid-session'],
+ [10,'Audience + PPW stage banner']
+];
+var cards=[
+ ['🎬','#3aa6ff','Editors &amp; Post Pros','Video editors, colorists, and finishing artists working across film, TV, and streaming.'],
+ ['✦','#a78bfa','Motion &amp; VFX Artists','Motion graphics designers and VFX creatives building for broadcast and brands.'],
+ ['🎥','#fb923c','Producers &amp; DPs','Producers, directors, and cinematographers in broadcast, corporate, and field production.'],
+ ['✨','#2dd4bf','AI Creatives','The fast-growing audience adopting generative and AI-assisted production workflows.'],
+ ['📱','#f472b6','Content Creators','Social-first and corporate creators scaling output across every platform.'],
+ ['🏢','#f6cf6a','Corporate Video Teams','In-house media teams producing at volume for global organizations.']
+];
+var nav='',out='';
+opts.forEach(function(o){
+  nav+='<a href="#o'+o[0]+'">'+o[0]+'</a>';
+  var c='';
+  cards.forEach(function(k){
+    c+='<div class="card"><div class="ibox" style="background:'+k[1]+'22;color:'+k[1]+'">'+k[0]+'</div><h4>'+k[2]+'</h4><p>'+k[3]+'</p></div>';
+  });
+  out+='<section class="opt" id="o'+o[0]+'"><div class="bg" style="background-image:url(ppw-assets/who-options/opt-'+o[0]+'.webp)"></div><div class="scrim"></div>'
+    +'<div class="inner"><div style="text-align:center"><span class="tag">Option '+o[0]+' &mdash; '+o[1]+'</span></div>'
+    +'<div class="kick">Conference attendees</div><div class="ttl">Who Attends PPW</div>'
+    +'<p class="sub">The editors, artists, producers, and creators who shape what the industry makes &mdash; and who come to PPW to sharpen their craft.</p>'
+    +'<div class="grid">'+c+'</div></div></section>';
+});
+document.getElementById('nav').innerHTML=nav;
+document.getElementById('out').innerHTML=out;
+</script>
+</body>
+</html>
