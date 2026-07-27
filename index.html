@@ -448,7 +448,11 @@
   .sponsors-light .partner-note{margin-top:44px!important}
   /* Who Attends: darkened attendee photo, full-bleed */
   #attendees{position:relative;overflow:hidden;background:var(--bg-2)!important;scroll-margin-top:86px}
-  #attendees::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,18,32,.90),rgba(12,18,32,.84) 45%,rgba(12,18,32,.95)),url(ppw-assets/who-bg-main.webp) center/cover no-repeat;pointer-events:none;z-index:0}
+  #attendees::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,18,32,.90),rgba(12,18,32,.84) 45%,rgba(12,18,32,.95)),url(ppw-assets/who-options/opt-1.webp) center/cover no-repeat;pointer-events:none;z-index:0}
+  #attendees-opt3{position:relative;overflow:hidden;background:var(--bg-2)!important}
+  #attendees-opt3 .wrap{position:relative;z-index:1}
+  #attendees-opt3::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,18,32,.90),rgba(12,18,32,.84) 45%,rgba(12,18,32,.95)),url(ppw-assets/who-options/opt-3.webp) center/cover no-repeat;pointer-events:none;z-index:0}
+  .wa-pick{display:inline-block;background:#2dd4ff;color:#04121a;font-weight:800;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:5px 12px;border-radius:6px;margin-bottom:12px}
   #attendees .wrap{position:relative;z-index:1}
   #attendees .wrap{position:relative;z-index:1}
   @media(max-width:600px){
@@ -536,7 +540,7 @@
     <h1 class="hero-h1">One conference.<br><span class="hl2">Four major regions.</span></h1>
     <p class="hero-sub">The world's leading training conference for video, TV, film, motion graphics, and AI.</p>
     <div class="hero-cta" id="heroCta">
-      <a class="btn gold" href="#locations"><span class="bt">Explore PPW Locations</span> <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a class="btn gold" href="#locations"><span class="bt">Explore Locations</span> <svg class="ic"><use href="#i-arrow"/></svg></a>
       <a class="btn" href="#attendees" style="background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.45);box-shadow:none;color:#fff"><span class="bt">Who attends</span></a>
     </div>
     <div class="partners">
@@ -626,6 +630,26 @@
 <section class="block" id="attendees">
   <div class="wrap">
     <div class="sec-head center">
+      <div class="wa-pick">Who Attends — Option 1 (for Elise)</div>
+      <div class="sec-kicker">Conference Attendees</div>
+      <h2 class="sec-title">Who Attends PPW</h2>
+      <p class="sec-desc">The editors, artists, producers, and creators who shape what the industry makes — and who come to PPW to sharpen their craft.</p>
+    </div>
+    <div class="who-grid">
+      <div class="who"><div class="ibox"><svg class="ic"><use href="#i-film"/></svg></div><h4>Editors &amp; Post Pros</h4><p>Video editors, colorists, and finishing artists working across film, TV, and streaming.</p></div>
+      <div class="who"><div class="ibox"><svg class="ic"><use href="#i-spark"/></svg></div><h4>Motion &amp; VFX Artists</h4><p>Motion graphics designers and VFX creatives building for broadcast and brands.</p></div>
+      <div class="who"><div class="ibox"><svg class="ic"><use href="#i-video"/></svg></div><h4>Producers &amp; DPs</h4><p>Producers, directors, and cinematographers in broadcast, corporate, and field production.</p></div>
+      <div class="who"><div class="ibox"><svg class="ic" style="fill:currentColor;stroke:none"><use href="#i-sparkle-ai"/></svg></div><h4>AI Creatives</h4><p>The fast-growing audience adopting generative and AI-assisted production workflows.</p></div>
+      <div class="who"><div class="ibox"><svg class="ic"><use href="#i-phone"/></svg></div><h4>Content Creators</h4><p>Social-first and corporate creators scaling output across every platform.</p></div>
+      <div class="who"><div class="ibox"><svg class="ic"><use href="#i-building"/></svg></div><h4>Corporate Video Teams</h4><p>In-house media teams producing at volume for global organizations.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="attendees-opt3">
+  <div class="wrap">
+    <div class="sec-head center">
+      <div class="wa-pick">Who Attends — Option 3 (for Elise)</div>
       <div class="sec-kicker">Conference Attendees</div>
       <h2 class="sec-title">Who Attends PPW</h2>
       <p class="sec-desc">The editors, artists, producers, and creators who shape what the industry makes — and who come to PPW to sharpen their craft.</p>
