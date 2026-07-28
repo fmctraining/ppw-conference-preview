@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partner-logo treatment — pick a style</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#eef2fb;--dim:#a3b2d2;--faint:#6b7b9e;--cyan:#2dd4ff;--line:#212d49;--bg:#080b12}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif}
+  .head{max-width:1120px;margin:0 auto;padding:40px 22px 6px}
+  h1{font-size:26px;font-weight:800;margin:0 0 6px}
+  .head p{color:var(--faint);font-size:14px;margin:0 0 6px;max-width:900px;line-height:1.6}
+  .head b{color:var(--cyan)}
+  .sec{max-width:1120px;margin:0 auto;padding:22px 22px 6px}
+  .lbl{display:inline-block;background:var(--cyan);color:#04121a;font-weight:800;font-size:13px;letter-spacing:.5px;text-transform:uppercase;padding:6px 14px;border-radius:6px}
+  .desc{color:var(--dim);font-size:13.5px;margin:10px 2px 16px;max-width:840px;line-height:1.6}
+  /* tile — Option 2 glass plate */
+  .tile{position:relative;height:320px;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+  .tile .img{position:absolute;inset:0;background:url(ppw-assets/city-vegas-hi.jpg) center/cover}
+  .tile .sc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,11,18,.22) 0%,transparent 32%,rgba(8,11,18,.74) 76%,rgba(8,11,18,.93))}
+  .plate{position:absolute;top:18px;right:24px;z-index:3;background:rgba(8,11,18,.55);backdrop-filter:blur(9px);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:13px 16px 12px;display:flex;flex-direction:column;align-items:center;gap:10px;min-width:238px}
+  .plate .ppw{width:210px;display:block}
+  .plate .rule{width:100%;height:1px;background:rgba(255,255,255,.16)}
+  .credit-txt{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:#cdd8ef;font-weight:600;text-align:center;line-height:1.5}
+  .credit-txt b{color:#fff;font-weight:700}
+  .nab{width:118px;display:block}
+  .byline{display:flex;align-items:center;gap:8px}
+  .byline span{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#cdd8ef;font-weight:600;white-space:nowrap}
+  .byline img{width:96px;display:block}
+  .info{position:absolute;left:0;right:0;bottom:0;padding:0 30px 24px;z-index:2}
+  .ev{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--cyan);font-weight:700}
+  .h{font-size:25px;font-weight:800;margin:2px 0 4px;letter-spacing:-.5px}
+  .foot{max-width:1120px;margin:0 auto;padding:24px 22px 80px;color:var(--faint);font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="head">
+  <h1>Partner-logo treatment — which style?</h1>
+  <p>All three use <b>Option 2 (the glass plate)</b> you picked, on the Las Vegas tile as the example. The only difference is how we credit the partner under the PPW logo. <b>Reply A, B, or C</b> and I'll roll it across all four tiles (NAB Show / NAB Show New York / MPTS / Broadcast India). Same idea will read "BY FMC AND NAB SHOW NEW YORK", "BY FMC AND MPTS", "BY FMC AND BROADCAST INDIA" on the others.</p>
+</div>
+
+<div class="sec">
+  <span class="lbl">A — text credit</span>
+  <p class="desc">A simple "BY FMC AND NAB SHOW" line, matching how London's logo is already built. No partner logo art, cleanest and most consistent. Needs no logo files for MPTS or Broadcast India.</p>
+  <div class="tile">
+    <div class="img"></div><div class="sc"></div>
+    <div class="plate">
+      <img class="ppw" src="ppw-assets/wm-vegas.png" alt="">
+      <div class="rule"></div>
+      <div class="credit-txt"><b>BY FMC AND NAB SHOW</b></div>
+    </div>
+    <div class="info"><div class="ev">at NAB Show · Las Vegas</div><div class="h">Post|Production World Las Vegas</div></div>
+  </div>
+</div>
+
+<div class="sec">
+  <span class="lbl">B — real partner logo</span>
+  <p class="desc">The actual NAB Show logo under the PPW logo. Richest and most "official," shows the real partner brand. Needs each partner's real logo art (I have NAB Show + NAB Show New York; I'd still need MPTS and Broadcast India logos from you).</p>
+  <div class="tile">
+    <div class="img"></div><div class="sc"></div>
+    <div class="plate">
+      <img class="ppw" src="ppw-assets/wm-vegas.png" alt="">
+      <div class="rule"></div>
+      <img class="nab" src="ppw-assets/partners/nab-show-white.png" alt="NAB Show">
+    </div>
+    <div class="info"><div class="ev">at NAB Show · Las Vegas</div><div class="h">Post|Production World Las Vegas</div></div>
+  </div>
+</div>
+
+<div class="sec">
+  <span class="lbl">C — "BY FMC AND" + real logo</span>
+  <p class="desc">Both: a small "BY FMC AND" lead-in next to the real partner logo. Most explicit about the partnership. Same asset needs as B.</p>
+  <div class="tile">
+    <div class="img"></div><div class="sc"></div>
+    <div class="plate">
+      <img class="ppw" src="ppw-assets/wm-vegas.png" alt="">
+      <div class="rule"></div>
+      <div class="byline"><span>By FMC and</span><img src="ppw-assets/partners/nab-show-white.png" alt="NAB Show"></div>
+    </div>
+    <div class="info"><div class="ev">at NAB Show · Las Vegas</div><div class="h">Post|Production World Las Vegas</div></div>
+  </div>
+</div>
+
+<div class="foot">Internal preview — partner-logo-mockup.html · Las Vegas tile shown as the example.</div>
+</body>
+</html>
