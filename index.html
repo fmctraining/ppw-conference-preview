@@ -249,7 +249,7 @@
   .edb-go .ic{width:16px;height:16px}
   /* light relief section */
   .light-sec{background:#f5f7fb;border-top:1px solid #e4e8f0;border-bottom:1px solid #e4e8f0}
-  .light-sec .sec-kicker{color:#7c3aed}
+  .light-sec .sec-kicker{background:none;color:#7c3aed;-webkit-text-fill-color:#7c3aed}
   .light-sec .sec-title{color:#0f1830;-webkit-text-fill-color:#0f1830}
   .light-sec .sec-desc{color:#4a5570}
   .light-sec .who{background:#fff;border-color:#e6e9f1;box-shadow:0 10px 30px rgba(20,30,60,.06)}
@@ -295,7 +295,7 @@
   .city-h{font-family:"Poppins",sans-serif;font-size:clamp(28px,3.6vw,44px);color:#fff;font-weight:800;margin:0 0 1px;letter-spacing:-.5px;text-shadow:0 3px 18px rgba(0,0,0,.6)}
   .city-cta{text-align:right;flex:none}
   /* location-tile co-brand plate (top-right) */
-  .city-plate{position:absolute;top:clamp(22px,3.2vw,38px);right:clamp(22px,3.2vw,46px);z-index:2;background:rgba(8,11,18,.56);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:16px 22px 15px;display:flex;flex-direction:column;align-items:center;gap:11px;min-width:300px}
+  .city-plate{position:absolute;top:clamp(22px,3.2vw,38px);right:calc(max(0px, (100% - var(--maxw))/2) + 24px);z-index:2;background:rgba(8,11,18,.56);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:16px 22px 15px;display:flex;flex-direction:column;align-items:center;gap:11px;min-width:300px}
   .city-plate .cwm{width:262px;display:block}
   .city-plate .crule{width:100%;height:1px;background:rgba(255,255,255,.18)}
   .clock{display:inline-flex;align-items:center;gap:9px}
@@ -311,7 +311,7 @@
   .sec-head{max-width:740px;margin-bottom:58px}
   #networking .sec-head{margin-bottom:32px}
   #attendees .sec-head{margin-bottom:36px}
-  .sec-kicker{font-size:12px;letter-spacing:3.5px;text-transform:uppercase;color:#87dffa;font-weight:700;display:inline-block;margin-bottom:18px}
+  .sec-kicker{font-size:12px;letter-spacing:3.5px;text-transform:uppercase;background:linear-gradient(100deg in oklch,oklch(86% .10 225),oklch(80% .12 288));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700;display:inline-block;margin-bottom:18px}
   #ai .sec-kicker{margin-bottom:18px}
   .sec-title{font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-.8px;line-height:1.24;padding-bottom:.14em;background:linear-gradient(180deg,#fff,#c9d5ee);-webkit-background-clip:text;background-clip:text;color:transparent;margin-top:16px}
   .city-sec{border-top:0}
@@ -327,7 +327,7 @@
   #locations .sec-title,#attendees .sec-title{padding-bottom:0}
   .spon-bridge p,.spon-bridge .sb-text p{text-wrap:balance;max-width:640px}
   /* white sponsor wall */
-  .sponsors-light .sec-kicker{color:#7c3aed!important}
+  .sponsors-light .sec-kicker{background:none!important;color:#7c3aed!important;-webkit-text-fill-color:#7c3aed!important}
   .sponsors-light .sec-title{color:#0e1626!important;-webkit-text-fill-color:#0e1626!important;background:none!important;margin-top:20px}
   @media(max-width:760px){.wall .tile img{height:34px!important;max-width:130px!important}}
   /* AI badges: one line + glass card */
@@ -426,30 +426,6 @@
   .sponsors-light{background:linear-gradient(160deg,#13203c,#0c1424)!important;border-top:1px solid var(--line)!important;position:relative;overflow:hidden;padding:84px 0 84px!important}
   .sponsors-light::before{content:"";position:absolute;left:0;right:0;top:140px;aspect-ratio:2560/340;background:url(ppw-assets/wavy-lines.webp) center/100% 100% no-repeat;opacity:.7;pointer-events:none;z-index:0}
   .sponsors-light .wrap{position:relative;z-index:1}
-  /* going-global band under the hero */
-  .global-band{position:relative;overflow:hidden;padding:96px 0 120px 0;background:var(--bg-2)}
-  .gb-waves{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);pointer-events:none}
-  .gb-wave-inner{position:relative;width:100%;aspect-ratio:2560/340}
-  .gb-wave-img{width:100%;height:100%;display:block;opacity:.9}
-  .global-band .wrap{position:relative;z-index:2}
-  .gb-card{max-width:660px;margin:0 auto;background:#fff;border-radius:18px;padding:38px 44px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.5)}
-  .gb-card p{margin:0 0 14px;color:#2b3550;font-size:16px;line-height:1.48;text-wrap:balance}
-  .gb-card p:last-child{margin-bottom:0}
-  .gb-card .lead{color:#2c3b59;font-size:18px;font-weight:500;font-family:"Poppins",sans-serif}
-  .gb-card .lv{color:#e0603a;font-weight:700}
-  .gb-card .ny{color:#2f6fd0;font-weight:700}
-  .gb-card .ldn{color:#7c4bd0;font-weight:700}
-  .gb-card .mum{color:#1d9b7a;font-weight:700}
-  .gb-pin{position:absolute;z-index:2;transform:translate(-40%,-97%);width:40px;height:46px;pointer-events:none}
-  .gb-pin i{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:26px;height:8px;border-radius:50%;background:radial-gradient(closest-side,rgba(20,25,45,.30),transparent 78%)}
-  .gb-pin b{position:absolute;left:50%;top:0;width:38px;height:38px;margin-left:-19px;background:#fff;border:2.5px solid currentColor;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 5px 12px rgba(20,25,45,.22);display:flex;align-items:center;justify-content:center}
-  .gb-pin b span{transform:rotate(45deg);font-size:9.5px;font-weight:800;letter-spacing:.04em;color:currentColor}
-  /* anchored to the measured top wave line: y/340 of the wave box */
-  .gb-pin.p-mum{left:12%;top:9.7%;color:#1d9b7a}
-  .gb-pin.p-nyc{left:20%;top:0.9%;color:#e08a2f}
-  .gb-pin.p-lv{left:78%;top:16.5%;color:#e0603a}
-  .gb-pin.p-ldn{left:84%;top:39.5%;color:#2f6fd0}
-  @media(max-width:900px){.gb-pin{display:none}.gb-card{padding:30px 26px;max-width:92%}.global-band{padding:70px 0}}
   #ai{position:relative;overflow:hidden;background-image:url(ppw-assets/ai-bg-global.webp)!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
   .sponsors-light .wall-plate{position:relative;z-index:1;background:#fff;max-width:860px;margin:0 auto;border-radius:14px;padding:44px 36px 38px}
   .sponsors-light .sec-head{margin-bottom:40px!important}
@@ -570,24 +546,6 @@
   </div>
 </section>
 
-<section class="global-band">
-  <div class="gb-waves">
-    <div class="gb-wave-inner">
-      <img class="gb-wave-img" src="ppw-assets/wavy-lines.webp" alt="">
-      <span class="gb-pin p-mum"><i></i><b><span>MUM</span></b></span>
-      <span class="gb-pin p-nyc"><i></i><b><span>NYC</span></b></span>
-      <span class="gb-pin p-lv"><i></i><b><span>LV</span></b></span>
-      <span class="gb-pin p-ldn"><i></i><b><span>LDN</span></b></span>
-    </div>
-  </div>
-  <div class="wrap">
-    <div class="gb-card">
-      <p class="lead">Post Production World is the creative-technology industry's only <strong>global, year-round, multi-market training platform</strong>.</p>
-      <p>From NAB Show <span class="lv">Las Vegas</span> and <span class="ny">New York</span> to MPTS <span class="ldn">London</span> and Broadcast India <span class="mum">Mumbai</span>, <strong>one partnership</strong> puts you in front of working creatives on three continents.</p>
-    </div>
-  </div>
-</section>
-
 <div class="proof-band">
   <div class="wrap">
     <div class="proof-grid">
@@ -616,7 +574,7 @@
   <div class="city-img" style="background-image:url(ppw-assets/city-mumbai-hi.jpg)"></div>
   <div class="city-plate"><img class="cwm" src="ppw-assets/wm-nodate/wm-mumbai-sa.webp" alt=""><div class="crule"></div><div class="clock"><img class="cfmc" src="ppw-assets/partners/fmc-notri.png"><span class="cplus">+</span><img class="cpartner" src="ppw-assets/partners/bi-abis-white.png" style="height:19px"></div></div>
   <div class="city-info"><div class="wrap city-row">
-    <div class="city-text"><div class="city-ev">at Broadcast India · Mumbai</div><h2 class="city-h">Post Production World • South Asia</h2><p class="city-d">A regional event bringing Post Production World Conference to this growing media market.</p></div>
+    <div class="city-text"><div class="city-ev">at Broadcast India · Mumbai</div><h2 class="city-h">Post Production World • South Asia</h2><p class="city-d">South Asia's premier professional-development event for content creators working across film, television, video, digital media, and design.</p></div>
     <div class="city-cta"><div class="city-date">October 22-23, 2026</div><span class="btn"><span class="bt">Explore South Asia</span> <svg class="ic"><use href="#i-arrow"/></svg></span></div>
   </div></div>
 </a>

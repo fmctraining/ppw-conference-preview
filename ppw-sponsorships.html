@@ -275,6 +275,30 @@
   .room-names{color:#dbe3f4;font-size:17px;font-weight:500;line-height:1.75;letter-spacing:.5px;text-wrap:balance;margin-bottom:10px}
   .room-more{color:#ecc6c6;font-size:14px;font-weight:600;margin:9px 0 0;letter-spacing:.2px}
   .room-src{color:var(--ink-faint);font-size:12px;margin:17px 0 0;letter-spacing:.3px}
+  /* going-global band under the hero */
+  .global-band{position:relative;overflow:hidden;padding:96px 0 120px 0;background:var(--bg-2)}
+  .gb-waves{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);pointer-events:none}
+  .gb-wave-inner{position:relative;width:100%;aspect-ratio:2560/340}
+  .gb-wave-img{width:100%;height:100%;display:block;opacity:.9}
+  .global-band .wrap{position:relative;z-index:2}
+  .gb-card{max-width:660px;margin:0 auto;background:#fff;border-radius:18px;padding:38px 44px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+  .gb-card p{margin:0 0 14px;color:#2b3550;font-size:16px;line-height:1.48;text-wrap:balance}
+  .gb-card p:last-child{margin-bottom:0}
+  .gb-card .lead{color:#2c3b59;font-size:18px;font-weight:500;font-family:"Poppins",sans-serif}
+  .gb-card .lv{color:#e0603a;font-weight:700}
+  .gb-card .ny{color:#2f6fd0;font-weight:700}
+  .gb-card .ldn{color:#7c4bd0;font-weight:700}
+  .gb-card .mum{color:#1d9b7a;font-weight:700}
+  .gb-pin{position:absolute;z-index:2;transform:translate(-40%,-97%);width:40px;height:46px;pointer-events:none}
+  .gb-pin i{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:26px;height:8px;border-radius:50%;background:radial-gradient(closest-side,rgba(20,25,45,.30),transparent 78%)}
+  .gb-pin b{position:absolute;left:50%;top:0;width:38px;height:38px;margin-left:-19px;background:#fff;border:2.5px solid currentColor;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 5px 12px rgba(20,25,45,.22);display:flex;align-items:center;justify-content:center}
+  .gb-pin b span{transform:rotate(45deg);font-size:9.5px;font-weight:800;letter-spacing:.04em;color:currentColor}
+  /* anchored to the measured top wave line: y/340 of the wave box */
+  .gb-pin.p-mum{left:12%;top:9.7%;color:#1d9b7a}
+  .gb-pin.p-nyc{left:20%;top:0.9%;color:#e08a2f}
+  .gb-pin.p-lv{left:78%;top:16.5%;color:#e0603a}
+  .gb-pin.p-ldn{left:84%;top:39.5%;color:#2f6fd0}
+  @media(max-width:900px){.gb-pin{display:none}.gb-card{padding:30px 26px;max-width:92%}.global-band{padding:70px 0}}
 </style>
 </head>
 <body>
@@ -333,10 +357,28 @@
   </div>
 </section>
 
+<section class="global-band">
+  <div class="gb-waves">
+    <div class="gb-wave-inner">
+      <img class="gb-wave-img" src="ppw-assets/wavy-lines.webp" alt="">
+      <span class="gb-pin p-mum"><i></i><b><span>MUM</span></b></span>
+      <span class="gb-pin p-nyc"><i></i><b><span>NYC</span></b></span>
+      <span class="gb-pin p-lv"><i></i><b><span>LV</span></b></span>
+      <span class="gb-pin p-ldn"><i></i><b><span>LDN</span></b></span>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="gb-card">
+      <p class="lead">Post Production World is the creative-technology industry's only <strong>global, year-round, multi-market training platform</strong>.</p>
+      <p>From NAB Show <span class="lv">Las Vegas</span> and <span class="ny">New York</span> to MPTS <span class="ldn">London</span> and Broadcast India <span class="mum">Mumbai</span>, <strong>one partnership</strong> puts you in front of working creatives on three continents.</p>
+    </div>
+  </div>
+</section>
+
 <section class="block deck-sec deck-a">
   <div class="deck-bg"></div>
   <div class="wrap">
-    <div class="sec-head center"><div class="sec-kicker">Global Platinum Sponsorship</div><h2 class="sec-title">A platform built for brand leaders</h2></div>
+    <div class="sec-head center"><div class="sec-kicker">Global Sponsorship</div><h2 class="sec-title">A platform built for brand leaders</h2></div>
     <div class="deck-pillars">
       <div class="pillar"><img class="ring-png" src="ppw-assets/ic-star.png" alt=""><h3>Establish <b>Global Brand Leadership</b></h3><p>Gain unparalleled, year-round visibility and position your company as a recognized industry leader.</p></div>
       <div class="pillar"><img class="ring-png" src="ppw-assets/ic-grad.png" alt=""><h3>Partner with <b>World-Class Training</b></h3><p>Showcase your brand alongside top-tier instruction from FMC's Certified Instructors and presenters.</p></div>
@@ -397,7 +439,7 @@
       <table class="cmp">
         <colgroup><col><col class="c-core"><col class="c-plat"><col><col></colgroup>
         <thead>
-          <tr><th></th><th class="core">Core*</th><th class="plat">Platinum</th><th>Gold</th><th>Tabletop</th></tr>
+          <tr><th></th><th class="core">Core</th><th class="plat">Platinum</th><th>Gold</th><th>Tabletop</th></tr>
         </thead>
         <tbody>
           <tr><th>Logo on website, signage &amp; marketing campaigns</th>
@@ -419,7 +461,6 @@
         </tbody>
       </table>
     </div>
-    <p class="cmp-note">*Core is an exclusive, single-partner tier — no other software vendor shares the position. Inclusions vary by market and availability; contact us for the full prospectus tailored to your goals.</p>
   </div>
 </section>
 
