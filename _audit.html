@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P|PW site — full audit</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#080b12;--panel:#121b2e;--panel2:#172138;--line:#212d49;--line2:#2c3a5c;--ink:#eef2fb;--dim:#a3b2d2;--faint:#6b7b9e;
+        --grad-blue:linear-gradient(100deg in oklch,oklch(85% .10 228),oklch(90% .13 196));
+        --green:#4ade80;--amber:#f6cf6a;--pink:#f5a3a0;--blue:#87dffa;--purple:#b794f6}
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1100px 700px at 85% -8%,rgba(124,58,237,.16),transparent 60%),var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.5}
+  .wrap{max-width:1120px;margin:0 auto;padding:44px 22px 90px}
+  h1{font-size:28px;font-weight:800;margin:0 0 4px}
+  .sub{color:var(--faint);font-size:13.5px;margin:0 0 8px}
+  .legend{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 8px;font-size:11.5px;color:var(--dim)}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:9px;height:9px;border-radius:50%}
+  h2{font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin:36px 0 4px;display:flex;align-items:center;gap:10px}
+  h2::after{content:"";flex:1;height:1px;background:var(--line)}
+  .cnt{color:var(--faint);font-size:12px;font-weight:500;letter-spacing:0}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .item{background:linear-gradient(170deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:12px;padding:12px 15px;display:flex;gap:11px;align-items:flex-start}
+  .item .d{width:8px;height:8px;border-radius:50%;flex:none;margin-top:6px}
+  .item b{color:var(--ink);font-weight:600;font-size:13.5px;display:block}
+  .item span{color:var(--dim);font-size:12px;line-height:1.45}
+  .full{grid-column:1/-1}
+  .done .d{background:var(--green)} .pick .d{background:var(--blue)} .dec .d{background:var(--amber)} .ben .d{background:var(--pink)} .elise .d{background:var(--purple)} .next .d{background:#5b9dff}
+  a{color:var(--blue)}
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+  .chip{background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.26);color:#bef0cf;border-radius:999px;padding:6px 12px;font-size:11.8px}
+  .chip::before{content:"✓ ";color:var(--green);font-weight:800}
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .links a{background:rgba(135,223,250,.08);border:1px solid var(--line2);border-radius:999px;padding:7px 13px;font-size:12px;text-decoration:none;color:var(--blue)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>P|PW site — full audit</h1>
+  <p class="sub">Every item across our sessions, with its real status. Generated Jul 30, 2026.</p>
+  <div class="legend">
+    <span><i class="dot" style="background:var(--green)"></i>Done &amp; live</span>
+    <span><i class="dot" style="background:var(--blue)"></i>Waiting on your pick</span>
+    <span><i class="dot" style="background:var(--amber)"></i>Your decision</span>
+    <span><i class="dot" style="background:var(--pink)"></i>Ben</span>
+    <span><i class="dot" style="background:var(--purple)"></i>Elise / others</span>
+    <span><i class="dot" style="background:#5b9dff"></i>I build next</span>
+  </div>
+
+  <h2>Done &amp; live <span class="cnt">— shipped</span></h2>
+  <div class="chips">
+    <span class="chip">Poppins site-wide</span>
+    <span class="chip">Facebook link → ppwconference</span>
+    <span class="chip">South Asia Oct 22-23, 2026</span>
+    <span class="chip">London May 12-13, 2027</span>
+    <span class="chip">Vegas April 3-7, 2027</span>
+    <span class="chip">Pipe: P|PW / Post|Production World (NY + Vegas)</span>
+    <span class="chip">NY register → NAB NY passes page</span>
+    <span class="chip">Location dropdowns → inner pages</span>
+    <span class="chip">Footer Locations aligned + tagline 2 lines</span>
+    <span class="chip">Homepage "Questions about P|PW?" contact</span>
+    <span class="chip">Eyebrows → site blue #87dffa + 18px</span>
+    <span class="chip">Electric gradient blue (sponsor)</span>
+    <span class="chip">Sponsor C1 colored touchpoint cards</span>
+    <span class="chip">Sponsor stats (glass+spotlight) + room L4</span>
+    <span class="chip">Tier colors (Core blue) + Core* note</span>
+    <span class="chip">Section spacing tightened</span>
+    <span class="chip">Who Attends = Option 3</span>
+    <span class="chip">Field Workshops on Vegas</span>
+    <span class="chip">LV stats moved to sponsor page</span>
+    <span class="chip">"Beyond the sessions" off Vegas</span>
+    <span class="chip">DRAFT notes removed</span>
+    <span class="chip">AI card titles peach #e9bc95</span>
+    <span class="chip">NY: centered program + bigger headshots/stars</span>
+    <span class="chip">NY: "Two days · 28 sessions"</span>
+    <span class="chip">"Heard from the room" de-blue/de-italic</span>
+    <span class="chip">Vegas $1,459 · 5 days/7 rooms/180+</span>
+  </div>
+
+  <h2>Waiting on your pick <span class="cnt">— samples built</span></h2>
+  <div class="links">
+    <a href="tier-table-samples.html" target="_blank">Tier table A–G</a>
+    <a href="stats-nab-samples.html" target="_blank">Stats N1(V1-4)/N2/N3</a>
+    <a href="partner-logo-mockup.html" target="_blank">Partner logo A/B/C</a>
+    <a href="sponsor-samples-v2.html" target="_blank">Icon tone</a>
+    <a href="_whoattends.html" target="_blank">Who Attends 1–5</a>
+  </div>
+  <div class="grid">
+    <div class="item pick"><i class="d"></i><div><b>Tier table style</b><span>A–G on the samples page. My rec: A (hero Core on the right).</span></div></div>
+    <div class="item pick"><i class="d"></i><div><b>Who's-in-the-room stats</b><span>N1 V1–V4 / N2 / N3. Reply e.g. "N1 V2".</span></div></div>
+    <div class="item pick"><i class="d"></i><div><b>Partner-logo treatment</b><span>A / B / C. B or C also need MPTS + Broadcast India logo art.</span></div></div>
+    <div class="item pick"><i class="d"></i><div><b>Icon tone</b><span>Blue / teal / white for the pillar + touchpoint icons.</span></div></div>
+  </div>
+
+  <h2>Your decisions <span class="cnt">— content / wording</span></h2>
+  <div class="grid">
+    <div class="item dec"><i class="d"></i><div><b>"Request a proposal" inbox</b><span>Currently info@ppw-conference.com, but "Request Sponsorship Details" → Megan. Unify to which?</span></div></div>
+    <div class="item dec"><i class="d"></i><div><b>Footer tagline</b><span>Your earlier answer came through blank. Homepage still reads the sponsor-heavy line.</span></div></div>
+    <div class="item dec"><i class="d"></i><div><b>Add member/student pricing?</b><span>NAB PPW pass is $799 / $749 members / $399 students. Add the tiers? ($699 is a different NAB pass, not PPW.)</span></div></div>
+    <div class="item dec"><i class="d"></i><div><b>Speaker subtitle tags (NY)</b><span>Keep or remove — not Elise-approved, accuracy unverified.</span></div></div>
+    <div class="item dec"><i class="d"></i><div><b>ATTENDEE FEEDBACK bar (NY)</b><span>Keep or remove — it's our label, quotes are real.</span></div></div>
+    <div class="item dec"><i class="d"></i><div><b>Contact copy (NY)</b><span>"Reach the right person…" — rewrite/tighten?</span></div></div>
+    <div class="item dec"><i class="d"></i><div><b>Pipe on Mumbai / homepage?</b><span>Applied to NY + Vegas. Extend Post|Production World to South Asia + tiles?</span></div></div>
+  </div>
+
+  <h2>Waiting on Ben <span class="cnt">— email drafted</span></h2>
+  <div class="grid">
+    <div class="item ben"><i class="d"></i><div><b>"World's leading organizations" section</b><span>Send the mockup file, or approve building fresh. Placeholder on NY.</span></div></div>
+    <div class="item ben"><i class="d"></i><div><b>Global-only benefits</b><span>Webinars + full FMC database access global-sponsor-only? Yes/no.</span></div></div>
+  </div>
+
+  <h2>Waiting on Elise / info <span class="cnt"></span></h2>
+  <div class="grid">
+    <div class="item elise"><i class="d"></i><div><b>South Asia program (Nick)</b><span>Speakers + tracks once Nick sends it. Can start Nick's profile now.</span></div></div>
+    <div class="item elise"><i class="d"></i><div><b>Homepage stats verification</b><span>92% / 1,500+ / 662 cities vs the deck — confirm figures.</span></div></div>
+  </div>
+
+  <h2>I build next <span class="cnt">— once picks land</span></h2>
+  <div class="grid">
+    <div class="item next"><i class="d"></i><div><b>Registration section redesign</b><span>5–7 layouts for "what your pass covers" (price card wrapping is rough).</span></div></div>
+    <div class="item next"><i class="d"></i><div><b>91% stat treatments</b><span>5 ways to emphasize the score in its own card.</span></div></div>
+    <div class="item next"><i class="d"></i><div><b>Photo galleries</b><span>Full P|PW picker + "Thousands of creatives" best-images (Europe 564 / India 119 sets to process).</span></div></div>
+    <div class="item next"><i class="d"></i><div><b>Roll partner logos onto tiles</b><span>Once you pick A/B/C + supply MPTS + Broadcast India art.</span></div></div>
+    <div class="item next"><i class="d"></i><div><b>NY program grid → Day 2 = 3 rooms</b><span>Have titles from the sheet; need presenters.</span></div></div>
+    <div class="item next"><i class="d"></i><div><b>Photo curation + South Asia face swap</b><span>Europe → London, India → Mumbai, swap the flagged face photo.</span></div></div>
+    <div class="item next"><i class="d"></i><div><b>Favicon + social-share image</b><span>Site has neither; needs a favicon + 1200×630 OG image.</span></div></div>
+    <div class="item next"><i class="d"></i><div><b>Homepage polish</b><span>Hero fold-to-viewport · Platinum/Gold logo brightness+size · global .sec-desc spec.</span></div></div>
+    <div class="item next"><i class="d"></i><div><b>Full CTA link audit</b><span>Vegas ✓, NY register ✓ now; final pass on every button before launch.</span></div></div>
+  </div>
+
+  <p class="sub" style="margin-top:34px">Internal — _audit.html · not part of the published site.</p>
+</div>
+</body>
+</html>
