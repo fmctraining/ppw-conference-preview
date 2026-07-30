@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FMC + NAB co-brand lockup</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#080b12;--line:#212d49;--ink:#eef2fb;--dim:#a3b2d2;--faint:#6b7b9e;--cyan:#2dd4ff}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.5}
+  header.top{max-width:1120px;margin:0 auto;padding:42px 22px 6px}
+  h1{font-size:26px;font-weight:800;margin:0 0 6px}
+  .top p{color:var(--faint);font-size:14px;margin:0;max-width:880px;line-height:1.6}
+  .top b{color:var(--cyan)}
+  .grp{max-width:1120px;margin:0 auto;padding:30px 22px 6px;border-top:1px solid var(--line);margin-top:22px}
+  .lbl{display:inline-block;background:var(--cyan);color:#04121a;font-weight:800;font-size:13px;letter-spacing:.5px;text-transform:uppercase;padding:6px 14px;border-radius:6px;margin-bottom:6px}
+  .desc{color:var(--faint);font-size:13px;margin:8px 0 20px;max-width:840px;line-height:1.55}
+  /* standalone lockup */
+  .lockstage{display:flex;gap:40px;flex-wrap:wrap}
+  .lockbox{background:#0e1422;border:1px solid var(--line);border-radius:16px;padding:34px 40px;display:flex;align-items:center;gap:22px}
+  .lockup{display:flex;align-items:center;gap:20px}
+  .lockup .plus{color:#8b98b5;font-weight:300;font-size:26px;line-height:0}
+  .lk-fmc-tri{height:30px}.lk-fmc-notri{height:24px}.lk-nab{height:19px}
+  /* tile (Option 2 glass plate) */
+  .tiles{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:820px){.tiles{grid-template-columns:1fr}}
+  .tile{position:relative;height:330px;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+  .tile .img{position:absolute;inset:0;background:url(ppw-assets/city-vegas-hi.jpg) center/cover}
+  .tile .sc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,11,18,.22) 0%,transparent 30%,rgba(8,11,18,.76) 74%,rgba(8,11,18,.94))}
+  .plate{position:absolute;top:18px;right:22px;z-index:3;background:rgba(8,11,18,.55);backdrop-filter:blur(9px);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:13px 16px 12px;display:flex;flex-direction:column;align-items:center;gap:11px;min-width:250px}
+  .plate .ppw{width:212px;display:block}
+  .plate .rule{width:100%;height:1px;background:rgba(255,255,255,.16)}
+  .plate .lockup{gap:14px}
+  .plate .plus{font-size:19px;color:#c7d0e4}
+  .plate .lk-fmc-tri{height:19px}.plate .lk-fmc-notri{height:15px}.plate .lk-nab{height:13px}
+  .info{position:absolute;left:0;right:0;bottom:0;padding:0 28px 22px;z-index:2}
+  .ev{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--cyan);font-weight:700}
+  .h{font-size:24px;font-weight:800;margin:2px 0 0;letter-spacing:-.5px}
+  .cap{text-align:center;color:var(--faint);font-size:12px;margin:12px 0 0}
+  .foot{max-width:1120px;margin:0 auto;padding:30px 22px 80px;color:var(--faint);font-size:12.5px}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>FMC + NAB Show — co-brand lockup</h1>
+  <p>The partner credit as a logo lockup: <b>FMC + NAB Show</b> with a plus between them (NAB sized smaller). Version A uses the FMC logo <b>without</b> the triangles; Version B keeps the triangles. Reply <b>A or B</b>. (For New York this same lockup uses the <b>NAB Show New York</b> logo.)</p>
+</header>
+
+<section class="grp">
+  <span class="lbl">A — FMC (no triangles) + NAB Show</span>
+  <p class="desc">Cleanest. "powered by FMC" + NAB Show, plus between.</p>
+  <div class="lockstage">
+    <div class="lockbox"><div class="lockup"><img class="lk-fmc-notri" src="ppw-assets/partners/fmc-notri.png"><span class="plus">+</span><img class="lk-nab" src="ppw-assets/partners/nab-show-white.png"></div></div>
+  </div>
+</section>
+
+<section class="grp">
+  <span class="lbl">B — FMC (with triangles) + NAB Show</span>
+  <p class="desc">Keeps the FMC triangle marks. A touch busier next to NAB.</p>
+  <div class="lockstage">
+    <div class="lockbox"><div class="lockup"><img class="lk-fmc-tri" src="ppw-assets/partners/fmc-tri.png"><span class="plus">+</span><img class="lk-nab" src="ppw-assets/partners/nab-show-white.png"></div></div>
+  </div>
+</section>
+
+<section class="grp">
+  <span class="lbl">On the tile (Option 2 glass plate)</span>
+  <p class="desc">Same lockup under the P|PW wordmark, both versions, so you can judge the balance in context.</p>
+  <div class="tiles">
+    <div class="tile">
+      <div class="img"></div><div class="sc"></div>
+      <div class="plate">
+        <img class="ppw" src="ppw-assets/wm-vegas.png" alt="">
+        <div class="rule"></div>
+        <div class="lockup"><img class="lk-fmc-notri" src="ppw-assets/partners/fmc-notri.png"><span class="plus">+</span><img class="lk-nab" src="ppw-assets/partners/nab-show-white.png"></div>
+      </div>
+      <div class="info"><div class="ev">at NAB Show · Las Vegas</div><div class="h">Post|Production World Las Vegas</div></div>
+    </div>
+    <div class="tile">
+      <div class="img"></div><div class="sc"></div>
+      <div class="plate">
+        <img class="ppw" src="ppw-assets/wm-vegas.png" alt="">
+        <div class="rule"></div>
+        <div class="lockup"><img class="lk-fmc-tri" src="ppw-assets/partners/fmc-tri.png"><span class="plus">+</span><img class="lk-nab" src="ppw-assets/partners/nab-show-white.png"></div>
+      </div>
+      <div class="info"><div class="ev">at NAB Show · Las Vegas</div><div class="h">Post|Production World Las Vegas</div></div>
+    </div>
+  </div>
+  <div class="cap">Left: Version A (no triangles) · Right: Version B (triangles)</div>
+</section>
+
+<p class="foot">Internal preview — cobrand-lockup.html · reply A or B.</p>
+</body>
+</html>
