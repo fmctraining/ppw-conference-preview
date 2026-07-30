@@ -30,7 +30,7 @@ p,.sec-desc,.hero-sub,.desc{text-wrap:pretty}
 header.nav{position:sticky;top:0;z-index:60;background:rgba(8,11,18,.8);backdrop-filter:blur(16px) saturate(1.2);border-bottom:1px solid var(--line)}
 .nav-inner{display:flex;align-items:center;gap:22px;height:86px;max-width:var(--maxw);margin:0 auto;padding:0 24px}
 .nav-logo{height:46px;width:auto;display:block}
-.nav-links{display:flex;gap:40px;margin-left:auto;align-items:center;font-size:14.5px}
+.nav-links{display:flex;gap:52px;margin-left:auto;align-items:center;font-size:14.5px}
 .nav-links a{text-decoration:none;color:var(--ink-dim);font-weight:500;transition:color .15s}
 .nav-links a:hover,.nav-links a.active{color:var(--ink)}
 .dd{position:relative;display:flex;align-items:center}
@@ -233,7 +233,7 @@ header.nav .btn{padding-top:10px;padding-bottom:10px}
 
 .cta-strip p{text-wrap:balance}
 
-.foot-inner > .foot-col:nth-child(2){transform:translateX(-29px)}
+.foot-inner > .foot-col:nth-child(2){transform:translateX(-53px)}
 
 .spon-by{display:flex;align-items:center;justify-content:center;gap:0;margin:-14px auto 30px;color:var(--ink-dim);font-size:14px;font-weight:600;letter-spacing:.02em}
 .spon-by img{height:36px;width:auto;margin-left:-9px}
