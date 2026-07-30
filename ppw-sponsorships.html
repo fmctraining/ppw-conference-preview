@@ -53,14 +53,14 @@
   .btn.gold:hover{box-shadow:0 11px 26px rgba(47,95,224,.42),inset 0 1px 0 rgba(255,255,255,.32)}
   @media(max-width:900px){.nav-links{display:none}}
   /* hero */
-  .hero{position:relative;overflow:hidden;padding:74px 0 60px;text-align:center}
+  .hero{position:relative;overflow:hidden;padding:104px 0 90px;text-align:center}
   .hero-bg{position:absolute;inset:0;background:url(ppw-assets/hero.jpg) center 40%/cover;filter:brightness(.55) saturate(1.1);opacity:.8;z-index:0}
   .hero::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,rgba(8,11,18,.45),rgba(8,11,18,.7) 70%,var(--bg))}
   .hero .wrap{position:relative;z-index:1}
   .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-2);font-weight:700;margin-bottom:22px}
   .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 16px var(--accent-2)}
   h1.title{font-size:clamp(34px,6vw,60px);line-height:1.04;font-weight:800;letter-spacing:-1.4px;max-width:900px;margin:0 auto 22px;background:linear-gradient(180deg,#fff,#bcccea);-webkit-background-clip:text;background-clip:text;color:transparent}
-  h1.title .hl{color:var(--accent-2);-webkit-text-fill-color:var(--accent-2)}
+  h1.title .hl{color:#87dffa;-webkit-text-fill-color:#87dffa}
   .hero-sub{font-size:clamp(17px,2.1vw,18px);color:#e4ebfa;font-weight:500;max-width:680px;margin:0 auto 30px;line-height:1.4;text-shadow:0 2px 16px rgba(0,0,0,.6)}
   .hero-sub{font-weight:300;margin:0 auto 26px}
   .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
@@ -95,16 +95,16 @@
   .cmp{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;font-size:14.5px}
   .cmp-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
   .cmp thead th{background:var(--panel-2);font-family:"Poppins",sans-serif;font-size:15px;font-weight:700}
-  .cmp thead th.core{color:var(--accent-2)}
-  .cmp thead th.plat{color:var(--gold)}
-  .cmp tbody th{text-align:left;font-weight:600;color:var(--ink-dim);background:rgba(255,255,255,.015);min-width:240px;white-space:normal}
+  .cmp thead th.core{color:#87dffa}
+  .cmp thead th.plat{color:#eef2fb}
+  .cmp tbody th{text-align:left;font-weight:600;color:var(--ink-dim);background:rgba(255,255,255,.015);min-width:240px;white-space:normal;font-size:15.5px}
   .cmp td .ic{width:20px;height:20px;color:var(--accent-2)}
   .cmp td.no{color:var(--ink-faint)}
   .cmp .val{font-weight:700;color:#fff;font-size:14px}
   .cmp tbody tr:last-child th,.cmp tbody tr:last-child td{border-bottom:0}
-  .cmp col.c-core{background:rgba(45,212,255,.05)}
-  .cmp col.c-plat{background:rgba(246,207,106,.04)}
-  .cmp-note{font-size:13px;color:var(--ink-faint);margin-top:16px;text-align:center;line-height:1.6}
+  .cmp col.c-core{background:rgba(135,223,250,.05)}
+  .cmp col.c-plat{background:rgba(255,255,255,.02)}
+  .cmp-note{font-size:13px;color:var(--ink-faint);margin:16px auto 0;max-width:740px;text-align:center;line-height:1.6;text-wrap:pretty}
   /* extras */
   .extras{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
   @media(max-width:820px){.extras{grid-template-columns:1fr}}
@@ -142,7 +142,7 @@
   .foot-glow{position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(124,58,237,.16) 55%,rgba(45,130,246,.13));pointer-events:none}
   .foot-inner{position:relative;display:grid;grid-template-columns:1fr auto auto;gap:95px;padding:53px 36px 38px;text-align:left}
   .foot-ppw{height:68px;width:auto;margin-bottom:13px;display:block}
-  .foot-brand p{color:#ffffff;font-size:15px;line-height:1.4;max-width:340px;margin:0 0 20px}
+  .foot-brand p{color:#ffffff;font-size:15px;line-height:1.4;max-width:340px;margin:0 0 20px;text-wrap:balance}
   .fb-btn{display:inline-flex;align-items:center;gap:10px;background:#1877f2;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:11px 18px;border-radius:12px;box-shadow:0 10px 26px rgba(24,119,242,.4);transition:transform .15s}
   .fb-btn:hover{transform:translateY(-1px)}
   .fb-btn svg{width:18px;height:18px;fill:#fff}
@@ -163,13 +163,13 @@
   .spon-bridge p{text-wrap:pretty}
   .deck-slide{display:block;width:100%;max-width:1080px;margin:0 auto;border-radius:16px;border:1px solid var(--line-2);box-shadow:0 26px 64px rgba(0,0,0,.45)}
   .deck-sec .wrap{position:relative;z-index:1}
-  .deck-sec .sec-kicker{color:#f6cf6a}
+  .deck-sec .sec-kicker{color:#87dffa}
   .deck-sec .sec-title{color:#fff}
   .ring-icon i{flex:1;border-radius:50%;background:#1b1640;display:flex;align-items:center;justify-content:center}
   .deck-pillars{display:grid;grid-template-columns:repeat(3,1fr);margin-top:36px;text-align:center}
   .deck-pillars .pillar{padding:0 28px}
   .deck-pillars .pillar+.pillar{border-left:1px solid rgba(255,255,255,.13)}
-  .deck-pillars .pillar b{color:#a2e8f4;display:block}
+  .deck-pillars .pillar b{color:#87dffa;display:block}
   .touch-pills{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:32px;max-width:940px;margin-inline:auto}
   .tpill b{color:#fff}
   .bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
@@ -185,11 +185,11 @@
   .ring-icon{border-radius:50%;display:flex;margin:0 auto 18px;background:conic-gradient(from 140deg,#f6cf6a,#2dd4bf,#a78bfa,#f6cf6a);padding:2px;width:92px;height:92px;margin-bottom:22px}
   .ring-icon svg{color:#f6cf6a;width:40px;height:40px}
   .deck-pillars .pillar+.pillar{border-left:1px solid rgba(255,255,255,.16)!important}
-  .deck-pillars h3{color:#fff;margin:0 0 9px;font-weight:600;font-size:20px;margin-bottom:12px}
+  .deck-pillars h3{color:#fff;margin:0 0 9px;font-weight:600;font-size:20px;margin-bottom:12px;text-wrap:balance}
   .deck-pillars p{color:#cdd4ea;margin:0;font-size:14.8px;line-height:1.6}
   .tpill span{line-height:1.45;font-size:15px;text-wrap:balance}
   /* premium pass v2 */
-  .sec-kicker{text-transform:uppercase;color:var(--accent-2);font-weight:700;font-size:14px!important;letter-spacing:2.6px!important}
+  .sec-kicker{text-transform:uppercase;color:#87dffa;font-weight:700;font-size:14px!important;letter-spacing:2.6px!important;margin-bottom:14px}
   .deck-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(52% 56% at 50% 22%,rgba(124,58,237,.34),transparent 64%),radial-gradient(42% 52% at 10% 58%,rgba(45,212,255,.16),transparent 70%),radial-gradient(42% 52% at 90% 52%,rgba(244,114,182,.18),transparent 70%)}
   .deck-pillars{margin-top:52px}
   .deck-pillars .pillar{background:none!important;border:0!important;box-shadow:none!important;border-radius:0!important;padding:0 44px}
@@ -216,7 +216,7 @@
   .deck-b{background:linear-gradient(150deg,#3a1838,#241640 52%,#141633)}
   .deck-c{background:linear-gradient(160deg,#132a47,#16213f 54%,#121634)}
   .deck-d{background:linear-gradient(160deg,#341641,#221541 54%,#141633)}
-  .ring-png{width:104px;height:104px;display:block;margin:0 auto 16px;object-fit:contain;filter:drop-shadow(0 8px 22px rgba(0,0,0,.4))}
+  .ring-png{width:94px;height:94px;display:block;margin:0 auto 16px;object-fit:contain;filter:drop-shadow(0 8px 22px rgba(0,0,0,.4))}
   /* dark cinematic deck backgrounds */
   .deck-bg{position:absolute;inset:0;background:url(ppw-assets/global-map.webp) center/cover;opacity:.42!important}
   .deck-a .deck-bg::after{background:radial-gradient(116% 96% at 50% 32%,transparent 16%,rgba(7,7,16,.82) 92%),radial-gradient(50% 46% at 50% 30%,rgba(124,58,237,.3),transparent 70%)!important}
@@ -246,14 +246,14 @@
   .bonus-split{display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;align-items:center;max-width:1120px;margin:0 auto}
   .bonus-copy{text-align:left}
   .bonus-copy .sec-title{margin-top:14px}
-  .bonus-copy .sec-desc{margin-top:16px;max-width:none}
+  .bonus-copy .sec-desc{margin-top:16px;max-width:none;text-wrap:balance}
   .bonus-copy .draft-note{margin-left:0;margin-right:0;text-align:left}
   .bonus-flower{display:block;width:100%;max-width:640px;margin:0 auto}
   @media(max-width:860px){.bonus-split{grid-template-columns:1fr;gap:24px}.bonus-copy{text-align:center}.bonus-copy .draft-note{text-align:center}}
   .draft-note{max-width:760px;margin:16px auto 0;padding:11px 18px;border:1px dashed rgba(246,207,106,.5);background:rgba(246,207,106,.07);border-radius:10px;color:#f3cd72;font-size:12.5px;line-height:1.5;text-align:center}
   .draft-note b{color:#ffe6a6}
   /* Who's in the room — Las Vegas stats (moved from Vegas page) */
-  #lv-stats::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,18,32,.90),rgba(12,18,32,.82) 45%,rgba(12,18,32,.93)),url(ppw-assets/who-options/opt-8.webp) center/cover no-repeat;pointer-events:none;z-index:0}
+  #lv-stats::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,26,.94),rgba(10,14,26,.88) 45%,rgba(10,14,26,.96)),url(ppw-assets/who-options/opt-8.webp) center/cover no-repeat;pointer-events:none;z-index:0}
   #lv-stats .wrap{position:relative;z-index:1}
   .aud-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1040px;margin:0 auto 26px}
   @media(max-width:820px){.aud-stats{grid-template-columns:repeat(2,1fr)}}
@@ -384,7 +384,7 @@
       <table class="cmp">
         <colgroup><col><col class="c-core"><col class="c-plat"><col><col></colgroup>
         <thead>
-          <tr><th></th><th class="core">Core</th><th class="plat">Platinum</th><th>Gold</th><th>Tabletop</th></tr>
+          <tr><th></th><th class="core">Core*</th><th class="plat">Platinum</th><th>Gold</th><th>Tabletop</th></tr>
         </thead>
         <tbody>
           <tr><th>Logo on website, signage &amp; marketing campaigns</th>
@@ -406,7 +406,7 @@
         </tbody>
       </table>
     </div>
-    <p class="cmp-note">Core is an exclusive, single-partner tier — no other software vendor shares the position. Inclusions vary by market and availability; contact us for the full prospectus tailored to your goals.</p>
+    <p class="cmp-note">*Core is an exclusive, single-partner tier — no other software vendor shares the position. Inclusions vary by market and availability; contact us for the full prospectus tailored to your goals.</p>
   </div>
 </section>
 
@@ -418,7 +418,6 @@
         <div class="sec-kicker">Bonus Value Additions</div>
         <h2 class="sec-title">Beyond the core benefits</h2>
         <p class="sec-desc" style="color:#cdd4ea">Beyond the core Platinum benefits, PPW Global Sponsors unlock <strong style="color:#fff">broader reach and lasting visibility</strong> well past the show floor.</p>
-        <div class="draft-note"><b>DRAFT SECTION &mdash; FOR REVIEW.</b> Benefit list and diagram are placeholders pulled from the sponsorship deck; wording and inclusions still to be confirmed.</div>
       </div>
       <img class="bonus-flower" src="ppw-assets/bonus-flower.webp" alt="Bonus value additions: demo tables, dedicated webinars, branded content, branded training tracks, database access, global platinum recognition">
     </div>
