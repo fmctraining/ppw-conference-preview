@@ -23,7 +23,7 @@
   .snote::before{content:"*";color:var(--faint)}
   svg.i{fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
   .num{font-family:"Poppins";font-weight:800;letter-spacing:-1px;line-height:1;color:#fff}
-  .cap{text-transform:uppercase;font-weight:700;letter-spacing:1.2px;color:var(--dim);line-height:1.25}
+  .cap{text-transform:uppercase;font-weight:700;letter-spacing:1.2px;color:var(--dim);line-height:1.25;text-wrap:balance}
 
   /* N1 variations — all four on ONE row (fixes the straggler) */
   .n1row{display:grid;grid-template-columns:repeat(4,1fr);gap:0 8px;max-width:1020px;margin:0 auto}
@@ -31,16 +31,18 @@
   .n1row .cell{display:flex;align-items:center;gap:14px;padding:0 6px}
   .n1row .i{width:46px;height:46px;flex:none;color:#eaf1ff;opacity:.9}
   .n1row .num{font-size:31px}.n1row .cap{font-size:11px;margin-top:4px}
+  .n1v2 .cell{justify-content:center}
   .n1v2 .cell+.cell{border-left:1px solid var(--line);padding-left:20px}
+  .n1v2 .i{color:#87dffa}
   .n1v3 .cell{flex-direction:column;text-align:center;gap:10px}
-  .n1v3 .i{width:42px;height:42px}.n1v3 .num{font-size:34px}
+  .n1v3 .i{width:42px;height:42px;color:#87dffa}.n1v3 .num{font-size:34px}
   .n1v4 .cell{flex-direction:column;align-items:flex-start;gap:6px}
   .n1v4 .i{width:30px;height:30px;color:#87dffa}.n1v4 .num{font-size:40px}.n1v4 .cap{font-size:11px}
 
   /* N2 — icon top-centered, 4 across */
   .n2{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;max-width:1000px;margin:0 auto;text-align:center}
   @media(max-width:760px){.n2{grid-template-columns:1fr 1fr;gap:34px 18px}}
-  .n2 .i{width:52px;height:52px;color:#dfe8fb;opacity:.9;margin:0 auto 14px;display:block}
+  .n2 .i{width:52px;height:52px;color:#87dffa;opacity:1;margin:0 auto 14px;display:block}
   .n2 .num{font-size:44px}.n2 .cap{font-size:12px;margin-top:9px}
 
   /* N3 — glass card + thin icon (our style, NAB clarity) */

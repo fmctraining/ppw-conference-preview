@@ -11,7 +11,7 @@
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#080b12;--bg-2:#0e1422;--panel:#121b2e;--panel-2:#172138;--line:#212d49;--line-2:#2c3a5c;--ink:#eef2fb;--ink-dim:#a3b2d2;--ink-faint:#6b7b9e;--accent:#3b82f6;--accent-2:#2dd4ff;--gold:#f6cf6a;--radius:18px;--maxw:1200px;--shadow:0 24px 60px rgba(0,0,0,.45);--grad-blue:linear-gradient(100deg in oklch, oklch(85% .10 228), oklch(90% .13 196));--a-blue:oklch(85% .10 228);--a-teal:oklch(82% .11 178);--a-green:oklch(84% .12 152);--a-gold:oklch(85% .10 92);--a-orange:oklch(80% .12 55);--a-purple:oklch(79% .11 300)}
+  :root{--bg:#080b12;--bg-2:#0e1422;--panel:#121b2e;--panel-2:#172138;--line:#212d49;--line-2:#2c3a5c;--ink:#eef2fb;--ink-dim:#a3b2d2;--ink-faint:#6b7b9e;--accent:#3b82f6;--accent-2:#2dd4ff;--gold:#f6cf6a;--radius:18px;--maxw:1200px;--shadow:0 24px 60px rgba(0,0,0,.45);--grad-blue:linear-gradient(100deg in oklch, oklch(86% .10 225), oklch(80% .12 288));--a-blue:oklch(85% .10 228);--a-teal:oklch(82% .11 178);--a-green:oklch(84% .12 152);--a-gold:oklch(85% .10 92);--a-orange:oklch(80% .12 55);--a-purple:oklch(79% .11 300)}
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
   body{margin:0;color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;font-size:16px;font-family:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:radial-gradient(1100px 720px at 86% -6%, rgba(124,58,237,.24), transparent 60%),
@@ -198,9 +198,9 @@
   .deck-pillars .ring-icon svg{width:42px;height:42px}
   .touch-pills{grid-template-columns:repeat(3,1fr)!important;gap:16px;margin-top:50px;max-width:1000px;margin-inline:auto}
   .a-blue{--a:var(--a-blue)}.a-teal{--a:var(--a-teal)}.a-green{--a:var(--a-green)}.a-gold{--a:var(--a-gold)}.a-orange{--a:var(--a-orange)}.a-purple{--a:var(--a-purple)}
-  .tp-card{position:relative;overflow:hidden;border-radius:16px;padding:37px 51px 26px;text-align:center;display:flex;flex-direction:column;align-items:center;background:linear-gradient(170deg,color-mix(in oklab,var(--a) 15%,var(--panel)),var(--panel));border:1px solid color-mix(in oklab,var(--a) 30%,var(--line))}
-  .tp-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--a);opacity:.95}
-  .tp-ic{width:56px;height:56px;border-radius:15px;display:flex;align-items:center;justify-content:center;background:color-mix(in oklab,var(--a) 22%,transparent);margin-bottom:15px}
+  .tp-card{position:relative;overflow:hidden;border-radius:16px;padding:37px 51px 26px;text-align:center;display:flex;flex-direction:column;align-items:center;background:rgba(18,27,47,.55);border:1px solid var(--line)}
+  .tp-ic{width:62px;height:62px;border-radius:50%;padding:2px;background:conic-gradient(from 130deg,var(--a),color-mix(in oklab,var(--a) 40%,transparent),var(--a));margin-bottom:15px}
+  .tp-ic i{width:100%;height:100%;border-radius:50%;background:#0f1524;display:flex;align-items:center;justify-content:center}
   .tp-ic .ic{width:27px;height:27px;stroke:var(--a)}
   .tp-ttl{color:#fff;font-weight:700;font-size:21px;margin-bottom:4px;line-height:1.3}
   .tp-sub{color:#d0d7e7;font-size:14px;line-height:1.35}
@@ -350,12 +350,12 @@
   <div class="wrap">
     <div class="sec-head center"><div class="sec-kicker">End-to-End Visibility, All Year Long</div><h2 class="sec-title">A robust, multi-touchpoint partnership</h2></div>
     <div class="touch-pills">
-      <div class="tp-card a-blue"><div class="tp-ic"><svg class="ic"><use href="#i-star"/></svg></div><div class="tp-ttl">Distinguished sponsor sessions</div><div class="tp-sub">for your brand in the conference program</div></div>
-      <div class="tp-card a-teal"><div class="tp-ic"><svg class="ic"><use href="#i-screen"/></svg></div><div class="tp-ttl">Year-round exposure</div><div class="tp-sub">via FMC + partner social channels</div></div>
-      <div class="tp-card a-green"><div class="tp-ic"><svg class="ic"><use href="#i-target"/></svg></div><div class="tp-ttl">Featured placement</div><div class="tp-sub">in pre-show + post-show campaigns</div></div>
-      <div class="tp-card a-gold"><div class="tp-ic"><svg class="ic"><use href="#i-play"/></svg></div><div class="tp-ttl">Co-branded quarterly webinars</div><div class="tp-sub">produced + promoted globally</div></div>
-      <div class="tp-card a-orange"><div class="tp-ic"><svg class="ic"><use href="#i-pin"/></svg></div><div class="tp-ttl">Opportunity to keynote</div><div class="tp-sub">the conference</div></div>
-      <div class="tp-card a-purple"><div class="tp-ic"><svg class="ic"><use href="#i-db"/></svg></div><div class="tp-ttl">Ownership</div><div class="tp-sub">of the opt-in attendee database</div></div>
+      <div class="tp-card a-blue"><div class="tp-ic"><i><svg class="ic"><use href="#i-star"/></svg></i></div><div class="tp-ttl">Distinguished sponsor sessions</div><div class="tp-sub">for your brand in the conference program</div></div>
+      <div class="tp-card a-teal"><div class="tp-ic"><i><svg class="ic"><use href="#i-screen"/></svg></i></div><div class="tp-ttl">Year-round exposure</div><div class="tp-sub">via FMC + partner social channels</div></div>
+      <div class="tp-card a-green"><div class="tp-ic"><i><svg class="ic"><use href="#i-target"/></svg></i></div><div class="tp-ttl">Featured placement</div><div class="tp-sub">in pre-show + post-show campaigns</div></div>
+      <div class="tp-card a-gold"><div class="tp-ic"><i><svg class="ic"><use href="#i-play"/></svg></i></div><div class="tp-ttl">Co-branded quarterly webinars</div><div class="tp-sub">produced + promoted globally</div></div>
+      <div class="tp-card a-orange"><div class="tp-ic"><i><svg class="ic"><use href="#i-pin"/></svg></i></div><div class="tp-ttl">Opportunity to keynote</div><div class="tp-sub">the conference</div></div>
+      <div class="tp-card a-purple"><div class="tp-ic"><i><svg class="ic"><use href="#i-db"/></svg></i></div><div class="tp-ttl">Ownership</div><div class="tp-sub">of the opt-in attendee database</div></div>
     </div>
     <p class="deck-foot">From on-site at the trade shows, online in the lead-up, and every moment in between — PPW ensures continuous brand exposure, delivering hundreds of thousands of impressions annually.</p>
   </div>

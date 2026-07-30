@@ -71,6 +71,7 @@
   .foot{color:var(--faint);font-size:12.5px;text-align:center;padding:34px 22px 80px}
   .rec{background:color-mix(in oklab,var(--a-core) 10%,var(--panel2));border:1px solid var(--line2);border-radius:12px;padding:13px 17px;color:var(--dim);font-size:13px;margin:0 0 8px;line-height:1.55}
   .rec b{color:#fff}
+  .corner{color:var(--dim);font-weight:700;font-size:11.5px;text-transform:uppercase;letter-spacing:1px;text-align:left!important;vertical-align:bottom;padding-bottom:16px!important}
   /* ===== extra variants D-G ===== */
   .var-d .hero-th .thd{background:linear-gradient(180deg,color-mix(in oklab,var(--a-core) 34%,transparent),transparent);padding-top:24px}
   .var-d .hero-cap{height:4px}
@@ -112,7 +113,7 @@
 <header class="top">
   <h1>Sponsorship tiers — premium options</h1>
   <p>Per-column color, a clear hero tier, and the order question answered two ways. Everything uses the site blue <b>gradient</b>.</p>
-  <p class="rec" style="max-width:840px;margin-top:14px"><b>My recommendation on order:</b> go low → high left-to-right (Tabletop → Gold → Platinum → Core), so the eye climbs to the hero tier on the right — that's the dominant pricing-table convention (Basic → Pro → Enterprise) and matches your instinct. <b>A</b> shows that. <b>B</b> keeps Core first if you'd rather anchor on the exclusive tier. Reply <b>A&ndash;G</b>.</p>
+  <p class="rec" style="max-width:840px;margin-top:14px"><b>My recommendation on order:</b> go low → high left-to-right (Tabletop → Gold → Platinum → Core), so the eye climbs to the hero tier on the right — that's the dominant pricing-table convention (Basic → Pro → Enterprise) and matches your instinct. <b>A</b> shows that. <b>B</b> keeps Core first if you'd rather anchor on the exclusive tier. Reply <b>A&ndash;F</b>.</p>
 </header>
 
 <section class="grp"><div class="wrap">
@@ -151,13 +152,7 @@
   <div class="cmp-scroll"><table class="cmp var-f" id="tF"></table></div>
 </div></section>
 
-<section class="grp"><div class="wrap">
-  <span class="lbl">G — hero card + compact table</span>
-  <p class="desc">Core broken out as a premium card with its full benefit list; the other three sit in a tight table beside it. Sells the exclusive tier hardest.</p>
-  <div class="split" id="tG"></div>
-</div></section>
-
-<p class="foot">Internal preview — tier-table-samples.html · reply A&ndash;G.</p>
+<p class="foot">Internal preview — tier-table-samples.html · reply A&ndash;F.</p>
 
 <script>
 var CK='<span class="ck K"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>';
@@ -186,7 +181,7 @@ function cell(v,k){
 }
 function buildTable(id,order){
  var hero='core';
- var head='<thead><tr><th></th>'+order.map(function(k){
+ var head='<thead><tr><th class="corner">What&#39;s included</th>'+order.map(function(k){
    var t=TIERS[k]; var isH=k===hero;
    var cap=isH?'<span class="hero-cap"></span>':'';
    var badge=isH?'<span class="badge">★ Most exclusive</span>':'';
@@ -215,14 +210,7 @@ document.getElementById('tC').innerHTML=order.map(function(k){
 buildTable('tD',['table','gold','plat','core']);
 buildTable('tE',['table','gold','plat','core']);
 buildTable('tF',['table','gold','plat','core']);
-(function(){
-  var lis=ROWS.filter(function(r){return r[1].core&&r[1].core!==0;}).map(function(r){var v=r[1].core;var txt=(v===1)?r[0]:r[0]+' &mdash; <b style="color:#fff;font-weight:600">'+v+'</b>';return '<li>'+CK.replace('K','k-core')+'<span>'+txt+'</span></li>';}).join('');
-  var card='<div class="herocard"><span class="badge">★ Most exclusive</span><div class="tname n-core">Core</div><span class="ttag">Exclusive · single partner</span><ul>'+lis+'</ul></div>';
-  var order=['table','gold','plat'];
-  var head='<thead><tr><th></th>'+order.map(function(k){var t=TIERS[k];return '<th class="col-'+t.cls+'"><div class="thd"><span class="tname n-'+t.cls+'">'+t.name+'</span><span class="ttag">'+t.tag+'</span></div></th>';}).join('')+'</tr></thead>';
-  var body='<tbody>'+ROWS.map(function(r){return '<tr><th>'+r[0]+'</th>'+order.map(function(k){return '<td class="col-'+TIERS[k].cls+'">'+cell(r[1][k],k)+'</td>';}).join('')+'</tr>';}).join('')+'</tbody>';
-  document.getElementById('tG').innerHTML=card+'<div class="cmp-scroll"><table class="cmp">'+head+body+'</table></div>';
-})();
+
 </script>
 </body>
 </html>
