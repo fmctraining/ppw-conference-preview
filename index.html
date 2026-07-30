@@ -285,7 +285,7 @@
   .proof .pn{font-family:"Poppins",sans-serif;font-weight:900;color:#fff;font-size:clamp(26px,2.8vw,40px);line-height:1;letter-spacing:-1px;text-wrap:balance}
   @media(max-width:780px){.proof-band{clip-path:polygon(0 14px,100% 0,100% 100%,0 calc(100% - 14px));padding:56px 0}.proof-grid{grid-template-columns:1fr;gap:30px}}
   /* hero partners uniform + inline */
-  .city-sec{display:block;position:relative;height:clamp(420px,56vh,600px);overflow:hidden;text-decoration:none;border-top:1px solid transparent;background-image:linear-gradient(90deg,transparent,rgba(120,190,255,.85),rgba(160,120,255,.85),transparent);background-size:100% 1px;background-repeat:no-repeat;background-position:top}
+  .city-sec{display:block;position:relative;height:clamp(470px,60vh,660px);overflow:hidden;text-decoration:none;border-top:1px solid transparent;background-image:linear-gradient(90deg,transparent,rgba(120,190,255,.85),rgba(160,120,255,.85),transparent);background-size:100% 1px;background-repeat:no-repeat;background-position:top}
   .city-img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .7s ease}
   .city-sec:hover .city-img{transform:scale(1.045)}
   .city-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,18,.12),transparent 32%,rgba(8,8,18,.2) 56%,rgba(8,8,18,.84))}
@@ -304,7 +304,7 @@
   .cfmc{height:13px}
   .cpartner{height:12px}
   @media(max-width:820px){.city-plate{min-width:0;left:14px;right:14px;top:14px;padding:12px 16px 11px;gap:9px}.city-plate .cwm{width:min(230px,58vw)}}
-  @media(max-width:780px){.city-sec{height:clamp(360px,62vh,520px)}.city-row{flex-direction:column;align-items:flex-start;gap:16px}.city-cta{text-align:left}}
+  @media(max-width:780px){.city-sec{height:clamp(400px,64vh,560px)}.city-row{flex-direction:column;align-items:flex-start;gap:16px}.city-cta{text-align:left}}
   /* premium spacing pass */
   section.block{border-top:1px solid var(--line);position:relative;padding:112px 0}
   .light-sec,#ai{padding:54px 0 84px}
@@ -315,9 +315,10 @@
   #ai .sec-kicker{margin-bottom:18px}
   .sec-title{font-size:clamp(28px,4vw,42px);font-weight:700;letter-spacing:-.8px;line-height:1.24;padding-bottom:.14em;background:linear-gradient(180deg,#fff,#c9d5ee);-webkit-background-clip:text;background-clip:text;color:transparent;margin-top:16px}
   .city-sec{border-top:0}
+  .loc-buffer{height:70px;background:var(--bg)}
   #locations{padding:97px 0 0;min-height:auto}
   #locations .sec-title{font-size:44px}
-  #networking{padding:128px 0 128px}
+  #networking{padding:82px 0 128px}
   .cards3,.who-grid{gap:22px}
   .hero-brand{display:flex;flex-direction:column;align-items:center;gap:12px;margin:0 auto 33px}
   .hero-og{height:85px;width:auto;filter:drop-shadow(0 8px 28px rgba(0,0,0,.85))}
@@ -434,7 +435,8 @@
   .sponsors-light .partner-note{margin-top:44px!important}
   /* Who Attends: darkened attendee photo, full-bleed */
   #attendees{position:relative;overflow:hidden;background:var(--bg-2)!important;scroll-margin-top:86px;padding:90px 0}
-  #attendees::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,18,32,.90),rgba(12,18,32,.84) 45%,rgba(12,18,32,.95)),url(ppw-assets/who-options/opt-7.webp) center/cover no-repeat;pointer-events:none;z-index:0}
+  #attendees .sec-kicker{margin-bottom:5px}
+  #attendees::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,26,.93),rgba(10,14,26,.88) 45%,rgba(10,14,26,.96)),url(ppw-assets/who-options/opt-7.webp) center/cover no-repeat;pointer-events:none;z-index:0}
   #attendees .wrap{position:relative;z-index:1}
   #attendees .wrap{position:relative;z-index:1}
   @media(max-width:600px){
@@ -595,6 +597,8 @@
   </div></div>
 </a>
 
+<div class="loc-buffer"></div>
+
 <section class="block" id="attendees">
   <div class="wrap">
     <div class="sec-head center">
@@ -607,8 +611,8 @@
       <div class="who"><div class="ibox"><svg class="ic"><use href="#i-spark"/></svg></div><h4>Motion &amp; VFX Artists</h4><p>Motion graphics designers and VFX creatives building for broadcast and brands.</p></div>
       <div class="who"><div class="ibox"><svg class="ic"><use href="#i-video"/></svg></div><h4>Producers &amp; DPs</h4><p>Producers, directors, and cinematographers in broadcast, corporate, and field production.</p></div>
       <div class="who"><div class="ibox"><svg class="ic" style="fill:currentColor;stroke:none"><use href="#i-sparkle-ai"/></svg></div><h4>AI Creatives</h4><p>The fast-growing audience adopting generative and AI-assisted production workflows.</p></div>
-      <div class="who"><div class="ibox"><svg class="ic"><use href="#i-phone"/></svg></div><h4>Content Creators</h4><p>Social-first and corporate creators scaling output across every platform.</p></div>
-      <div class="who"><div class="ibox"><svg class="ic"><use href="#i-building"/></svg></div><h4>Corporate Video Teams</h4><p>In-house media teams producing at volume for global organizations.</p></div>
+      <div class="who"><div class="ibox"><svg class="ic"><use href="#i-phone"/></svg></div><h4>Content Creators</h4><p>Social-first and corporate creators scaling output across every platform, from short-form social to branded series.</p></div>
+      <div class="who"><div class="ibox"><svg class="ic"><use href="#i-building"/></svg></div><h4>Corporate Video Teams</h4><p>In-house media teams producing training, marketing, and brand content at volume for global organizations.</p></div>
     </div>
   </div>
 </section>
