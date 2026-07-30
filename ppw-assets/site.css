@@ -167,7 +167,7 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
 .foot-glow{position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(124,58,237,.16) 55%,rgba(45,130,246,.13));pointer-events:none}
 .foot-inner{position:relative;display:grid;grid-template-columns:1fr auto auto;gap:95px;padding:53px 24px 38px;text-align:left}
 .foot-ppw{height:68px;width:auto;margin-bottom:13px;display:block}
-.foot-brand p{color:#ffffff;font-size:14px;line-height:1.6;max-width:330px;margin:0 0 20px}
+.foot-brand p{color:#ffffff;font-size:14px;line-height:1.6;max-width:440px;margin:0 0 20px;text-wrap:balance}
 .fb-btn{display:inline-flex;align-items:center;gap:10px;background:#1877f2;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:11px 18px;border-radius:12px;box-shadow:0 10px 26px rgba(24,119,242,.4);transition:transform .15s}
 .fb-btn:hover{transform:translateY(-1px)}
 .fb-btn svg{width:18px;height:18px;fill:#fff}
@@ -233,7 +233,7 @@ header.nav .btn{padding-top:10px;padding-bottom:10px}
 
 .cta-strip p{text-wrap:balance}
 
-.foot-inner > .foot-col:nth-child(2){transform:translateX(-20px)}
+.foot-inner > .foot-col:nth-child(2){transform:translateX(-29px)}
 
 .spon-by{display:flex;align-items:center;justify-content:center;gap:0;margin:-14px auto 30px;color:var(--ink-dim);font-size:14px;font-weight:600;letter-spacing:.02em}
 .spon-by img{height:36px;width:auto;margin-left:-9px}
