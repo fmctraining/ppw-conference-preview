@@ -71,13 +71,48 @@
   .foot{color:var(--faint);font-size:12.5px;text-align:center;padding:34px 22px 80px}
   .rec{background:color-mix(in oklab,var(--a-core) 10%,var(--panel2));border:1px solid var(--line2);border-radius:12px;padding:13px 17px;color:var(--dim);font-size:13px;margin:0 0 8px;line-height:1.55}
   .rec b{color:#fff}
+  /* ===== extra variants D-G ===== */
+  .var-d .hero-th .thd{background:linear-gradient(180deg,color-mix(in oklab,var(--a-core) 34%,transparent),transparent);padding-top:24px}
+  .var-d .hero-cap{height:4px}
+  .var-d .hero-col{background:color-mix(in oklab,var(--a-core) 17%,transparent)}
+  .var-d td.col-plat,.var-d td.col-gold,.var-d td.col-table,.var-d th.col-plat,.var-d th.col-gold,.var-d th.col-table{background:transparent}
+  .var-e td[class*="col-"],.var-e th.col-plat,.var-e th.col-gold,.var-e th.col-table{background:transparent}
+  .var-e .hero-col{background:transparent}
+  .var-e .hero-th .thd{background:transparent}
+  .var-e .hero-cap{background:transparent}
+  .var-e .hero-th{position:relative}
+  .var-e .hero-th::after{content:"";position:absolute;left:22%;right:22%;bottom:0;height:2px;background:var(--grad-blue)}
+  .var-e .ck svg{stroke:#c4cde0}
+  .var-e .ck.k-core svg{stroke:oklch(86% .11 220)}
+  .var-e .badge{background:transparent;color:oklch(86% .11 220);padding:0 0 4px;letter-spacing:1.4px}
+  .var-f thead th{background:transparent;padding:8px 8px 0}
+  .var-f .thd{border-radius:13px 13px 0 0;padding:16px 12px 14px}
+  .var-f .hero-th .thd{background:var(--grad-blue)}
+  .var-f th.col-plat .thd{background:linear-gradient(180deg,#eaf0f8,#c6d0e2)}
+  .var-f th.col-gold .thd{background:linear-gradient(180deg,#f5d891,#dcac57)}
+  .var-f th.col-table .thd{background:linear-gradient(180deg,#8f9cb4,#6d7b98)}
+  .var-f .thd .tname{-webkit-text-fill-color:#0b1018;color:#0b1018;background:none}
+  .var-f .thd .ttag{color:rgba(11,16,24,.68)}
+  .var-f .badge{background:rgba(11,16,24,.82);color:#eaf1ff}
+  .var-f .hero-cap{display:none}
+  .var-f tbody tr:nth-child(even) td,.var-f tbody tr:nth-child(even) th{background:rgba(255,255,255,.022)}
+  .var-f td[class*="col-"]{background:transparent}
+  .var-f .hero-col{background:color-mix(in oklab,var(--a-core) 9%,transparent)}
+  .split{display:grid;grid-template-columns:.92fr 1.32fr;gap:18px;align-items:start}
+  @media(max-width:860px){.split{grid-template-columns:1fr}}
+  .herocard{position:relative;overflow:hidden;border-radius:20px;padding:30px 26px;background:linear-gradient(170deg,color-mix(in oklab,var(--a-core) 18%,var(--panel)),var(--panel));border:1px solid color-mix(in oklab,var(--a-core) 42%,var(--line))}
+  .herocard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-blue)}
+  .herocard .tname{font-size:22px}.herocard .ttag{font-size:12px;color:var(--faint);margin:2px 0 16px;display:block}
+  .herocard ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+  .herocard li{display:flex;gap:10px;font-size:13px;color:var(--dim);line-height:1.4}
+  .herocard li .ck{flex:none;width:16px;height:16px;margin-top:1px}
 </style>
 </head>
 <body>
 <header class="top">
   <h1>Sponsorship tiers — premium options</h1>
   <p>Per-column color, a clear hero tier, and the order question answered two ways. Everything uses the site blue <b>gradient</b>.</p>
-  <p class="rec" style="max-width:840px;margin-top:14px"><b>My recommendation on order:</b> go low → high left-to-right (Tabletop → Gold → Platinum → Core), so the eye climbs to the hero tier on the right — that's the dominant pricing-table convention (Basic → Pro → Enterprise) and matches your instinct. <b>A</b> shows that. <b>B</b> keeps Core first if you'd rather anchor on the exclusive tier. Reply <b>A, B, or C</b>.</p>
+  <p class="rec" style="max-width:840px;margin-top:14px"><b>My recommendation on order:</b> go low → high left-to-right (Tabletop → Gold → Platinum → Core), so the eye climbs to the hero tier on the right — that's the dominant pricing-table convention (Basic → Pro → Enterprise) and matches your instinct. <b>A</b> shows that. <b>B</b> keeps Core first if you'd rather anchor on the exclusive tier. Reply <b>A&ndash;G</b>.</p>
 </header>
 
 <section class="grp"><div class="wrap">
@@ -98,7 +133,31 @@
   <div class="cards" id="tC"></div>
 </div></section>
 
-<p class="foot">Internal preview — tier-table-samples.html · reply A / B / C.</p>
+<section class="grp"><div class="wrap">
+  <span class="lbl">D — spotlight hero column</span>
+  <p class="desc">Same tinted layout, but Core is dialed up: deep wash, thick gradient cap, the rest go quiet. Most dramatic hierarchy.</p>
+  <div class="cmp-scroll"><table class="cmp var-d" id="tD"></table></div>
+</div></section>
+
+<section class="grp"><div class="wrap">
+  <span class="lbl">E — luxe minimal</span>
+  <p class="desc">No column washes. Hairline rules, metallic tier names, Core marked only by a gradient underline. Restrained, high-end.</p>
+  <div class="cmp-scroll"><table class="cmp var-e" id="tE"></table></div>
+</div></section>
+
+<section class="grp"><div class="wrap">
+  <span class="lbl">F — color-block headers</span>
+  <p class="desc">Each tier a bold solid header block in its own color; body stays neutral with soft row striping. High-contrast and confident.</p>
+  <div class="cmp-scroll"><table class="cmp var-f" id="tF"></table></div>
+</div></section>
+
+<section class="grp"><div class="wrap">
+  <span class="lbl">G — hero card + compact table</span>
+  <p class="desc">Core broken out as a premium card with its full benefit list; the other three sit in a tight table beside it. Sells the exclusive tier hardest.</p>
+  <div class="split" id="tG"></div>
+</div></section>
+
+<p class="foot">Internal preview — tier-table-samples.html · reply A&ndash;G.</p>
 
 <script>
 var CK='<span class="ck K"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>';
@@ -153,6 +212,17 @@ document.getElementById('tC').innerHTML=order.map(function(k){
  }).join('');
  return '<div class="tcard'+(isH?' hero':'')+'">'+(isH?'<span class="badge">★ Most exclusive</span>':'')+'<div class="tname n-'+t.cls+'">'+t.name+'</div><div class="price">'+t.tag+'</div><ul>'+lis+'</ul></div>';
 }).join('');
+buildTable('tD',['table','gold','plat','core']);
+buildTable('tE',['table','gold','plat','core']);
+buildTable('tF',['table','gold','plat','core']);
+(function(){
+  var lis=ROWS.filter(function(r){return r[1].core&&r[1].core!==0;}).map(function(r){var v=r[1].core;var txt=(v===1)?r[0]:r[0]+' &mdash; <b style="color:#fff;font-weight:600">'+v+'</b>';return '<li>'+CK.replace('K','k-core')+'<span>'+txt+'</span></li>';}).join('');
+  var card='<div class="herocard"><span class="badge">★ Most exclusive</span><div class="tname n-core">Core</div><span class="ttag">Exclusive · single partner</span><ul>'+lis+'</ul></div>';
+  var order=['table','gold','plat'];
+  var head='<thead><tr><th></th>'+order.map(function(k){var t=TIERS[k];return '<th class="col-'+t.cls+'"><div class="thd"><span class="tname n-'+t.cls+'">'+t.name+'</span><span class="ttag">'+t.tag+'</span></div></th>';}).join('')+'</tr></thead>';
+  var body='<tbody>'+ROWS.map(function(r){return '<tr><th>'+r[0]+'</th>'+order.map(function(k){return '<td class="col-'+TIERS[k].cls+'">'+cell(r[1][k],k)+'</td>';}).join('')+'</tr>';}).join('')+'</tbody>';
+  document.getElementById('tG').innerHTML=card+'<div class="cmp-scroll"><table class="cmp">'+head+body+'</table></div>';
+})();
 </script>
 </body>
 </html>
