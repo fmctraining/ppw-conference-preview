@@ -267,7 +267,7 @@
   .aud-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1040px;margin:-15px auto 40px}
   @media(max-width:820px){.aud-stats{grid-template-columns:repeat(2,1fr)}}
   .aud-tile{position:relative;overflow:hidden;min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px 16px;border-radius:18px;background:radial-gradient(120% 90% at 50% 0,color-mix(in oklab,var(--a-blue) 13%,transparent),transparent 62%),rgba(18,27,47,.6);border:1px solid var(--line-2)}
-  .aud-tile::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad-blue)}
+  .aud-tile::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad-blue);border-radius:18px 18px 0 0}
   .aud-tile .n{font-family:"Poppins",sans-serif;font-weight:900;font-size:40px;letter-spacing:-1px;background:linear-gradient(180deg,#fff,#9fb4e6);-webkit-background-clip:text;background-clip:text;color:transparent}
   .aud-tile .l{color:var(--ink-dim);font-size:13px;margin-top:-4px;line-height:1.45}
   .room-band{text-align:center;max-width:840px;margin:8px auto 0}
@@ -275,6 +275,7 @@
   .room-names{color:#dbe3f4;font-size:17px;font-weight:500;line-height:1.75;letter-spacing:.5px;text-wrap:balance;margin-bottom:10px}
   .room-more{color:#ecc6c6;font-size:14px;font-weight:600;margin:9px 0 0;letter-spacing:.2px}
   .room-src{color:var(--ink-faint);font-size:12px;margin:17px 0 0;letter-spacing:.3px}
+  .room-note{text-align:center;color:var(--ink-faint);font-size:12.5px;letter-spacing:.3px;margin:-10px auto 28px;max-width:620px}
   /* going-global band under the hero */
   .global-band{position:relative;overflow:hidden;padding:96px 0 120px 0;background:var(--bg-2)}
   .gb-waves{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);pointer-events:none}
@@ -511,6 +512,7 @@
       <h2 class="sec-title">Who's in the room</h2>
       <p class="sec-desc">Sponsoring PPW puts your product in front of a concentrated, high-intent audience of working post-production professionals, the people who spec, approve, and buy.</p>
     </div>
+    <p class="room-note">The figures in this section are from P|PW Las Vegas 2026.</p>
     <div class="aud-stats">
       <div class="aud-tile"><div class="n">1,496</div><div class="l">unique post-production professionals</div></div>
       <div class="aud-tile"><div class="n">52</div><div class="l">countries represented</div></div>
@@ -521,7 +523,6 @@
       <div class="room-eyebrow">In the room in 2026</div>
       <p class="room-names">Disney &nbsp;·&nbsp; Amazon Prime Video &nbsp;·&nbsp; Apple &nbsp;·&nbsp; NHK &nbsp;·&nbsp; MLB Network &nbsp;·&nbsp; Sony &nbsp;·&nbsp; Walmart &nbsp;·&nbsp; Deloitte &nbsp;·&nbsp; Best Buy</p>
       <p class="room-more">and hundreds more</p>
-      <p class="room-src">From P|PW Las Vegas 2026</p>
     </div>
   </div>
 </section>
