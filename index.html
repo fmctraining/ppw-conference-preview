@@ -294,6 +294,16 @@
   .city-ev{font-size:13px;letter-spacing:1.6px;text-transform:uppercase;color:var(--accent-2);font-weight:700;margin-bottom:1px;text-shadow:0 2px 10px rgba(0,0,0,.6)}
   .city-h{font-family:"Poppins",sans-serif;font-size:clamp(28px,3.6vw,44px);color:#fff;font-weight:800;margin:0 0 1px;letter-spacing:-.5px;text-shadow:0 3px 18px rgba(0,0,0,.6)}
   .city-cta{text-align:right;flex:none}
+  /* location-tile co-brand plate (top-right) */
+  .city-plate{position:absolute;top:clamp(22px,3.2vw,38px);right:clamp(22px,3.2vw,46px);z-index:2;background:rgba(8,11,18,.56);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:16px 22px 15px;display:flex;flex-direction:column;align-items:center;gap:11px;min-width:300px}
+  .city-plate .cwm{width:262px;display:block}
+  .city-plate .crule{width:100%;height:1px;background:rgba(255,255,255,.18)}
+  .clock{display:inline-flex;align-items:center;gap:9px}
+  .clock .cplus{color:#c3cde2;font-weight:300;font-size:14px;line-height:0;transform:translateY(1px)}
+  .clock img{display:block}
+  .cfmc{height:13px}
+  .cpartner{height:12px}
+  @media(max-width:820px){.city-plate{min-width:0;left:14px;right:14px;top:14px;padding:12px 16px 11px;gap:9px}.city-plate .cwm{width:min(230px,58vw)}}
   @media(max-width:780px){.city-sec{height:clamp(360px,62vh,520px)}.city-row{flex-direction:column;align-items:flex-start;gap:16px}.city-cta{text-align:left}}
   /* premium spacing pass */
   section.block{border-top:1px solid var(--line);position:relative;padding:112px 0}
@@ -596,6 +606,7 @@
 
 <a class="city-sec" href="new-york.html">
   <div class="city-img" style="background-image:url(ppw-assets/city-nyc-hi.jpg)"></div>
+  <div class="city-plate"><img class="cwm" src="ppw-assets/wm-nodate/wm-nyc.png" alt=""><div class="crule"></div><div class="clock"><img class="cfmc" src="ppw-assets/partners/fmc-notri.png"><span class="cplus">+</span><img class="cpartner" src="ppw-assets/partners/nab-ny-white.png"></div></div>
   <div class="city-info"><div class="wrap city-row">
     <div class="city-text"><div class="city-ev">at NAB Show New York</div><h2 class="city-h">Post|Production World New York</h2><p class="city-d">East Coast edition — a complete two-day program across post, production, AI, immersive media, and creator workflows.</p></div>
     <div class="city-cta"><div class="city-date">Oct 20-21, 2026</div><span class="btn"><span class="bt">Explore New York</span> <svg class="ic"><use href="#i-arrow"/></svg></span></div>
@@ -603,6 +614,7 @@
 </a>
 <a class="city-sec" href="mumbai.html">
   <div class="city-img" style="background-image:url(ppw-assets/city-mumbai-hi.jpg)"></div>
+  <div class="city-plate"><img class="cwm" src="ppw-assets/wm-nodate/wm-mumbai-sa.webp" alt=""><div class="crule"></div><div class="clock"><img class="cfmc" src="ppw-assets/partners/fmc-notri.png"><span class="cplus">+</span><img class="cpartner" src="ppw-assets/partners/bi-abis-white.png" style="height:19px"></div></div>
   <div class="city-info"><div class="wrap city-row">
     <div class="city-text"><div class="city-ev">at Broadcast India · Mumbai</div><h2 class="city-h">Post Production World • South Asia</h2><p class="city-d">A regional event bringing Post Production World Conference to this growing media market.</p></div>
     <div class="city-cta"><div class="city-date">October 22-23, 2026</div><span class="btn"><span class="bt">Explore South Asia</span> <svg class="ic"><use href="#i-arrow"/></svg></span></div>
@@ -610,6 +622,7 @@
 </a>
 <a class="city-sec" href="vegas.html">
   <div class="city-img" style="background-image:url(ppw-assets/city-vegas-hi.jpg)"></div>
+  <div class="city-plate"><img class="cwm" src="ppw-assets/wm-nodate/wm-vegas.png" alt=""><div class="crule"></div><div class="clock"><img class="cfmc" src="ppw-assets/partners/fmc-notri.png"><span class="cplus">+</span><img class="cpartner" src="ppw-assets/partners/nab-show-white.png"></div></div>
   <div class="city-info"><div class="wrap city-row">
     <div class="city-text"><div class="city-ev">at NAB Show · Las Vegas</div><h2 class="city-h">Post|Production World Las Vegas</h2><p class="city-d">The flagship event inside the world's largest media-technology trade show — and the deepest Post Production World training footprint.</p></div>
     <div class="city-cta"><div class="city-date">April 3-7, 2027</div><span class="btn"><span class="bt">Explore Las Vegas</span> <svg class="ic"><use href="#i-arrow"/></svg></span></div>
@@ -617,6 +630,7 @@
 </a>
 <a class="city-sec" href="london.html">
   <div class="city-img" style="background-image:url(ppw-assets/city-london-hi.jpg)"></div>
+  <div class="city-plate"><img class="cwm" src="ppw-assets/wm-nodate/wm-london.png" alt=""><div class="crule"></div><div class="clock"><img class="cfmc" src="ppw-assets/partners/fmc-notri.png"><span class="cplus">+</span><img class="cpartner" src="ppw-assets/mpts-logo.webp" style="height:13px"></div></div>
   <div class="city-info"><div class="wrap city-row">
     <div class="city-text"><div class="city-ev">at MPTS · London</div><h2 class="city-h">Post Production Conference • Europe</h2><p class="city-d">A European training conference built around practical, high-level education for post, broadcast, content creation, and AI workflows.</p></div>
     <div class="city-cta"><div class="city-date">May 12-13, 2027</div><span class="btn"><span class="bt">Explore Europe</span> <svg class="ic"><use href="#i-arrow"/></svg></span></div>
