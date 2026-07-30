@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Partner co-brand lockups — all tiles</title>
+<title>Location tile — logo + partner treatment</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#080b12;--line:#212d49;--ink:#eef2fb;--dim:#a3b2d2;--faint:#6b7b9e;--cyan:#2dd4ff;--amber:#f6cf6a}
+  :root{--bg:#080b12;--line:#212d49;--ink:#eef2fb;--dim:#a3b2d2;--faint:#6b7b9e;--cyan:#2dd4ff;--amber:#f6cf6a;--green:#7bd06a}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.5}
   header.top{max-width:1180px;margin:0 auto;padding:42px 22px 6px}
@@ -15,34 +15,29 @@
   .top b{color:var(--cyan)}
   .warn{max-width:1180px;margin:14px auto 0;padding:11px 16px;border:1px dashed rgba(246,207,106,.5);background:rgba(246,207,106,.08);border-radius:10px;color:var(--amber);font-size:12.7px;line-height:1.55}
   .warn b{color:#ffe6a6}
-  .grp{max-width:1180px;margin:26px auto 0;padding:26px 22px 6px;border-top:1px solid var(--line)}
-  .lbl{display:inline-block;background:var(--cyan);color:#04121a;font-weight:800;font-size:13px;letter-spacing:.5px;text-transform:uppercase;padding:6px 14px;border-radius:6px;margin-bottom:6px}
-  .desc{color:var(--faint);font-size:13px;margin:8px 0 18px;max-width:860px;line-height:1.55}
-  /* lockup primitives */
-  .lockup{display:inline-flex;align-items:center;gap:12px}
-  .lockup .plus{color:#9aa6c2;font-weight:300;font-size:15px;line-height:0;transform:translateY(-1px)}
-  .lockup img{display:block}
-  .ph{display:inline-flex;flex-direction:column;align-items:center;line-height:1;color:#fff}
-  .ph .p1{font-weight:800;letter-spacing:1px}
-  .ph .p2{font-weight:600;letter-spacing:.5px;opacity:.85}
-  .ph-note{color:var(--amber);font-size:9px;letter-spacing:.4px;margin-top:3px;text-transform:uppercase;opacity:.8}
-  /* standalone compare row */
-  .lockbox{background:#0e1422;border:1px solid var(--line);border-radius:16px;padding:30px 36px;display:inline-flex;align-items:center}
-  .lockstage{display:flex;gap:24px;flex-wrap:wrap;align-items:center}
-  .fmc-notri{height:24px}.fmc-tri{height:30px}.nab{height:15px}
+  .grp{max-width:1180px;margin:26px auto 0;padding:24px 22px 6px;border-top:1px solid var(--line)}
+  .lbl{display:inline-block;background:var(--cyan);color:#04121a;font-weight:800;font-size:13px;letter-spacing:.5px;text-transform:uppercase;padding:6px 14px;border-radius:6px;margin-bottom:16px}
   /* tiles */
   .tiles{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  @media(max-width:840px){.tiles{grid-template-columns:1fr}}
-  .tile{position:relative;height:320px;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+  @media(max-width:860px){.tiles{grid-template-columns:1fr}}
+  .tile{position:relative;height:330px;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
   .tile .img{position:absolute;inset:0;background-size:cover;background-position:center}
-  .tile .sc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,11,18,.24) 0%,transparent 30%,rgba(8,11,18,.78) 74%,rgba(8,11,18,.95))}
-  .plate{position:absolute;top:18px;right:20px;z-index:3;background:rgba(8,11,18,.56);backdrop-filter:blur(9px);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:13px 16px 12px;display:flex;flex-direction:column;align-items:center;gap:10px;min-width:248px}
-  .plate .ppw{width:206px;display:block}
-  .plate .rule{width:100%;height:1px;background:rgba(255,255,255,.16)}
-  .plate .lockup{gap:10px}
-  .plate .plus{font-size:12px}
-  .plate .fmc-notri{height:14px}.plate .nab{height:9px}
-  .plate .ph .p1{font-size:12px}.plate .ph .p2{font-size:8px}.plate .ph-note{display:none}
+  .tile .sc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,11,18,.26) 0%,transparent 32%,rgba(8,11,18,.8) 74%,rgba(8,11,18,.96))}
+  /* the plate: PPW logo -> location(green) -> rule -> powered by FMC + partner */
+  .plate{position:absolute;top:18px;right:20px;z-index:3;background:rgba(8,11,18,.58);backdrop-filter:blur(9px);border:1px solid rgba(255,255,255,.14);border-radius:13px;padding:15px 18px 13px;display:flex;flex-direction:column;align-items:center;gap:9px;min-width:262px}
+  .plate .ppw{width:186px;display:block}
+  .plate .loc{color:var(--green);font-weight:800;font-size:13.5px;letter-spacing:2.4px;text-transform:uppercase;margin-top:-1px}
+  .plate .rule{width:100%;height:1px;background:rgba(255,255,255,.17)}
+  .lockup{display:inline-flex;align-items:center;gap:8px}
+  .lockup .plus{color:#c3cde2;font-weight:300;font-size:12px;line-height:0;transform:translateY(-1px)}
+  .lockup img{display:block}
+  .fmc{height:11px}
+  .partner{height:14px}
+  /* broadcast india text placeholder */
+  .ph{display:inline-flex;flex-direction:column;align-items:center;line-height:1;color:#fff}
+  .ph .p1{font-weight:800;letter-spacing:.6px;font-size:11.5px}
+  .ph .p2{font-weight:600;letter-spacing:.4px;font-size:8.5px;opacity:.85}
+  .ph .tag{color:var(--amber);font-size:7.5px;letter-spacing:.3px;margin-top:2px;text-transform:uppercase;opacity:.85}
   .info{position:absolute;left:0;right:0;bottom:0;padding:0 26px 20px;z-index:2}
   .ev{font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);font-weight:700}
   .h{font-size:22px;font-weight:800;margin:2px 0 0;letter-spacing:-.5px}
@@ -51,63 +46,57 @@
 </head>
 <body>
 <header class="top">
-  <h1>Partner co-brand lockups — all four tiles</h1>
-  <p>Each tile: the P|PW city wordmark on the glass plate, with the <b>FMC + partner</b> lockup beneath it. NAB shrunk and the plus reduced so the two marks sit balanced. Compare across all four, then tell me the FMC version (<b>A no-triangles / B triangles</b>) and whether the balance works.</p>
+  <h1>Location tile — new logo treatment</h1>
+  <p>Your structure on every tile: the <b>clean P|PW logo</b> → <b>location name in green</b> → rule → <b>powered by FMC + the partner's real logo</b>. FMC reduced so it doesn't overpower the partner, plus tightened. Tell me if the balance + green work.</p>
 </header>
-<div class="warn"><b>Heads up:</b> I have the real <b>NAB Show</b> + <b>NAB Show New York</b> logos. I do <b>not</b> have <b>MPTS</b> (London) or <b>Broadcast India</b> (Mumbai) yet — those two are shown as text placeholders so you can judge layout. Send those two logo files (like you did NAB) and I'll drop them in. Note: the London wordmark already has "BY FMC AND MPTS" baked in, so London may not need a second lockup.</div>
+<div class="warn"><b>Only gap:</b> I now have the real <b>NAB Show</b>, <b>NAB Show New York</b>, <b>MPTS</b> and clean <b>P|PW</b> logos. I still need <b>Broadcast India</b> (Mumbai) — shown as a placeholder below. Send that one and all four are real.</div>
 
 <section class="grp">
-  <span class="lbl">FMC + NAB — balanced</span>
-  <p class="desc">Rebalanced from last version: NAB smaller, plus smaller. A = no triangles, B = triangles.</p>
-  <div class="lockstage">
-    <div class="lockbox"><div class="lockup"><img class="fmc-notri" src="ppw-assets/partners/fmc-notri.png"><span class="plus">+</span><img class="nab" src="ppw-assets/partners/nab-show-white.png"></div></div>
-    <div class="lockbox"><div class="lockup"><img class="fmc-tri" src="ppw-assets/partners/fmc-tri.png"><span class="plus">+</span><img class="nab" src="ppw-assets/partners/nab-show-white.png"></div></div>
-  </div>
-</section>
-
-<section class="grp">
-  <span class="lbl">All four tiles (FMC no-triangles)</span>
-  <p class="desc">New York + Vegas use the real NAB logos; London + Mumbai use placeholders until you send those two.</p>
+  <span class="lbl">All four tiles</span>
   <div class="tiles">
     <div class="tile">
       <div class="img" style="background-image:url(ppw-assets/city-nyc-hi.jpg)"></div><div class="sc"></div>
       <div class="plate">
-        <img class="ppw" src="ppw-assets/wm-nyc.png" alt="">
+        <img class="ppw" src="ppw-assets/ppw-logo.webp" alt="">
+        <div class="loc">New York</div>
         <div class="rule"></div>
-        <div class="lockup"><img class="fmc-notri" src="ppw-assets/partners/fmc-notri.png"><span class="plus">+</span><img class="nab" src="ppw-assets/partners/nab-ny-white.png"></div>
+        <div class="lockup"><img class="fmc" src="ppw-assets/partners/fmc-notri.png"><span class="plus">+</span><img class="partner" src="ppw-assets/partners/nab-ny-white.png"></div>
       </div>
       <div class="info"><div class="ev">at NAB Show New York</div><div class="h">Post|Production World New York</div></div>
     </div>
     <div class="tile">
       <div class="img" style="background-image:url(ppw-assets/city-vegas-hi.jpg)"></div><div class="sc"></div>
       <div class="plate">
-        <img class="ppw" src="ppw-assets/wm-vegas.png" alt="">
+        <img class="ppw" src="ppw-assets/ppw-logo.webp" alt="">
+        <div class="loc">Las Vegas</div>
         <div class="rule"></div>
-        <div class="lockup"><img class="fmc-notri" src="ppw-assets/partners/fmc-notri.png"><span class="plus">+</span><img class="nab" src="ppw-assets/partners/nab-show-white.png"></div>
+        <div class="lockup"><img class="fmc" src="ppw-assets/partners/fmc-notri.png"><span class="plus">+</span><img class="partner" src="ppw-assets/partners/nab-show-white.png"></div>
       </div>
       <div class="info"><div class="ev">at NAB Show · Las Vegas</div><div class="h">Post|Production World Las Vegas</div></div>
     </div>
     <div class="tile">
       <div class="img" style="background-image:url(ppw-assets/city-london-hi.jpg)"></div><div class="sc"></div>
       <div class="plate">
-        <img class="ppw" src="ppw-assets/wm-london.png" alt="">
+        <img class="ppw" src="ppw-assets/ppw-logo.webp" alt="">
+        <div class="loc">Europe</div>
         <div class="rule"></div>
-        <div class="lockup"><img class="fmc-notri" src="ppw-assets/partners/fmc-notri.png"><span class="plus">+</span><span class="ph"><span class="p1" style="font-size:15px">MPTS</span><span class="ph-note">placeholder</span></span></div>
+        <div class="lockup"><img class="fmc" src="ppw-assets/partners/fmc-notri.png"><span class="plus">+</span><img class="partner" src="ppw-assets/mpts-logo.webp" style="height:16px"></div>
       </div>
-      <div class="info"><div class="ev">at MPTS · London</div><div class="h">Post Production Conference · Europe</div></div>
+      <div class="info"><div class="ev">at MPTS · London</div><div class="h">Post|Production World · Europe</div></div>
     </div>
     <div class="tile">
       <div class="img" style="background-image:url(ppw-assets/city-mumbai-hi.jpg)"></div><div class="sc"></div>
       <div class="plate">
-        <img class="ppw" src="ppw-assets/wm-mumbai-sa.webp" alt="">
+        <img class="ppw" src="ppw-assets/ppw-logo.webp" alt="">
+        <div class="loc">South Asia</div>
         <div class="rule"></div>
-        <div class="lockup"><img class="fmc-notri" src="ppw-assets/partners/fmc-notri.png"><span class="plus">+</span><span class="ph"><span class="p1" style="font-size:13px">BROADCAST</span><span class="p2" style="font-size:10px">INDIA</span><span class="ph-note">placeholder</span></span></div>
+        <div class="lockup"><img class="fmc" src="ppw-assets/partners/fmc-notri.png"><span class="plus">+</span><span class="ph"><span class="p1">BROADCAST</span><span class="p2">INDIA</span><span class="tag">placeholder</span></span></div>
       </div>
       <div class="info"><div class="ev">at Broadcast India · Mumbai</div><div class="h">Post|Production World · South Asia</div></div>
     </div>
   </div>
 </section>
 
-<p class="foot">Internal preview — cobrand-lockup.html · reply A or B + send MPTS / Broadcast India logos.</p>
+<p class="foot">Internal preview — cobrand-lockup.html · send the Broadcast India logo to finish.</p>
 </body>
 </html>
