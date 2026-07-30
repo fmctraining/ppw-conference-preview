@@ -48,14 +48,14 @@
   .dd-btn .sic{width:15px;height:15px;transition:transform .2s}
   .dd:hover .dd-btn{color:var(--ink)}
   .dd:hover .dd-btn .sic{transform:rotate(180deg)}
-  .dd-menu{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%) translateY(8px);min-width:288px;background:var(--panel-2);border:1px solid var(--line);border-radius:16px;padding:8px;opacity:0;visibility:hidden;transition:.18s;box-shadow:0 24px 60px rgba(0,0,0,.45);z-index:70}
+  .dd-menu{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%) translateY(8px);min-width:340px;background:var(--panel-2);border:1px solid var(--line);border-radius:16px;padding:8px;opacity:0;visibility:hidden;transition:.18s;box-shadow:0 24px 60px rgba(0,0,0,.45);z-index:70}
   .dd:hover .dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
   .dd-menu::before{content:"";position:absolute;top:-18px;left:0;right:0;height:18px}
   .dd-menu a{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 14px;border-radius:11px;text-decoration:none}
   .dd-menu a:hover{background:rgba(255,255,255,.05)}
   .dd-menu .lft{display:flex;align-items:center;gap:11px}
   .dd-menu .sic{width:16px;height:16px;color:var(--accent-2)}
-  .dd-menu .c{font-weight:700;font-size:14px;color:var(--ink)}
+  .dd-menu .c{font-weight:700;font-size:14px;color:var(--ink);white-space:nowrap}
   .dd-menu .d{font-size:12.5px;color:var(--ink-faint);white-space:nowrap}
   .dd-menu .all{justify-content:center;color:var(--accent-2);font-weight:700;font-size:13px;border-top:1px solid var(--line);border-radius:0 0 11px 11px;margin-top:2px}
   .seg.day button.active{background:linear-gradient(115deg,#8b5cf6,#5b8def)}
@@ -327,10 +327,10 @@
       <div class="dd">
         <button class="dd-btn" aria-haspopup="true">Locations <span style="font-size:11px">▾</span></button>
         <div class="dd-menu" role="menu">
-          <a href="new-york.html"><span class="lft"><svg class="sic"><use href="#i-pin"/></svg><span class="c">New York</span></span><span class="d">Oct 20-21, 2026</span></a>
-          <a href="mumbai.html"><span class="lft"><svg class="sic"><use href="#i-pin"/></svg><span class="c">Mumbai · South Asia</span></span><span class="d">Oct 22-23, 2026</span></a>
-          <a href="vegas.html"><span class="lft"><svg class="sic"><use href="#i-pin"/></svg><span class="c">Las Vegas</span></span><span class="d">Apr 3-7, 2027</span></a>
-          <a href="london.html"><span class="lft"><svg class="sic"><use href="#i-pin"/></svg><span class="c">London · Europe</span></span><span class="d">May 12-13, 2027</span></a>
+          <a href="new-york.html"><span class="lft"><svg class="sic" style="color:#5b9dff"><use href="#i-pin"/></svg><span class="c">New York</span></span><span class="d">Oct 20-21, 2026</span></a>
+          <a href="mumbai.html"><span class="lft"><svg class="sic" style="color:#43d9b8"><use href="#i-pin"/></svg><span class="c">Mumbai · South Asia</span></span><span class="d">Oct 22-23, 2026</span></a>
+          <a href="vegas.html"><span class="lft"><svg class="sic" style="color:#ff8a4c"><use href="#i-pin"/></svg><span class="c">Las Vegas</span></span><span class="d">Apr 3-7, 2027</span></a>
+          <a href="london.html"><span class="lft"><svg class="sic" style="color:#b794f6"><use href="#i-pin"/></svg><span class="c">London · Europe</span></span><span class="d">May 12-13, 2027</span></a>
         </div>
       </div>
       <a href="index.html#attendees">Who Attends</a>

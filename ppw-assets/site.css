@@ -47,7 +47,7 @@ header.nav{position:sticky;top:0;z-index:60;background:rgba(8,11,18,.8);backdrop
 .dd-menu a:hover{background:rgba(255,255,255,.05)}
 .dd-menu .lft{display:flex;align-items:center;gap:11px}
 .dd-menu .ic{width:16px;height:16px;color:var(--accent-2)}
-.dd-menu .c{font-weight:700;font-size:14px;color:var(--ink)}
+.dd-menu .c{font-weight:700;font-size:14px;color:var(--ink);white-space:nowrap}
 .dd-menu .d{font-size:12.5px;color:var(--ink-faint);white-space:nowrap}
 .dd-menu .all{justify-content:center;color:var(--accent-2);font-weight:700;font-size:13px;margin-top:2px;border-top:1px solid var(--line);border-radius:0 0 11px 11px}
 .btn{display:inline-flex;align-items:center;gap:7px;background:var(--grad);color:#fff;text-decoration:none;font-weight:700;font-size:14px;
@@ -227,7 +227,7 @@ header.nav .btn{padding-top:10px;padding-bottom:10px}
 .edition-intro{padding-bottom:80px}
 .btn .bt{transform:translateY(-1px)}
 
-.dd-menu{min-width:300px}
+.dd-menu{min-width:340px}
 .dd-menu .c{white-space:nowrap}
 .partner-note a{margin-left:7px}
 

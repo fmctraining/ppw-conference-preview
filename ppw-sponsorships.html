@@ -36,14 +36,14 @@
   .dd-btn .ic{width:15px;height:15px;transition:transform .2s}
   .dd:hover .dd-btn,.dd:focus-within .dd-btn{color:var(--ink)}
   .dd:hover .dd-btn .ic{transform:rotate(180deg)}
-  .dd-menu{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%) translateY(8px);min-width:288px;background:var(--panel-2);border:1px solid var(--line-2);border-radius:16px;padding:8px;opacity:0;visibility:hidden;transition:.18s ease;box-shadow:var(--shadow);z-index:70}
+  .dd-menu{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%) translateY(8px);min-width:340px;background:var(--panel-2);border:1px solid var(--line-2);border-radius:16px;padding:8px;opacity:0;visibility:hidden;transition:.18s ease;box-shadow:var(--shadow);z-index:70}
   .dd:hover .dd-menu,.dd:focus-within .dd-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
   .dd-menu::before{content:"";position:absolute;top:-18px;left:0;right:0;height:18px}
   .dd-menu a{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 14px;border-radius:11px;text-decoration:none}
   .dd-menu a:hover{background:rgba(255,255,255,.05)}
   .dd-menu .lft{display:flex;align-items:center;gap:11px}
   .dd-menu .ic{width:16px;height:16px;color:var(--accent-2)}
-  .dd-menu .c{font-weight:700;font-size:14px;color:var(--ink)}
+  .dd-menu .c{font-weight:700;font-size:14px;color:var(--ink);white-space:nowrap}
   .dd-menu .d{font-size:12.5px;color:var(--ink-faint);white-space:nowrap}
   .dd-menu .all{justify-content:center;color:var(--accent-2);font-weight:700;font-size:13px;margin-top:2px;border-top:1px solid var(--line);border-radius:0 0 11px 11px}
   .btn:hover{transform:translateY(-1px);box-shadow:0 11px 26px rgba(47,95,224,.42),inset 0 1px 0 rgba(255,255,255,.32)}
@@ -327,14 +327,14 @@
       <div class="dd">
         <button class="dd-btn" aria-haspopup="true">Locations <svg class="ic"><use href="#i-chev"/></svg></button>
         <div class="dd-menu" role="menu">
-          <a href="new-york.html" role="menuitem"><span class="lft"><svg class="ic"><use href="#i-pin"/></svg><span class="c">New York</span></span><span class="d">Oct 20-21, 2026</span></a>
-          <a href="mumbai.html" role="menuitem"><span class="lft"><svg class="ic"><use href="#i-pin"/></svg><span class="c">Mumbai · South Asia</span></span><span class="d">Oct 22-23, 2026</span></a>
-          <a href="vegas.html" role="menuitem"><span class="lft"><svg class="ic"><use href="#i-pin"/></svg><span class="c">Las Vegas</span></span><span class="d">Apr 3-7, 2027</span></a>
-          <a href="london.html" role="menuitem"><span class="lft"><svg class="ic"><use href="#i-pin"/></svg><span class="c">London · Europe</span></span><span class="d">May 12-13, 2027</span></a>
+          <a href="new-york.html" role="menuitem"><span class="lft"><svg class="ic" style="color:#5b9dff"><use href="#i-pin"/></svg><span class="c">New York</span></span><span class="d">Oct 20-21, 2026</span></a>
+          <a href="mumbai.html" role="menuitem"><span class="lft"><svg class="ic" style="color:#43d9b8"><use href="#i-pin"/></svg><span class="c">Mumbai · South Asia</span></span><span class="d">Oct 22-23, 2026</span></a>
+          <a href="vegas.html" role="menuitem"><span class="lft"><svg class="ic" style="color:#ff8a4c"><use href="#i-pin"/></svg><span class="c">Las Vegas</span></span><span class="d">Apr 3-7, 2027</span></a>
+          <a href="london.html" role="menuitem"><span class="lft"><svg class="ic" style="color:#b794f6"><use href="#i-pin"/></svg><span class="c">London · Europe</span></span><span class="d">May 12-13, 2027</span></a>
         </div>
       </div>
       <a href="index.html#attendees">Who Attends</a>
-      <a href="ppw-sponsorships.html" class="active">Sponsorship</a>
+      <a href="ppw-sponsorships.html">Sponsorship</a>
     </nav>
   </div>
 </header>
@@ -510,7 +510,7 @@
     <div class="sec-head center">
       <div class="sec-kicker">The audience</div>
       <h2 class="sec-title">Who's in the room</h2>
-      <p class="sec-desc">Sponsoring PPW puts your product in front of a concentrated, high-intent audience of working post-production professionals, the people who spec, approve, and buy.</p>
+      <p class="sec-desc">PPW Las Vegas is the industry's only opportunity to place your product in front of a concentrated, high-intent audience of working post-production professionals &mdash; the people who spec, approve, and buy.</p>
     </div>
     <p class="room-note">The figures in this section are from P|PW Las Vegas 2026.</p>
     <div class="aud-stats">
