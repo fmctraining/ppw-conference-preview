@@ -80,7 +80,7 @@ header.nav .btn{padding:10px 18px;font-size:13.5px;margin-left:10px}
 section.block{padding:106px 0;border-top:1px solid var(--line)}
 .sec-head{margin-bottom:26px;max-width:760px}
 .sec-head.center{margin-inline:auto;text-align:center}
-.sec-kicker{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent-2);font-weight:700}
+.sec-kicker{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#87dffa;font-weight:700;margin-bottom:18px}
 .sec-title{font-size:clamp(28px,4vw,42px);margin-top:18px;font-weight:700;letter-spacing:-.8px;line-height:1.24;padding-bottom:.14em}
 .sec-desc{color:var(--ink-dim);margin-top:14px;font-size:16.5px;line-height:1.6}
 .sec-head.center .sec-desc{max-width:600px;margin-inline:auto;text-wrap:balance}
