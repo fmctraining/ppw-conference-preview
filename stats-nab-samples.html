@@ -25,12 +25,17 @@
   .num{font-family:"Poppins";font-weight:800;letter-spacing:-1px;line-height:1;color:#fff}
   .cap{text-transform:uppercase;font-weight:700;letter-spacing:1.2px;color:var(--dim);line-height:1.25}
 
-  /* N1 — NAB exact: icon left, number + caps label stacked right, 3-up */
-  .n1{display:grid;grid-template-columns:repeat(3,1fr);gap:44px 30px;max-width:960px;margin:0 auto}
-  @media(max-width:760px){.n1{grid-template-columns:1fr 1fr;gap:34px 18px}}
-  .n1 .cell{display:flex;align-items:center;gap:18px}
-  .n1 .i{width:58px;height:58px;flex:none;color:#eaf1ff;opacity:.92}
-  .n1 .num{font-size:38px}.n1 .cap{font-size:12.5px;margin-top:5px}
+  /* N1 variations — all four on ONE row (fixes the straggler) */
+  .n1row{display:grid;grid-template-columns:repeat(4,1fr);gap:0 8px;max-width:1020px;margin:0 auto}
+  @media(max-width:760px){.n1row{grid-template-columns:1fr 1fr;gap:30px 14px}}
+  .n1row .cell{display:flex;align-items:center;gap:14px;padding:0 6px}
+  .n1row .i{width:46px;height:46px;flex:none;color:#eaf1ff;opacity:.9}
+  .n1row .num{font-size:31px}.n1row .cap{font-size:11px;margin-top:4px}
+  .n1v2 .cell+.cell{border-left:1px solid var(--line);padding-left:20px}
+  .n1v3 .cell{flex-direction:column;text-align:center;gap:10px}
+  .n1v3 .i{width:42px;height:42px}.n1v3 .num{font-size:34px}
+  .n1v4 .cell{flex-direction:column;align-items:flex-start;gap:6px}
+  .n1v4 .i{width:30px;height:30px;color:#87dffa}.n1v4 .num{font-size:40px}.n1v4 .cap{font-size:11px}
 
   /* N2 — icon top-centered, 4 across */
   .n2{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;max-width:1000px;margin:0 auto;text-align:center}
@@ -55,11 +60,29 @@
 </header>
 
 <section class="grp"><div class="wrap">
-  <span class="lbl">N1 — icon left, number + label (closest to NAB)</span>
-  <p class="desc">Thin-line icon beside a big number and an uppercase label. No cards. Reads like a report.</p>
+  <span class="lbl">N1 · V1 — icon left, all four on one row</span>
+  <p class="desc">The straggler fix: four across in a single row, smaller icon so it fits cleanly.</p>
   <div class="stitle">Who's in the room</div>
-  <div class="snote">Attendance data from P|PW Las Vegas 2026.</div>
-  <div class="n1" id="n1"></div>
+  <div class="snote">From P|PW Las Vegas 2026</div>
+  <div class="n1row n1v1" id="n1v1"></div>
+</div></section>
+
+<section class="grp"><div class="wrap">
+  <span class="lbl">N1 · V2 — divider rules between stats</span>
+  <p class="desc">Same row with thin vertical rules between each stat. Feels like a press/report bar.</p>
+  <div class="n1row n1v2" id="n1v2"></div>
+</div></section>
+
+<section class="grp"><div class="wrap">
+  <span class="lbl">N1 · V3 — icon on top, centered</span>
+  <p class="desc">Icon above the number, everything centered. Cleanest symmetry.</p>
+  <div class="n1row n1v3" id="n1v3"></div>
+</div></section>
+
+<section class="grp"><div class="wrap">
+  <span class="lbl">N1 · V4 — left-aligned, big number, small blue icon</span>
+  <p class="desc">Editorial: number leads, small blue icon, tight label. More design-forward.</p>
+  <div class="n1row n1v4" id="n1v4"></div>
 </div></section>
 
 <section class="grp"><div class="wrap">
@@ -94,7 +117,8 @@ var STATS=[
  ['map','6','Continents in the room']
 ];
 function svg(k){return '<svg class="i" viewBox="0 0 24 24">'+I[k]+'</svg>';}
-document.getElementById('n1').innerHTML=STATS.map(s=>'<div class="cell">'+svg(s[0])+'<div><div class="num">'+s[1]+'</div><div class="cap">'+s[2]+'</div></div></div>').join('');
+["n1v1","n1v2"].forEach(function(id){document.getElementById(id).innerHTML=STATS.map(function(s){return '<div class="cell">'+svg(s[0])+'<div><div class="num">'+s[1]+'</div><div class="cap">'+s[2]+'</div></div></div>';}).join('');});
+["n1v3","n1v4"].forEach(function(id){document.getElementById(id).innerHTML=STATS.map(function(s){return '<div class="cell">'+svg(s[0])+'<div class="num">'+s[1]+'</div><div class="cap">'+s[2]+'</div></div>';}).join('');});
 document.getElementById('n2').innerHTML=STATS.map(s=>'<div class="cell">'+svg(s[0])+'<div class="num">'+s[1]+'</div><div class="cap">'+s[2]+'</div></div>').join('');
 document.getElementById('n3').innerHTML=STATS.map(s=>'<div class="cell">'+svg(s[0])+'<div class="num">'+s[1]+'</div><div class="cap">'+s[2]+'</div></div>').join('');
 </script>
