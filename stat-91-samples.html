@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>91% satisfaction — 5 featured-box treatments</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0a0e17;--panel:#131c30;--panel2:#18223a;--line:#243150;--line2:#31406a;--ink:#eaf0ff;--dim:#9fb0d4;--faint:#6c7c9e;--gold:#f5c451;--grad:linear-gradient(100deg in oklch,oklch(86% .10 225),oklch(80% .12 288))}
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1200px 600px at 70% -10%,rgba(59,130,246,.16),transparent 60%),var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.5}
+  header.top{max-width:1080px;margin:0 auto;padding:42px 22px 6px}
+  h1{font-size:26px;font-weight:800;margin:0 0 6px}
+  .top p{color:var(--faint);font-size:14px;margin:0;max-width:860px;line-height:1.6}
+  .grp{max-width:1080px;margin:0 auto;padding:34px 22px 6px}
+  .lbl{display:inline-block;background:var(--grad);color:#04121a;font-weight:800;font-size:12.5px;letter-spacing:.4px;text-transform:uppercase;padding:6px 14px;border-radius:7px;margin-bottom:16px}
+  .stars{color:var(--gold);font-size:16px;letter-spacing:3px}
+  .q{font-style:italic;color:#eaf1ff;text-wrap:pretty}
+  .role{font-size:10.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--faint)}
+  .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .card{background:linear-gradient(165deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px}
+  /* ===== S1 — giant % left + featured quote right ===== */
+  .s1{display:grid;grid-template-columns:.85fr 1.4fr;gap:18px;align-items:stretch}
+  @media(max-width:760px){.s1{grid-template-columns:1fr}}
+  .s1 .stat{border:1px solid var(--line2);border-radius:18px;background:linear-gradient(160deg,rgba(124,58,237,.16),rgba(45,130,246,.05));padding:34px 26px;display:flex;flex-direction:column;justify-content:center}
+  .s1 .big{font-family:"Poppins";font-weight:900;font-size:74px;line-height:.95;letter-spacing:-2px}
+  .s1 .big sup{font-size:34px;font-weight:800;vertical-align:12px;margin-left:2px}
+  .s1 .sl{color:var(--dim);font-size:14px;margin-top:10px;max-width:220px}
+  .s1 .quote{padding:34px 38px;display:flex;flex-direction:column;justify-content:center}
+  .s1 .quote .q{font-size:22px;line-height:1.4;font-weight:500;margin:12px 0 14px}
+  /* ===== S2 — ring dial + quote ===== */
+  .s2{display:grid;grid-template-columns:.8fr 1.45fr;gap:18px;align-items:stretch}
+  @media(max-width:760px){.s2{grid-template-columns:1fr}}
+  .s2 .stat{border:1px solid var(--line2);border-radius:18px;background:var(--panel);padding:30px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+  .ring{width:150px;height:150px;border-radius:50%;background:conic-gradient(oklch(84% .12 250) 0 91.75%,rgba(255,255,255,.07) 91.75% 100%);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .ring i{width:118px;height:118px;border-radius:50%;background:var(--panel);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:30px}
+  .s2 .sl{color:var(--dim);font-size:14px;max-width:210px}
+  .s2 .quote{padding:32px 36px;display:flex;flex-direction:column;justify-content:center}
+  .s2 .quote .q{font-size:20px;line-height:1.42;margin:10px 0 12px}
+  /* ===== S3 — banner strip above quotes ===== */
+  .s3 .strip{display:flex;align-items:center;gap:22px;border:1px solid var(--line2);border-left:4px solid transparent;border-image:var(--grad) 1;border-radius:16px;background:linear-gradient(120deg,rgba(124,58,237,.14),transparent 60%);padding:22px 30px;margin-bottom:16px}
+  .s3 .strip .big{font-weight:900;font-size:52px;letter-spacing:-1.5px;line-height:1}
+  .s3 .strip .t{font-size:15px;color:var(--dim)}.s3 .strip .t b{color:#fff}
+  .s3 .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:760px){.s3 .row{grid-template-columns:1fr}}
+  .s3 .row .card{padding:22px 24px}.s3 .q{font-size:14.5px;margin:8px 0 10px;line-height:1.5}
+  /* ===== S4 — quote card, % as side accent ===== */
+  .s4 .card{display:flex;gap:0;overflow:hidden;align-items:stretch}
+  @media(max-width:640px){.s4 .card{flex-direction:column}}
+  .s4 .acc{flex:none;width:34%;background:linear-gradient(160deg,rgba(124,58,237,.28),rgba(45,130,246,.08));display:flex;flex-direction:column;justify-content:center;padding:34px 28px;border-right:1px solid var(--line2)}
+  @media(max-width:640px){.s4 .acc{width:100%;border-right:0;border-bottom:1px solid var(--line2)}}
+  .s4 .acc .big{font-weight:900;font-size:62px;line-height:.95;letter-spacing:-2px}
+  .s4 .acc .sl{color:var(--dim);font-size:13px;margin-top:8px}
+  .s4 .body{padding:34px 38px;display:flex;flex-direction:column;justify-content:center}
+  .s4 .body .q{font-size:21px;line-height:1.4;font-weight:500;margin:10px 0 12px}
+  /* ===== S5 — stat box leads a 3-across row ===== */
+  .s5{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:14px}
+  @media(max-width:820px){.s5{grid-template-columns:1fr}}
+  .s5 .stat{border:1px solid var(--line2);border-radius:16px;background:linear-gradient(160deg,rgba(124,58,237,.18),rgba(45,130,246,.05));padding:28px 24px;display:flex;flex-direction:column;justify-content:center}
+  .s5 .stat .big{font-weight:900;font-size:56px;letter-spacing:-1.5px;line-height:1}
+  .s5 .stat .sl{color:var(--dim);font-size:13.5px;margin-top:8px}
+  .s5 .card{padding:22px 24px;display:flex;flex-direction:column}
+  .s5 .q{font-size:14.5px;margin:8px 0 12px;line-height:1.5;flex:1}
+  .foot{max-width:1080px;margin:0 auto;padding:30px 22px 80px;color:var(--faint);font-size:12.5px}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>91.75% satisfaction — featured-box, 5 ways</h1>
+  <p>Bringing back the big percentage next to the testimonials (Elise approved 91.75% for publication). All left-anchored, none centered. Reply 1–5.</p>
+</header>
+
+<!-- S1 -->
+<section class="grp"><span class="lbl">1 — giant % + featured quote</span>
+  <div class="s1">
+    <div class="stat"><div class="big grad">91.75<sup>%</sup></div><div class="sl">attendee satisfaction on content &amp; presenters</div></div>
+    <div class="card quote"><span class="stars">★★★★★</span><p class="q">"One of the best sessions that I attended at Post|Production World — super useful information that was all new to me. Thank you!"</p><span class="role">Production-Safe AI session · P|PW Las Vegas 2026</span></div>
+  </div>
+</section>
+
+<!-- S2 -->
+<section class="grp"><span class="lbl">2 — ring dial + quote</span>
+  <div class="s2">
+    <div class="stat"><div class="ring"><i class="grad">91.75%</i></div><div class="sl">attendee satisfaction on content &amp; presenters</div></div>
+    <div class="card quote"><span class="stars">★★★★★</span><p class="q">"One of the best sessions that I attended at Post|Production World — super useful information that was all new to me. Thank you!"</p><span class="role">Production-Safe AI session · P|PW Las Vegas 2026</span></div>
+  </div>
+</section>
+
+<!-- S3 -->
+<section class="grp"><span class="lbl">3 — stat banner over quotes</span>
+  <div class="s3">
+    <div class="strip"><div class="big grad">91.75%</div><div class="t"><b>attendee satisfaction</b> on content &amp; presenters — P|PW Las Vegas 2026</div></div>
+    <div class="row">
+      <div class="card"><span class="stars">★★★★★</span><p class="q">"Best session I've attended yet. Jeff is the high watermark of post education."</p><span class="role">Compression · Jeff Greenberg</span></div>
+      <div class="card"><span class="stars">★★★★★</span><p class="q">"Amazing shortcuts. Most useful session of my whole NAB course load."</p><span class="role">Premiere same-day editing</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- S4 -->
+<section class="grp"><span class="lbl">4 — quote card with % accent panel</span>
+  <div class="s4"><div class="card"><div class="acc"><div class="big grad">91.75%</div><div class="sl">attendee satisfaction, content &amp; presenters</div></div>
+    <div class="body"><span class="stars">★★★★★</span><p class="q">"One of the best sessions that I attended at Post|Production World — super useful information that was all new to me. Thank you!"</p><span class="role">Production-Safe AI session · P|PW Las Vegas 2026</span></div></div>
+  </div>
+</section>
+
+<!-- S5 -->
+<section class="grp"><span class="lbl">5 — stat box leads a 3-across row</span>
+  <div class="s5">
+    <div class="stat"><div class="big grad">91.75%</div><div class="sl">attendee satisfaction on content &amp; presenters · P|PW Las Vegas 2026</div></div>
+    <div class="card"><span class="stars">★★★★★</span><p class="q">"One of the best sessions I attended — super useful information, all new to me."</p><span class="role">Production-Safe AI session</span></div>
+    <div class="card"><span class="stars">★★★★★</span><p class="q">"Jeff is the high watermark of post education."</p><span class="role">Compression · Jeff Greenberg</span></div>
+  </div>
+</section>
+
+<p class="foot">Internal preview — stat-91-samples.html · reply 1 / 2 / 3 / 4 / 5</p>
+</body>
+</html>
