@@ -284,6 +284,12 @@
   .fb-bar .l{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint)}
   .fb-bar .r{font-size:13px;font-weight:700;color:var(--accent-2)}
   .fb4{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+  .fb-top{display:grid;grid-template-columns:.72fr 1.45fr;gap:14px;align-items:stretch}
+  @media(max-width:760px){.fb-top{grid-template-columns:1fr}}
+  .fb-stat{border:1px solid rgba(255,255,255,.1);border-radius:14px;background:linear-gradient(160deg,rgba(124,58,237,.2),rgba(45,130,246,.05));padding:30px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  .fb-big{font-family:"Poppins";font-weight:900;font-size:60px;line-height:.95;letter-spacing:-2px;background:linear-gradient(100deg in oklch,oklch(86% .10 225),oklch(80% .12 288));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .fb-big sup{font-size:27px;vertical-align:13px;margin-left:1px}
+  .fb-sl{color:var(--ink-dim);font-size:13.5px;margin-top:10px;max-width:200px;line-height:1.4}
   .fb-card{background:rgba(8,12,22,.62);backdrop-filter:blur(3px);border:1px solid rgba(255,255,255,.09);border-radius:14px}
   .fb-card.feat{padding:36px 40px;text-align:center;display:flex;flex-direction:column;align-items:center}
   .fb-card.feat .q{font-size:22px;line-height:1.42;font-weight:400;margin:16px 0 14px;color:#fff;font-style:italic;text-wrap:pretty}
@@ -429,7 +435,7 @@
   <div class="wrap">
     <div class="sec-head center"><div class="sec-kicker">What attendees say</div><h2 class="sec-title fb-title">Heard from the <span class="hl">room.</span></h2><p class="sec-desc" style="margin-inline:auto">Attendee feedback from P|PW Las Vegas 2026.</p></div>
     <div class="fb4">
-      <div class="fb-card feat"><span class="fb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p class="q">"One of the best sessions that I attended at Post|Production World — super useful information that was all new to me. Thank you!"</p><span class="role">Production-Safe AI session · P|PW Las Vegas 2026</span></div>
+      <div class="fb-top"><div class="fb-stat"><div class="fb-big">91.75<sup>%</sup></div><div class="fb-sl">attendee satisfaction on content &amp; presenters</div></div><div class="fb-card feat"><span class="fb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p class="q">"One of the best sessions that I attended at Post|Production World — super useful information that was all new to me. Thank you!"</p><span class="role">Production-Safe AI session · P|PW Las Vegas 2026</span></div></div>
       <div class="fb-two">
         <div class="fb-card"><span class="fb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p class="q">"Best session I've attended yet. Jeff is the high watermark of post education."</p><span class="role">Compression session with Jeff Greenberg · P|PW Las Vegas 2026</span></div>
         <div class="fb-card"><span class="fb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p class="q">"Amazing shortcuts. Most useful session of my whole NAB course load."</p><span class="role">Premiere same-day editing session · P|PW Las Vegas 2026</span></div>
