@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horizontal location tiles — 5 layouts</title>
+<title>Horizontal location tiles — CTA-right layouts</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{--bg:#080b12;--line:#212d49;--ink:#eef2fb;--dim:#a3b2d2;--faint:#6b7b9e;--cyan:#87dffa}
@@ -12,100 +12,80 @@
   header.top{max-width:1180px;margin:0 auto;padding:40px 22px 4px}
   h1{font-size:26px;font-weight:800;margin:0 0 6px}
   .top p{color:var(--faint);font-size:14px;margin:0;max-width:900px;line-height:1.6}
-  .lbl{position:absolute;top:14px;left:0;z-index:5;background:var(--cyan);color:#04121a;font-weight:800;font-size:12px;letter-spacing:.4px;text-transform:uppercase;padding:6px 14px;border-radius:0 8px 8px 0}
+  .lbl{position:absolute;top:14px;left:0;z-index:6;background:var(--cyan);color:#04121a;font-weight:800;font-size:12px;letter-spacing:.4px;text-transform:uppercase;padding:6px 14px;border-radius:0 8px 8px 0}
   .band{position:relative;height:430px;overflow:hidden;margin-top:34px}
   .band .img{position:absolute;inset:0;background:url(ppw-assets/city-nyc-hi.jpg) center/cover;transition:transform .7s ease}
   .band:hover .img{transform:scale(1.04)}
-  .wrap{max-width:1180px;margin:0 auto;padding:0 40px;height:100%;position:relative;z-index:2}
-  /* shared bits */
+  .wrap{max-width:1180px;margin:0 auto;padding:0 44px;height:100%;position:relative;z-index:2}
   .wm{display:block;filter:drop-shadow(0 4px 16px rgba(0,0,0,.7))}
-  .lk{display:inline-flex;align-items:center;gap:9px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.85))}
+  .lk{display:inline-flex;align-items:center;gap:9px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.85));margin-top:10px}
   .lk .by{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:#e4ebfa;font-weight:600}
   .lk .fmc{height:14px;display:block}.lk .plus{color:#dbe3f4;font-weight:300;font-size:13px;line-height:0;transform:translateY(1px)}.lk .ptnr{height:12px;display:block}
+  .brand{display:flex;flex-direction:column;align-items:flex-start}
   .city{font-weight:800;letter-spacing:-.6px;color:#fff;margin:0;text-shadow:0 3px 18px rgba(0,0,0,.65);line-height:1}
-  .date{color:var(--cyan);font-weight:700;letter-spacing:.4px}
-  .cta{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(180deg,#4f7df9,#2f5fe0);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:13px 22px;border-radius:999px;box-shadow:0 10px 26px rgba(47,95,224,.4)}
+  .ev{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-bottom:6px}
+  /* CTA cluster: date ABOVE button, right-aligned */
+  .cta-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:11px}
+  .cta-wrap .date{color:#fff;font-weight:700;font-size:18px;letter-spacing:.2px;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+  .cta{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(180deg,#4f7df9,#2f5fe0);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:13px 22px;border-radius:999px;box-shadow:0 10px 26px rgba(47,95,224,.42)}
   .cta svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2}
-  /* ============ A — centered stack ============ */
-  .A .sc{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 30%,transparent,rgba(6,9,18,.6)),linear-gradient(180deg,rgba(6,9,18,.55),transparent 34%,rgba(6,9,18,.72))}
-  .A .wrap{display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding-top:40px;padding-bottom:38px;text-align:center}
-  .A .top{display:flex;flex-direction:column;align-items:center;gap:12px}
-  .A .wm{width:230px}.A .city{font-size:34px}.A .date{margin:3px 0 16px;font-size:13.5px}
-  /* ============ B — left editorial ============ */
-  .B .sc{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,9,18,.88),rgba(6,9,18,.35) 52%,transparent 78%)}
-  .B .wrap{display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;padding-top:38px;padding-bottom:36px}
-  .B .lk{margin-top:12px}.B .wm{width:250px}
-  .B .city{font-size:46px}.B .date{margin:6px 0 18px}
-  /* ============ C — split: logo left, info right ============ */
-  .C .sc{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,9,18,.6),rgba(6,9,18,.32) 50%,rgba(6,9,18,.72))}
-  .C .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px}
-  .C .left{display:flex;flex-direction:column;align-items:flex-start;gap:13px}
-  .C .wm{width:260px}
-  .C .right{text-align:right;flex:none}.C .city{font-size:40px}.C .date{margin:5px 0 16px}
-  /* ============ D — top logo, bottom justified bar ============ */
-  .D .sc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,9,18,.68),transparent 30%,rgba(6,9,18,.8))}
-  .D .wrap{display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding-top:40px;padding-bottom:30px}
-  .D .top{display:flex;flex-direction:column;align-items:center;gap:12px}.D .wm{width:240px}
-  .D .bar{width:100%;display:flex;align-items:center;justify-content:space-between}
-  .D .bar .l{display:flex;flex-direction:column}.D .city{font-size:30px}.D .date{margin-top:2px;font-size:13px}
-  /* ============ E — big overlay type ============ */
-  .E .sc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,9,18,.55),rgba(6,9,18,.3) 40%,rgba(6,9,18,.82))}
-  .E .wrap{display:flex;flex-direction:column;justify-content:space-between;padding-top:30px;padding-bottom:34px}
-  .E .row1{display:flex;justify-content:space-between;align-items:flex-start}
-  .E .wm{width:210px}
-  .E .giant{position:absolute;left:0;right:0;top:47%;transform:translateY(-50%);text-align:center;font-size:96px;font-weight:900;letter-spacing:-3px;color:rgba(255,255,255,.10);z-index:1;pointer-events:none;line-height:.9}
-  .E .row3{display:flex;justify-content:space-between;align-items:flex-end;position:relative;z-index:3}
-  .E .city{font-size:34px}.E .date{margin-top:3px}
+  .btm{position:absolute;left:44px;right:44px;bottom:34px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;z-index:3}
+  /* ===== 1: logo top-left · city bottom-left · CTA bottom-right ===== */
+  .L1 .sc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,9,18,.6),transparent 34%,rgba(6,9,18,.78))}
+  .L1 .brand{position:absolute;top:34px;left:44px}.L1 .wm{width:220px}
+  .L1 .city{font-size:40px}
+  /* ===== 2: logo top-right · city bottom-left · CTA bottom-right ===== */
+  .L2 .sc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,9,18,.58),transparent 34%,rgba(6,9,18,.78))}
+  .L2 .brand{position:absolute;top:34px;right:44px;left:auto;align-items:flex-end}.L2 .wm{width:220px}
+  .L2 .city{font-size:40px}
+  /* ===== 3: left stack (logo+city) · CTA right, vertically centered ===== */
+  .L3 .sc{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,9,18,.82),rgba(6,9,18,.4) 55%,rgba(6,9,18,.66))}
+  .L3 .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px}
+  .L3 .left .wm{width:250px}.L3 .left .city{font-size:44px;margin-top:16px}
+  .L3 .cta-wrap{align-items:flex-end}
+  /* ===== 4: logo top-left · GIANT city · CTA bottom-right ===== */
+  .L4 .sc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,9,18,.55),transparent 30%,rgba(6,9,18,.82))}
+  .L4 .brand{position:absolute;top:32px;left:44px}.L4 .wm{width:200px}
+  .L4 .giant{position:absolute;left:44px;bottom:30px;z-index:3;font-size:68px;font-weight:900;letter-spacing:-2.5px;color:#fff;line-height:.9;margin:0;text-shadow:0 4px 22px rgba(0,0,0,.6)}
+  .L4 .cta-wrap{position:absolute;right:44px;bottom:34px;z-index:3}
   .foot{max-width:1180px;margin:0 auto;padding:30px 22px 80px;color:var(--faint);font-size:12.5px}
 </style>
 </head>
 <body>
 <header class="top">
-  <h1>Horizontal location tiles — 5 layouts</h1>
-  <p>All full-width bands (New York shown for all, so you compare layout not city), open logo treatment (no plate) + a Register/Explore CTA. Reply A / B / C / D / E.</p>
+  <h1>Horizontal tiles — CTA on the right, date above, nothing centered</h1>
+  <p>New York shown for all so you compare layout. Open logo treatment (no plate) + the register CTA bottom-right with the date above it — the arrangement you've had. Reply 1 / 2 / 3 / 4.</p>
 </header>
 
-<!-- A -->
-<section class="band A"><div class="lbl">A — centered stack</div><div class="img"></div><div class="sc"></div>
+<!-- 1 -->
+<section class="band L1"><div class="lbl">1 — logo top-left · CTA bottom-right</div><div class="img"></div><div class="sc"></div>
+  <div class="brand"><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png" alt=""><div class="lk"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-ny-white.png"></div></div>
+  <div class="btm"><div><div class="ev">at NAB Show New York</div><p class="city">New York</p></div>
+    <div class="cta-wrap"><div class="date">October 20-21, 2026</div><a class="cta" href="#">Explore New York <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div>
+</section>
+
+<!-- 2 -->
+<section class="band L2"><div class="lbl">2 — logo top-right · CTA bottom-right</div><div class="img"></div><div class="sc"></div>
+  <div class="brand"><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png" alt=""><div class="lk"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-ny-white.png"></div></div>
+  <div class="btm"><div><div class="ev">at NAB Show New York</div><p class="city">New York</p></div>
+    <div class="cta-wrap"><div class="date">October 20-21, 2026</div><a class="cta" href="#">Explore New York <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div>
+</section>
+
+<!-- 3 -->
+<section class="band L3"><div class="lbl">3 — left stack · CTA right (centered vertically)</div><div class="img"></div><div class="sc"></div>
   <div class="wrap">
-    <div class="top"><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png" alt=""><div class="lk"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-ny-white.png"></div></div>
-    <div><p class="city">New York</p><div class="date">October 20-21, 2026</div><a class="cta" href="#">Explore New York <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <div class="left brand"><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png" alt=""><div class="lk"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-ny-white.png"></div><p class="city">New York</p></div>
+    <div class="cta-wrap"><div class="date">October 20-21, 2026</div><a class="cta" href="#">Explore <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
   </div>
 </section>
 
-<!-- B -->
-<section class="band B"><div class="lbl">B — left editorial</div><div class="img"></div><div class="sc"></div>
-  <div class="wrap">
-    <div><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png" alt=""><div class="lk"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-ny-white.png"></div></div>
-    <div><p class="city">New York</p><div class="date">October 20-21, 2026</div><a class="cta" href="#">Explore New York <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-  </div>
+<!-- 4 -->
+<section class="band L4"><div class="lbl">4 — logo top-left · giant city · CTA bottom-right</div><div class="img"></div><div class="sc"></div>
+  <div class="brand"><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png" alt=""><div class="lk"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-ny-white.png"></div></div>
+  <p class="giant">New York</p>
+  <div class="cta-wrap"><div class="date">October 20-21, 2026</div><a class="cta" href="#">Explore New York <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
 </section>
 
-<!-- C -->
-<section class="band C"><div class="lbl">C — split (logo left · info right)</div><div class="img"></div><div class="sc"></div>
-  <div class="wrap">
-    <div class="left"><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png" alt=""><div class="lk"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-ny-white.png"></div></div>
-    <div class="right"><p class="city">New York</p><div class="date">October 20-21, 2026</div><a class="cta" href="#">Explore <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-  </div>
-</section>
-
-<!-- D -->
-<section class="band D"><div class="lbl">D — top logo · bottom bar</div><div class="img"></div><div class="sc"></div>
-  <div class="wrap">
-    <div class="top"><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png" alt=""><div class="lk"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-ny-white.png"></div></div>
-    <div class="bar"><div class="l"><p class="city">New York</p><div class="date">October 20-21, 2026</div></div><a class="cta" href="#">Explore New York <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-  </div>
-</section>
-
-<!-- E -->
-<section class="band E"><div class="lbl">E — big overlay type</div><div class="img"></div><div class="sc"></div>
-  <div class="giant">NEW YORK</div>
-  <div class="wrap">
-    <div class="row1"><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png" alt=""><div class="lk"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-ny-white.png"></div></div>
-    <div class="row3"><div><p class="city">New York</p><div class="date">October 20-21, 2026</div></div><a class="cta" href="#">Explore New York <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-  </div>
-</section>
-
-<p class="foot">Internal preview — tile-horizontal-options.html · reply A / B / C / D / E</p>
+<p class="foot">Internal preview — tile-horizontal-options.html · reply 1 / 2 / 3 / 4</p>
 </body>
 </html>
