@@ -130,7 +130,7 @@
   .time-cell{display:flex;align-items:center;justify-content:flex-end;font-size:13px;font-weight:700;color:var(--ink-dim);padding:10px 12px;white-space:nowrap}
   .cell{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 19px;min-height:92px;display:flex;flex-direction:column;gap:7px;overflow:hidden}
   .cell.cont{border-top:3px solid var(--tc,#a78bfa);padding-top:15px}
-  .cell .ttl{font-weight:700;font-size:18px;line-height:1.5;color:#fff;text-wrap:balance;overflow-wrap:break-word;hyphens:none;text-align:center}
+  .cell .ttl{font-weight:700;font-size:17px;line-height:1.32;color:#fff;text-wrap:balance;overflow-wrap:break-word;hyphens:none;text-align:center;min-height:2.64em;display:flex;align-items:center;justify-content:center}
   .cell .spk{font-size:12.5px;color:var(--ink-dim);margin-top:auto;display:flex;align-items:center;justify-content:center;gap:6px}
   .cell .spk .av{width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#3b4a72,#1c2742);font-size:9px;display:flex;align-items:center;justify-content:center;color:#cdd9f5;font-weight:800}
   .trk{display:block;font-size:10.5px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;padding:7px 15px;margin:-18px -19px 14px;color:#fff;border-radius:0;text-align:center}
@@ -312,7 +312,8 @@
   /* get in touch */
   .git-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1040px;margin:0 auto}
   @media(max-width:820px){.git-grid{grid-template-columns:1fr}}
-  .git-card{background:var(--panel);border:1px solid var(--line);border-top:3px solid #f0862f;border-radius:14px;padding:28px 26px;text-align:center;display:flex;flex-direction:column;align-items:center}
+  .git-card{background:var(--panel);border:1px solid var(--line);border-top:3px solid #f0862f;border-radius:14px;padding:24px 26px 28px;text-align:center;display:flex;flex-direction:column;align-items:center}
+  .reg-btn{background:linear-gradient(180deg,#6ba6ff,#4a82e6)!important;box-shadow:0 8px 20px rgba(74,130,230,.4)!important}
   .git-card.spon{border-top-color:#f0862f}
   .git-av{width:74px;height:74px;border-radius:50%;overflow:hidden;border:1.5px solid var(--line-2);margin-bottom:16px}
   .git-av img{width:100%;height:100%;object-fit:cover;display:block}
@@ -362,7 +363,7 @@
     <p class="hero-sub">Produced by FMC and NAB Show, this elite program for editors, producers, and motion designers in TV, film, and video delivers cutting-edge skills, AI mastery, and insider strategies — across six tracks in post, production, AI, corporate media, cinematography, and immersive media.</p>
     <div class="hero-meta">
       <span class="chip"><svg class="sic" style="color:var(--accent-2)"><use href="#i-cal"/></svg> <b>Oct 20-21, 2026</b></span>
-      <span class="chip"><svg class="sic" style="color:var(--accent-2)"><use href="#i-pin"/></svg> <b>Javits Center</b>, New York</span>
+      <span class="chip"><svg class="sic" style="color:var(--accent-2)"><use href="#i-pin"/></svg> <b>Javits Center,</b> New York</span>
       <span class="chip"><svg class="sic" style="color:var(--accent-2)"><use href="#i-ticket"/></svg> 6 tracks · 28 sessions</span>
     </div>
     <div class="hero-cta">
@@ -419,7 +420,6 @@
 <section class="block fb-sec">
   <div class="wrap">
     <div class="sec-head center"><div class="sec-kicker">What attendees say</div><h2 class="sec-title fb-title">Heard from the <span class="hl">room.</span></h2><p class="sec-desc" style="margin-inline:auto">Attendee feedback from P|PW Las Vegas 2026.</p></div>
-    <div class="fb-bar"><span class="l">Attendee feedback · P|PW Las Vegas 2026</span><span class="r">91.75% overall rating</span></div>
     <div class="fb4">
       <div class="fb-card feat"><span class="fb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p class="q">"One of the best sessions that I attended at Post|Production World — super useful information that was all new to me. Thank you!"</p><span class="role">Production-Safe AI session · P|PW Las Vegas 2026</span></div>
       <div class="fb-two">
