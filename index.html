@@ -355,8 +355,8 @@
   #locations .sec-title,#attendees .sec-title{padding-bottom:0}
   .spon-bridge p,.spon-bridge .sb-text p{text-wrap:balance;max-width:640px}
   /* white sponsor wall */
-  .sponsors-light .sec-kicker{background:none!important;color:#7c3aed!important;-webkit-text-fill-color:#7c3aed!important}
-  .sponsors-light .sec-title{color:#0e1626!important;-webkit-text-fill-color:#0e1626!important;background:none!important;margin-top:20px}
+  .sponsors-light .sec-kicker{background:none!important;color:#b794f6!important;-webkit-text-fill-color:#b794f6!important}
+  .sponsors-light .sec-title{color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;background:none!important;margin-top:20px}
   @media(max-width:760px){.wall .tile img{height:34px!important;max-width:130px!important}}
   /* AI badges: one line + glass card */
   .ai-badges{display:flex;justify-content:center;margin-top:44px;flex-wrap:nowrap!important;gap:14px!important;max-width:1120px;margin-inline:auto}
@@ -455,7 +455,9 @@
   .sponsors-light::before{content:"";position:absolute;left:0;right:0;top:140px;aspect-ratio:2560/340;background:url(ppw-assets/wavy-lines.webp) center/100% 100% no-repeat;opacity:.7;pointer-events:none;z-index:0}
   .sponsors-light .wrap{position:relative;z-index:1}
   #ai{position:relative;overflow:hidden;background-image:url(ppw-assets/ai-bg-global.webp)!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
-  .sponsors-light .wall-plate{position:relative;z-index:1;background:#fff;max-width:860px;margin:0 auto;border-radius:14px;padding:44px 36px 38px}
+  .sponsors-light .wall-plate{position:relative;z-index:1;background:transparent;max-width:900px;margin:0 auto;border-radius:14px;padding:20px 20px 30px}
+  .sponsors-light .wall .tile img{filter:brightness(0) invert(1);opacity:.85;transition:opacity .2s}
+  .sponsors-light .wall .tile:hover img{opacity:1}
   .sponsors-light .sec-head{margin-bottom:40px!important}
   .sponsors-light .tier-label{color:#8a93a8!important;margin-top:30px!important;margin-bottom:10px!important}
   .sponsors-light .wall.gold + .tier-label{margin-top:35px!important}
