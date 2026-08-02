@@ -306,20 +306,21 @@
   .tk-card{background:var(--panel);border:1px solid var(--line-2);border-radius:16px;padding:30px 32px;position:relative}
   .tk-card.primary{border-color:var(--accent-2);box-shadow:0 0 0 1px rgba(34,211,238,.25)}
   .tk-badge{position:absolute;top:18px;right:20px;font-size:9.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#04121a;background:var(--accent-2);border-radius:6px;padding:4px 9px}
-  .tk-name{font-family:"Poppins",sans-serif;font-weight:800;font-size:18px;color:#fff;margin:0 0 4px}
-  .tk-price{font-family:"Poppins",sans-serif;font-weight:800;font-size:52px;color:var(--accent-2);line-height:1;margin:8px 0 2px;letter-spacing:-1px}
+  .tk-name{font-family:"Poppins",sans-serif;font-weight:800;font-size:18px;color:#fff;margin:0 0 4px;text-align:center}
+  .tk-price{font-family:"Poppins",sans-serif;font-weight:800;font-size:52px;color:var(--accent-2);line-height:1;margin:8px 0 2px;letter-spacing:-1px;text-align:center}
   .tk-price sup{font-size:24px;vertical-align:super;margin-right:2px}
-  .tk-sub{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:18px}
+  .tk-sub{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:18px;text-align:center}
   .tk-list{list-style:none;margin:0;padding:0}
-  .tk-list li{position:relative;padding-left:26px;font-size:13.5px;line-height:1.5;color:var(--ink-dim)}
+  .tk-list li{position:relative;padding-left:26px;font-size:13.5px;line-height:1.55;color:var(--ink-dim);text-wrap:pretty}
   .tk-list li + li{margin-top:11px}
   .tk-list li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--accent-2);font-weight:800}
   .tk-list li b{color:#fff;font-weight:700;display:block;margin-bottom:2px}
-  .tk-covers h4{font-family:"Poppins",sans-serif;font-size:15px;color:#fff;margin:0 0 12px}
+  .tk-covers h4{font-family:"Poppins",sans-serif;font-size:15px;color:#fff;margin:0 0 12px;text-align:center}
   .tk-covers p{color:var(--ink-dim);font-size:13.5px;line-height:1.55;margin:0 0 16px}
-  .tk-reg{display:block;text-align:center;margin-top:22px;background:linear-gradient(180deg,#f0862f,#e0741d);color:#fff;font-weight:800;font-size:14px;letter-spacing:.3px;padding:14px;border-radius:10px;text-decoration:none}
-  .tk-rates{text-align:center;font-size:13.5px;color:var(--ink-dim);font-weight:600;margin-top:9px}
+  .tk-reg{display:block;text-align:center;margin-top:22px;background:linear-gradient(180deg,#6ba6ff,#4a82e6);color:#fff;font-weight:700;font-size:14.5px;letter-spacing:.2px;padding:15px;border-radius:999px;text-decoration:none;box-shadow:0 10px 26px rgba(74,130,230,.4)}
+  .tk-rates{font-size:13.5px;color:var(--ink-dim);font-weight:600;margin:12px 0 4px;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 16px}
   .tk-rates b{color:#fff;font-weight:800}
+  .tk-rates .rt{white-space:nowrap}
   /* world's leading orgs */
   .orgs{text-align:center}
   .orgs .draft-box{max-width:820px;margin:14px auto 0;padding:26px 28px;border:1px dashed var(--line-2);border-radius:14px;background:rgba(255,255,255,.02);color:var(--ink-dim);font-size:14px;line-height:1.6}
@@ -335,8 +336,19 @@
   .git-name{font-family:"Poppins",sans-serif;font-weight:800;font-size:16px;color:#fff;margin:0}
   .git-role{color:#f6a25a;font-size:12.5px;font-weight:600;margin:3px 0 12px}
   .git-desc{color:var(--ink-dim);font-size:13px;line-height:1.5;margin:0 0 16px;flex:1}
-  .git-email{font-size:12px;font-weight:700;letter-spacing:.3px;color:#f6a25a;text-decoration:none;border:1px solid rgba(240,134,47,.35);border-radius:8px;padding:9px 14px;text-transform:uppercase}
+  .git-email{font-size:12px;font-weight:800;letter-spacing:.3px;color:#f6a25a;text-decoration:none;border:1.5px solid rgba(240,134,47,.6);border-radius:8px;padding:10px 16px;text-transform:uppercase}
   .git-card.spon .git-email{color:#f6a25a;border-color:rgba(240,134,47,.35)}
+  /* ===== mobile-only surgical refinements ===== */
+  @media(max-width:600px){
+    .chip{font-size:15px;padding:13px 17px;gap:10px}
+    .edition-intro .hero-cta .btn{font-size:16px;padding:16px 28px}
+    .sec-kicker{font-size:13px}
+    .eyebrow{font-size:13.5px}
+    .fb-sl{font-size:15px;max-width:250px}
+    .spk-av{width:104px;height:104px}
+    .spk-name{font-size:18px}
+    .spk-bio{font-size:14.5px;line-height:1.55}
+  }
 </style>
 </head>
 <!-- DATE-DISCREPANCY (internal): P|PW uses Oct 20-21, 2026; NAB Show NY public site lists Oct 21-22, 2026. Preserving P|PW dates pending source-of-truth confirmation. -->
@@ -453,14 +465,14 @@
         <div class="tk-name">P|PW Full Conference Pass</div>
         <div class="tk-price"><sup>$</sup>799</div>
         <div class="tk-sub">Standard rate · per person · both days</div>
-        <div class="tk-rates">NAB members &amp; Government <b>$749</b> &nbsp;·&nbsp; Students <b>$399</b></div>
+        <div class="tk-rates"><span class="rt">NAB members &amp; Government <b>$749</b></span><span class="rt">Students <b>$399</b></span></div>
         <ul class="tk-list">
           <li><b>All sessions, all rooms, all days</b>complete access to the full P|PW New York program with no add-ons required.</li>
           <li><b>All workshop tracks</b>Editing, AI &amp; Emerging Tech, Color &amp; Motion, Audio, Photography &amp; Video, VR/Immersive, Business &amp; Career.</li>
           <li><b>NAB Show New York floor access</b>Included with your P|PW registration.</li>
           <li>Networking events and the P|PW Party.</li>
         </ul>
-        <a class="tk-reg" href="https://www.nabshow.com/new-york/passes-and-pricing/#ppw" target="_blank" rel="noopener">Register Now &mdash; $799</a>
+        <a class="tk-reg" href="https://www.nabshow.com/new-york/passes-and-pricing/#ppw" target="_blank" rel="noopener">Register at NAB Show</a>
       </div>
       <div class="tk-card tk-covers">
         <h4>What your pass covers</h4>
@@ -489,7 +501,7 @@
   </div>
 </section>
 
-<section class="block orgs" id="orgs">
+<section class="block orgs" id="orgs" style="display:none">
   <div class="wrap">
     <div class="sec-head center"><div class="sec-kicker">In good company</div><h2 class="sec-title">The world's leading organizations learn at P|PW</h2></div>
     <div class="elise-note"><b>Elise &mdash; re: the 'world's leading organizations' version.</b> 'Comment #5' was just the 5th item in Ben's Jul 19 email; it isn't a link to a build. Ben mocked these up in his own account (likely v0/Figma), and we don't have that source &mdash; only the same emailed draft links you have. Suggest asking Ben directly to share the file/link for this section; placeholder stays until then.</div>
@@ -515,7 +527,7 @@
 
 <section class="block" id="contact">
   <div class="wrap">
-    <div class="sec-head center"><div class="sec-kicker">Contact</div><h2 class="sec-title">Get in touch.</h2></div>
+    <div class="sec-head center"><div class="sec-kicker">Contact</div><h2 class="sec-title">Get in touch</h2></div>
     <div class="git-grid">
       <div class="git-card spon">
         <div class="git-av"><img src="ppw-assets/people/megan.webp" alt="Megan Belka" loading="lazy"></div>
