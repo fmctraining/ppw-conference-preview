@@ -499,6 +499,20 @@
   #sponsor .wrap{position:relative;z-index:1}
   .spon-by img{margin-left:-9px}
   .foot-bottom .small{font-size:11.5px}
+  .loc-br{display:none}
+  /* ===== batch 1 · mobile hero refinements ===== */
+  @media(max-width:600px){
+    .hero-og{height:60px}
+    .hero-h1{font-size:clamp(31px,8.6vw,40px)}
+    .mid-sep{display:none}
+    .loc-br{display:block}
+    .eyebrow{font-size:14px;gap:7px;line-height:1.9}
+    .partner-tier-label{font-size:14px}
+    .pslot{height:64px!important;max-width:200px!important}
+    .partner-grid.platinum{gap:22px 26px!important}
+    .partner-grid.gold{gap:22px 30px!important}
+    #locations .sec-title{margin-top:15px}
+  }
 </style>
 </head>
 <body>
@@ -548,7 +562,7 @@
   <div class="hero-scrim"></div>
   <div class="wrap">
     <div class="hero-brand"><img class="hero-og" src="ppw-assets/ppw-global-logo.webp" alt="Post Production World Conference Global"></div>
-    <div class="eyebrow"><span style="color:#5b9dff">New&nbsp;York</span> · <span style="color:#43d9b8">Mumbai</span> · <span style="color:#ff8a4c">Las&nbsp;Vegas</span> · <span style="color:#b794f6">London</span></div>
+    <div class="eyebrow"><span style="color:#5b9dff">New&nbsp;York</span> · <span style="color:#43d9b8">Mumbai</span><span class="mid-sep"> · </span><br class="loc-br"><span style="color:#ff8a4c">Las&nbsp;Vegas</span> · <span style="color:#b794f6">London</span></div>
     <h1 class="hero-h1">One conference.<br><span class="hl2">Four major regions.</span></h1>
     <p class="hero-sub">The world's leading training conference for video, TV, film, motion graphics, and AI.</p>
     <div class="hero-cta" id="heroCta">
