@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — round 2 (minimal + card variants)</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0a0e17;--panel:#111a2c;--panel2:#0e1626;--line:rgba(255,255,255,.1);--line2:rgba(255,255,255,.16);
+    --ink:#eef2fb;--dim:#a9b7d6;--faint:#6b7b9e;--b1:#6ba6ff;--b2:#4a82e6;--acc:#5b8def;--cyan:#87dffa}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.5}
+  .top{max-width:1080px;margin:0 auto;padding:44px 22px 4px}
+  h1{font-size:26px;font-weight:800;margin:0 0 6px}
+  .top p{color:var(--faint);font-size:14px;margin:0;max-width:860px;line-height:1.6}
+  .grp{max-width:1080px;margin:0 auto;padding:40px 22px 0;position:relative}
+  .tag{display:inline-block;background:var(--cyan);color:#04121a;font-weight:800;font-size:12px;letter-spacing:.4px;text-transform:uppercase;padding:6px 14px;border-radius:8px;margin-bottom:20px}
+  .tag small{font-weight:600;text-transform:none;letter-spacing:0;opacity:.85}
+  .fam{max-width:1080px;margin:0 auto;padding:38px 22px 2px}
+  .fam h2{font-size:15px;letter-spacing:2px;text-transform:uppercase;color:var(--faint);margin:0;border-bottom:1px solid var(--line);padding-bottom:12px}
+  .kick{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;background:linear-gradient(100deg in oklch,oklch(86% .10 225),oklch(80% .12 288));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(180deg,var(--b1),var(--b2));color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:15px 30px;border-radius:999px;box-shadow:0 12px 30px rgba(74,130,230,.42);white-space:nowrap}
+  .btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2}
+  .ck{list-style:none;margin:0;padding:0}
+  .ck li{position:relative;padding-left:28px;color:var(--dim);font-size:14px;line-height:1.5}
+  .ck li + li{margin-top:12px}
+  .ck li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--acc);font-weight:800}
+  .ck b{color:#fff;font-weight:700;display:block;margin-bottom:1px}
+  .foot{max-width:1080px;margin:0 auto;padding:46px 22px 90px;color:var(--faint);font-size:12.5px}
+
+  /* ============ MINIMAL FAMILY ============ */
+  /* M1 — headline price band */
+  .M1 .band{border:1px solid var(--line);border-radius:20px;background:radial-gradient(120% 140% at 12% 0,rgba(91,141,239,.14),transparent 55%),var(--panel2);padding:44px 46px}
+  .M1 .lead{font-size:34px;font-weight:800;letter-spacing:-.5px;margin:0;text-wrap:balance}
+  .M1 .lead .amt{color:var(--acc)}
+  .M1 .sub{color:var(--dim);font-size:15.5px;margin:14px 0 0;max-width:620px}
+  .M1 .tiers{color:var(--faint);font-size:13.5px;margin-top:8px}.M1 .tiers b{color:#fff}
+  .M1 .row{display:flex;align-items:center;justify-content:space-between;gap:26px;margin-top:26px;flex-wrap:wrap}
+  .M1 .mini{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--dim)}
+  .M1 .mini span{position:relative;padding-left:20px}
+  .M1 .mini span::before{content:"\2713";position:absolute;left:0;color:var(--acc);font-weight:800}
+
+  /* M2 — airy centered, price is the hero */
+  .M2{text-align:center}
+  .M2 .kick{display:block;margin-bottom:16px}
+  .M2 .amt{font-size:104px;font-weight:900;letter-spacing:-3px;line-height:.85;color:#fff}
+  .M2 .amt sup{font-size:42px;vertical-align:26px;color:var(--acc);margin-right:2px}
+  .M2 .oneline{font-size:15px;letter-spacing:1px;text-transform:uppercase;color:var(--faint);margin:18px 0 20px}
+  .M2 .tiers{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:26px}
+  .M2 .tier{border:1px solid var(--line2);border-radius:999px;padding:8px 18px;font-size:13.5px;color:var(--dim)}.M2 .tier b{color:#fff}
+  .M2 .flow{max-width:640px;margin:0 auto 30px;color:var(--dim);font-size:14.5px;line-height:1.9}
+  .M2 .flow b{color:#fff;font-weight:600}
+  @media(max-width:620px){.M2 .amt{font-size:78px}}
+
+  /* M3 — split band: price left / checklist + CTA right */
+  .M3 .band{display:grid;grid-template-columns:.85fr 1.15fr;gap:0;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--panel2)}
+  @media(max-width:720px){.M3 .band{grid-template-columns:1fr}}
+  .M3 .left{padding:38px 36px;background:linear-gradient(160deg,rgba(91,141,239,.16),transparent 70%);border-right:1px solid var(--line)}
+  @media(max-width:720px){.M3 .left{border-right:0;border-bottom:1px solid var(--line)}}
+  .M3 .amt{font-size:66px;font-weight:900;letter-spacing:-2px;color:#fff;line-height:1}
+  .M3 .amt sup{font-size:28px;vertical-align:16px;color:var(--acc)}
+  .M3 .cap{font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--faint);margin:8px 0 18px}
+  .M3 .t{font-size:14px;color:var(--dim);margin-top:8px}.M3 .t b{color:#fff}
+  .M3 .right{padding:34px 36px;display:flex;flex-direction:column;justify-content:center}
+  .M3 .right .btn{margin-top:22px;align-self:flex-start}
+
+  /* ============ CARD FAMILY ============ */
+  .cardwrap{display:flex;justify-content:center}
+  /* C1 — refined centered card */
+  .C1 .card{max-width:540px;width:100%;background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line2);border-radius:22px;padding:38px 40px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+  .C1 .name{text-align:center;font-weight:700;font-size:15px;color:var(--dim)}
+  .C1 .amt{text-align:center;font-size:80px;font-weight:900;letter-spacing:-2.5px;color:#fff;line-height:1;margin:4px 0 2px}
+  .C1 .amt sup{font-size:34px;vertical-align:18px;color:var(--acc)}
+  .C1 .std{text-align:center;font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--faint)}
+  .C1 .ribbon{margin:22px 0;text-align:center;background:rgba(91,141,239,.12);border:1px solid rgba(91,141,239,.28);border-radius:12px;padding:12px;font-size:14px;color:var(--dim);font-weight:600}.C1 .ribbon b{color:#fff}
+  .C1 .card .btn{display:flex;width:100%;margin-top:26px}
+
+  /* C2 — horizontal single card: offer panel + checklist */
+  .C2 .card{max-width:860px;width:100%;display:grid;grid-template-columns:.9fr 1.1fr;background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line2);border-radius:22px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+  @media(max-width:720px){.C2 .card{grid-template-columns:1fr}}
+  .C2 .offer{padding:36px 34px;background:linear-gradient(160deg,rgba(91,141,239,.18),transparent 75%);border-right:1px solid var(--line);display:flex;flex-direction:column}
+  @media(max-width:720px){.C2 .offer{border-right:0;border-bottom:1px solid var(--line)}}
+  .C2 .name{font-weight:700;font-size:14.5px;color:var(--dim)}
+  .C2 .amt{font-size:64px;font-weight:900;letter-spacing:-2px;color:#fff;line-height:1;margin:6px 0 2px}
+  .C2 .amt sup{font-size:28px;vertical-align:14px;color:var(--acc)}
+  .C2 .std{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--faint);margin-bottom:18px}
+  .C2 .tstack{display:flex;flex-direction:column;gap:9px;border-top:1px solid var(--line);padding-top:16px;margin-bottom:22px}
+  .C2 .trow{display:flex;justify-content:space-between;font-size:13.5px;color:var(--dim)}.C2 .trow b{color:#fff}
+  .C2 .offer .btn{margin-top:auto}
+  .C2 .incl{padding:34px 34px;display:flex;flex-direction:column;justify-content:center}
+  .C2 .incl h4{margin:0 0 16px;font-size:13px;letter-spacing:.4px;text-transform:uppercase;color:#fff}
+
+  /* C3 — card with a 3-tier row baked in */
+  .C3 .card{max-width:600px;width:100%;background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line2);border-radius:22px;padding:36px 38px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+  .C3 .name{text-align:center;font-weight:700;font-size:15px;color:var(--dim);margin-bottom:18px}
+  .C3 .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px}
+  .C3 .tier{border:1px solid var(--line);border-radius:14px;padding:18px 10px;text-align:center;background:var(--panel2)}
+  .C3 .tier.feat{border-color:var(--acc);background:rgba(91,141,239,.1)}
+  .C3 .tier .who{font-size:10.5px;letter-spacing:.8px;text-transform:uppercase;color:var(--faint);font-weight:700;margin-bottom:8px}
+  .C3 .tier .amt{font-size:30px;font-weight:900;color:#fff;letter-spacing:-1px;line-height:1}.C3 .tier .amt sup{font-size:15px;vertical-align:super;color:var(--acc)}
+  .C3 .card .btn{display:flex;width:100%;margin-top:24px}
+  .C3 h4{text-align:center;font-size:12px;letter-spacing:.5px;text-transform:uppercase;color:var(--faint);margin:0 0 14px}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Pricing — round 2</h1>
+  <p>Six more, built off the two you liked: three <b>minimal</b> (M1–M3) and three <b>card</b> (C1–C3). All blue, same facts. Reply with the codes you want to show Elise (e.g. "M2 and C3").</p>
+</header>
+
+<div class="fam"><h2>Minimal family</h2></div>
+
+<!-- M1 -->
+<section class="grp M1"><span class="tag">M1 <small>· headline price band</small></span>
+  <div class="band">
+    <p class="lead">One pass, <span class="amt">$799</span> — every session, every room, both days.</p>
+    <p class="sub">A single full-access credential to the entire P|PW New York program, including NAB Show New York floor access.</p>
+    <p class="tiers">NAB members &amp; Government <b>$749</b> · Students <b>$399</b></p>
+    <div class="row">
+      <div class="mini"><span>All six tracks</span><span>NAB floor access</span><span>Networking + P|PW Party</span></div>
+      <a class="btn" href="#">Register at NAB Show <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- M2 -->
+<section class="grp M2"><span class="tag">M2 <small>· airy, price is the hero</small></span>
+  <div class="kick">Registration</div>
+  <div class="amt"><sup>$</sup>799</div>
+  <div class="oneline">One full-access pass · both days</div>
+  <div class="tiers"><span class="tier">NAB &amp; Government <b>$749</b></span><span class="tier">Students <b>$399</b></span></div>
+  <p class="flow">Every session, every room, both days · <b>All six workshop tracks</b> · NAB Show New York floor access · Networking events + the P|PW Party</p>
+  <a class="btn" href="#">Register at NAB Show <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</section>
+
+<!-- M3 -->
+<section class="grp M3"><span class="tag">M3 <small>· split band</small></span>
+  <div class="band">
+    <div class="left">
+      <div class="amt"><sup>$</sup>799</div>
+      <div class="cap">Standard · per person · both days</div>
+      <div class="t">NAB members &amp; Government <b>$749</b></div>
+      <div class="t">Students <b>$399</b></div>
+    </div>
+    <div class="right">
+      <ul class="ck">
+        <li><b>All sessions, all rooms, both days</b>The full program + NAB Show New York floor access.</li>
+        <li><b>All six workshop tracks + the P|PW Party</b>Post, Production, AI, Corporate, Cinematography, Immersive — plus every networking event.</li>
+      </ul>
+      <a class="btn" href="#">Register at NAB Show <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<div class="fam"><h2>Card family</h2></div>
+
+<!-- C1 -->
+<section class="grp C1"><span class="tag">C1 <small>· refined centered card</small></span>
+  <div class="cardwrap"><div class="card">
+    <div class="name">P|PW Full Conference Pass</div>
+    <div class="amt"><sup>$</sup>799</div>
+    <div class="std">Standard rate · per person · both days</div>
+    <div class="ribbon">NAB members &amp; Government <b>$749</b> &nbsp;·&nbsp; Students <b>$399</b></div>
+    <ul class="ck">
+      <li><b>All sessions, all rooms, both days</b>The full P|PW New York program, no add-ons.</li>
+      <li><b>All six workshop tracks</b>Post, Production, AI, Corporate, Cinematography, Immersive.</li>
+      <li><b>NAB Show New York floor access</b>Included with your registration.</li>
+      <li><b>Networking events + the P|PW Party</b>Every after-hours event included.</li>
+    </ul>
+    <a class="btn" href="#">Register at NAB Show <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div></div>
+</section>
+
+<!-- C2 -->
+<section class="grp C2"><span class="tag">C2 <small>· horizontal card</small></span>
+  <div class="cardwrap"><div class="card">
+    <div class="offer">
+      <div class="name">P|PW Full Conference Pass</div>
+      <div class="amt"><sup>$</sup>799</div>
+      <div class="std">Standard · per person · both days</div>
+      <div class="tstack">
+        <div class="trow"><span>NAB members &amp; Government</span><b>$749</b></div>
+        <div class="trow"><span>Students</span><b>$399</b></div>
+      </div>
+      <a class="btn" href="#">Register at NAB Show <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="incl">
+      <h4>What your pass covers</h4>
+      <ul class="ck">
+        <li><b>All sessions, all rooms, both days</b>Walk into any session on either day.</li>
+        <li><b>All six workshop tracks</b>Post, Production, AI, Corporate, Cinematography, Immersive.</li>
+        <li><b>NAB Show New York floor access</b>Included with your registration.</li>
+        <li><b>Networking events + the P|PW Party</b>Every after-hours event included.</li>
+      </ul>
+    </div>
+  </div></div>
+</section>
+
+<!-- C3 -->
+<section class="grp C3"><span class="tag">C3 <small>· card with tier row</small></span>
+  <div class="cardwrap"><div class="card">
+    <div class="name">P|PW Full Conference Pass · both days</div>
+    <div class="tiers">
+      <div class="tier feat"><div class="who">Standard</div><div class="amt"><sup>$</sup>799</div></div>
+      <div class="tier"><div class="who">NAB &amp; Gov</div><div class="amt"><sup>$</sup>749</div></div>
+      <div class="tier"><div class="who">Students</div><div class="amt"><sup>$</sup>399</div></div>
+    </div>
+    <h4>Every pass includes</h4>
+    <ul class="ck">
+      <li><b>All sessions, all rooms, both days</b>The full program + NAB Show New York floor access.</li>
+      <li><b>All six workshop tracks + the P|PW Party</b>Post, Production, AI, Corporate, Cinematography, Immersive — plus every networking event.</li>
+    </ul>
+    <a class="btn" href="#">Register at NAB Show <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div></div>
+</section>
+
+<p class="foot">Internal preview — pricing-samples-v2.html · reply with codes (M1–M3, C1–C3)</p>
+</body>
+</html>
