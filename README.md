@@ -10,6 +10,17 @@ Static HTML preview of the Post Production World conference site. Hand-authored 
 
 Internal design/review comps use an `_` prefix (e.g. `_hub.html`). They are not linked from the public site.
 
+### Canonical URLs
+
+Each public page sets `<link rel="canonical">` to the matching URL on the live site ([ppw-conference.com](https://www.ppw-conference.com/)) when one exists:
+
+- `index.html` → `https://www.ppw-conference.com/`
+- `new-york.html` → `https://www.ppw-conference.com/nyc/`
+- `vegas.html` → `https://www.ppw-conference.com/las-vegas/`
+- `london.html` → `https://www.ppw-conference.com/london/`
+- `mumbai.html` → `https://www.ppw-conference.com/mumbai/`
+- `ppw-sponsorships.html` → `https://www.ppw-conference.com/` (no dedicated sponsorship page on the live site)
+
 ## Deploy (Cloudflare Workers)
 
 ### `wrangler.jsonc`
