@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Location tile — background framing options</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#080b12;--line:rgba(255,255,255,.12);--ink:#eef2fb;--faint:#6b7b9e;--cyan:#87dffa}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.5}
+  .top{max-width:1180px;margin:0 auto;padding:44px 22px 4px}
+  h1{font-size:26px;font-weight:800;margin:0 0 6px}
+  .top p{color:var(--faint);font-size:14px;margin:0;max-width:900px;line-height:1.6}
+  .tag{position:absolute;top:0;left:0;z-index:8;background:var(--cyan);color:#04121a;font-weight:900;font-size:19px;letter-spacing:.4px;text-transform:uppercase;padding:8px 18px;border-radius:0 0 12px 0}
+  .tag small{font-weight:600;text-transform:none;letter-spacing:0;font-size:13px}
+  .grp{max-width:1180px;margin:0 auto;padding:34px 22px 0;position:relative}
+  .band{position:relative;height:440px;overflow:hidden;border-radius:6px;border:1px solid var(--line)}
+  .img{position:absolute;inset:0;background-image:url(ppw-assets/tile-nyc.jpg);background-size:cover}
+  .sc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,9,18,.5),transparent 24%,transparent 52%,rgba(6,9,18,.86))}
+  .head{position:absolute;top:34px;left:0;right:0;display:flex;flex-direction:column;align-items:center}
+  .head .wm{width:330px;max-width:50%;filter:drop-shadow(0 6px 20px rgba(0,0,0,.6));display:block;transform:translateX(-12px)}
+  .divider{width:220px;height:1px;margin:8px 0 12px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent)}
+  .lock{display:inline-flex;align-items:center;gap:10px;filter:drop-shadow(0 2px 10px rgba(0,0,0,.85));transform:translateX(10px)}
+  .lock .by{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:#dbe6fb;font-weight:600}
+  .lock .fmc{height:16px;display:block}.lock .plus{color:#cdd8ef;font-weight:300;font-size:14px;line-height:0;transform:translateY(1px)}.lock .ptnr{height:15px;display:block}
+  .city{position:absolute;left:48px;bottom:34px;z-index:3;margin:0;font-weight:800;font-size:56px;letter-spacing:-1.5px;line-height:.95;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.6)}
+  .city .ev{display:block;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;color:#8fb6ff;text-shadow:0 2px 10px rgba(0,0,0,.7)}
+  .cluster{position:absolute;right:48px;bottom:36px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:12px}
+  .cluster .date{color:#fff;font-weight:700;font-size:17px;text-shadow:0 2px 12px rgba(0,0,0,.7)}
+  .cta{display:inline-flex;align-items:center;gap:9px;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:13px 24px;border-radius:999px;white-space:nowrap;background:linear-gradient(180deg,#4f7df9,#2f5fe0);box-shadow:0 10px 26px rgba(47,95,224,.45)}
+  .cta svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2}
+  /* only difference between the four: vertical framing of the photo */
+  .v1 .img{background-position:center 30%}
+  .v2 .img{background-position:center 45%}
+  .v3 .img{background-position:center 60%}
+  .v4 .img{background-position:center 75%}
+  .foot{max-width:1180px;margin:0 auto;padding:34px 22px 90px;color:var(--faint);font-size:12.5px}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Tile background — 4 framings</h1>
+  <p>Same tile, only the photo's vertical framing changes (how far "up" the skyline sits). Lower % shows more sky up top; higher % pushes the image up so you see more of the cityscape and waterfront. Reply 1 / 2 / 3 / 4.</p>
+</header>
+
+<section class="grp"><div class="tag">1 <small>· 30% (more sky)</small></div>
+  <div class="band v1"><div class="img"></div><div class="sc"></div>
+    <div class="head"><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png" alt=""><div class="divider"></div><div class="lock"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-show-white.png"></div></div>
+    <p class="city"><span class="ev">at NAB Show New York</span>New York</p>
+    <div class="cluster"><span class="date">October 20–21, 2026</span><a class="cta" href="#">Explore New York <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
+
+<section class="grp"><div class="tag">2 <small>· 45% (current)</small></div>
+  <div class="band v2"><div class="img"></div><div class="sc"></div>
+    <div class="head"><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png" alt=""><div class="divider"></div><div class="lock"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-show-white.png"></div></div>
+    <p class="city"><span class="ev">at NAB Show New York</span>New York</p>
+    <div class="cluster"><span class="date">October 20–21, 2026</span><a class="cta" href="#">Explore New York <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
+
+<section class="grp"><div class="tag">3 <small>· 60% (more city)</small></div>
+  <div class="band v3"><div class="img"></div><div class="sc"></div>
+    <div class="head"><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png" alt=""><div class="divider"></div><div class="lock"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-show-white.png"></div></div>
+    <p class="city"><span class="ev">at NAB Show New York</span>New York</p>
+    <div class="cluster"><span class="date">October 20–21, 2026</span><a class="cta" href="#">Explore New York <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
+
+<section class="grp"><div class="tag">4 <small>· 75% (most city + water)</small></div>
+  <div class="band v4"><div class="img"></div><div class="sc"></div>
+    <div class="head"><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png" alt=""><div class="divider"></div><div class="lock"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-show-white.png"></div></div>
+    <p class="city"><span class="ev">at NAB Show New York</span>New York</p>
+    <div class="cluster"><span class="date">October 20–21, 2026</span><a class="cta" href="#">Explore New York <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
+
+<p class="foot">Internal preview — tile-bg-options.html · reply 1 / 2 / 3 / 4</p>
+</body>
+</html>
