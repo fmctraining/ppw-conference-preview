@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact section — 4 color options</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0a0e17;--panel:#111a2c;--line:rgba(255,255,255,.1);--ink:#eef2fb;--dim:#a9b7d6;--faint:#6b7b9e;
+    --b1:#6ba6ff;--b2:#4a82e6;--acc:#5b8def;--cyan:#87dffa}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.5}
+  .top{max-width:1080px;margin:0 auto;padding:44px 22px 4px}
+  h1{font-size:26px;font-weight:800;margin:0 0 6px}
+  .top p{color:var(--faint);font-size:14px;margin:0;max-width:860px;line-height:1.6}
+  .grp{max-width:1080px;margin:0 auto;padding:36px 22px 0}
+  .tag{display:inline-block;background:var(--cyan);color:#04121a;font-weight:800;font-size:12px;letter-spacing:.4px;text-transform:uppercase;padding:6px 14px;border-radius:8px;margin-bottom:6px}
+  .note{color:var(--faint);font-size:13px;margin:0 0 20px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:720px}
+  @media(max-width:640px){.row{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px 26px 26px;text-align:center;display:flex;flex-direction:column;align-items:center}
+  .av{width:74px;height:74px;border-radius:50%;overflow:hidden;margin-bottom:14px;flex:none}
+  .av img{width:100%;height:100%;object-fit:cover;display:block}
+  .k{font-size:10px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--faint);margin-bottom:8px}
+  .nm{font-weight:800;font-size:16px;color:#fff;margin:0}
+  .rl{font-size:12.5px;font-weight:600;margin:3px 0 12px}
+  .ds{color:var(--dim);font-size:13px;line-height:1.5;margin:0 0 18px;flex:1}
+  .em{font-size:12px;font-weight:800;letter-spacing:.3px;text-decoration:none;padding:11px 18px;border-radius:10px;text-transform:none}
+  .foot{max-width:1080px;margin:0 auto;padding:44px 22px 90px;color:var(--faint);font-size:12.5px}
+
+  /* A — blue outline buttons (distinct from site CTAs) */
+  .A .card{border-top:3px solid var(--acc)}
+  .A .rl{color:var(--acc)}
+  .A .em{color:var(--b1);border:1.5px solid rgba(107,166,255,.55);background:transparent}
+  .A .em:hover{background:rgba(91,141,239,.12)}
+
+  /* B — blue filled buttons (matches the site's CTAs) */
+  .B .card{border-top:3px solid var(--acc)}
+  .B .rl{color:var(--acc)}
+  .B .em{color:#fff;background:linear-gradient(180deg,var(--b1),var(--b2));border:0;box-shadow:0 8px 20px rgba(74,130,230,.4);border-radius:999px;padding:12px 22px}
+
+  /* C — neutral + blue as a whisper (most restrained) */
+  .C .card{border-top:3px solid rgba(255,255,255,.16)}
+  .C .k{color:var(--acc)}
+  .C .rl{color:var(--dim)}
+  .C .em{color:#fff;border:1.5px solid rgba(255,255,255,.28);background:transparent}
+  .C .em:hover{border-color:var(--b1);color:var(--b1)}
+
+  /* D — soft blue tint fill (scales to each city's accent) */
+  .D .card{border-top:3px solid var(--acc)}
+  .D .rl{color:var(--acc)}
+  .D .em{color:var(--b1);background:rgba(91,141,239,.14);border:1px solid rgba(91,141,239,.35)}
+  .D .em:hover{background:rgba(91,141,239,.22)}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Contact section — 4 color options</h1>
+  <p>All blue-leaning, per your instinct. The difference is the <b>button style</b> — which answers your other question: <b>B matches the rest of the site</b> (filled blue CTA), the others read as a quieter, secondary "contact" action. My pick is noted below. Reply A / B / C / D.</p>
+</header>
+
+<section class="grp A"><span class="tag">A · blue outline</span>
+  <p class="note">Accent-blue outline buttons. Clearly clickable but lighter than a primary CTA — reads as "reach out," not "buy."</p>
+  <div class="row">
+    <div class="card"><div class="av"><img src="ppw-assets/people/megan.webp" alt=""></div><div class="k">Sponsorship</div><p class="nm">Megan Belka</p><div class="rl">Event &amp; Projects Manager</div><p class="ds">Sponsorship packages, tabletop opportunities, and partner inquiries for P|PW New York.</p><a class="em" href="#">meganb@fmctraining.com</a></div>
+    <div class="card"><div class="av"><img src="ppw-assets/people/tyree.webp" alt=""></div><div class="k">Marketing &amp; Press</div><p class="nm">Tyree Peters</p><div class="rl">Marketing Manager</div><p class="ds">Press accreditation, media partnerships, and marketing inquiries.</p><a class="em" href="#">tyreep@fmctraining.com</a></div>
+  </div>
+</section>
+
+<section class="grp B"><span class="tag">B · blue filled <small style="font-weight:600;text-transform:none">(matches site CTAs)</small></span>
+  <p class="note">Same filled blue pill as the Register buttons. Most cohesive with the rest of the site — but visually as loud as a primary action.</p>
+  <div class="row">
+    <div class="card"><div class="av"><img src="ppw-assets/people/megan.webp" alt=""></div><div class="k">Sponsorship</div><p class="nm">Megan Belka</p><div class="rl">Event &amp; Projects Manager</div><p class="ds">Sponsorship packages, tabletop opportunities, and partner inquiries for P|PW New York.</p><a class="em" href="#">meganb@fmctraining.com</a></div>
+    <div class="card"><div class="av"><img src="ppw-assets/people/tyree.webp" alt=""></div><div class="k">Marketing &amp; Press</div><p class="nm">Tyree Peters</p><div class="rl">Marketing Manager</div><p class="ds">Press accreditation, media partnerships, and marketing inquiries.</p><a class="em" href="#">tyreep@fmctraining.com</a></div>
+  </div>
+</section>
+
+<section class="grp C"><span class="tag">C · neutral + blue whisper</span>
+  <p class="note">White/neutral cards, blue only on the little eyebrow. Buttons are clean white outlines that turn blue on hover. The most restrained — lets the section breathe.</p>
+  <div class="row">
+    <div class="card"><div class="av"><img src="ppw-assets/people/megan.webp" alt=""></div><div class="k">Sponsorship</div><p class="nm">Megan Belka</p><div class="rl">Event &amp; Projects Manager</div><p class="ds">Sponsorship packages, tabletop opportunities, and partner inquiries for P|PW New York.</p><a class="em" href="#">meganb@fmctraining.com</a></div>
+    <div class="card"><div class="av"><img src="ppw-assets/people/tyree.webp" alt=""></div><div class="k">Marketing &amp; Press</div><p class="nm">Tyree Peters</p><div class="rl">Marketing Manager</div><p class="ds">Press accreditation, media partnerships, and marketing inquiries.</p><a class="em" href="#">tyreep@fmctraining.com</a></div>
+  </div>
+</section>
+
+<section class="grp D"><span class="tag">D · soft blue tint <small style="font-weight:600;text-transform:none">(my pick)</small></span>
+  <p class="note">Blue-tinted fill — reads as clickable and on-brand, but softer than a primary CTA. Cleanest per-city path: on Vegas this becomes orange, London purple, Mumbai teal, automatically.</p>
+  <div class="row">
+    <div class="card"><div class="av"><img src="ppw-assets/people/megan.webp" alt=""></div><div class="k">Sponsorship</div><p class="nm">Megan Belka</p><div class="rl">Event &amp; Projects Manager</div><p class="ds">Sponsorship packages, tabletop opportunities, and partner inquiries for P|PW New York.</p><a class="em" href="#">meganb@fmctraining.com</a></div>
+    <div class="card"><div class="av"><img src="ppw-assets/people/tyree.webp" alt=""></div><div class="k">Marketing &amp; Press</div><p class="nm">Tyree Peters</p><div class="rl">Marketing Manager</div><p class="ds">Press accreditation, media partnerships, and marketing inquiries.</p><a class="em" href="#">tyreep@fmctraining.com</a></div>
+  </div>
+</section>
+
+<p class="foot">Internal preview — contact-colors.html · reply A / B / C / D</p>
+</body>
+</html>

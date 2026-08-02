@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing / Registration — 5 designs</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0e17;--panel:#111a2c;--panel2:#0e1626;--line:rgba(255,255,255,.1);--line2:rgba(255,255,255,.16);
+    --ink:#eef2fb;--dim:#a9b7d6;--faint:#6b7b9e;
+    --b1:#6ba6ff;--b2:#4a82e6;--acc:#5b8def;--cyan:#87dffa;--gold:#f5c451}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.5}
+  .top{max-width:1080px;margin:0 auto;padding:44px 22px 4px}
+  h1{font-size:26px;font-weight:800;margin:0 0 6px}
+  .top p{color:var(--faint);font-size:14px;margin:0;max-width:840px;line-height:1.6}
+  .grp{max-width:1080px;margin:0 auto;padding:40px 22px 0;position:relative}
+  .tag{display:inline-block;background:var(--cyan);color:#04121a;font-weight:800;font-size:12px;letter-spacing:.4px;text-transform:uppercase;padding:6px 14px;border-radius:8px;margin-bottom:20px}
+  .tag small{font-weight:600;text-transform:none;letter-spacing:0;opacity:.8}
+  .kick{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;background:linear-gradient(100deg in oklch,oklch(86% .10 225),oklch(80% .12 288));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .ck{list-style:none;margin:0;padding:0}
+  .ck li{position:relative;padding-left:28px;color:var(--dim);font-size:14px;line-height:1.5}
+  .ck li + li{margin-top:12px}
+  .ck li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--acc);font-weight:800}
+  .ck b{color:#fff;font-weight:700;display:block;margin-bottom:1px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(180deg,var(--b1),var(--b2));color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:15px 30px;border-radius:999px;box-shadow:0 12px 30px rgba(74,130,230,.42)}
+  .btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2}
+  .foot{max-width:1080px;margin:0 auto;padding:46px 22px 90px;color:var(--faint);font-size:12.5px}
+
+  /* ===== 1 — CENTERED HERO PRICE ===== */
+  .P1{text-align:center}
+  .P1 .kick{margin-bottom:14px;display:block}
+  .P1 h2{font-size:30px;font-weight:800;margin:0 0 26px}
+  .P1 .amt{font-size:96px;font-weight:900;letter-spacing:-3px;line-height:.9;color:#fff}
+  .P1 .amt sup{font-size:40px;vertical-align:22px;color:var(--acc);margin-right:2px}
+  .P1 .std{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--faint);margin:14px 0 22px}
+  .P1 .tiers{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:34px}
+  .P1 .tier{background:var(--panel);border:1px solid var(--line2);border-radius:999px;padding:10px 20px;font-size:14px;color:var(--dim);font-weight:600}
+  .P1 .tier b{color:#fff}
+  .P1 .ck{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;max-width:720px;margin:0 auto 34px;text-align:left}
+  @media(max-width:620px){.P1 .ck{grid-template-columns:1fr}.P1 .amt{font-size:76px}}
+
+  /* ===== 2 — TIER TABLE (3 columns) ===== */
+  .P2 .head{text-align:center;margin-bottom:26px}
+  .P2 .head h2{font-size:26px;font-weight:800;margin:10px 0 0}
+  .P2 .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:720px){.P2 .cols{grid-template-columns:1fr}}
+  .P2 .col{background:var(--panel2);border:1px solid var(--line);border-radius:16px;padding:30px 24px;text-align:center}
+  .P2 .col.feat{border-color:var(--acc);box-shadow:0 0 0 1px rgba(91,141,239,.35),0 20px 50px rgba(0,0,0,.35);position:relative}
+  .P2 .col.feat::before{content:"Most popular";position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:linear-gradient(180deg,var(--b1),var(--b2));color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:5px 13px;border-radius:999px;white-space:nowrap}
+  .P2 .who{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--faint);font-weight:700;margin-bottom:12px}
+  .P2 .amt{font-size:48px;font-weight:900;letter-spacing:-1.5px;color:#fff;line-height:1}
+  .P2 .amt sup{font-size:22px;vertical-align:super;color:var(--acc)}
+  .P2 .per{font-size:12px;color:var(--faint);margin-top:8px}
+  .P2 .inc{max-width:560px;margin:30px auto 0;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px 30px}
+  .P2 .inc h4{margin:0 0 16px;font-size:13px;letter-spacing:.4px;text-transform:uppercase;color:#fff}
+  .P2 .cta-row{text-align:center;margin-top:26px}
+
+  /* ===== 3 — SPLIT: offer left / included right ===== */
+  .P3 .split{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px;align-items:stretch}
+  @media(max-width:760px){.P3 .split{grid-template-columns:1fr}}
+  .P3 .offer{background:linear-gradient(165deg,var(--panel),var(--panel2));border:1px solid var(--acc);border-radius:20px;padding:36px 34px;display:flex;flex-direction:column}
+  .P3 .name{font-weight:700;font-size:15px;color:var(--dim)}
+  .P3 .amt{font-size:70px;font-weight:900;letter-spacing:-2px;color:#fff;line-height:1;margin:6px 0 2px}
+  .P3 .amt sup{font-size:30px;vertical-align:16px;color:var(--acc)}
+  .P3 .std{font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--faint);margin-bottom:22px}
+  .P3 .tstack{border-top:1px solid var(--line);padding-top:18px;margin-bottom:24px;display:flex;flex-direction:column;gap:10px}
+  .P3 .trow{display:flex;justify-content:space-between;font-size:14px;color:var(--dim)}
+  .P3 .trow b{color:#fff}
+  .P3 .offer .btn{margin-top:auto}
+  .P3 .incl{padding:8px 6px}
+  .P3 .incl h3{font-size:20px;font-weight:800;margin:0 0 20px}
+
+  /* ===== 4 — MINIMAL BAND ===== */
+  .P4 .band{border:1px solid var(--line);border-radius:20px;background:radial-gradient(120% 140% at 12% 0,rgba(91,141,239,.14),transparent 55%),var(--panel2);padding:44px 46px}
+  .P4 .lead{font-size:34px;font-weight:800;letter-spacing:-.5px;margin:0;text-wrap:balance}
+  .P4 .lead .amt{color:var(--acc)}
+  .P4 .sub{color:var(--dim);font-size:15.5px;margin:14px 0 0;max-width:620px}
+  .P4 .tiers{color:var(--faint);font-size:13.5px;margin-top:8px}
+  .P4 .tiers b{color:#fff}
+  .P4 .row{display:flex;align-items:center;justify-content:space-between;gap:26px;margin-top:26px;flex-wrap:wrap}
+  .P4 .mini{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--dim)}
+  .P4 .mini span{position:relative;padding-left:20px}
+  .P4 .mini span::before{content:"\2713";position:absolute;left:0;color:var(--acc);font-weight:800}
+  @media(max-width:620px){.P4 .lead{font-size:26px}.P4 .band{padding:32px 26px}}
+
+  /* ===== 5 — REFINED FEATURED CARD ===== */
+  .P5{display:flex;justify-content:center}
+  .P5 .card{max-width:560px;width:100%;background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line2);border-radius:22px;padding:38px 40px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+  .P5 .name{text-align:center;font-weight:700;font-size:15px;color:var(--dim)}
+  .P5 .amt{text-align:center;font-size:80px;font-weight:900;letter-spacing:-2.5px;color:#fff;line-height:1;margin:4px 0 2px}
+  .P5 .amt sup{font-size:34px;vertical-align:18px;color:var(--acc)}
+  .P5 .std{text-align:center;font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--faint)}
+  .P5 .ribbon{margin:22px 0;text-align:center;background:rgba(91,141,239,.12);border:1px solid rgba(91,141,239,.28);border-radius:12px;padding:12px;font-size:14px;color:var(--dim);font-weight:600}
+  .P5 .ribbon b{color:#fff}
+  .P5 .card .btn{display:flex;width:100%;margin-top:26px}
+
+  @media(max-width:620px){.grp{padding:34px 18px 0}}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Registration section — 5 designs</h1>
+  <p>Same facts, five ways to prioritize and align them. All in the site's blue. Reply 1 / 2 / 3 / 4 / 5 (mixing is fine — e.g. "3 but the tiers from 2") and I'll build your pick into New York, then the other cities.</p>
+</header>
+
+<!-- 1 -->
+<section class="grp P1"><span class="tag">1 <small>· centered hero price</small></span>
+  <div class="kick">Registration</div>
+  <h2>One pass. Full access.</h2>
+  <div class="amt"><sup>$</sup>799</div>
+  <div class="std">Standard rate · per person · both days</div>
+  <div class="tiers"><span class="tier">NAB members &amp; Government <b>$749</b></span><span class="tier">Students <b>$399</b></span></div>
+  <ul class="ck">
+    <li><b>All sessions, all rooms, both days</b>The full P|PW New York program, no add-ons.</li>
+    <li><b>All six workshop tracks</b>Post, Production, AI, Corporate, Cinematography, Immersive.</li>
+    <li><b>NAB Show New York floor access</b>Included with your P|PW registration.</li>
+    <li><b>Networking + the P|PW Party</b>Every after-hours event included.</li>
+  </ul>
+  <a class="btn" href="#">Register at NAB Show <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</section>
+
+<!-- 2 -->
+<section class="grp P2"><span class="tag">2 <small>· tier table</small></span>
+  <div class="head"><div class="kick">Registration</div><h2>Pick your rate. Same full access.</h2></div>
+  <div class="cols">
+    <div class="col feat"><div class="who">Standard</div><div class="amt"><sup>$</sup>799</div><div class="per">per person · both days</div></div>
+    <div class="col"><div class="who">NAB members &amp; Gov</div><div class="amt"><sup>$</sup>749</div><div class="per">per person · both days</div></div>
+    <div class="col"><div class="who">Students</div><div class="amt"><sup>$</sup>399</div><div class="per">valid ID required</div></div>
+  </div>
+  <div class="inc"><h4>Every pass includes</h4>
+    <ul class="ck">
+      <li><b>All sessions, all rooms, both days</b>The full program plus NAB Show New York floor access.</li>
+      <li><b>All six workshop tracks &amp; the P|PW Party</b>Post, Production, AI, Corporate, Cinematography, Immersive — plus every networking event.</li>
+    </ul>
+  </div>
+  <div class="cta-row"><a class="btn" href="#">Register at NAB Show <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</section>
+
+<!-- 3 -->
+<section class="grp P3"><span class="tag">3 <small>· split: offer + what's included</small></span>
+  <div class="split">
+    <div class="offer">
+      <div class="name">P|PW Full Conference Pass</div>
+      <div class="amt"><sup>$</sup>799</div>
+      <div class="std">Standard · per person · both days</div>
+      <div class="tstack">
+        <div class="trow"><span>NAB members &amp; Government</span><b>$749</b></div>
+        <div class="trow"><span>Students</span><b>$399</b></div>
+      </div>
+      <a class="btn" href="#">Register at NAB Show <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="incl">
+      <h3>What your pass covers</h3>
+      <ul class="ck">
+        <li><b>All sessions, all rooms, both days</b>Walk into any session on either day — no add-ons required.</li>
+        <li><b>All six workshop tracks</b>Post, Production, AI, Corporate Media, Cinematography, Immersive.</li>
+        <li><b>NAB Show New York floor access</b>Included with your P|PW registration.</li>
+        <li><b>Networking events + the P|PW Party</b>Every after-hours event included.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="grp P4"><span class="tag">4 <small>· minimal band</small></span>
+  <div class="band">
+    <p class="lead">One pass, <span class="amt">$799</span> — every session, every room, both days.</p>
+    <p class="sub">A single full-access credential to the entire P|PW New York program, including NAB Show New York floor access.</p>
+    <p class="tiers">NAB members &amp; Government <b>$749</b> · Students <b>$399</b></p>
+    <div class="row">
+      <div class="mini"><span>All six tracks</span><span>NAB floor access</span><span>Networking + P|PW Party</span></div>
+      <a class="btn" href="#">Register at NAB Show <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="grp P5"><span class="tag" style="position:absolute;top:40px;left:22px">5 <small>· refined featured card</small></span>
+  <div class="card">
+    <div class="name">P|PW Full Conference Pass</div>
+    <div class="amt"><sup>$</sup>799</div>
+    <div class="std">Standard rate · per person · both days</div>
+    <div class="ribbon">NAB members &amp; Government <b>$749</b> &nbsp; · &nbsp; Students <b>$399</b></div>
+    <ul class="ck">
+      <li><b>All sessions, all rooms, both days</b>The full P|PW New York program, no add-ons.</li>
+      <li><b>All six workshop tracks</b>Post, Production, AI, Corporate, Cinematography, Immersive.</li>
+      <li><b>NAB Show New York floor access</b>Included with your registration.</li>
+      <li><b>Networking events + the P|PW Party</b>Every after-hours event included.</li>
+    </ul>
+    <a class="btn" href="#">Register at NAB Show <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<p class="foot">Internal preview — pricing-samples.html · reply 1 / 2 / 3 / 4 / 5</p>
+</body>
+</html>
