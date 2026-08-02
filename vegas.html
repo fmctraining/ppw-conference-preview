@@ -347,5 +347,6 @@
 </footer>
 <script>(function(){try{var els=[].slice.call(document.querySelectorAll("section.block .sec-head,.loc,.who,.fcard,.track-chip,.sat-wrap,.collage,.photo-ph,.proof2,.quote-row .qcard,.xp2 .card,.pricing-card,.host-mod,.cta-strip,.partner-strip"));els.forEach(function(el){el.classList.add("reveal");});function check(){var h=window.innerHeight||800;for(var i=els.length-1;i>=0;i--){if(els[i].getBoundingClientRect().top<h*0.9){els[i].classList.add("in");els.splice(i,1);}}}check();window.addEventListener("scroll",check,{passive:true});window.addEventListener("resize",check);setTimeout(check,250);setTimeout(function(){els.forEach(function(el){el.classList.add("in");});els=[];},2600);}catch(e){}})();</script>
 <script>(function(){var imgs=document.querySelectorAll(".collage a, .photo-shot");if(!imgs.length)return;var ov=document.createElement("div");ov.className="lb-overlay";var im=document.createElement("img");ov.appendChild(im);document.body.appendChild(ov);function close(){ov.classList.remove("open");}imgs.forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();im.src=a.getAttribute("href");ov.classList.add("open");});});ov.addEventListener("click",close);document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});})();</script>
+<script defer src="ppw-assets/site.js"></script>
 </body>
 </html>

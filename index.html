@@ -251,7 +251,7 @@
   .foot-bottom{position:relative;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);padding:22px 24px 44px}
   .foot-fmc{height:26px;width:auto;opacity:.9;padding-left:9px}
   footer .small{color:var(--ink-faint);font-size:12.5px;line-height:1.5}
-  @media(max-width:760px){.foot-inner{grid-template-columns:1fr 1fr;gap:30px;padding:46px 22px 30px}.foot-brand{grid-column:1/-1}}
+  @media(max-width:760px){.foot-inner{grid-template-columns:auto auto;justify-content:start;gap:46px;padding:46px 22px 30px}.foot-brand{grid-column:1/-1}.foot-inner>.foot-col:nth-child(2){transform:none;padding-right:0}.foot-bottom{flex-direction:column;align-items:center;text-align:center;gap:12px}}
   /* comparison labels */
   .cmp-label{max-width:var(--maxw);margin:0 auto;padding:0 24px;text-align:center}
   .cmp-label .tag{display:inline-block;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:#06222a;background:var(--accent-2);padding:5px 12px;border-radius:999px;font-weight:800}
@@ -788,5 +788,6 @@
 
 <script>(function(){try{var els=[].slice.call(document.querySelectorAll("section.block .sec-head,.loc,.who,.fcard,.ai-wrap,.collage,.cta-strip,.pillar,.rcard,.extra,.cmp,.hero-stats"));els.forEach(function(el){el.classList.add("reveal");});function check(){var h=window.innerHeight||800;for(var i=els.length-1;i>=0;i--){if(els[i].getBoundingClientRect().top<h*0.9){els[i].classList.add("in");els.splice(i,1);}}}check();window.addEventListener("scroll",check,{passive:true});window.addEventListener("resize",check);setTimeout(check,250);setTimeout(function(){els.forEach(function(el){el.classList.add("in");});els=[];},2600);}catch(e){}})();</script>
 <script>(function(){var imgs=document.querySelectorAll(".collage a");if(!imgs.length)return;var ov=document.createElement("div");ov.className="lb-overlay";var im=document.createElement("img");ov.appendChild(im);document.body.appendChild(ov);function close(){ov.classList.remove("open");}imgs.forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();im.src=a.getAttribute("href");ov.classList.add("open");});});ov.addEventListener("click",close);document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});})();</script>
+<script defer src="ppw-assets/site.js"></script>
 </body>
 </html>
