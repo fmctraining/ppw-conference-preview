@@ -2,7 +2,15 @@
 
 Static HTML preview of the Post Production World conference site. Hand-authored pages (no build step) plus assets in `ppw-assets/`.
 
-## Public pages
+### Local preview (as served by Cloudflare)
+
+- Install [pnpm](https://pnpm.io/installation) (v11 preferred)
+- Run `pnpm install` in this directory
+- Run `pnpm dev`
+- Type `b` to open preview in browser
+- Type `x` to exit
+
+### Public pages
 
 - `index.html` — homepage
 - `new-york.html`, `vegas.html`, `london.html`, `mumbai.html` — city editions
@@ -21,23 +29,24 @@ Each public page sets `<link rel="canonical">` to the matching URL on the live s
 - `mumbai.html` → `https://www.ppw-conference.com/mumbai/`
 - `ppw-sponsorships.html` → `https://www.ppw-conference.com/` (no dedicated sponsorship page on the live site)
 
-## Deploy (Cloudflare Workers)
-
-### `wrangler.jsonc`
-
-Assets-only Worker config: no Worker script. Everything under the project root is published as static assets.
-
-```bash
-npx wrangler deploy
-# or preview locally:
-npx wrangler dev
-```
-
 ### `.assetsignore`
 
 Gitignore-style list of paths **not** uploaded as public assets:
 
-- `.git`, `wrangler.jsonc`, `.wrangler`, `.netlify`, and similar — repo / tooling, not site content
+- `.git`, `wrangler.jsonc`, `.wrangler`, `.netlify`, `package.json`, `pnpm-workspace.yaml`, README/AGENTS, and similar — repo / tooling, not site content
 - `_*.html` — internal review pages (audit, hub, design options)
 
 Edit `.assetsignore` if you need more private paths excluded from deploy.
+
+### Dev note
+`assets.directory` is `.` (the repo root). Wrangler’s default local state lives under `.wrangler/`, which is *inside* that watched tree. State files (e.g. SQLite `-shm`) update continuously, so bare `wrangler dev` / `pnpx wrangler dev` enters an infinite “Local server updated / Reloading…” loop.
+
+Use the `dev` script (or pass the flag yourself):
+
+```bash
+pnpm dev
+# equivalent:
+pnpx wrangler dev --persist-to /tmp/ppw-conference-preview-wrangler
+```
+
+That keeps local persistence outside the assets directory so the watcher stays quiet.

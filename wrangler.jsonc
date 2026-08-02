@@ -1,6 +1,10 @@
 {
   // Assets-only Worker: serves this directory as static files.
-  // Deploy with: npx wrangler deploy
+  // Deploy: pnpm deploy  (or pnpx wrangler deploy)
+  // Dev:    pnpm dev     — do not use bare `wrangler dev` here:
+  //   assets.directory is ".", so default local state under .wrangler/ is
+  //   inside the watched tree and causes an infinite reload loop. The
+  //   package.json "dev" script uses --persist-to outside the project.
   "name": "ppw-conference-preview",
   "compatibility_date": "2026-08-01",
   "assets": {

@@ -1,0 +1,11 @@
+{
+  "name": "ppw-conference-preview",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev --persist-to /tmp/ppw-conference-preview-wrangler",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}

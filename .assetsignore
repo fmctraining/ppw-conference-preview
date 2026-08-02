@@ -7,6 +7,12 @@ wrangler.jsonc
 .gitignore
 .nojekyll
 node_modules
+package.json
+pnpm-workspace.yaml
+pnpm-lock.yaml
+AGENTS.md
+README.md
+REVIEW-NOTES.md
 
 # Internal review / design-comp pages (not linked from the main site)
 _*.html
