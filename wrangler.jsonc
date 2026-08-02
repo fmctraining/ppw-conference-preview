@@ -7,6 +7,7 @@
   //   package.json "dev" script uses --persist-to outside the project.
   "name": "ppw-conference-preview",
   "compatibility_date": "2026-08-01",
+  "account_id": "e293b61f26d82aaa3dd91d99b3b34c2e",
   "assets": {
     "directory": "."
   }

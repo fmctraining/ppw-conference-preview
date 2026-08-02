@@ -5,9 +5,9 @@ Static HTML preview of the Post Production World conference site. Hand-authored 
 ### Local preview (as served by Cloudflare)
 
 - Install [pnpm](https://pnpm.io/installation) (v11 preferred)
-- Run `pnpm install` in this directory
-- Run `pnpm dev`
-- Type `b` to open preview in browser
+- Run `pnpm install` to install wrangler
+- Run `pnpm dev` to start a local preview dev server
+- Type `b` to open the preview in a browser
 - Type `x` to exit
 
 ### Public pages
