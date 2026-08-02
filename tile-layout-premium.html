@@ -3,107 +3,96 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Location tiles — 5 premium framings</title>
+<title>Location tiles — 5 framings (full content)</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#080b12;--line:rgba(255,255,255,.12);--ink:#eef2fb;--faint:#6b7b9e;--cyan:#87dffa;--maxw:1200px}
+  :root{--bg:#080b12;--line:rgba(255,255,255,.12);--ink:#eef2fb;--faint:#6b7b9e;--cyan:#87dffa}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.5}
-  .top{max-width:var(--maxw);margin:0 auto;padding:44px 24px 4px}
+  .top{max-width:1200px;margin:0 auto;padding:44px 22px 4px}
   h1{font-size:26px;font-weight:800;margin:0 0 6px}
   .top p{color:var(--faint);font-size:14px;margin:0;max-width:900px;line-height:1.6}
-  .opt{max-width:var(--maxw);margin:0 auto;padding:52px 24px 0}
-  .optlabel{display:inline-block;background:var(--cyan);color:#04121a;font-weight:900;font-size:20px;text-transform:uppercase;padding:9px 20px;border-radius:12px}
-  .optnote{color:var(--faint);font-size:13.5px;margin:12px 0 0;max-width:760px}
+  .opt{max-width:1200px;margin:38px auto 0;padding:0 22px}
+  .optlabel{display:inline-block;background:var(--cyan);color:#04121a;font-weight:900;font-size:18px;text-transform:uppercase;padding:8px 18px;border-radius:12px}
+  .optnote{color:var(--faint);font-size:13.5px;margin:10px 0 0;max-width:820px;line-height:1.6}
 
-  /* ---- shared compact tile ---- */
-  .tile{position:relative;height:300px;overflow:hidden}
-  .tile .img{position:absolute;inset:0;background-size:cover;background-position:center 55%;transition:transform .8s ease}
-  .tile:hover .img{transform:scale(1.04)}
-  .tile .sc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,9,18,.5),transparent 26%,transparent 52%,rgba(6,9,18,.86))}
-  .tile .wm{position:absolute;top:26px;left:50%;transform:translateX(calc(-50% - 10px));width:230px;filter:drop-shadow(0 6px 20px rgba(0,0,0,.6))}
-  .tile .city{position:absolute;left:26px;bottom:24px;z-index:3;margin:0;font-weight:800;font-size:38px;letter-spacing:-1px;line-height:.95;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,.6)}
-  .tile .cta{position:absolute;right:26px;bottom:26px;z-index:3;display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:11px 20px;border-radius:999px;white-space:nowrap}
-  .tile.nyc .img{background-image:url(ppw-assets/tile-nyc.jpg)}   .tile.nyc .cta{background:linear-gradient(180deg,#4f7df9,#2f5fe0)}
-  .tile.veg .img{background-image:url(ppw-assets/tile-vegas.jpg)} .tile.veg .cta{background:linear-gradient(180deg,#ff9d64,#f07a2f)}
-  .tile.lon .img{background-image:url(ppw-assets/tile-london.jpg)}.tile.lon .cta{background:linear-gradient(180deg,#c6a3ff,#a074ee)}
-  .tile.mum .img{background-image:url(ppw-assets/tile-mumbai.jpg)}.tile.mum .cta{background:linear-gradient(180deg,#5ee0c0,#33bfa0)}
+  /* ===== the tile (identical content everywhere) ===== */
+  .tile{position:relative;height:360px;overflow:hidden;background:#0b0f18}
+  .tile .img{position:absolute;inset:0;background-position:center 45%;background-size:cover;transition:transform .8s ease}
+  .tile:hover .img{transform:scale(1.035)}
+  .tile .sc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,9,18,.5),transparent 24%,transparent 52%,rgba(6,9,18,.88))}
+  .head{position:absolute;top:28px;left:0;right:0;z-index:3;display:flex;flex-direction:column;align-items:center}
+  .head .wm{width:250px;max-width:52%;filter:drop-shadow(0 6px 20px rgba(0,0,0,.6));display:block;transform:translateX(-10px)}
+  .head .divider{width:180px;height:1px;margin:8px 0 11px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent)}
+  .lock{display:inline-flex;align-items:center;gap:9px;filter:drop-shadow(0 2px 10px rgba(0,0,0,.85));transform:translateX(9px)}
+  .lock .by{font-size:9.5px;letter-spacing:1.8px;text-transform:uppercase;color:#dbe6fb;font-weight:600}
+  .lock .fmc{height:14px;display:block}
+  .lock .plus{color:#cdd8ef;font-weight:300;font-size:13px;line-height:0;transform:translateY(1px)}
+  .lock .ptnr{height:13px;display:block}
+  .city{position:absolute;left:30px;bottom:26px;z-index:3;margin:0;font-weight:800;font-size:42px;letter-spacing:-1.2px;line-height:.95;color:#fff;text-shadow:0 4px 22px rgba(0,0,0,.6)}
+  .city .ev{display:block;font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:8px;text-shadow:0 2px 10px rgba(0,0,0,.7)}
+  .cluster{position:absolute;right:30px;bottom:28px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px}
+  .cluster .date{color:#fff;font-weight:700;font-size:15px;text-shadow:0 2px 12px rgba(0,0,0,.7)}
+  .cta{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-weight:700;font-size:13.5px;padding:12px 22px;border-radius:999px;white-space:nowrap}
+  /* per-city accents */
+  .nyc .img{background-image:url(ppw-assets/tile-nyc.jpg)}    .nyc .ev{color:#8fb6ff} .nyc .cta{background:linear-gradient(180deg,#4f7df9,#2f5fe0);box-shadow:0 10px 26px rgba(47,95,224,.45)}
+  .veg .img{background-image:url(ppw-assets/tile-vegas.jpg)}  .veg .ev{color:#ffb98a} .veg .cta{background:linear-gradient(180deg,#ff9d64,#f07a2f);box-shadow:0 10px 26px rgba(240,122,47,.45)}
+  .lon .img{background-image:url(ppw-assets/tile-london.jpg)} .lon .ev{color:#cdb3ff} .lon .cta{background:linear-gradient(180deg,#c6a3ff,#a074ee);box-shadow:0 10px 26px rgba(160,116,238,.45)}
+  .mum .img{background-image:url(ppw-assets/tile-mumbai.jpg)} .mum .ev{color:#7fe9cf} .mum .cta{background:linear-gradient(180deg,#5ee0c0,#33bfa0);box-shadow:0 10px 26px rgba(51,191,160,.45)}
 
-  /* faux "next section" to show separation */
-  .next{position:relative;height:120px;margin-top:0;background:linear-gradient(180deg,#0c1526,#0a1120);border-top:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--faint);font-size:12px;letter-spacing:2px;text-transform:uppercase}
-
-  /* ===== 1 · full-bleed (the current one, for reference) ===== */
-  .L1 .stack .tile{border-bottom:1px solid rgba(255,255,255,.06)}
-
-  /* ===== 2 · contained + gap on dark ===== */
-  .L2 .stack{display:flex;flex-direction:column;gap:16px;padding:8px 0 40px}
-  .L2 .tile{border-radius:16px;border:1px solid var(--line)}
-
-  /* ===== 3 · floating cards (shadow + lift) ===== */
-  .L3 .stack{display:flex;flex-direction:column;gap:26px;padding:10px 0 48px}
-  .L3 .tile{border-radius:20px;box-shadow:0 30px 70px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.14)}
-
-  /* ===== 4 · 2x2 gallery grid ===== */
-  .L4 .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:8px 0 44px}
-  @media(max-width:720px){.L4 .grid{grid-template-columns:1fr}}
-  .L4 .tile{height:280px;border-radius:16px;border:1px solid var(--line)}
-  .L4 .tile .wm{width:180px}.L4 .tile .city{font-size:32px}
-
-  /* ===== 5 · matte frame (dark mat around image) ===== */
-  .L5 .stack{display:flex;flex-direction:column;gap:20px;padding:8px 0 44px}
-  .L5 .mat{background:#0c1424;border:1px solid var(--line);border-radius:18px;padding:12px}
-  .L5 .tile{border-radius:10px}
-
-  .foot{max-width:var(--maxw);margin:0 auto;padding:40px 24px 90px;color:var(--faint);font-size:12.5px}
+  /* ===== framings ===== */
+  .stack{max-width:1200px;margin:16px auto 0;padding:0 22px}
+  .f1 .stack{max-width:none;padding:0}
+  .f2 .stack{display:flex;flex-direction:column;gap:16px}
+  .f2 .tile{border-radius:8px;border:1px solid var(--line)}
+  .f3 .stack{display:flex;flex-direction:column;gap:26px}
+  .f3 .tile{border-radius:16px;box-shadow:0 26px 60px rgba(0,0,0,.5)}
+  .f4 .stack{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .f4 .tile{border-radius:12px;border:1px solid var(--line);height:320px}
+  @media(max-width:760px){.f4 .stack{grid-template-columns:1fr}}
+  .f5 .stack{display:flex;flex-direction:column;gap:22px}
+  .f5 .mat{background:#0c111c;border:1px solid var(--line);border-radius:16px;padding:14px}
+  .f5 .tile{border-radius:8px}
+  .foot{max-width:1200px;margin:0 auto;padding:36px 22px 90px;color:var(--faint);font-size:12.5px}
 </style>
 </head>
 <body>
 <header class="top">
-  <h1>Location tiles — 5 framings (which feels most premium?)</h1>
-  <p>The problem: full-bleed tiles butt straight into the next heavy image section (Who Attends). Options 2–5 contain the tiles so the dark page frames them and the section clearly ends. Each is shown with a faux "Who Attends" strip below so you can judge the breathing room. Reply 1–5.</p>
+  <h1>Location tiles — 5 framings, full content</h1>
+  <p>Every framing now shows the real thing 100%: wordmark, divider, "By FMC + partner" lockup, eyebrow, big city name, date, and the actual CTA. Only the framing (edges / gaps / shadow / grid / mat) changes. Reply 1 / 2 / 3 / 4 / 5.</p>
 </header>
 
-<!-- 1 full-bleed reference -->
-<div class="opt"><span class="optlabel">1 · full-bleed (current)</span><p class="optnote">Edge to edge, no gaps. Bold, but it slams into the next image section — hence the manual dark spacer.</p></div>
-<section class="L1"><div class="stack">
-  <div class="tile nyc"><div class="img"></div><div class="sc"></div><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png"><p class="city">New York</p><a class="cta" href="#">Explore →</a></div>
-  <div class="tile veg"><div class="img"></div><div class="sc"></div><img class="wm" src="ppw-assets/wm-nodate/wm-vegas.png"><p class="city">Las Vegas</p><a class="cta" href="#">Explore →</a></div>
-</div><div class="next">↓ Who Attends section</div></section>
-
-<!-- 2 contained + gap -->
-<div class="opt"><span class="optlabel">2 · contained + gap</span><p class="optnote">Tiles sit inside the page width with the dark background showing around and between them. Simple, clean, and the section reads as clearly bounded.</p>
-  <div class="stack">
-    <div class="tile nyc"><div class="img"></div><div class="sc"></div><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png"><p class="city">New York</p><a class="cta" href="#">Explore →</a></div>
-    <div class="tile veg"><div class="img"></div><div class="sc"></div><img class="wm" src="ppw-assets/wm-nodate/wm-vegas.png"><p class="city">Las Vegas</p><a class="cta" href="#">Explore →</a></div>
-  </div>
-</div><section class="L2"></section><div class="next">↓ Who Attends section</div>
-
-<!-- 3 floating cards -->
-<div class="opt L3"><span class="optlabel">3 · floating cards</span><p class="optnote">Same as 2 but the tiles lift off the page with a soft shadow and larger gaps. Reads the most premium — like framed prints.</p>
-  <div class="stack">
-    <div class="tile nyc"><div class="img"></div><div class="sc"></div><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png"><p class="city">New York</p><a class="cta" href="#">Explore →</a></div>
-    <div class="tile veg"><div class="img"></div><div class="sc"></div><img class="wm" src="ppw-assets/wm-nodate/wm-vegas.png"><p class="city">Las Vegas</p><a class="cta" href="#">Explore →</a></div>
-  </div>
-</div><div class="next">↓ Who Attends section</div>
-
-<!-- 4 grid -->
-<div class="opt L4"><span class="optlabel">4 · 2×2 gallery grid</span><p class="optnote">All four cities in a grid instead of a tall stack. Shorter section, more of an overview, less scrolling.</p>
-  <div class="grid">
-    <div class="tile nyc"><div class="img"></div><div class="sc"></div><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png"><p class="city">New York</p><a class="cta" href="#">Explore →</a></div>
-    <div class="tile veg"><div class="img"></div><div class="sc"></div><img class="wm" src="ppw-assets/wm-nodate/wm-vegas.png"><p class="city">Las Vegas</p><a class="cta" href="#">Explore →</a></div>
-    <div class="tile lon"><div class="img"></div><div class="sc"></div><img class="wm" src="ppw-assets/wm-nodate/wm-london.png"><p class="city">London</p><a class="cta" href="#">Explore →</a></div>
-    <div class="tile mum"><div class="img"></div><div class="sc"></div><img class="wm" src="ppw-assets/wm-nodate/wm-mumbai-sa.webp"><p class="city">Mumbai</p><a class="cta" href="#">Explore →</a></div>
-  </div>
-</div><div class="next">↓ Who Attends section</div>
-
-<!-- 5 matte -->
-<div class="opt L5"><span class="optlabel">5 · matte frame</span><p class="optnote">Each tile is inset inside a dark bordered "mat," like a gallery mount. Most formal / editorial.</p>
-  <div class="stack">
-    <div class="mat"><div class="tile nyc"><div class="img"></div><div class="sc"></div><img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png"><p class="city">New York</p><a class="cta" href="#">Explore →</a></div></div>
-    <div class="mat"><div class="tile veg"><div class="img"></div><div class="sc"></div><img class="wm" src="ppw-assets/wm-nodate/wm-vegas.png"><p class="city">Las Vegas</p><a class="cta" href="#">Explore →</a></div></div>
-  </div>
-</div><div class="next">↓ Who Attends section</div>
+<section class="f1"><div class="opt"><span class="optlabel">1 · full-bleed</span><p class="optnote">Edge to edge, no gaps between tiles. Boldest, but it runs straight into the next section.</p></div><div class="stack" data-cities="nyc,veg"></div></section>
+<section class="f2"><div class="opt"><span class="optlabel">2 · contained + gap</span><p class="optnote">Tiles sit inside the page width with dark showing around and between. Clean and clearly bounded.</p></div><div class="stack" data-cities="nyc,veg"></div></section>
+<section class="f3"><div class="opt"><span class="optlabel">3 · floating cards</span><p class="optnote">Same as 2 but tiles lift off the page with a soft shadow and bigger gaps. Reads the most premium.</p></div><div class="stack" data-cities="nyc,veg"></div></section>
+<section class="f4"><div class="opt"><span class="optlabel">4 · 2×2 gallery grid</span><p class="optnote">All four cities in a grid — shorter section, more of an overview, less scrolling.</p></div><div class="stack" data-cities="nyc,veg,lon,mum"></div></section>
+<section class="f5"><div class="opt"><span class="optlabel">5 · matte frame</span><p class="optnote">Each tile inset inside a dark bordered "mat," like a gallery mount. Most formal / editorial.</p></div><div class="stack" data-cities="nyc,veg"></div></section>
 
 <p class="foot">Internal preview — tile-layout-premium.html · reply 1 / 2 / 3 / 4 / 5</p>
+
+<script>
+const C = {
+  nyc:{cls:'nyc',wm:'ppw-assets/wm-nodate/wm-nyc.png',    ptnr:'ppw-assets/partners/nab-show-white.png', ph:14, ev:'at NAB Show New York',            city:'New York',  date:'October 20–21, 2026', cta:'Explore New York'},
+  veg:{cls:'veg',wm:'ppw-assets/wm-nodate/wm-vegas.png',  ptnr:'ppw-assets/partners/nab-show-white.png', ph:14, ev:'at NAB Show',                      city:'Las Vegas', date:'April 3–7, 2027',      cta:'Explore Las Vegas'},
+  lon:{cls:'lon',wm:'ppw-assets/wm-nodate/wm-london.png', ptnr:'ppw-assets/mpts-logo.webp',              ph:14, ev:'at MPTS · Europe',                  city:'London',    date:'May 12–13, 2027',      cta:'Explore London'},
+  mum:{cls:'mum',wm:'ppw-assets/wm-nodate/wm-mumbai-sa.webp', ptnr:'ppw-assets/partners/bi-abis-white.png', ph:20, ev:'at Broadcast India · South Asia', city:'Mumbai',    date:'October 22–23, 2026',  cta:'Explore Mumbai'}
+};
+function tile(c){
+  return `<div class="tile ${c.cls}">
+    <div class="img"></div><div class="sc"></div>
+    <div class="head">
+      <img class="wm" src="${c.wm}" alt="">
+      <div class="divider"></div>
+      <div class="lock"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png" alt="FMC"><span class="plus">+</span><img class="ptnr" src="${c.ptnr}" alt="" style="height:${c.ph}px"></div>
+    </div>
+    <p class="city"><span class="ev">${c.ev}</span>${c.city}</p>
+    <div class="cluster"><span class="date">${c.date}</span><a class="cta" href="#">${c.cta} →</a></div>
+  </div>`;
+}
+document.querySelectorAll('.stack[data-cities]').forEach(st=>{
+  const ids = st.getAttribute('data-cities').split(',');
+  st.innerHTML = ids.map(id=> st.closest('.f5') ? `<div class="mat">${tile(C[id])}</div>` : tile(C[id])).join('');
+});
+</script>
 </body>
 </html>
