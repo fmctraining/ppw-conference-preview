@@ -30,11 +30,11 @@
   .lock .ptnr{height:15px;display:block}
 
   /* bottom-left: big white city name */
-  .city{position:absolute;left:48px;bottom:34px;z-index:3;margin:0;font-weight:800;font-size:56px;letter-spacing:-1.5px;line-height:.95;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.6)}
+  .city{position:absolute;left:max(24px,calc((100% - 1200px)/2 + 24px));bottom:34px;z-index:3;margin:0;font-weight:800;font-size:56px;letter-spacing:-1.5px;line-height:.95;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.6)}
   .city .ev{display:block;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;text-shadow:0 2px 10px rgba(0,0,0,.7)}
 
   /* bottom-right: date + CTA */
-  .cluster{position:absolute;right:48px;bottom:36px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:12px}
+  .cluster{position:absolute;right:max(24px,calc((100% - 1200px)/2 + 24px));bottom:36px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:12px}
   .cluster .date{color:#fff;font-weight:700;font-size:17px;text-shadow:0 2px 12px rgba(0,0,0,.7)}
   .cta{display:inline-flex;align-items:center;gap:9px;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:13px 24px;border-radius:999px;white-space:nowrap}
   .cta svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2}
@@ -57,7 +57,7 @@
 <body>
 <header class="top">
   <h1>Homepage location tiles — final</h1>
-  <p>Option 1 lockup, refined: text-only P|PW wordmark (ring removed so the partner logos center cleanly), a horizontal divider, then the "By FMC + partner" lockup — centered up top. Large white city name bottom-left, date + CTA bottom-right. Each city in its own color. Look right? I'll drop these into the homepage.</p>
+  <p>Real branded P|PW wordmark (ring + region) nudged for optical centering, horizontal divider, then the "By FMC + partner" lockup. City name bottom-left + date/CTA bottom-right, both pulled in to line up with the nav bar (logo left, last link right). Each city in its own color.</p>
 </header>
 
 <!-- New York -->
@@ -65,7 +65,7 @@
   <div class="head">
     <img class="wm" src="ppw-assets/wm-nodate/wm-nyc.png" alt="Post Production World New York">
     <div class="divider"></div>
-    <div class="lock"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png" alt="FMC"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-ny-white.png" alt="NAB Show New York"></div>
+    <div class="lock"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png" alt="FMC"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-show-white.png" alt="NAB Show"></div>
   </div>
   <p class="city"><span class="ev">at NAB Show New York</span>New York</p>
   <div class="cluster"><span class="date">October 20–21, 2026</span><a class="cta" href="new-york.html">Explore New York <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
