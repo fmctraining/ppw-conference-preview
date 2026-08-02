@@ -5,30 +5,41 @@ body{margin:0;background:#0a0e17;color:#eef2fb;font-family:"Poppins",-apple-syst
 .bar h1{font-size:16px;margin:0;font-weight:800}.count{color:#87dffa;font-weight:800;font-size:14px}
 .btn{background:#4f7df9;color:#fff;border:0;border-radius:8px;padding:10px 16px;font-weight:800;font-size:13px;cursor:pointer}
 .btn.sec{background:transparent;border:1px solid rgba(255,255,255,.25)}
-.intro{max-width:1300px;margin:0 auto;padding:20px 22px 0;color:#a9b7d6;font-size:14px;line-height:1.6}
+.intro{max-width:1300px;margin:0 auto;padding:18px 22px 0;color:#a9b7d6;font-size:14px;line-height:1.6}
+.editnote{max-width:1300px;margin:12px auto 0;padding:11px 16px;background:rgba(245,196,81,.09);border:1px solid rgba(245,196,81,.35);border-radius:10px;color:#f5c451;font-size:13px;line-height:1.5}
 .grid{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:14px;padding:16px 22px 70px}
 .ph{position:relative;aspect-ratio:3/2;border-radius:12px;overflow:hidden;cursor:pointer;border:4px solid transparent;background:#111}
-.ph img{width:100%;height:100%;object-fit:cover;opacity:.66;transition:opacity .15s}
+.ph img{width:100%;height:100%;object-fit:cover;opacity:.66;transition:opacity .15s;user-select:none}
 .ph.yes{border-color:#5fd39a}.ph.yes img{opacity:1}
 .ph .k{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;background:#5fd39a;color:#04120b;display:none;align-items:center;justify-content:center;font-weight:900;font-size:18px}
 .ph.yes .k{display:flex}
+.ph .zoom{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font-size:10.5px;font-weight:700;padding:5px 9px;border-radius:7px;opacity:0;transition:.15s}
+.ph:hover .zoom{opacity:1}
+#lb{position:fixed;inset:0;z-index:100;background:rgba(4,7,13,.94);display:none;align-items:center;justify-content:center;cursor:zoom-out;padding:20px}
+#lb img{max-width:98vw;max-height:96vh;border-radius:8px;box-shadow:0 30px 90px rgba(0,0,0,.6)}
+#lb .x{position:fixed;top:16px;right:20px;font-size:34px;color:#fff;font-weight:300;cursor:pointer;line-height:1}
 dialog{background:#111a2c;color:#eef2fb;border:1px solid rgba(255,255,255,.15);border-radius:14px;max-width:640px;width:92%}
 textarea{width:100%;height:240px;background:#0a0e17;color:#eef2fb;border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:10px;font-family:monospace;font-size:12px;box-sizing:border-box}
 </style></head><body>
 <div class="bar"><h1>PPW Las Vegas — pick your favorites</h1><span class="count" id="c">0 selected</span>
 <button class="btn" onclick="exp()">Copy my picks</button><button class="btn sec" onclick="clr()">Clear</button></div>
-<div class="intro">Tap the photos you like for the "Inside P|PW" gallery (green check = picked). Images are large so you can check they're sharp. When done, hit <b>Copy my picks</b> and paste them back to Syvonne. Order doesn't matter. Auto-saves.</div>
+<div class="intro"><b>Single-tap</b> a photo to pick it (green check). <b>Double-tap</b> to pop it up full-size and check it's sharp. When done, hit <b>Copy my picks</b> and paste them back to Syvonne. Order doesn't matter. Auto-saves.</div>
+
 <div class="grid" id="g"></div>
+<div id="lb"><span class="x">&times;</span><img id="lbimg" src=""></div>
 <dialog id="d"><h3 style="margin:0 0 8px">Your picks (<span id="dn"></span>)</h3><textarea id="ta" readonly></textarea>
 <div style="margin-top:10px;text-align:right"><button class="btn" onclick="navigator.clipboard.writeText(ta.value);this.textContent='Copied!'">Copy</button>
 <button class="btn sec" onclick="d.close()">Close</button></div></dialog>
 <script>
 const KEY="ppw_vegas_elise",FILES=["718A5491.jpg", "PPW2024_by_Syvonne_K_Photography_316.jpg", "718A6604.jpg", "PPW2024_by_Syvonne_K_Photography_623.jpg", "PPW1.jpg", "PPW2024_by_Syvonne_K_Photography_365.jpg", "PPW2024_by_Syvonne_K_Photography_358.jpg", "718A5934.jpg", "PPW2024_by_Syvonne_K_Photography_377.jpg", "718A6334.jpg", "PPW2024_by_Syvonne_K_Photography_549.jpg", "PPW2024_by_Syvonne_K_Photography_612.jpg", "PPW2024_by_Syvonne_K_Photography_144.jpg", "PPW2024_by_Syvonne_K_Photography_147.jpg", "PPW2024_by_Syvonne_K_Photography_237.jpg", "PPW2024_by_Syvonne_K_Photography_402.jpg", "PPW2024_by_Syvonne_K_Photography_395.jpg", "PPW2024_by_Syvonne_K_Photography_580.jpg", "718A5966.jpg", "718A6291.jpg", "PPW2024_by_Syvonne_K_Photography_324.jpg", "PPW2024_by_Syvonne_K_Photography_558.jpg", "PPW2024_by_Syvonne_K_Photography_551.jpg", "718A7006.jpg"],DIR="ppw-assets/gallery-vegas";
 let sel=new Set(JSON.parse(localStorage.getItem(KEY)||'[]'));
-const g=document.getElementById('g'),ta=document.getElementById('ta'),d=document.getElementById('d');
-FILES.forEach(f=>{const e=document.createElement('div');e.className='ph'+(sel.has(f)?' yes':'');
- e.innerHTML='<img loading="lazy" src="'+DIR+'/'+encodeURIComponent(f)+'"><div class="k">&#10003;</div>';
- e.onclick=()=>{sel.has(f)?(sel.delete(f),e.classList.remove('yes')):(sel.add(f),e.classList.add('yes'));save()};g.appendChild(e)});
+const g=document.getElementById('g'),ta=document.getElementById('ta'),d=document.getElementById('d'),lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg');
+FILES.forEach(f=>{const e=document.createElement('div');e.className='ph'+(sel.has(f)?' yes':'');const u=DIR+'/'+encodeURIComponent(f);
+ e.innerHTML='<img loading="lazy" src="'+u+'"><div class="k">&#10003;</div><div class="zoom">Double-tap to enlarge</div>';
+ e.onclick=()=>{sel.has(f)?(sel.delete(f),e.classList.remove('yes')):(sel.add(f),e.classList.add('yes'));save()};
+ e.ondblclick=(ev)=>{ev.preventDefault();lbimg.src=u;lb.style.display='flex';};
+ g.appendChild(e)});
+lb.onclick=()=>lb.style.display='none';
 function save(){localStorage.setItem(KEY,JSON.stringify([...sel]));document.getElementById('c').textContent=sel.size+' selected'}
 function exp(){ta.value=[...sel].join('\n');document.getElementById('dn').textContent=sel.size;d.showModal()}
 function clr(){if(confirm('Clear all?')){sel.clear();save();document.querySelectorAll('.ph.yes').forEach(x=>x.classList.remove('yes'))}}
