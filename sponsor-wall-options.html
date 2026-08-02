@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sponsor wall — treatments</title>
+<title>Sponsor wall — the two real options</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{--bg:#0a0e17;--line:rgba(255,255,255,.1);--ink:#eef2fb;--dim:#a9b7d6;--faint:#6b7b9e;--cyan:#87dffa;--purple:#b794f6}
@@ -15,80 +15,68 @@
   .demo{max-width:1000px;margin:30px auto 0;padding:0 22px}
   .tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:#04121a;background:var(--cyan);padding:6px 14px;border-radius:8px;margin-bottom:12px}
   .tag.rec{background:var(--purple);color:#120a24}
-  .note{color:var(--faint);font-size:13px;margin:0 0 14px;max-width:820px}
-  .kick{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--purple);font-weight:700;text-align:center;margin:0 0 6px}
+  .note{color:var(--faint);font-size:13px;margin:0 0 14px;max-width:840px;line-height:1.6}
+  .ruled{color:#8a93a8;font-size:13px;border-left:3px solid rgba(255,255,255,.18);padding:10px 0 10px 16px;margin:34px 0 0;max-width:840px}
+  .kick{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;text-align:center;margin:0 0 6px}
   .h2{font-size:22px;font-weight:800;text-align:center;margin:0 0 26px}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:720px;margin:0 auto}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:760px;margin:0 auto}
   @media(max-width:620px){.grid{grid-template-columns:1fr 1fr}}
-  .sec{border:1px solid var(--line);border-radius:20px;padding:44px 34px;margin-bottom:40px;position:relative;overflow:hidden}
+  .sec{border:1px solid var(--line);border-radius:20px;padding:44px 34px;margin-bottom:26px;overflow:hidden}
 
-  /* 1 — CURRENT: white plate */
+  /* 1 white plate */
   .s1{background:linear-gradient(160deg,#13203c,#0c1424)}
-  .s1 .plate{background:#fff;max-width:760px;margin:0 auto;border-radius:14px;padding:38px 30px}
+  .s1 .plate{background:#fff;max-width:780px;margin:0 auto;border-radius:14px;padding:40px 32px}
   .s1 .kick{color:#7c3aed}.s1 .h2{color:#0e1626}
-  .s1 .grid img{max-height:34px;max-width:130px;width:auto;object-fit:contain}
-  .s1 .cell{display:flex;align-items:center;justify-content:center;min-height:52px}
+  .s1 .cell{display:flex;align-items:center;justify-content:center;min-height:56px}
+  .s1 .cell img{max-height:38px;max-width:132px;width:auto;object-fit:contain}
 
-  /* 2 — DARK + LIGHT CHIPS */
+  /* 2 dark + chips */
   .s2{background:linear-gradient(160deg,#111a2c,#0b1220)}
-  .s2 .chip{background:#f4f6fb;border-radius:14px;min-height:84px;display:flex;align-items:center;justify-content:center;padding:20px 22px;box-shadow:0 8px 24px rgba(0,0,0,.28)}
-  .s2 .chip img{max-height:38px;max-width:130px;width:auto;object-fit:contain}
-
-  /* 3 — DARK + MONOCHROME (my pick) */
-  .s3{background:linear-gradient(160deg,#111a2c,#0b1220)}
-  .s3 .cell{display:flex;align-items:center;justify-content:center;min-height:64px}
-  .s3 .cell img{max-height:34px;max-width:130px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.82;transition:opacity .2s}
-  .s3 .cell:hover img{opacity:1}
+  .s2 .kick{color:var(--cyan)}.s2 .h2{color:#fff}
+  .s2 .chip{background:#f3f5f9;border-radius:12px;height:82px;display:flex;align-items:center;justify-content:center;padding:0 20px;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+  .s2 .chip img{max-height:36px;max-width:120px;width:auto;object-fit:contain}
 </style>
 </head>
 <body>
 <header class="top">
-  <h1>Sponsor wall — 3 ways</h1>
-  <p>The problem: logos have mixed backgrounds, and a full white section is jarring on a dark site (and breaks in dark mode). Here's what you have now, the chip idea you asked about, and my recommended alternative. Reply 1 / 2 / 3.</p>
+  <h1>Sponsor wall — the two real options</h1>
+  <p>Real logos, real copy this time. Monochrome (all-white logos) is <b>ruled out</b> — 15 of your 23 logos have solid backgrounds, so the white filter turns them into white blocks. That leaves two clean choices. Reply 1 or 2.</p>
 </header>
 
 <div class="demo">
-  <span class="tag">1 · what you have now</span>
-  <p class="note">A white plate holding the logos. It protects the white-background logos, but the hard white block is the jarring transition you flagged.</p>
+  <span class="tag">1 · white plate (what you have now-ish)</span>
+  <p class="note">Logos sit on a white card inside the dark section. Every logo reads perfectly, but the hard white block is the jarring jump you flagged.</p>
   <section class="sec s1"><div class="plate">
-    <div class="kick">Trusted by the industry</div><div class="h2">Sponsors &amp; partners</div>
+    <div class="kick">In good company</div><div class="h2">Brands that partner with PPW</div>
     <div class="grid">
-      <div class="cell"><img src="ppw-assets/spon-nvidia.webp" alt="NVIDIA"></div>
-      <div class="cell"><img src="ppw-assets/spon-dell.webp" alt="Dell"></div>
-      <div class="cell"><img src="ppw-assets/spon-adobe.webp" alt="Adobe"></div>
-      <div class="cell"><img src="ppw-assets/spon-maxon.webp" alt="Maxon"></div>
-      <div class="cell"><img src="ppw-assets/spon-bmd-ko.webp" alt="Blackmagic"></div>
-      <div class="cell"><img src="ppw-assets/spon-intel-ko.webp" alt="Intel"></div>
+      <div class="cell"><img src="ppw-assets/c-nvidia.svg" alt="NVIDIA"></div>
+      <div class="cell"><img src="ppw-assets/c-dell.webp" alt="Dell"></div>
+      <div class="cell"><img src="ppw-assets/c-adobe.png" alt="Adobe"></div>
+      <div class="cell"><img src="ppw-assets/c-maxon.webp" alt="Maxon"></div>
+      <div class="cell"><img src="ppw-assets/c-bmd.webp" alt="Blackmagic"></div>
+      <div class="cell"><img src="ppw-assets/spon-amd.webp" alt="AMD"></div>
+      <div class="cell"><img src="ppw-assets/spon-hp.webp" alt="HP"></div>
+      <div class="cell"><img src="ppw-assets/t-wacom.webp" alt="Wacom"></div>
     </div>
   </div></section>
 
-  <span class="tag">2 · dark + light chips</span>
-  <p class="note">Section stays dark; each logo sits on its own light rounded chip. Fixes both problems with no logo-hunting — but it's busier, and the chips compete a little.</p>
+  <span class="tag rec">2 · dark + light chips — live now, my pick</span>
+  <p class="note">Section stays dark; each logo gets its own light rounded chip. Fixes the jarring transition, works with every logo exactly as-is (no re-sourcing), and dark-mode-proof. This is what's on the site right now.</p>
   <section class="sec s2">
-    <div class="kick" style="color:var(--cyan)">Trusted by the industry</div><div class="h2">Sponsors &amp; partners</div>
+    <div class="kick">In good company</div><div class="h2">Brands that partner with PPW</div>
     <div class="grid">
-      <div class="chip"><img src="ppw-assets/spon-nvidia.webp" alt="NVIDIA"></div>
-      <div class="chip"><img src="ppw-assets/spon-dell.webp" alt="Dell"></div>
-      <div class="chip"><img src="ppw-assets/spon-adobe.webp" alt="Adobe"></div>
-      <div class="chip"><img src="ppw-assets/spon-maxon.webp" alt="Maxon"></div>
-      <div class="chip"><img src="ppw-assets/spon-bmd-ko.webp" alt="Blackmagic"></div>
-      <div class="chip"><img src="ppw-assets/spon-intel-ko.webp" alt="Intel"></div>
+      <div class="chip"><img src="ppw-assets/c-nvidia.svg" alt="NVIDIA"></div>
+      <div class="chip"><img src="ppw-assets/c-dell.webp" alt="Dell"></div>
+      <div class="chip"><img src="ppw-assets/c-adobe.png" alt="Adobe"></div>
+      <div class="chip"><img src="ppw-assets/c-maxon.webp" alt="Maxon"></div>
+      <div class="chip"><img src="ppw-assets/c-bmd.webp" alt="Blackmagic"></div>
+      <div class="chip"><img src="ppw-assets/spon-amd.webp" alt="AMD"></div>
+      <div class="chip"><img src="ppw-assets/spon-hp.webp" alt="HP"></div>
+      <div class="chip"><img src="ppw-assets/t-wacom.webp" alt="Wacom"></div>
     </div>
   </section>
 
-  <span class="tag rec">3 · dark + monochrome — my pick</span>
-  <p class="note">Section stays dark; every logo is rendered in one uniform white. No chips, no white block, dark-mode-proof, and it reads as one clean, premium system. Trade-off: you lose the brand colors (NVIDIA green, Intel blue). Most modern sponsor walls do exactly this.</p>
-  <section class="sec s3">
-    <div class="kick">Trusted by the industry</div><div class="h2">Sponsors &amp; partners</div>
-    <div class="grid">
-      <div class="cell"><img src="ppw-assets/spon-nvidia.webp" alt="NVIDIA"></div>
-      <div class="cell"><img src="ppw-assets/spon-dell.webp" alt="Dell"></div>
-      <div class="cell"><img src="ppw-assets/spon-adobe.webp" alt="Adobe"></div>
-      <div class="cell"><img src="ppw-assets/spon-maxon.webp" alt="Maxon"></div>
-      <div class="cell"><img src="ppw-assets/spon-bmd-ko.webp" alt="Blackmagic"></div>
-      <div class="cell"><img src="ppw-assets/spon-intel-ko.webp" alt="Intel"></div>
-    </div>
-  </section>
+  <p class="ruled"><b>Ruled out · monochrome:</b> would look the most premium, but 15 of 23 logos have opaque backgrounds and become solid white rectangles under the white filter. Making it work would mean sourcing transparent versions of all 15 — not a fast fix. Parking it as a possible Phase 2 polish.</p>
 </div>
 </body>
 </html>
