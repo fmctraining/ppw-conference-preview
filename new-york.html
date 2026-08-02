@@ -123,9 +123,9 @@
   @media(max-width:700px){.collage{grid-template-columns:repeat(2,1fr);grid-auto-rows:128px}}
   .spon-by{display:flex;align-items:center;justify-content:center;gap:0;margin:-14px auto 30px;color:var(--ink-dim);font-size:14px;font-weight:600;letter-spacing:.02em}
 .spon-by img{height:36px;width:auto;margin-left:-9px}
-  .legend{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 18px;max-width:660px;margin:0 auto 24px;background:rgba(19,28,48,.4);border:1px solid var(--line);border-radius:14px;padding:15px 24px}
-  .legend span{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-dim)}
-  .legend i{width:10px;height:10px;border-radius:3px;display:inline-block;flex:none}
+  .legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;width:fit-content;margin:0 auto 20px;background:rgba(19,28,48,.55);backdrop-filter:blur(10px);border:1px solid var(--line-2);border-radius:999px;padding:13px 30px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+  .legend span{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:#fff}
+  .legend i{width:11px;height:11px;border-radius:3px;display:inline-block;transform:translateY(-1px)}
   /* ---------- SCHEDULE (container query driven) ---------- */
   .schedule-wrap{container-type:inline-size}
   .schedule-wrap.sim{max-width:412px;margin:0 auto;border:10px solid #060912;border-radius:38px;padding:10px;box-shadow:0 30px 80px rgba(0,0,0,.5);background:#060912}
@@ -136,12 +136,12 @@
   .gh{font-weight:800;font-size:13px;letter-spacing:.5px;color:var(--ink);padding:10px 12px;text-transform:uppercase;text-align:center}
   .gh.time-h{color:var(--ink-faint)}
   .time-cell{display:flex;align-items:center;justify-content:flex-end;font-size:13px;font-weight:700;color:var(--ink-dim);padding:10px 12px;white-space:nowrap}
-  .cell{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 19px;min-height:92px;display:flex;flex-direction:column;gap:7px;overflow:hidden}
+  .cell{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 19px 14px;min-height:92px;display:flex;flex-direction:column;gap:7px;overflow:hidden}
   .cell.cont{border-top:3px solid var(--tc,#a78bfa);padding-top:15px}
   .cell .ttl{font-weight:600;font-size:16px;line-height:1.38;color:#fff;text-wrap:balance;overflow-wrap:break-word;hyphens:none;text-align:center;min-height:2.76em;display:flex;align-items:center;justify-content:center}
   .cell .spk{font-size:12.5px;color:var(--ink-dim);margin-top:auto;padding-top:4px;display:flex;align-items:center;justify-content:center;gap:6px}
   .cell .spk .av{width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#3b4a72,#1c2742);font-size:9px;display:flex;align-items:center;justify-content:center;color:#cdd9f5;font-weight:800}
-  .trk{display:block;font-size:11.5px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;padding:7px 15px;margin:-18px -19px 14px;color:#fff;border-radius:0;text-align:center}
+  .trk{display:block;font-size:14.5px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;padding:12px 15px;margin:-18px -19px 14px;color:#fff;border-radius:0;text-align:center}
   .cell.empty{background:transparent;border-style:dashed;border-left-width:1px;min-height:92px}
   .keynote{grid-column:2 / -1;background:linear-gradient(180deg,rgba(167,139,250,.15),rgba(167,139,250,.05));border:1px solid rgba(167,139,250,.42);border-left:3px solid #a78bfa;border-right:3px solid #a78bfa;border-radius:10px;padding:18px 14px;display:flex;align-items:center;justify-content:center;gap:12px}
   .keynote .kx{font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#c4b5fd;background:rgba(167,139,250,.16);padding:4px 9px;border-radius:999px}
@@ -210,15 +210,15 @@
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
   /* clean skyline banner + content below */
-  .edition-banner{position:relative;height:clamp(300px,46vh,520px);background:url(ppw-assets/city-nyc-hi.jpg) center 50%/cover}
+  .edition-banner{position:relative;height:clamp(340px,54vh,600px);background:url(ppw-assets/city-nyc-hi.jpg) center 50%/cover}
   @media(max-width:760px){.edition-banner{height:clamp(220px,40vh,360px)}}
   .edition-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,transparent 72%,rgba(10,14,23,.42) 88%,rgba(10,14,23,.9) 98%,var(--bg) 100%)}
-  .edition-intro{text-align:center;padding:44px 0 56px}
+  .edition-intro{text-align:center;padding:56px 0 68px}
   .edition-intro .wrap{max-width:760px;margin:0 auto;padding:0 20px}
   .edition-intro .eyebrow{justify-content:center}
-  .edition-intro .ny-wordmark{max-width:min(473px,86%);width:100%;height:auto;display:block;margin:0 auto 20px;padding-top:30px;filter:drop-shadow(0 14px 40px rgba(0,0,0,.45))}
-  .prodby{display:flex;flex-direction:column;align-items:center;gap:7px;margin:-2px auto 24px}.prodby .pby{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);font-weight:700}.prodby .lk{display:inline-flex;align-items:center;gap:11px}.prodby .fmc{height:20px;width:auto;display:block}.prodby .plus{color:#8b98b5;font-weight:300;font-size:17px;line-height:0}.prodby .ptnr{height:17px;width:auto;display:block}
-  .edition-intro .hero-sub{margin:0 auto 29px}
+  .edition-intro .ny-wordmark{max-width:min(473px,86%);width:100%;height:auto;display:block;margin:0 auto 20px;padding-top:30px;filter:drop-shadow(0 14px 40px rgba(0,0,0,.45));transform:translateX(-13px)}
+  .prodby{display:flex;flex-direction:column;align-items:center;gap:7px;margin:-2px auto 24px;transform:translateX(11px)}.prodby .pby{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);font-weight:700}.prodby .lk{display:inline-flex;align-items:center;gap:11px}.prodby .fmc{height:20px;width:auto;display:block}.prodby .plus{color:#8b98b5;font-weight:300;font-size:17px;line-height:0}.prodby .ptnr{height:17px;width:auto;display:block}
+  .edition-intro .hero-sub{margin:18px auto 34px}
   .edition-intro .hero-meta{justify-content:center}
   .edition-intro .hero-cta{justify-content:center}
   .edition-intro .note-reg{text-align:center}
@@ -290,14 +290,15 @@
   .fb-stat{border:1px solid rgba(255,255,255,.12);border-radius:14px;background:radial-gradient(120% 92% at 50% 0,rgba(96,165,250,.13),transparent 62%),rgba(8,12,22,.62);backdrop-filter:blur(3px);padding:30px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
   .fb-big{font-family:"Poppins";font-weight:900;font-size:60px;line-height:.95;letter-spacing:-2px;background:linear-gradient(100deg in oklch,oklch(86% .10 225),oklch(80% .12 288));-webkit-background-clip:text;background-clip:text;color:transparent}
   .fb-big sup{font-size:27px;vertical-align:13px;margin-left:1px}
-  .fb-sl{color:#e6edfb;font-weight:600;font-size:13.5px;margin-top:10px;max-width:200px;line-height:1.4}
+  .fb-sl{color:#e6edfb;font-weight:600;font-size:15.5px;margin-top:10px;max-width:200px;line-height:1.4}
   .fb-card{background:rgba(8,12,22,.62);backdrop-filter:blur(3px);border:1px solid rgba(255,255,255,.09);border-radius:14px}
   .fb-card.feat{padding:36px 40px;text-align:center;display:flex;flex-direction:column;align-items:center}
   .fb-card.feat .q{font-size:22px;line-height:1.42;font-weight:400;margin:16px 0 14px;color:#fff;font-style:italic;text-wrap:pretty}
   .fb-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .fb-two .fb-card{padding:26px 26px;text-align:center;display:flex;flex-direction:column;align-items:center}
-  .fb-two .q{font-size:15px;line-height:1.5;margin:12px 0 10px;color:#eaf1ff;font-style:italic;text-wrap:pretty}
+  .fb-two .q{font-size:20px;line-height:1.5;margin:12px 0 10px;color:#eaf1ff;font-style:italic;text-wrap:pretty}
   .fb-card .role{font-size:10.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-faint)}
+  .fb-card .role .rloc{display:block;margin-top:3px}
   .fb-stars{color:#f5c451;font-size:19px;letter-spacing:3px}
   .fb-card.feat .fb-stars{font-size:24px;letter-spacing:5px}
   @media(max-width:820px){.fb-two{grid-template-columns:1fr}}
@@ -345,12 +346,11 @@
     .edition-intro .hero-cta .btn{font-size:16px;padding:16px 28px}
     .sec-kicker{font-size:13px}
     .eyebrow{font-size:13.5px}
-    .fb-sl{font-size:15px;max-width:250px}
     .spk-av{width:104px;height:104px}
     .spk-name{font-size:18px}
     .spk-bio{font-size:14.5px;line-height:1.55}
     /* legend: 2-col grid, Keynote spans full width (no lonely orphan) */
-    .legend{display:grid;grid-template-columns:1fr 1fr;gap:11px 14px;padding:16px 18px}
+    .legend{display:grid;grid-template-columns:1fr 1fr;gap:11px 14px;padding:16px 18px;width:auto;max-width:none;border-radius:16px}
     .legend span:last-child{grid-column:1/-1;justify-content:center}
   }
 </style>
@@ -453,10 +453,10 @@
   <div class="wrap">
     <div class="sec-head center"><div class="sec-kicker">What attendees say</div><h2 class="sec-title fb-title">Heard from the <span class="hl">room.</span></h2><p class="sec-desc" style="margin-inline:auto">Attendee feedback from P|PW Las Vegas 2026.</p></div>
     <div class="fb4">
-      <div class="fb-top"><div class="fb-stat"><div class="fb-big">91.75<sup>%</sup></div><div class="fb-sl">attendee satisfaction on content &amp; presenters</div></div><div class="fb-card feat"><span class="fb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p class="q">"One of the best sessions that I attended at Post|Production World — super useful information that was all new to me. Thank you!"</p><span class="role">Production-Safe AI session · P|PW Las Vegas 2026</span></div></div>
+      <div class="fb-top"><div class="fb-stat"><div class="fb-big">91.75<sup>%</sup></div><div class="fb-sl">attendee satisfaction on content &amp; presenters</div></div><div class="fb-card feat"><span class="fb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p class="q">"One of the best sessions that I attended at Post|Production World — super useful information that was all new to me. Thank you!"</p><span class="role">Production-Safe AI session<span class="rloc">P|PW Las Vegas 2026</span></span></div></div>
       <div class="fb-two">
-        <div class="fb-card"><span class="fb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p class="q">"Best session I've attended yet. Jeff is the high watermark of post education."</p><span class="role">Compression session with Jeff Greenberg · P|PW Las Vegas 2026</span></div>
-        <div class="fb-card"><span class="fb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p class="q">"Amazing shortcuts. Most useful session of my whole NAB course load."</p><span class="role">Premiere same-day editing session · P|PW Las Vegas 2026</span></div>
+        <div class="fb-card"><span class="fb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p class="q">"Best session I've attended yet. Jeff is the high watermark of post education."</p><span class="role">Compression session with Jeff Greenberg<span class="rloc">P|PW Las Vegas 2026</span></span></div>
+        <div class="fb-card"><span class="fb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p class="q">"Amazing shortcuts. Most useful session of my whole NAB course load."</p><span class="role">Premiere same-day editing session<span class="rloc">P|PW Las Vegas 2026</span></span></div>
       </div>
     </div>
     </div>

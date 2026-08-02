@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homepage location tiles — final</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#080b12;--line:rgba(255,255,255,.12);--ink:#eef2fb;--faint:#6b7b9e;--cyan:#87dffa}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.5}
+  .top{max-width:1180px;margin:0 auto;padding:44px 22px 4px}
+  h1{font-size:26px;font-weight:800;margin:0 0 6px}
+  .top p{color:var(--faint);font-size:14px;margin:0;max-width:900px;line-height:1.6}
+
+  .band{position:relative;height:440px;overflow:hidden;margin-top:26px;border:1px solid var(--line);border-radius:6px}
+  .band .img{position:absolute;inset:0;background-position:center 45%;background-size:cover;transition:transform .8s ease}
+  .band:hover .img{transform:scale(1.035)}
+  .sc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,9,18,.5),transparent 24%,transparent 52%,rgba(6,9,18,.86))}
+  .wrap{position:relative;z-index:3;height:100%;max-width:1180px;margin:0 auto;padding:0 48px}
+
+  /* top-center lockup: wordmark / divider / partners */
+  .head{position:absolute;top:34px;left:0;right:0;display:flex;flex-direction:column;align-items:center}
+  .head .wm{width:300px;max-width:46%;filter:drop-shadow(0 6px 20px rgba(0,0,0,.6));display:block}
+  .head .divider{width:220px;height:1px;margin:15px 0 14px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent)}
+  .lock{display:inline-flex;align-items:center;gap:10px;filter:drop-shadow(0 2px 10px rgba(0,0,0,.85))}
+  .lock .by{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:#dbe6fb;font-weight:600}
+  .lock .fmc{height:15px;display:block}
+  .lock .plus{color:#cdd8ef;font-weight:300;font-size:14px;line-height:0;transform:translateY(1px)}
+  .lock .ptnr{height:15px;display:block}
+
+  /* bottom-left: big white city name */
+  .city{position:absolute;left:48px;bottom:34px;z-index:3;margin:0;font-weight:800;font-size:56px;letter-spacing:-1.5px;line-height:.95;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.6)}
+  .city .ev{display:block;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;text-shadow:0 2px 10px rgba(0,0,0,.7)}
+
+  /* bottom-right: date + CTA */
+  .cluster{position:absolute;right:48px;bottom:36px;z-index:3;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+  .cluster .date{color:#fff;font-weight:700;font-size:17px;text-shadow:0 2px 12px rgba(0,0,0,.7)}
+  .cta{display:inline-flex;align-items:center;gap:9px;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:13px 24px;border-radius:999px;white-space:nowrap}
+  .cta svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.2}
+
+  /* per-city accents */
+  .nyc  .img{background-image:url(ppw-assets/tile-nyc.jpg)}    .nyc  .ev{color:#8fb6ff} .nyc  .cta{background:linear-gradient(180deg,#4f7df9,#2f5fe0);box-shadow:0 10px 26px rgba(47,95,224,.45)}
+  .veg  .img{background-image:url(ppw-assets/tile-vegas.jpg)}  .veg  .ev{color:#ffb98a} .veg  .cta{background:linear-gradient(180deg,#ff9d64,#f07a2f);box-shadow:0 10px 26px rgba(240,122,47,.45)}
+  .lon  .img{background-image:url(ppw-assets/tile-london.jpg)} .lon  .ev{color:#cdb3ff} .lon  .cta{background:linear-gradient(180deg,#c6a3ff,#a074ee);box-shadow:0 10px 26px rgba(160,116,238,.45)}
+  .mum  .img{background-image:url(ppw-assets/tile-mumbai.jpg)} .mum  .ev{color:#7fe9cf} .mum  .cta{background:linear-gradient(180deg,#5ee0c0,#33bfa0);box-shadow:0 10px 26px rgba(51,191,160,.45)}
+
+  @media(max-width:720px){
+    .band{height:400px}.wrap{padding:0 22px}
+    .head .wm{width:60%;max-width:260px}
+    .city{left:24px;bottom:auto;top:52%;font-size:44px}
+    .cluster{right:24px;left:24px;bottom:28px;align-items:center}
+  }
+  .foot{max-width:1180px;margin:0 auto;padding:34px 22px 90px;color:var(--faint);font-size:12.5px}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Homepage location tiles — final</h1>
+  <p>Option 1 lockup, refined: text-only P|PW wordmark (ring removed so the partner logos center cleanly), a horizontal divider, then the "By FMC + partner" lockup — centered up top. Large white city name bottom-left, date + CTA bottom-right. Each city in its own color. Look right? I'll drop these into the homepage.</p>
+</header>
+
+<!-- New York -->
+<section class="band nyc"><div class="img"></div><div class="sc"></div>
+  <div class="head">
+    <img class="wm" src="ppw-assets/tile-wm-text.png" alt="Post Production World Conference">
+    <div class="divider"></div>
+    <div class="lock"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png" alt="FMC"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-ny-white.png" alt="NAB Show New York"></div>
+  </div>
+  <p class="city"><span class="ev">at NAB Show New York</span>New York</p>
+  <div class="cluster"><span class="date">October 20–21, 2026</span><a class="cta" href="new-york.html">Explore New York <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</section>
+
+<!-- Las Vegas -->
+<section class="band veg"><div class="img"></div><div class="sc"></div>
+  <div class="head">
+    <img class="wm" src="ppw-assets/tile-wm-text.png" alt="Post Production World Conference">
+    <div class="divider"></div>
+    <div class="lock"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png" alt="FMC"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/nab-show-white.png" alt="NAB Show"></div>
+  </div>
+  <p class="city"><span class="ev">at NAB Show</span>Las Vegas</p>
+  <div class="cluster"><span class="date">April 3–7, 2027</span><a class="cta" href="vegas.html">Explore Las Vegas <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</section>
+
+<!-- London -->
+<section class="band lon"><div class="img"></div><div class="sc"></div>
+  <div class="head">
+    <img class="wm" src="ppw-assets/tile-wm-text.png" alt="Post Production World Conference">
+    <div class="divider"></div>
+    <div class="lock"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png" alt="FMC"><span class="plus">+</span><img class="ptnr" src="ppw-assets/mpts-logo.webp" alt="MPTS" style="height:13px"></div>
+  </div>
+  <p class="city"><span class="ev">at MPTS · Europe</span>London</p>
+  <div class="cluster"><span class="date">May 12–13, 2027</span><a class="cta" href="london.html">Explore London <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</section>
+
+<!-- Mumbai -->
+<section class="band mum"><div class="img"></div><div class="sc"></div>
+  <div class="head">
+    <img class="wm" src="ppw-assets/tile-wm-text.png" alt="Post Production World Conference">
+    <div class="divider"></div>
+    <div class="lock"><span class="by">By</span><img class="fmc" src="ppw-assets/partners/fmc-mark.png" alt="FMC"><span class="plus">+</span><img class="ptnr" src="ppw-assets/partners/bi-abis-white.png" alt="Broadcast India" style="height:19px"></div>
+  </div>
+  <p class="city"><span class="ev">at Broadcast India · South Asia</span>Mumbai</p>
+  <div class="cluster"><span class="date">October 22–23, 2026</span><a class="cta" href="mumbai.html">Explore Mumbai <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</section>
+
+<p class="foot">Internal preview — tile-final.html</p>
+</body>
+</html>
