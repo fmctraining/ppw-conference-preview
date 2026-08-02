@@ -240,7 +240,7 @@
   .foot-bottom{position:relative;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);padding:22px 24px 44px}
   .foot-fmc{height:24px;width:auto;opacity:.9}
   footer .small{color:var(--ink-faint);font-size:12.5px;line-height:1.5}
-  @media(max-width:760px){.foot-inner{grid-template-columns:1fr 1fr;gap:30px;padding:46px 22px 30px}.foot-brand{grid-column:1/-1}}
+  @media(max-width:760px){.foot-inner{grid-template-columns:auto auto;justify-content:start;gap:46px;padding:46px 22px 30px}.foot-brand{grid-column:1/-1}.foot-inner>.foot-col:nth-child(2){transform:none}.foot-bottom{flex-direction:column;align-items:center;text-align:center;gap:12px}}
   .nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none}
   .nb-ppw{height:48px;width:auto;display:block}
   .nb-by{font-size:9.5px;letter-spacing:1px;text-transform:uppercase;color:var(--ink-dim);font-weight:600;white-space:nowrap}
