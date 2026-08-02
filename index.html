@@ -500,6 +500,13 @@
   .spon-by img{margin-left:-9px}
   .foot-bottom .small{font-size:11.5px}
   .loc-br{display:none}
+  /* stats (proof band) on mobile: horizontal separators, no stray vertical bars, +30% */
+  @media(max-width:780px){
+    .proof:not(:last-child){border-right:0!important;border-bottom:1px solid rgba(255,255,255,.16)!important;padding-bottom:28px!important}
+    .proof-grid{gap:28px!important}
+    .proof .pn{font-size:38px!important}
+    .proof .pc{font-size:15px!important}
+  }
   /* ===== batch 1 · mobile hero refinements ===== */
   @media(max-width:600px){
     .hero-og{height:60px}
