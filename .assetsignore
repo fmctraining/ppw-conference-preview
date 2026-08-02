@@ -1,0 +1,12 @@
+# Do not upload as public static assets (gitignore-style)
+.git
+wrangler.jsonc
+.wrangler
+.netlify
+.DS_Store
+.gitignore
+.nojekyll
+node_modules
+
+# Internal review / design-comp pages (not linked from the main site)
+_*.html

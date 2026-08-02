@@ -1,0 +1,9 @@
+{
+  // Assets-only Worker: serves this directory as static files.
+  // Deploy with: npx wrangler deploy
+  "name": "ppw-conference-preview",
+  "compatibility_date": "2026-08-01",
+  "assets": {
+    "directory": "."
+  }
+}
