@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FMC status — inbox + PPW publish readiness</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#080b12;--card:#0f1626;--card2:#131c30;--line:#212d49;--line2:#2c3a5c;--ink:#eef2fb;--dim:#a3b2d2;--faint:#6b7b9e;--cyan:#2dd4ff;--green:#4ade80;--amber:#f6cf6a;--blue:#5b9dff;--pink:#f5a3a0}
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1100px 700px at 85% -8%,rgba(124,58,237,.18),transparent 60%),radial-gradient(900px 600px at -10% 5%,rgba(45,130,246,.16),transparent 58%),var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.55}
+  .wrap{max-width:1080px;margin:0 auto;padding:44px 22px 90px}
+  h1{font-size:29px;font-weight:800;margin:0 0 6px;letter-spacing:-.5px}
+  .sub{color:var(--faint);font-size:14px;margin:0 0 30px}
+  h2{font-size:14px;letter-spacing:2.5px;text-transform:uppercase;color:var(--cyan);font-weight:700;margin:38px 0 16px;display:flex;align-items:center;gap:12px}
+  h2::after{content:"";flex:1;height:1px;background:var(--line)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .card{background:linear-gradient(170deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+  .card.full{grid-column:1/-1}
+  .tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:10px}
+  .t-ppw{background:rgba(45,212,255,.14);color:var(--cyan)}
+  .t-pp{background:rgba(245,163,160,.16);color:var(--pink)}
+  .t-iph{background:rgba(118,185,0,.16);color:#9bd34a}
+  .card h3{font-size:16px;margin:0 0 6px;font-weight:700}
+  .meta{font-size:12px;color:var(--faint);margin:0 0 10px}
+  .card p{margin:0 0 8px;color:var(--dim);font-size:13.7px}
+  .card p:last-child{margin-bottom:0}
+  .card b{color:var(--ink)}
+  .you{color:var(--amber);font-weight:700}
+  /* readiness */
+  .board{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+  @media(max-width:860px){.board{grid-template-columns:1fr}}
+  .col{background:rgba(15,22,38,.5);border:1px solid var(--line);border-radius:16px;padding:8px 8px 14px}
+  .col-h{font-size:12.5px;font-weight:800;letter-spacing:.4px;padding:12px 12px 10px;display:flex;align-items:center;gap:8px}
+  .dot{width:9px;height:9px;border-radius:50%;flex:none}
+  .d-you{background:var(--amber)} .d-them{background:var(--blue)} .d-me{background:var(--green)}
+  .item{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:12px 13px;margin:8px 6px 0;font-size:13px;color:var(--dim)}
+  .item b{color:var(--ink);font-weight:700;display:block;margin-bottom:3px;font-size:13.3px}
+  .item .why{color:var(--faint);font-size:11.7px;margin-top:5px}
+  .done{margin-top:30px}
+  .done h2{color:var(--green)} .done h2::after{background:var(--line)}
+  .donelist{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.28);color:#bef0cf;border-radius:999px;padding:7px 14px;font-size:12.3px;font-weight:500}
+  .chip::before{content:"✓ ";color:var(--green);font-weight:800}
+  .foot{color:var(--faint);font-size:12px;margin-top:40px;text-align:center}
+  .lead{background:rgba(45,212,255,.06);border:1px solid var(--line2);border-radius:14px;padding:15px 18px;color:var(--dim);font-size:13.7px;margin-bottom:8px}
+  .lead b{color:var(--cyan)}
+  a{color:var(--cyan)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>FMC status board</h1>
+  <p class="sub">Inbox review (Jul 25&ndash;29) + what stands between PPW and publish &middot; generated Jul 29, 2026</p>
+
+  <h2>Inbox &mdash; what's new (last 4 days)</h2>
+  <div class="lead">Filtered your FMC inbox to work mail only. <b>3 PPW threads, 0 new IPH, 0 new Partner Program</b> (Partner Program's last activity was Jul 20 &mdash; see below). Everything else was travel, banking, and promos.</div>
+  <div class="grid">
+
+    <div class="card">
+      <span class="tag t-ppw">PPW</span>
+      <h3>Ben on Tyree's NY promo email</h3>
+      <p class="meta">Jul 29 &middot; Ben &rarr; Elise, cc you &middot; "Fwd: Rated 4.73/5. Now $200 off in NY"</p>
+      <p>Ben flagged two things on Tyree's NY marketing email: (1) Tyree <b>keeps using the "707" attendee number</b> &mdash; Ben's questioning it, and (2) he thinks <b>putting the program grid into the email</b> would make a difference.</p>
+      <p class="you">For you: it's Tyree's HubSpot email, but the schedule grid is your build. Likely you'll be asked to supply/embed it.</p>
+    </div>
+
+    <div class="card">
+      <span class="tag t-ppw">PPW</span>
+      <h3>Jeff's website comments</h3>
+      <p class="meta">Jul 27 &middot; Jeff &rarr; Ben, cc you &middot; "Re: PPW website" &middot; you replied "On it!"</p>
+      <p>Vegas &amp; London dates should go up on both pages; delete the "DRAFT COPY" note; Facebook link is broken.</p>
+      <p><b>Mostly handled this week.</b> <span class="you">Only open piece: the exact Vegas conference dates</span> (Jeff gave NAB's 4/4&ndash;4/7 and said adjust to ours).</p>
+    </div>
+
+    <div class="card">
+      <span class="tag t-ppw">PPW &middot; bizdev</span>
+      <h3>Ben's ANGA COM outreach letter</h3>
+      <p class="meta">Jul 26&ndash;27 &middot; Ben &rarr; you &middot; "does it look clean?"</p>
+      <p>Ben's cold email to <b>Ms. Friedsam at ANGA COM</b> (European cable/broadband show) pitching a PPW-branded training track. You already flagged the formatting (double "Regards," spacing).</p>
+      <p>No site action &mdash; just a heads-up that PPW expansion outreach is live.</p>
+    </div>
+
+    <div class="card">
+      <span class="tag t-pp">Partner Program</span>
+      <h3>No new mail &mdash; last activity Jul 20</h3>
+      <p class="meta">Jeff &rarr; you &middot; "Re: FMC Partner Program - Final Pass"</p>
+      <p>Jeff asked: <b>"Just confirming the rough draft below is latest?"</b> Ben (Jul 19) endorsed the project ("most ATC sales come through affiliates like New Horizon, CDW, Global Knowledge").</p>
+      <p class="you">For you: Jeff may still be waiting on you to confirm which of the two versions is current.</p>
+    </div>
+
+    <div class="card">
+      <span class="tag t-iph">IPH</span>
+      <h3>Nothing new</h3>
+      <p class="meta">Last 4 days</p>
+      <p>No IPH (Intelligent Production Hub) emails in the window. The "$200 off in NY" mail is PPW New York, not IPH.</p>
+    </div>
+
+  </div>
+
+  <h2>PPW &mdash; what's between you and publish</h2>
+  <div class="board">
+    <div class="col">
+      <div class="col-h"><span class="dot d-you"></span>Waiting on you (decisions)</div>
+      <div class="item"><b>Vegas dates</b>Give me the exact PPW Vegas conference dates (Jeff: NAB is 4/4&ndash;4/7, adjust to ours). <span class="why">Blocks the Vegas tile, Vegas page &amp; dropdown &mdash; and reconciles the "Five Days" line.</span></div>
+      <div class="item"><b>Partner-logo style</b>Pick A / B / C on the mockup. <span class="why">B or C also need MPTS + Broadcast India logo art.</span></div>
+      <div class="item"><b>Footer tagline</b>Elise's reply came back blank &mdash; give me the line (or say keep it).</div>
+      <div class="item"><b>Tracks section</b>Confirm: build it on the homepage from Vegas's 6 tracks?</div>
+      <div class="item"><b>Session count</b>NY header shows "28 sessions" (Elise's number); the live sheet lists ~25. Keep 28, use 25, or 25+?</div>
+      <div class="item"><b>Your own final content pass</b>The read-through you told Elise you still owe.</div>
+    </div>
+    <div class="col">
+      <div class="col-h"><span class="dot d-them"></span>Waiting on others</div>
+      <div class="item"><b>Ben &mdash; "World's leading orgs" NY section</b>He mocked a version; needs the specific draft. Placeholder for now.</div>
+      <div class="item"><b>Ben + Elise &mdash; sponsor benefits</b>Elise is clarifying co-branded webinar / database-access inclusions with Ben.</div>
+      <div class="item"><b>Elise/Nick &mdash; South Asia program</b>Nick Harauz + ~2 local speakers &amp; tracks, when the program lands.</div>
+      <div class="item"><b>Ben &mdash; homepage stats</b>92% / 1,500+ / 662 cities vs the deck's figures &mdash; verify before final.</div>
+    </div>
+    <div class="col">
+      <div class="col-h"><span class="dot d-me"></span>I'll do (once above clears)</div>
+      <div class="item"><b>Roll partner logos</b>Apply your chosen style across all 4 tiles (NAB set already in hand).</div>
+      <div class="item"><b>NY program grid</b>Rebuild Day 2 to 3 rooms (AI track) from the live sheet.</div>
+      <div class="item"><b>CTA link audit</b>Point every Register/Explore button to its real destination. <span class="why">The big pre-launch technical pass.</span></div>
+      <div class="item"><b>Photos</b>Curate Europe/India shots onto London &amp; Mumbai; swap the South Asia face photo.</div>
+      <div class="item"><b>Build tracks section</b>Once you confirm placement.</div>
+    </div>
+  </div>
+
+  <div class="done">
+    <h2>Done &amp; live this week</h2>
+    <div class="donelist">
+      <span class="chip">Poppins site-wide</span>
+      <span class="chip">Facebook link fixed (all pages)</span>
+      <span class="chip">South Asia confirmed Oct 22&ndash;23, 2026</span>
+      <span class="chip">London dates May 12&ndash;13, 2027</span>
+      <span class="chip">NY header: dropped "2 rooms"</span>
+      <span class="chip">Who Attends = Option 3 locked</span>
+      <span class="chip">Field workshops added to Vegas</span>
+      <span class="chip">"Beyond the sessions" moved off Vegas</span>
+      <span class="chip">LV stats moved to sponsor page</span>
+      <span class="chip">Sponsor "DRAFT COPY" note removed</span>
+      <span class="chip">Location dropdowns all link to inner pages</span>
+      <span class="chip">AI card titles recolored</span>
+      <span class="chip">NAB logos sourced + mockup built</span>
+    </div>
+  </div>
+
+  <p class="foot">Internal status &mdash; localhost:4388/_status.html &middot; not part of the published site.</p>
+</div>
+</body>
+</html>

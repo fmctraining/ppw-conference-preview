@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PPW Site — Open Items &amp; Review Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#080b12;--bg2:#0e1422;--panel:#121b2e;--panel2:#172138;--ink:#eef2fb;--dim:#a3b2d2;--faint:#6b7b9e;--line:#212d49;--line2:#2c3a5c;--cyan:#2dd4ff;--green:#4ade80;--amber:#f6cf6a;--pink:#f472b6;--violet:#a78bfa}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1000px;margin:0 auto;padding:44px 22px 90px}
+  h1{font-size:30px;font-weight:800;margin:0 0 6px;letter-spacing:-.5px}
+  .sub{color:var(--faint);font-size:14px;margin:0 0 8px}
+  .legend{display:flex;flex-wrap:wrap;gap:14px;margin:18px 0 8px;font-size:12.5px;color:var(--dim)}
+  .legend span{display:inline-flex;align-items:center;gap:7px}
+  .dot{width:10px;height:10px;border-radius:50%;flex:none}
+  h2{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;margin:38px 0 4px;font-weight:700}
+  .cnt{color:var(--faint);font-weight:500;letter-spacing:0;text-transform:none;font-size:12px}
+  .card{background:linear-gradient(170deg,var(--panel2),var(--panel));border:1px solid var(--line);border-left-width:3px;border-radius:12px;padding:15px 18px;margin:10px 0}
+  .card .t{font-weight:600;font-size:15px;margin:0 0 3px}
+  .card .d{color:var(--dim);font-size:13.5px;margin:0}
+  .card .d b{color:var(--ink);font-weight:600}
+  .done{border-left-color:var(--green)}
+  .ben{border-left-color:var(--pink)}
+  .elise{border-left-color:var(--cyan)}
+  .syv{border-left-color:var(--amber)}
+  .tech{border-left-color:var(--violet)}
+  .tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:5px;margin-left:8px;vertical-align:1px}
+  .tag.g{background:rgba(74,222,128,.14);color:var(--green)}
+  .intro{background:rgba(45,212,255,.06);border:1px solid var(--line2);border-radius:12px;padding:16px 20px;margin:20px 0 6px;font-size:13.5px;color:var(--dim)}
+  .intro b{color:var(--ink)}
+  a{color:var(--cyan)}
+  .foot{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);color:var(--faint);font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>PPW Site — Review &amp; Open Items</h1>
+  <p class="sub">Everything I've changed for you to review, plus every item still waiting on someone. Updated after Elise's July 21 notes.</p>
+  <div class="legend">
+    <span><i class="dot" style="background:var(--green)"></i>Done — please review</span>
+    <span><i class="dot" style="background:var(--pink)"></i>Waiting on Ben</span>
+    <span><i class="dot" style="background:var(--cyan)"></i>Waiting on Elise / more info</span>
+    <span><i class="dot" style="background:var(--amber)"></i>Waiting on you (Syvonne)</span>
+    <span><i class="dot" style="background:var(--violet)"></i>Technical — mine to do</span>
+  </div>
+
+  <div class="intro"><b>Two questions Elise asked — answered:</b><br>
+  1. <b>"Where did the NY feedback quotes come from?"</b> — The originals were transcribed from Ben's mockup, not the 2026 sheet (you were right not to recognize them). They're now <b>replaced with three real quotes pulled directly from the "PPW LV 2026 Poll Report – Written Feedback" CSV</b>, each attributed to its actual session so you can trace them. Two even reference Jeff Greenberg, who's on the NY lineup.<br>
+  2. <b>"Headshots aren't populating."</b> — They are live and correct (verified HTTP 200). Elise reviewed before the headshot push, or her browser cached the old page. A hard refresh (Cmd+Shift+R) shows all 11.</div>
+
+  <h2>Done this session <span class="cnt">— review these</span></h2>
+  <div class="card done"><p class="t">Mobile: fixed real horizontal-scroll bug<span class="tag g">verified</span></p><p class="d">The homepage stats row forced 3 columns on phones and pushed the page wider than the screen. Fixed; audited all 6 pages at 375px — no horizontal scroll anywhere.</p></div>
+  <div class="card done"><p class="t">India dates → October 22-23, 2026</p><p class="d">Mumbai hero + nav + homepage tile. All instances updated.</p></div>
+  <div class="card done"><p class="t">Vegas edits</p><p class="d">"Produced by NAB Show &amp; FMC" under the event logo · "Where it all began" + Program now read <b>Five days · seven rooms · 180+ sessions</b> · full pass <b>$799 → $1,459</b> · removed the "For sponsors / Who's in the room" section.</p></div>
+  <div class="card done"><p class="t">Sponsor page — copy + tier table</p><p class="d">Header de-dashed ("creates and buys") · first benefit → "Distinguished sponsor sessions" · <b>Silver → Tabletop</b> · removed "Logo on live sessions" row + a stray empty row · VIP passes now checks not numbers · Keynote = Core only · Co-branded webinar = Core + Platinum only.</p></div>
+  <div class="card done"><p class="t">NY page (Elise round 1 + Ben's 5 sections)</p><p class="d">Real headshots for all 11 people · Speakers trimmed to Elise's 6 · Tuesday keynote → "To Be Announced" · removed "hands-on workshops" line · Elise's title → "Senior Director, Global Events &amp; Operations" · real feedback quotes · Poppins font · dates 20-21.</p></div>
+  <div class="card done"><p class="t">Homepage (Elise round 1)</p><p class="d">Poppins throughout · "markets → regions" · Platinum/Gold <b>Sponsor</b> · "15,000+ trained" · Post|Production naming · Alt-3 heading + new paragraph, redundant tiles removed and routed to the sponsor page.</p></div>
+
+  <h2>Waiting on Ben</h2>
+  <div class="card ben"><p class="t">"World's leading organizations learn at PPW" section</p><p class="d">Ben referenced an earlier version he mocked up. Elise can't follow his drafts chronologically from email links — <b>the work needs to be traced from Ben's own account</b>. Currently a labeled placeholder on the NY page.</p></div>
+  <div class="card ben"><p class="t">Global-only benefits decision</p><p class="d">Elise recommends <b>co-branded webinars + full FMC database access be Global-sponsor-only</b>. If Ben agrees: remove the co-branded webinar row from the tier chart entirely (it's currently interim Core+Platinum), and the event tiers keep only the event database.</p></div>
+
+  <h2>Waiting on Elise / more info</h2>
+  <div class="card elise"><p class="t">India speakers &amp; program</p><p class="d">Nick Harauz = instructor + program manager, plus ~2 local speakers. I can add Nick's profile now (I have his headshot). Local speakers + tracks/topics come once Nick sends the program.</p></div>
+  <div class="card elise"><p class="t">"Who Attends" background photo</p><p class="d">Elise flagged the person on the projector screen looks like part of the site design. Needs a different / adjusted photo showing more of the audience.</p></div>
+  <div class="card elise"><p class="t">Bonus diagram — "Database Access" wording</p><p class="d">Elise wants it to say "additional marketing blast to full FMC database" (vs event database). That text is baked into Ben's Napkin diagram image — needs regenerating from his source file.</p></div>
+  <div class="card elise"><p class="t">Confirm AI "Sound Mastering" icon size</p><p class="d">All badges were set to equal height — should be resolved. Please eyeball to confirm.</p></div>
+
+  <h2>Waiting on you (Syvonne)</h2>
+  <div class="card syv"><p class="t">India audience photos — Elise's Dropbox</p><p class="d">She has last-year shots with the local audience (non-professional). I can't reach Dropbox — download them into the FMC folder and I'll place them. <br><a href="https://www.dropbox.com/scl/fo/x6ziweavqqfm2b2mjuxsl/AMlendmvvh83Q-ZWW7mkibI?rlkey=8ik7dyzfoyo7b6tgiv45j46n7&st=23ujduzm&dl=0">India Dropbox folder</a></p></div>
+  <div class="card syv"><p class="t">Europe photos — photographer's Dropbox (optional)</p><p class="d">Event-specific London shots if you want them. Same deal — download and I'll place. <br><a href="https://www.dropbox.com/scl/fo/3lj6thcudn3cnynp85z4q/AFsAYWN670kkzhciMv9zyW4?rlkey=hqicwh0qzjixgkl69xs1zjudh&st=x3mdg36z&dl=0">Europe Dropbox folder</a></p></div>
+  <div class="card syv"><p class="t">Vegas attendee stats — new home needed</p><p class="d">I removed the "Who's in the room" stats (1,496 attendees / 52 countries / etc.) from Vegas per Elise. She wants them on the <b>sponsor page</b> — but that page is global and these are Vegas-specific numbers. Confirm how you want them presented there and I'll add them.</p></div>
+  <div class="card syv"><p class="t">Partner logos on homepage event tiles</p><p class="d">Elise's suggestion (also header image / above Platinum Sponsor). Needs the logo assets + your go-ahead on the treatment.</p></div>
+  <div class="card syv"><p class="t">Full photo curation from your galleries</p><p class="d">Still outstanding from earlier — your full Pixieset dumps + Elise's 38 edited selections (~96 photos) that I haven't drawn from. Say the word and I'll contact-sheet them and place across sections.</p></div>
+
+  <h2>Technical — mine to do (low urgency)</h2>
+  <div class="card tech"><p class="t">CTA link audit before launch</p><p class="d">Several buttons are still placeholders (Register, etc.). Full pass required before go-live.</p></div>
+  <div class="card tech"><p class="t">GitHub token cleanup</p><p class="d">Plaintext personal-access-token in the IPH repo remote + ~/.git-credentials. ~2 min whenever you want it done; not urgent, not blocking.</p></div>
+  <div class="card tech"><p class="t">CSS phase-2 refactor</p><p class="d">Single source of truth, remove remaining !important / inline styles. Invisible to visitors — maintainability only.</p></div>
+
+  <div class="foot">Internal tracker — not part of the live site. Served locally at localhost:4388/_review.html. I'll keep it current as items close out.</div>
+</div>
+</body>
+</html>

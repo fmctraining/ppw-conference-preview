@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Location logos on tiles — Option 1 vs Option 6</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#eef2fb;--dim:#a3b2d2;--faint:#6b7b9e;--cyan:#2dd4ff;--line:#212d49;--bg:#080b12;--amber:#f6cf6a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif}
+  .head{max-width:1120px;margin:0 auto;padding:40px 22px 8px}
+  h1{font-size:26px;font-weight:800;margin:0 0 6px}
+  .head p{color:var(--faint);font-size:14px;margin:0 0 6px;max-width:860px;line-height:1.6}
+  .head b{color:var(--cyan)}
+  .nav{position:sticky;top:0;z-index:50;background:rgba(8,11,18,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:11px 22px;display:flex;gap:10px;justify-content:center}
+  .nav a{color:var(--dim);text-decoration:none;font-size:13px;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:6px 16px}
+  .nav a:hover{color:var(--cyan);border-color:var(--cyan)}
+  .sec{max-width:1120px;margin:0 auto;padding:26px 22px}
+  .lbl{display:inline-block;background:var(--cyan);color:#04121a;font-weight:800;font-size:13px;letter-spacing:.5px;text-transform:uppercase;padding:6px 14px;border-radius:6px}
+  .desc{color:var(--dim);font-size:13.5px;margin:10px 2px 18px;max-width:840px;line-height:1.6}
+  .tile{position:relative;height:300px;border-radius:16px;overflow:hidden;border:1px solid var(--line);margin-bottom:16px}
+  .tile .img{position:absolute;inset:0;background-size:cover;background-position:center}
+  .tile .sc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,11,18,.22) 0%,transparent 32%,rgba(8,11,18,.74) 76%,rgba(8,11,18,.93))}
+  .tile .info{position:absolute;left:0;right:0;bottom:0;padding:0 32px 26px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;z-index:2}
+  .ev{font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--cyan);font-weight:700}
+  .h{font-size:26px;font-weight:800;margin:2px 0 4px;letter-spacing:-.5px}
+  .d{color:#e6ebf6;font-size:13px;max-width:420px;margin:0;line-height:1.5}
+  .dt{color:#fff;font-weight:700;font-size:17px;white-space:nowrap}
+  /* OPTION 1 — bare wordmark, top-right */
+  .o1 .wm{position:absolute;top:20px;right:26px;z-index:3;width:215px;filter:drop-shadow(0 3px 12px rgba(0,0,0,.65))}
+  /* OPTION 6 — wordmark on frosted plate */
+  .o6 .plate{position:absolute;top:18px;right:24px;z-index:3;background:rgba(8,11,18,.55);backdrop-filter:blur(9px);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:11px 15px 10px}
+  .o6 .plate img{width:205px;display:block}
+  .verdict{background:rgba(45,212,255,.07);border:1px solid var(--line);border-radius:12px;padding:18px 22px;color:var(--dim);font-size:14px;line-height:1.65;margin-top:8px}
+  .verdict b{color:var(--cyan)}
+  .warn{background:rgba(246,207,106,.08);border:1px dashed rgba(246,207,106,.45);border-radius:12px;padding:16px 20px;color:var(--amber);font-size:13.5px;line-height:1.6;margin:16px 0 4px}
+  .warn b{color:#ffe6a6}
+</style>
+</head>
+<body>
+<div class="head">
+  <h1>Location logos on the event tiles — Option 1 vs Option 6</h1>
+  <p>Corrected: each tile now carries <b>its own location wordmark</b> — New York logo on the New York tile, South Asia on Mumbai, and so on. Same two treatments as before, across all four tiles.</p>
+</div>
+<div class="nav"><a href="#o1">Option 1 — bare</a><a href="#o6">Option 6 — glass plate</a><a href="#note">The date issue</a></div>
+
+<div class="sec" id="o1">
+  <span class="lbl">Option 1 — bare wordmark</span>
+  <p class="desc">Logo sits directly on the photo, top-right. Lightest touch. Watch how it holds up on the brighter photos (London especially).</p>
+  <div id="t1"></div>
+</div>
+
+<div class="sec" id="o6">
+  <span class="lbl">Option 6 — wordmark on a frosted plate</span>
+  <p class="desc">Same logo and position, on a subtle glass panel so it stays crisp regardless of what's behind it.</p>
+  <div id="t6"></div>
+  <div class="verdict"><b>My recommendation: Option 6.</b> These wordmarks are full-colour with a multi-colour ring, so on a busy or bright photo (London's sunset, Vegas' neon) the bare version loses definition fast. The plate keeps every city consistent and legible. Option 1 is cleaner but only safe if every tile photo stays dark and simple.</div>
+</div>
+
+<div class="sec" id="note">
+  <div class="warn"><b>One thing to decide either way:</b> each wordmark has the <b>date baked into the image</b> ("October 20-21, 2026", "April 2027", etc.), and the tile already shows the date on the right. So you'd be showing the date twice. Options: (a) drop the separate date from the tile and let the logo carry it, (b) have me crop the date line off the wordmarks so they're just the logo, or (c) live with it. <b>My pick: (b)</b> — cleanest, and it keeps the tile's date styling consistent. Also note the South Asia wordmark still reads "October 2026" rather than the confirmed 22-23.</div>
+</div>
+
+<div style="max-width:1120px;margin:0 auto;padding:10px 22px 80px;color:var(--faint);font-size:12.5px">Internal preview — localhost:4388/_logotiles.html</div>
+
+<script>
+var cities=[
+ ['ppw-assets/city-nyc-hi.jpg','ppw-assets/wm-nyc.png','at NAB Show New York','Post&#124;Production World New York','East Coast edition — a complete two-day program.','Oct 20-21, 2026'],
+ ['ppw-assets/city-mumbai-hi.jpg','ppw-assets/wm-mumbai-sa.webp','at Broadcast India · Mumbai','Post Production World • South Asia','A regional event in this growing media market.','October 22-23, 2026'],
+ ['ppw-assets/city-vegas-hi.jpg','ppw-assets/wm-vegas.png','at NAB Show · Las Vegas','Post&#124;Production World Las Vegas','The flagship event inside the world\'s largest media-tech show.','April 2027'],
+ ['ppw-assets/city-london-hi.jpg','ppw-assets/wm-london.png','at MPTS · London','Post Production Conference • Europe','A European training conference for post, broadcast and AI.','May 2027']
+];
+function build(mode){
+  var h='';
+  cities.forEach(function(c){
+    var mark = mode==='o1'
+      ? '<img class="wm" src="'+c[1]+'" alt="">'
+      : '<div class="plate"><img src="'+c[1]+'" alt=""></div>';
+    h+='<div class="tile '+mode+'"><div class="img" style="background-image:url('+c[0]+')"></div><div class="sc"></div>'+mark
+      +'<div class="info"><div><div class="ev">'+c[2]+'</div><div class="h">'+c[3]+'</div><p class="d">'+c[4]+'</p></div><div class="dt">'+c[5]+'</div></div></div>';
+  });
+  return h;
+}
+document.getElementById('t1').innerHTML=build('o1');
+document.getElementById('t6').innerHTML=build('o6');
+</script>
+</body>
+</html>

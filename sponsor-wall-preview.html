@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sponsor wall — chips preview (LOCAL)</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#080b12;--line:#212d49;--ink:#eef2fb}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif}
+  .flag{background:#f5c451;color:#1a1305;text-align:center;font-weight:800;font-size:13px;padding:9px;letter-spacing:.3px}
+  .sponsors-light{background:linear-gradient(160deg,#13203c,#0c1424);border-top:1px solid var(--line);position:relative;overflow:hidden;padding:84px 0}
+  .sponsors-light::before{content:"";position:absolute;left:0;right:0;top:140px;aspect-ratio:2560/340;background:url(ppw-assets/wavy-lines.webp) center/100% 100% no-repeat;opacity:.7;pointer-events:none;z-index:0}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+  .sec-head{text-align:center;margin-bottom:40px}
+  .sec-kicker{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:#b794f6;font-weight:700}
+  .sec-title{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.6px;margin:16px 0 0;color:#fff}
+  .tier-label{text-align:center;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:#aeb9d2;font-weight:800;margin:40px 0 18px}
+  .wall{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px}
+  /* CHIP: hugs the logo with padding — logo sizes are the SAME as the live site */
+  .tile{background:#fff;border-radius:14px;padding:20px 30px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.26)}
+  .tile img{width:auto;height:auto;object-fit:contain;display:block}
+  /* per-tier sizing = exactly what the live wall uses */
+  .wall.plat     .tile img{height:60px;max-width:230px}
+  .wall.gold     .tile img{height:54px;max-width:230px}
+  .wall.table    .tile img{height:46px;max-width:180px}
+  .wall.workshop .tile img{height:50px;max-width:190px}
+  .wall.marketing .tile img{height:44px;max-width:180px}
+  .foot{max-width:1000px;margin:0 auto;padding:26px;color:#6b7b9e;font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="flag">LOCAL PREVIEW — not live. Per-tier logo sizes (same as the site) inside pure-white chips.</div>
+<section class="sponsors-light">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-kicker">In good company</div><h2 class="sec-title">Brands that partner with PPW</h2></div>
+
+    <div class="tier-label">Platinum</div>
+    <div class="wall plat">
+      <div class="tile"><img src="ppw-assets/c-nvidia.svg" alt="NVIDIA"></div>
+      <div class="tile"><img src="ppw-assets/c-dell.webp" alt="Dell Technologies"></div>
+      <div class="tile"><img src="ppw-assets/c-adobe.png" alt="Adobe"></div>
+      <div class="tile"><img src="ppw-assets/c-maxon.webp" alt="Maxon"></div>
+    </div>
+
+    <div class="tier-label">Gold</div>
+    <div class="wall gold">
+      <div class="tile"><img src="ppw-assets/c-bmd.webp" alt="Blackmagic Design"></div>
+      <div class="tile"><img src="ppw-assets/spon-intel.webp" alt="Intel"></div>
+    </div>
+
+    <div class="tier-label">Tabletop</div>
+    <div class="wall table">
+      <div class="tile"><img src="ppw-assets/t-aja.webp" alt="AJA"></div>
+      <div class="tile"><img src="ppw-assets/spon-amd.webp" alt="AMD"></div>
+      <div class="tile"><img src="ppw-assets/t-asus.webp" alt="ASUS"></div>
+      <div class="tile"><img src="ppw-assets/spon-atomos.webp" alt="Atomos"></div>
+      <div class="tile"><img src="ppw-assets/spon-fujifilm.webp" alt="Fujifilm"></div>
+      <div class="tile"><img src="ppw-assets/spon-hp.webp" alt="HP"></div>
+      <div class="tile"><img src="ppw-assets/t-promise.webp" alt="Promise Technology"></div>
+      <div class="tile"><img src="ppw-assets/t-ugreen.webp" alt="UGREEN"></div>
+      <div class="tile"><img src="ppw-assets/t-wacom.webp" alt="Wacom"></div>
+      <div class="tile"><img src="ppw-assets/t-wasabi.webp" alt="Wasabi"></div>
+    </div>
+
+    <div class="tier-label">Workshop</div>
+    <div class="wall workshop">
+      <div class="tile"><img src="ppw-assets/t-smg.webp" alt="Sundance Media Group"></div>
+      <div class="tile"><img src="ppw-assets/t-insta360.png" alt="Insta360"></div>
+      <div class="tile"><img src="ppw-assets/t-antigravity.webp" alt="Antigravity"></div>
+    </div>
+
+    <div class="tier-label">Marketing</div>
+    <div class="wall marketing">
+      <div class="tile"><img src="ppw-assets/t-galsngear.jpg" alt="Gals N Gear"></div>
+      <div class="tile"><img src="ppw-assets/t-productionhub.png" alt="ProductionHUB"></div>
+      <div class="tile"><img src="ppw-assets/t-makingof.webp" alt="The Making Of"></div>
+      <div class="tile"><img src="ppw-assets/t-ripple.webp" alt="Ripple Training"></div>
+    </div>
+  </div>
+</section>
+<p class="foot">sponsor-wall-preview.html · local · logos keep the site's per-tier sizing; chips hug each logo with even padding</p>
+</body>
+</html>
