@@ -1,43 +1,69 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>PPW Las Vegas — pick your favorites</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet"><style>
-body{margin:0;background:#0a0e17;color:#eef2fb;font-family:"Poppins",-apple-system,sans-serif}
-.bar{position:sticky;top:0;z-index:10;background:rgba(10,14,23,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.1);padding:14px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.bar h1{font-size:16px;margin:0;font-weight:800}.count{color:#87dffa;font-weight:800;font-size:14px}
-.btn{background:#4f7df9;color:#fff;border:0;border-radius:8px;padding:10px 16px;font-weight:800;font-size:13px;cursor:pointer}
-.btn.sec{background:transparent;border:1px solid rgba(255,255,255,.25)}
-.intro{max-width:1300px;margin:0 auto;padding:18px 22px 0;color:#a9b7d6;font-size:14px;line-height:1.6}
-.editnote{max-width:1300px;margin:12px auto 0;padding:11px 16px;background:rgba(245,196,81,.09);border:1px solid rgba(245,196,81,.35);border-radius:10px;color:#f5c451;font-size:13px;line-height:1.5}
-.grid{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:14px;padding:16px 22px 70px}
+<title>Inside P|PW — pick your favorites</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet"><style>
+:root{--cyan:#87dffa}
+*{box-sizing:border-box}
+body{margin:0;background:#0a0e17;color:#eef2fb;font-family:"Poppins",-apple-system,sans-serif;line-height:1.55}
+.hero{max-width:1300px;margin:0 auto;padding:40px 24px 4px}
+.eyebrow{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--cyan);font-weight:700}
+h1{font-size:40px;font-weight:900;letter-spacing:-1px;margin:6px 0 6px}
+.sub{color:#a9b7d6;font-size:17px;margin:0}
+.wrap{max-width:1300px;margin:0 auto;padding:0 24px}
+.banner{margin:26px auto 0;background:rgba(95,211,154,.1);border:1px solid rgba(95,211,154,.4);border-radius:12px;padding:14px 18px;color:#bff3d6;font-size:15px}
+.banner b{color:#eaffe f}
+.samp{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:6px;column-gap:14px;margin-top:16px}
+.samp img{width:100%;border-radius:10px}
+@media(max-width:820px){.samp{grid-template-columns:repeat(2,1fr)}}
+.divider{max-width:1300px;margin:44px auto 0;padding:0 24px}
+.divider .line{border-top:1px solid rgba(255,255,255,.12)}
+.h2{font-size:26px;font-weight:800;margin:30px 0 6px}
+.howto{color:#c3d0ea;font-size:15.5px;margin:0 0 8px;max-width:900px}
+.howto b{color:#fff}
+.editnote{margin:14px 0 0;background:rgba(245,196,81,.09);border:1px solid rgba(245,196,81,.35);border-radius:10px;padding:12px 16px;color:#f5c451;font-size:14.5px;line-height:1.55;max-width:1000px}
+.bar{position:sticky;top:0;z-index:20;background:rgba(10,14,23,.96);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.1);margin-top:18px;padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.bar .goal{font-weight:800;font-size:15px}.count{color:var(--cyan);font-weight:800;font-size:15px}
+.btn{background:#4f7df9;color:#fff;border:0;border-radius:9px;padding:11px 18px;font-weight:800;font-size:14px;cursor:pointer;font-family:inherit}
+.btn.sec{background:transparent;border:1px solid rgba(255,255,255,.28)}
+.grid{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:14px;padding:18px 24px 90px}
 .ph{position:relative;aspect-ratio:3/2;border-radius:12px;overflow:hidden;cursor:pointer;border:4px solid transparent;background:#111}
 .ph img{width:100%;height:100%;object-fit:cover;opacity:.66;transition:opacity .15s;user-select:none}
 .ph.yes{border-color:#5fd39a}.ph.yes img{opacity:1}
-.ph .k{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;background:#5fd39a;color:#04120b;display:none;align-items:center;justify-content:center;font-weight:900;font-size:18px}
+.ph .k{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;background:#5fd39a;color:#04120b;display:none;align-items:center;justify-content:center;font-weight:900;font-size:19px}
 .ph.yes .k{display:flex}
-.ph .zoom{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font-size:10.5px;font-weight:700;padding:5px 9px;border-radius:7px;opacity:0;transition:.15s}
+.ph .zoom{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.62);color:#fff;font-size:11px;font-weight:700;padding:6px 10px;border-radius:7px;opacity:0;transition:.15s}
 .ph:hover .zoom{opacity:1}
-#lb{position:fixed;inset:0;z-index:100;background:rgba(4,7,13,.94);display:none;align-items:center;justify-content:center;cursor:zoom-out;padding:20px}
-#lb img{max-width:98vw;max-height:96vh;border-radius:8px;box-shadow:0 30px 90px rgba(0,0,0,.6)}
-#lb .x{position:fixed;top:16px;right:20px;font-size:34px;color:#fff;font-weight:300;cursor:pointer;line-height:1}
+#lb{position:fixed;inset:0;z-index:100;background:rgba(4,7,13,.95);display:none;align-items:center;justify-content:center;cursor:zoom-out;padding:20px}
+#lb img{max-width:98vw;max-height:96vh;border-radius:8px}
+#lb .x{position:fixed;top:14px;right:22px;font-size:38px;color:#fff;font-weight:300;cursor:pointer;line-height:1}
 dialog{background:#111a2c;color:#eef2fb;border:1px solid rgba(255,255,255,.15);border-radius:14px;max-width:640px;width:92%}
 textarea{width:100%;height:240px;background:#0a0e17;color:#eef2fb;border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:10px;font-family:monospace;font-size:12px;box-sizing:border-box}
 </style></head><body>
-<div class="bar"><h1>PPW Las Vegas — pick your favorites</h1><span class="count" id="c">0 selected</span>
+<div class="hero"><div class="eyebrow">From past events</div><h1>Inside P|PW</h1><p class="sub">A look inside Post|Production World — Las Vegas</p></div>
+<div class="wrap"><div class="banner">✨ <b>This is how the gallery will look on the website</b> — about <b>12 photos</b> in this exact layout. (These are just examples to show the look &amp; count — you choose the real ones below.)</div>
+<div class="samp" id="samp"></div></div>
+<div class="divider"><div class="line"></div><h2 class="h2">Now choose your favorites 👇</h2>
+<p class="howto"><b>Single-tap</b> a photo to pick it (it gets a green check). <b>Double-tap</b> any photo to see it full-size and check it's sharp. When you're happy, hit <b>Copy my picks</b> and paste them back to Syvonne — order doesn't matter, she'll arrange them. Aim for around <b>12</b>, but pick as many as you like and Syvonne will make the final call. It saves automatically.</p></div>
+<div class="bar"><span class="goal">🎯 Goal: ~12 photos</span><span class="count" id="c">0 selected</span>
 <button class="btn" onclick="exp()">Copy my picks</button><button class="btn sec" onclick="clr()">Clear</button></div>
-<div class="intro"><b>Single-tap</b> a photo to pick it (green check). <b>Double-tap</b> to pop it up full-size and check it's sharp. When done, hit <b>Copy my picks</b> and paste them back to Syvonne. Order doesn't matter. Auto-saves.</div>
 <div class="grid" id="g"></div>
 <div id="lb"><span class="x">&times;</span><img id="lbimg" src=""></div>
 <dialog id="d"><h3 style="margin:0 0 8px">Your picks (<span id="dn"></span>)</h3><textarea id="ta" readonly></textarea>
 <div style="margin-top:10px;text-align:right"><button class="btn" onclick="navigator.clipboard.writeText(ta.value);this.textContent='Copied!'">Copy</button>
 <button class="btn sec" onclick="d.close()">Close</button></div></dialog>
 <script>
-const KEY="ppw_vegas_elise",FILES=["DSCF0002.JPG", "DSCF0013.JPG", "DSCF0016.JPG", "DSCF0022.JPG", "DSCF0026.JPG", "DSCF0029.JPG", "DSCF0033.JPG", "DSCF0043.JPG", "DSCF0050.JPG", "DSCF0056.JPG", "DSCF0070.JPG", "DSCF0077.JPG", "DSCF0084.JPG", "DSCF0100.JPG", "DSCF0104.JPG", "DSCF0106.JPG", "DSCF0110.JPG", "DSCF0114.JPG"],DIR="ppw-assets/gallery-india";
+const KEY="ppw_vegas_elise",DIR="ppw-assets/gallery-vegas",POOL=["718A5193.jpg", "718A5491.jpg", "718A5678.jpg", "718A5776.jpg", "718A5820.jpg", "718A5851.jpg", "718A5934.jpg", "718A5966.jpg", "718A6091.jpg", "718A6155.jpg", "718A6253.jpg", "718A6291.jpg", "718A6334.jpg", "718A6403.jpg", "718A6435.jpg", "718A6604.jpg", "718A6816.jpg", "718A6978.jpg", "718A7006.jpg", "PPW1.jpg", "PPW2024_by_Syvonne_K_Photography_144.jpg", "PPW2024_by_Syvonne_K_Photography_145.jpg", "PPW2024_by_Syvonne_K_Photography_147.jpg", "PPW2024_by_Syvonne_K_Photography_163.jpg", "PPW2024_by_Syvonne_K_Photography_218.jpg", "PPW2024_by_Syvonne_K_Photography_220.jpg", "PPW2024_by_Syvonne_K_Photography_228.jpg", "PPW2024_by_Syvonne_K_Photography_237.jpg", "PPW2024_by_Syvonne_K_Photography_249.jpg", "PPW2024_by_Syvonne_K_Photography_316.jpg", "PPW2024_by_Syvonne_K_Photography_324.jpg", "PPW2024_by_Syvonne_K_Photography_34.jpg", "PPW2024_by_Syvonne_K_Photography_358.jpg", "PPW2024_by_Syvonne_K_Photography_365.jpg", "PPW2024_by_Syvonne_K_Photography_377.jpg", "PPW2024_by_Syvonne_K_Photography_380.jpg", "PPW2024_by_Syvonne_K_Photography_390.jpg", "PPW2024_by_Syvonne_K_Photography_391.jpg", "PPW2024_by_Syvonne_K_Photography_395.jpg", "PPW2024_by_Syvonne_K_Photography_400.jpg", "PPW2024_by_Syvonne_K_Photography_402.jpg", "PPW2024_by_Syvonne_K_Photography_430.jpg", "PPW2024_by_Syvonne_K_Photography_484.jpg", "PPW2024_by_Syvonne_K_Photography_524.jpg", "PPW2024_by_Syvonne_K_Photography_541.jpg", "PPW2024_by_Syvonne_K_Photography_549.jpg", "PPW2024_by_Syvonne_K_Photography_551.jpg", "PPW2024_by_Syvonne_K_Photography_558.jpg", "PPW2024_by_Syvonne_K_Photography_580.jpg", "PPW2024_by_Syvonne_K_Photography_612.jpg", "PPW2024_by_Syvonne_K_Photography_623.jpg", "PPW2024_by_Syvonne_K_Photography_656.jpg", "ppw-feature-image-field.jpg"],SAMPLE=["718A5491.jpg", "PPW2024_by_Syvonne_K_Photography_316.jpg", "718A6604.jpg", "PPW2024_by_Syvonne_K_Photography_623.jpg", "PPW1.jpg", "PPW2024_by_Syvonne_K_Photography_365.jpg", "PPW2024_by_Syvonne_K_Photography_358.jpg", "718A5934.jpg", "PPW2024_by_Syvonne_K_Photography_377.jpg", "718A6334.jpg", "PPW2024_by_Syvonne_K_Photography_549.jpg", "PPW2024_by_Syvonne_K_Photography_612.jpg"];
 let sel=new Set(JSON.parse(localStorage.getItem(KEY)||'[]'));
+const mk=(f,cls)=>{const i=document.createElement('img');i.loading='lazy';i.className=cls||'';i.src=DIR+'/'+encodeURIComponent(f);return i;};
+// sample masonry
+const samp=document.getElementById('samp');
+function place(i){const r=Math.ceil((i.getBoundingClientRect().height+14)/6);i.style.gridRowEnd='span '+r;}
+SAMPLE.forEach(f=>{const i=mk(f);samp.appendChild(i);i.complete?place(i):i.addEventListener('load',()=>place(i));});
+addEventListener('resize',()=>samp.querySelectorAll('img').forEach(place));
+// pool
 const g=document.getElementById('g'),ta=document.getElementById('ta'),d=document.getElementById('d'),lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg');
-FILES.forEach(f=>{const e=document.createElement('div');e.className='ph'+(sel.has(f)?' yes':'');const u=DIR+'/'+encodeURIComponent(f);
+POOL.forEach(f=>{const e=document.createElement('div');e.className='ph'+(sel.has(f)?' yes':'');const u=DIR+'/'+encodeURIComponent(f);
  e.innerHTML='<img loading="lazy" src="'+u+'"><div class="k">&#10003;</div><div class="zoom">Double-tap to enlarge</div>';
  e.onclick=()=>{sel.has(f)?(sel.delete(f),e.classList.remove('yes')):(sel.add(f),e.classList.add('yes'));save()};
- e.ondblclick=(ev)=>{ev.preventDefault();lbimg.src=u;lb.style.display='flex';};
- g.appendChild(e)});
+ e.ondblclick=(ev)=>{ev.preventDefault();lbimg.src=u;lb.style.display='flex';};g.appendChild(e)});
 lb.onclick=()=>lb.style.display='none';
 function save(){localStorage.setItem(KEY,JSON.stringify([...sel]));document.getElementById('c').textContent=sel.size+' selected'}
 function exp(){ta.value=[...sel].join('\n');document.getElementById('dn').textContent=sel.size;d.showModal()}
