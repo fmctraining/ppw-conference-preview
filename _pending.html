@@ -3,84 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>P|PW — Open Items</title>
+<title>P|PW — Board</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#0a0e17;--panel:#111a2c;--panel2:#0e1626;--line:rgba(255,255,255,.1);--ink:#eef2fb;--dim:#a9b7d6;--faint:#6b7b9e;
-    --blue:#5b8def;--cyan:#87dffa;--amber:#f5c451;--green:#5fd39a;--purple:#b794f6;--pink:#ff7fb0}
+  :root{--bg:#0a0e17;--card:#141d31;--card2:#101827;--line:rgba(255,255,255,.09);--ink:#eef2fb;--dim:#9fb0d4;--faint:#6b7b9e;
+    --cyan:#87dffa;--amber:#f5c451;--green:#5fd39a;--purple:#b794f6}
   *{box-sizing:border-box}
-  body{margin:0;background:radial-gradient(1100px 640px at 84% -8%,rgba(91,141,239,.14),transparent 60%),var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.5}
-  .wrap{max-width:960px;margin:0 auto;padding:48px 22px 90px}
-  h1{font-size:30px;font-weight:800;margin:0 0 4px;letter-spacing:-.5px}
-  .sub{color:var(--faint);font-size:14px;margin:0 0 34px}
-  .grp{margin-bottom:30px;background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:18px;overflow:hidden}
-  .grp > h2{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin:0;padding:18px 24px;background:rgba(255,255,255,.03);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:11px}
-  .grp > h2 .dot{width:9px;height:9px;border-radius:50%;flex:none}
-  .row{display:flex;gap:14px;padding:15px 24px;border-bottom:1px solid rgba(255,255,255,.05)}
-  .row:last-child{border-bottom:0}
-  .pill{flex:none;align-self:flex-start;font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:5px 10px;border-radius:999px;min-width:82px;text-align:center}
-  .p-you{background:rgba(135,223,250,.16);color:var(--cyan);border:1px solid rgba(135,223,250,.3)}
-  .p-them{background:rgba(245,196,81,.14);color:var(--amber);border:1px solid rgba(245,196,81,.3)}
-  .p-claude{background:rgba(95,211,154,.14);color:var(--green);border:1px solid rgba(95,211,154,.3)}
-  .p-p2{background:rgba(183,148,246,.14);color:var(--purple);border:1px solid rgba(183,148,246,.3)}
-  .it{flex:1}
-  .it .t{font-weight:600;font-size:14.5px;color:#fff}
-  .it .d{font-size:13px;color:var(--dim);margin-top:2px}
-  .it a{color:var(--cyan);text-decoration:none}
-  .legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 30px;font-size:12px;color:var(--faint)}
-  .legend span{display:inline-flex;align-items:center;gap:7px}
-  .legend i{width:9px;height:9px;border-radius:50%}
+  body{margin:0;background:radial-gradient(1200px 700px at 82% -10%,rgba(91,141,239,.16),transparent 60%),var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;-webkit-font-smoothing:antialiased}
+  .top{max-width:1240px;margin:0 auto;padding:40px 22px 8px;display:flex;flex-wrap:wrap;align-items:baseline;gap:14px}
+  h1{font-size:26px;font-weight:800;margin:0;letter-spacing:-.5px}
+  .top .meta{color:var(--faint);font-size:13px}
+  .top .meta b{color:var(--cyan)}
+  .board{max-width:1240px;margin:0 auto;padding:20px 22px 90px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start}
+  @media(max-width:900px){.board{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.board{grid-template-columns:1fr}}
+  .col{background:linear-gradient(180deg,rgba(255,255,255,.03),transparent);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+  .col > h2{margin:0;padding:16px 18px;font-size:13px;font-weight:800;letter-spacing:.3px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line)}
+  .col > h2 .ct{margin-left:auto;font-size:12px;font-weight:800;color:#08101e;border-radius:999px;min-width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;padding:0 8px}
+  .emoji{font-size:17px}
+  .cards{padding:12px;display:flex;flex-direction:column;gap:10px}
+  .c{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--bar,var(--line));border-radius:12px;padding:12px 14px;transition:transform .12s,border-color .12s}
+  .c:hover{transform:translateY(-2px)}
+  .c .t{font-weight:700;font-size:14px;line-height:1.3}
+  .c .s{color:var(--dim);font-size:12px;margin-top:4px;line-height:1.4}
+  .c a{color:var(--cyan);text-decoration:none;font-weight:700}
+  /* column accents */
+  .you  > h2{color:var(--cyan)}   .you  > h2 .ct{background:var(--cyan)}   .you  .c{--bar:var(--cyan)}
+  .them > h2{color:var(--amber)}  .them > h2 .ct{background:var(--amber)}  .them .c{--bar:var(--amber)}
+  .me   > h2{color:var(--green)}  .me   > h2 .ct{background:var(--green)}  .me   .c{--bar:var(--green)}
+  .p2   > h2{color:var(--purple)} .p2   > h2 .ct{background:var(--purple)} .p2   .c{--bar:var(--purple)}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>P|PW — Open Items</h1>
-  <p class="sub">Everything still pending, grouped by who owns it. Updated 2026-08-02.</p>
-  <div class="legend">
-    <span><i style="background:var(--cyan)"></i> Needs you</span>
-    <span><i style="background:var(--amber)"></i> Waiting on others</span>
-    <span><i style="background:var(--green)"></i> On me (Claude)</span>
-    <span><i style="background:var(--purple)"></i> Phase 2</span>
-  </div>
+<div class="top">
+  <h1>P|PW — Board</h1>
+  <div class="meta">what's left before launch · tap a <b>link</b> to preview · updated Aug 2</div>
+</div>
 
-  <div class="grp">
-    <h2><span class="dot" style="background:var(--cyan)"></span>Needs your pick (previews are built)</h2>
-    <div class="row"><span class="pill p-you">Decide</span><div class="it"><div class="t">Location tile framing — 1–5</div><div class="d">Full-bleed / contained / floating / grid / matte · <a href="tile-layout-premium.html">tile-layout-premium</a></div></div></div>
-    <div class="row"><span class="pill p-you">Decide</span><div class="it"><div class="t">Tile photo framing — 60% vs 75%</div><div class="d"><a href="tile-bg-allcities.html">tile-bg-allcities</a> (all 4 cities both ways)</div></div></div>
-    <div class="row"><span class="pill p-you">Decide</span><div class="it"><div class="t">Pricing design — M1–M3 / C1–C3</div><div class="d"><a href="pricing-samples-v2.html">pricing-samples-v2</a> · also out to Jordan/Elise</div></div></div>
-    <div class="row"><span class="pill p-you">Decide</span><div class="it"><div class="t">Contact colors — A / B / C / D</div><div class="d"><a href="contact-colors.html">contact-colors</a></div></div></div>
-    <div class="row"><span class="pill p-you">Decide</span><div class="it"><div class="t">Homepage stats</div><div class="d">Apply 91.75% + drop "1,500+"? Ben's report has no attendee count.</div></div></div>
-    <div class="row"><span class="pill p-you">Greenlight</span><div class="it"><div class="t">Sentence case sitewide · dark sponsor logo chips · stacked Dell · napkin rebuild</div><div class="d">My recommendations — say go and I bundle them in.</div></div></div>
-  </div>
+<div class="board">
 
-  <div class="grp">
-    <h2><span class="dot" style="background:var(--amber)"></span>Waiting on others</h2>
-    <div class="row"><span class="pill p-them">Jordan/Elise</span><div class="it"><div class="t">Pricing option pick</div><div class="d">Slack message drafted — send when ready.</div></div></div>
-    <div class="row"><span class="pill p-them">Ben</span><div class="it"><div class="t">"1,500+" attendee number + "World's leading organizations" NY section source</div></div></div>
-    <div class="row"><span class="pill p-them">Elise</span><div class="it"><div class="t">"Post Production World · Europe" vs "Conference" wording; London / Broadcast India final details</div></div></div>
-  </div>
+  <section class="col you">
+    <h2><span class="emoji">🎯</span> Your call <span class="ct">6</span></h2>
+    <div class="cards">
+      <div class="c"><div class="t">Tile framing 1–5</div><div class="s"><a href="tile-layout-premium.html">preview →</a></div></div>
+      <div class="c"><div class="t">Tile photo 60% vs 75%</div><div class="s"><a href="tile-bg-allcities.html">preview →</a></div></div>
+      <div class="c"><div class="t">Pricing design</div><div class="s"><a href="pricing-samples-v2.html">M1–M3 / C1–C3 →</a></div></div>
+      <div class="c"><div class="t">Contact color</div><div class="s"><a href="contact-colors.html">A / B / C / D →</a></div></div>
+      <div class="c"><div class="t">Homepage stats</div><div class="s">Apply 91.75% · drop "1,500+"?</div></div>
+      <div class="c"><div class="t">Greenlight bundle</div><div class="s">Sentence case · dark logos · Dell · napkin</div></div>
+    </div>
+  </section>
 
-  <div class="grp">
-    <h2><span class="dot" style="background:var(--green)"></span>Mobile styling — 3 batches (on me)</h2>
-    <div class="row"><span class="pill p-claude">Batch 1</span><div class="it"><div class="t">Homepage mobile</div><div class="d">Hero locations wrap (2+2), h1 bigger, global logo smaller, sponsors bigger/tighter, stats → horizontal separators + 30% bigger, AI badges 2-per-row, "for brands" padding, In Good Company padding, Platinum/Gold eyebrows bigger, nav spacing.</div></div></div>
-    <div class="row"><span class="pill p-claude">Batch 2</span><div class="it"><div class="t">Sponsorship page mobile</div><div class="d">H1 bigger sitewide (watch wrapping), the 3 icon sections (icons −15%, spacing, kill stray vertical bars, one-line titles), padding above "see what's included", capitalization.</div></div></div>
-    <div class="row"><span class="pill p-claude">Batch 3</span><div class="it"><div class="t">Gallery lightbox (mobile)</div><div class="d">Open in-page (not new tab), opaque X top-right, subtle left/right arrows to swipe through like a slideshow.</div></div></div>
-    <div class="row"><span class="pill p-claude">Then</span><div class="it"><div class="t">Mirror the whole NY pass → Vegas / London / Mumbai</div></div></div>
-  </div>
+  <section class="col them">
+    <h2><span class="emoji">⏳</span> Waiting on <span class="ct">3</span></h2>
+    <div class="cards">
+      <div class="c"><div class="t">Jordan + Elise</div><div class="s">Pricing option pick (Slack ready)</div></div>
+      <div class="c"><div class="t">Ben</div><div class="s">"1,500+" number · NY "leading orgs" source</div></div>
+      <div class="c"><div class="t">Elise</div><div class="s">Europe wording · London / India details</div></div>
+    </div>
+  </section>
 
-  <div class="grp">
-    <h2><span class="dot" style="background:var(--green)"></span>Content / build — on me</h2>
-    <div class="row"><span class="pill p-claude">Build</span><div class="it"><div class="t">Place real event photos</div><div class="d">Mumbai/South Asia, London/Europe, Vegas, maybe NY (assets foldered). Also "Who Attends" bg photo swap. — point me to which shots per page.</div></div></div>
-    <div class="row"><span class="pill p-claude">Build</span><div class="it"><div class="t">Tier table → stacked cards on mobile</div><div class="d">Once Jordan picks the tier design.</div></div></div>
-    <div class="row"><span class="pill p-claude">Build</span><div class="it"><div class="t">Nick Harauz — South Asia speaker profile</div><div class="d">Have photo + bio.</div></div></div>
-    <div class="row"><span class="pill p-claude">Build</span><div class="it"><div class="t">General tracks section · footer tagline (Elise's line) · NY Day-2 = 3 rooms (need presenters) · networking-party wrapping · CTA link audit before launch</div></div></div>
-  </div>
+  <section class="col me">
+    <h2><span class="emoji">🔨</span> I'm building <span class="ct">8</span></h2>
+    <div class="cards">
+      <div class="c"><div class="t">Homepage mobile</div><div class="s">Hero ✓ · stats ✓ · AI badges · sponsors</div></div>
+      <div class="c"><div class="t">Sponsorship page mobile</div><div class="s">H1 · 3 icon rows · spacing · caps</div></div>
+      <div class="c"><div class="t">Gallery lightbox</div><div class="s">In-page · X · swipe arrows</div></div>
+      <div class="c"><div class="t">Place event photos</div><div class="s">Mumbai · London · Vegas · NY</div></div>
+      <div class="c"><div class="t">Tier table → mobile cards</div><div class="s">after Jordan picks</div></div>
+      <div class="c"><div class="t">Nick Harauz profile</div><div class="s">South Asia speaker</div></div>
+      <div class="c"><div class="t">Roll pass → other cities</div><div class="s">Vegas · London · Mumbai</div></div>
+      <div class="c"><div class="t">Loose ends</div><div class="s">Tracks · footer line · CTA audit</div></div>
+    </div>
+  </section>
 
-  <div class="grp">
-    <h2><span class="dot" style="background:var(--purple)"></span>Phase 2</h2>
-    <div class="row"><span class="pill p-p2">Phase 2</span><div class="it"><div class="t">Real forms instead of mailto</div><div class="d">"Questions about P|PW?" (→ Megan) + "Request a proposal". Interim: I'll populate the mailtos with a proper subject + body now.</div></div></div>
-    <div class="row"><span class="pill p-p2">Phase 2</span><div class="it"><div class="t">Rebuild the Napkin "core benefits" diagram as on-brand SVG</div><div class="d">Too rainbow + "Database Access" → "additional marketing blast to full FMC database". I can rebuild it so colors match + it's editable.</div></div></div>
-  </div>
+  <section class="col p2">
+    <h2><span class="emoji">🚀</span> Phase 2 <span class="ct">2</span></h2>
+    <div class="cards">
+      <div class="c"><div class="t">Real forms</div><div class="s">Replace mailto (Megan · proposal)</div></div>
+      <div class="c"><div class="t">Rebuild napkin diagram</div><div class="s">On-brand SVG, less rainbow</div></div>
+    </div>
+  </section>
+
 </div>
 </body>
 </html>
