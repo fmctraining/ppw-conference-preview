@@ -134,7 +134,7 @@
   .cta-strip{position:relative;overflow:hidden;text-align:center;background:linear-gradient(160deg,rgba(15,22,38,.88),rgba(12,18,32,.9)),url(ppw-assets/hero.jpg) center/cover no-repeat;border:1px solid var(--line-2);border-radius:26px;padding:60px 30px}
   .cta-strip .glow{position:absolute;inset:0;background:radial-gradient(600px 240px at 50% 0,rgba(45,212,255,.14),transparent 70%)}
   .cta-strip h2{position:relative;font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.6px;margin-bottom:14px}
-  .cta-strip p{position:relative;color:var(--ink-dim);max-width:580px;margin:0 auto 30px;font-size:16.5px}
+  .cta-strip p{position:relative;color:#bccae8;max-width:650px;margin:0 auto 26px;font-size:17.5px}
   .cta-strip .hero-cta{position:relative}
   .hero-stats{display:flex;flex-wrap:wrap;justify-content:center;gap:20px 54px;margin-top:44px}
   .hero-stats>div{text-align:center;min-width:120px}
@@ -285,9 +285,11 @@
   /* Who's in the room — Las Vegas stats (moved from Vegas page) */
   #lv-stats::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,26,.94),rgba(10,14,26,.88) 45%,rgba(10,14,26,.96)),url(ppw-assets/who-options/opt-8.webp) center/cover no-repeat;pointer-events:none;z-index:0}
   #lv-stats .wrap{position:relative;z-index:1}
-  .aud-stats{display:flex;flex-wrap:wrap;max-width:1000px;margin:-4px auto 42px;position:relative;overflow:hidden;border-radius:20px;border:1px solid var(--line-2);background:linear-gradient(165deg,rgba(20,30,52,.72),rgba(13,19,33,.6));box-shadow:0 24px 60px rgba(0,0,0,.32)}
+  #lv-stats .sec-title{font-size:clamp(27px,3.8vw,40px);background:linear-gradient(180deg,#fff,#c9d5ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .aud-stats{display:flex;flex-wrap:wrap;align-items:flex-start;max-width:1000px;margin:-4px auto 42px;position:relative;overflow:hidden;border-radius:20px;border:1px solid var(--line-2);background:linear-gradient(165deg,rgba(20,30,52,.72),rgba(13,19,33,.6));box-shadow:0 24px 60px rgba(0,0,0,.32)}
   .aud-stats::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad-blue);z-index:1}
-  .aud-tile{flex:1 1 200px;padding:36px 18px 32px;text-align:center;border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .aud-stats::after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--grad-blue);z-index:1}
+  .aud-tile{flex:1 1 200px;padding:36px 18px 32px;text-align:center;border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
   .aud-tile:last-child{border-right:0}
   .aud-tile .n{font-family:"Poppins",sans-serif;font-weight:900;font-size:48px;letter-spacing:-1.5px;line-height:1;background:linear-gradient(180deg,#fff,#9fb4e6);-webkit-background-clip:text;background-clip:text;color:transparent}
   .aud-tile .l{color:var(--ink-dim);font-size:15px;margin-top:1px;line-height:1.35;max-width:200px}
@@ -303,7 +305,7 @@
   .b-orgs{color:#dbe3f4;font-size:15px;font-weight:500;line-height:1.5}
   @media(max-width:640px){.band2{flex-direction:column;align-items:flex-start;gap:5px}.b-cat{width:auto}}
   .room-src{color:var(--ink-faint);font-size:12px;margin:17px 0 0;letter-spacing:.3px}
-  .room-note{text-align:center;color:#cfa598;font-size:14.5px;letter-spacing:.3px;margin:-10px auto 37px;max-width:620px}
+  .room-note{text-align:center;color:#cfa598;font-size:14.5px;letter-spacing:.3px;margin:0 auto 37px;max-width:620px}
   #lv-stats .sec-head{margin-bottom:24px;max-width:760px}
   /* going-global band under the hero */
   .global-band{position:relative;overflow:hidden;padding:96px 0 120px 0;background:var(--bg-2)}
