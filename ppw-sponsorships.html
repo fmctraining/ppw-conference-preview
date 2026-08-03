@@ -296,6 +296,12 @@
   .room-eyebrow{display:inline-block;background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:18.5px;letter-spacing:1.8px;text-transform:uppercase;font-weight:700;margin-bottom:1px}
   .room-names{color:#dbe3f4;font-size:17px;font-weight:500;line-height:1.75;letter-spacing:.5px;text-wrap:balance;margin-bottom:10px}
   .room-more{color:#ecc6c6;font-size:14px;font-weight:600;margin:9px 0 0;letter-spacing:.2px}
+  .rooms7{max-width:900px;margin:22px auto 0}
+  .band2{display:flex;align-items:center;gap:18px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .band2:last-child{border-bottom:0}
+  .b-cat{flex:none;width:160px;font-size:12px;letter-spacing:.8px;text-transform:uppercase;font-weight:800;background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .b-orgs{color:#dbe3f4;font-size:15px;font-weight:500;line-height:1.5}
+  @media(max-width:640px){.band2{flex-direction:column;align-items:flex-start;gap:5px}.b-cat{width:auto}}
   .room-src{color:var(--ink-faint);font-size:12px;margin:17px 0 0;letter-spacing:.3px}
   .room-note{text-align:center;color:#cfa598;font-size:14.5px;letter-spacing:.3px;margin:-10px auto 37px;max-width:620px}
   #lv-stats .sec-head{margin-bottom:24px;max-width:760px}
@@ -575,13 +581,13 @@
     </div>
     <div class="room-band">
       <div class="room-eyebrow">In the room in 2026</div>
-      <div class="org-grid" style="margin-top:22px">
-      <div class="org-cat"><h4>Streaming &amp; Studios</h4><ul><li>Netflix</li><li>Amazon MGM Studios</li><li>Disney+</li><li>Warner Bros. Discovery</li><li>Paramount+</li></ul></div>
-      <div class="org-cat"><h4>Broadcast Networks</h4><ul><li>NBC Universal</li><li>CBS News</li><li>ABC News</li><li>ESPN</li><li>BBC Studios</li></ul></div>
-      <div class="org-cat"><h4>Post Production</h4><ul><li>Technicolor</li><li>Industrial Light &amp; Magic</li><li>Framestore</li><li>MPC</li><li>Company 3</li></ul></div>
-      <div class="org-cat"><h4>News &amp; Sports</h4><ul><li>Associated Press</li><li>Reuters</li><li>Bloomberg</li><li>Fox Sports</li><li>NFL Films</li></ul></div>
-      <div class="org-cat"><h4>Enterprise &amp; Corporate</h4><ul><li>Apple</li><li>Google</li><li>Microsoft</li><li>Meta</li><li>Sony Pictures</li></ul></div>
-      <div class="org-cat"><h4>Government &amp; Education</h4><ul><li>NASA</li><li>US Air Force</li><li>NYU Tisch</li><li>USC Cinematic Arts</li><li>Pixar</li></ul></div>
+      <div class="rooms7">
+      <div class="band2"><div class="b-cat">Streaming &amp; Studios</div><div class="b-orgs">Netflix  ·  Amazon MGM Studios  ·  Disney+  ·  Warner Bros. Discovery  ·  Paramount+</div></div>
+      <div class="band2"><div class="b-cat">Broadcast Networks</div><div class="b-orgs">NBC Universal  ·  CBS News  ·  ABC News  ·  ESPN  ·  BBC Studios</div></div>
+      <div class="band2"><div class="b-cat">Post Production</div><div class="b-orgs">Technicolor  ·  Industrial Light &amp; Magic  ·  Framestore  ·  MPC  ·  Company 3</div></div>
+      <div class="band2"><div class="b-cat">News &amp; Sports</div><div class="b-orgs">Associated Press  ·  Reuters  ·  Bloomberg  ·  Fox Sports  ·  NFL Films</div></div>
+      <div class="band2"><div class="b-cat">Enterprise &amp; Corporate</div><div class="b-orgs">Apple  ·  Google  ·  Microsoft  ·  Meta  ·  Sony Pictures</div></div>
+      <div class="band2"><div class="b-cat">Government &amp; Education</div><div class="b-orgs">NASA  ·  US Air Force  ·  NYU Tisch  ·  USC Cinematic Arts  ·  Pixar</div></div>
       </div>
       <p class="room-more">and hundreds more</p>
     </div>
