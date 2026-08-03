@@ -1,37 +1,38 @@
-<svg viewBox="0 0 1520 1080" xmlns="http://www.w3.org/2000/svg" font-family="Poppins,Segoe UI,sans-serif">
-<line x1="760" y1="540" x2="760.0" y2="366.0" stroke="#22d3ee" stroke-width="3" stroke-opacity="0.5"/>
-<line x1="760" y1="540" x2="910.7" y2="453.0" stroke="#38bdf8" stroke-width="3" stroke-opacity="0.5"/>
-<line x1="760" y1="540" x2="910.7" y2="627.0" stroke="#6366f1" stroke-width="3" stroke-opacity="0.5"/>
-<line x1="760" y1="540" x2="760.0" y2="714.0" stroke="#8b5cf6" stroke-width="3" stroke-opacity="0.5"/>
-<line x1="760" y1="540" x2="609.3" y2="627.0" stroke="#a855f7" stroke-width="3" stroke-opacity="0.5"/>
-<line x1="760" y1="540" x2="609.3" y2="453.0" stroke="#2dd4bf" stroke-width="3" stroke-opacity="0.5"/>
-<circle cx="760" cy="540" r="26" fill="#101a2e" stroke="rgba(255,255,255,.32)" stroke-width="2.5"/>
-<circle cx="760.0" cy="290.0" r="76" fill="#22d3ee" fill-opacity="0.9" stroke="#22d3ee" stroke-width="3"/>
-<g stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(736.0,266.0)"><rect x="7" y="30" width="34" height="7" rx="2"/><path d="M13 30v-7h22v7"/><circle cx="24" cy="13" r="5"/><circle cx="11" cy="18" r="4"/><circle cx="37" cy="18" r="4"/></g>
-<circle cx="976.5" cy="415.0" r="76" fill="#38bdf8" fill-opacity="0.9" stroke="#38bdf8" stroke-width="3"/>
-<g stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(952.5063509461097,391.0)"><path d="M9 21l21-9v26L9 28z"/><path d="M30 15c6 2 6 14 0 16"/><path d="M13 28v8h6l2-6"/></g>
-<circle cx="976.5" cy="665.0" r="76" fill="#6366f1" fill-opacity="0.9" stroke="#6366f1" stroke-width="3"/>
-<g stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(952.5063509461097,641.0)"><rect x="7" y="9" width="34" height="23" rx="3"/><path d="M18 40h12M24 32v8"/><path d="M20 15l7 5-7 5z"/></g>
-<circle cx="760.0" cy="790.0" r="76" fill="#8b5cf6" fill-opacity="0.9" stroke="#8b5cf6" stroke-width="3"/>
-<g stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(736.0,766.0)"><path d="M24 7l5 10 11 1-8 8 3 11-11-6-11 6 3-11-8-8 11-1z"/></g>
-<circle cx="543.5" cy="665.0" r="76" fill="#a855f7" fill-opacity="0.9" stroke="#a855f7" stroke-width="3"/>
-<g stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(519.4936490538903,641.0)"><ellipse cx="24" cy="12" rx="14" ry="5.5"/><path d="M10 12v10c0 3 6.3 5.5 14 5.5s14-2.5 14-5.5V12"/><path d="M10 22v10c0 3 6.3 5.5 14 5.5s14-2.5 14-5.5V22"/></g>
-<circle cx="543.5" cy="415.0" r="76" fill="#2dd4bf" fill-opacity="0.9" stroke="#2dd4bf" stroke-width="3"/>
-<g stroke="#fff" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(519.4936490538903,391.0)"><circle cx="24" cy="19" r="10"/><path d="M18 28l-4 12 10-5 10 5-4-12"/></g>
-<text x="760" y="156" fill="#22d3ee" font-size="29" font-weight="800" text-anchor="middle">Demo Tables</text>
-<text x="760" y="188" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="middle">Prime, high-traffic placement after</text>
-<text x="760" y="214" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="middle">training sessions (select events)</text>
-<text x="1074" y="354" fill="#38bdf8" font-size="29" font-weight="800" text-anchor="start">Dedicated Webinars</text>
-<text x="1074" y="386" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="start">Co-produced by FMC + sponsor</text>
-<text x="1074" y="710" fill="#6366f1" font-size="29" font-weight="800" text-anchor="start">Branded Content</text>
-<text x="1074" y="742" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="start">Articles, video spotlights +</text>
-<text x="1074" y="768" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="start">tutorials co-developed with FMC</text>
-<text x="760" y="910" fill="#8b5cf6" font-size="29" font-weight="800" text-anchor="middle">Branded Training Tracks</text>
-<text x="760" y="942" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="middle">Showcasing your solutions to</text>
-<text x="760" y="968" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="middle">engage, educate, and convert</text>
-<text x="446" y="710" fill="#a855f7" font-size="29" font-weight="800" text-anchor="end">Database Access</text>
-<text x="446" y="742" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="end">Additional marketing blast to</text>
-<text x="446" y="768" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="end">FMC's full database (global)</text>
-<text x="446" y="354" fill="#2dd4bf" font-size="29" font-weight="800" text-anchor="end">Global Platinum Recognition</text>
-<text x="446" y="386" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="end">In all marketing assets</text>
+<svg viewBox="0 0 1540 1090" xmlns="http://www.w3.org/2000/svg" font-family="Poppins,Segoe UI,sans-serif">
+<path d="M770.0 545.0 L891.9 328.8 A140 140 0 1 1 648.1 328.8 Z" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8" stroke-opacity="0.6" stroke-width="2.5"/>
+<path d="M770.0 545.0 L1018.2 542.5 A140 140 0 1 1 896.3 331.3 Z" fill="#22d3ee" fill-opacity="0.2" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="2.5"/>
+<path d="M770.0 545.0 L896.3 758.7 A140 140 0 1 1 1018.2 547.5 Z" fill="#2dd4bf" fill-opacity="0.2" stroke="#2dd4bf" stroke-opacity="0.6" stroke-width="2.5"/>
+<path d="M770.0 545.0 L648.1 761.2 A140 140 0 1 1 891.9 761.2 Z" fill="#818cf8" fill-opacity="0.2" stroke="#818cf8" stroke-opacity="0.6" stroke-width="2.5"/>
+<path d="M770.0 545.0 L521.8 547.5 A140 140 0 1 1 643.7 758.7 Z" fill="#a78bfa" fill-opacity="0.2" stroke="#a78bfa" stroke-opacity="0.6" stroke-width="2.5"/>
+<path d="M770.0 545.0 L643.7 331.3 A140 140 0 1 1 521.8 542.5 Z" fill="#60a5fa" fill-opacity="0.2" stroke="#60a5fa" stroke-opacity="0.6" stroke-width="2.5"/>
+<circle cx="770.0" cy="260.0" r="140" fill="#38bdf8" fill-opacity="0.92" stroke="#38bdf8" stroke-width="2.5"/>
+<g stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(737.0,227.0) scale(1.38)"><rect x="7" y="30" width="34" height="7" rx="2"/><path d="M13 30v-7h22v7"/><circle cx="24" cy="13" r="5"/><circle cx="11" cy="18" r="4"/><circle cx="37" cy="18" r="4"/></g>
+<circle cx="1016.8" cy="402.5" r="140" fill="#22d3ee" fill-opacity="0.92" stroke="#22d3ee" stroke-width="2.5"/>
+<g stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(983.817240078565,369.5) scale(1.38)"><path d="M9 21l21-9v26L9 28z"/><path d="M30 15c6 2 6 14 0 16"/><path d="M13 28v8h6l2-6"/></g>
+<circle cx="1016.8" cy="687.5" r="140" fill="#2dd4bf" fill-opacity="0.92" stroke="#2dd4bf" stroke-width="2.5"/>
+<g stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(983.817240078565,654.5) scale(1.38)"><rect x="7" y="9" width="34" height="23" rx="3"/><path d="M18 40h12M24 32v8"/><path d="M20 15l7 5-7 5z"/></g>
+<circle cx="770.0" cy="830.0" r="140" fill="#818cf8" fill-opacity="0.92" stroke="#818cf8" stroke-width="2.5"/>
+<g stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(737.0,797.0) scale(1.38)"><path d="M24 6l5 10 11 1-8 8 3 11-11-6-11 6 3-11-8-8 11-1z"/><circle cx="24" cy="40" r="4"/><circle cx="14" cy="43" r="3.4"/><circle cx="34" cy="43" r="3.4"/></g>
+<circle cx="523.2" cy="687.5" r="140" fill="#a78bfa" fill-opacity="0.92" stroke="#a78bfa" stroke-width="2.5"/>
+<g stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(490.18275992143504,654.5) scale(1.38)"><ellipse cx="24" cy="12" rx="14" ry="5.5"/><path d="M10 12v10c0 3 6.3 5.5 14 5.5s14-2.5 14-5.5V12"/><path d="M10 22v10c0 3 6.3 5.5 14 5.5s14-2.5 14-5.5V22"/></g>
+<circle cx="523.2" cy="402.5" r="140" fill="#60a5fa" fill-opacity="0.92" stroke="#60a5fa" stroke-width="2.5"/>
+<g stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(490.18275992143504,369.5) scale(1.38)"><circle cx="24" cy="18" r="10"/><path d="M18 27l-4 13 10-5 10 5-4-13"/></g>
+<text x="770" y="48" fill="#38bdf8" font-size="34" font-weight="800" text-anchor="middle">Demo Tables</text>
+<text x="770" y="91" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="middle">Prime, high-traffic placement</text>
+<text x="770" y="118" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="middle">after training sessions (select events)</text>
+<text x="1183" y="294" fill="#22d3ee" font-size="34" font-weight="800" text-anchor="start">Dedicated Webinars</text>
+<text x="1183" y="338" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="start">co-produced by</text>
+<text x="1183" y="364" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="start">FMC + sponsor</text>
+<text x="1183" y="760" fill="#2dd4bf" font-size="34" font-weight="800" text-anchor="start">Branded Content</text>
+<text x="1183" y="802" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="start">Articles, video spotlights,</text>
+<text x="1183" y="830" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="start">+ tutorials co-developed with FMC</text>
+<text x="770" y="1028" fill="#818cf8" font-size="34" font-weight="800" text-anchor="middle">Branded Training Tracks</text>
+<text x="770" y="1071" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="middle">showcasing your solutions to</text>
+<text x="770" y="1098" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="middle">engage, educate, and convert</text>
+<text x="357" y="760" fill="#a78bfa" font-size="34" font-weight="800" text-anchor="end">Database Blast</text>
+<text x="357" y="802" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="end">a dedicated marketing send</text>
+<text x="357" y="830" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="end">to FMC's full database</text>
+<text x="357" y="256" fill="#60a5fa" font-size="34" font-weight="800" text-anchor="end">Global Platinum</text>
+<text x="357" y="296" fill="#60a5fa" font-size="34" font-weight="800" text-anchor="end">Recognition</text>
+<text x="357" y="338" fill="#c7d2e6" font-size="20" font-weight="500" text-anchor="end">in all marketing assets</text>
 </svg>
