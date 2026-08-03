@@ -532,6 +532,31 @@
   .org-cat li{font-size:14.5px;color:#fff;font-weight:600;padding:6px 0;border-top:1px solid rgba(255,255,255,.06)}
   .org-cat li:first-child{border-top:0}
   .org-note{max-width:820px;margin:22px auto 0;text-align:center;color:var(--ink-faint);font-size:12px;line-height:1.5}
+  /* homepage location tiles — floating cards */
+  .ctiles{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:26px}
+  .ctile{position:relative;display:block;height:440px;overflow:hidden;border-radius:18px;box-shadow:0 26px 60px rgba(0,0,0,.5);text-decoration:none;border:1px solid rgba(255,255,255,.08)}
+  .ctile .cimg{position:absolute;inset:0;background-position:center 30%;background-size:cover;transition:transform .8s ease}
+  .ctile:hover .cimg{transform:scale(1.035)}
+  .ctile .csc{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,9,18,.5),transparent 24%,transparent 52%,rgba(6,9,18,.88))}
+  .ctile .chead{position:absolute;top:32px;left:0;right:0;z-index:3;display:flex;flex-direction:column;align-items:center}
+  .ctile .cwm2{width:300px;max-width:50%;filter:drop-shadow(0 6px 20px rgba(0,0,0,.6));display:block;transform:translateX(-11px)}
+  .ctile .cdiv{width:200px;height:1px;margin:8px 0 12px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent)}
+  .ctile .clk{display:inline-flex;align-items:center;gap:10px;filter:drop-shadow(0 2px 10px rgba(0,0,0,.85));transform:translateX(9px)}
+  .ctile .clk .cby{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:#dbe6fb;font-weight:600}
+  .ctile .clk .cf{height:15px;display:block}
+  .ctile .clk .cp{color:#cdd8ef;font-weight:300;font-size:14px;line-height:0;transform:translateY(1px)}
+  .ctile .clk .cpt{height:14px;display:block}
+  .ctile .cname{position:absolute;left:34px;bottom:32px;z-index:3;margin:0;font-weight:800;font-size:clamp(38px,5vw,54px);letter-spacing:-1.4px;line-height:.95;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.6)}
+  .ctile .cname .cev{display:block;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:9px;text-shadow:0 2px 10px rgba(0,0,0,.7)}
+  .ctile .cclus{position:absolute;right:34px;bottom:34px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:12px}
+  .ctile .cdate{color:#fff;font-weight:700;font-size:17px;text-shadow:0 2px 12px rgba(0,0,0,.7)}
+  .ctile .ccta{display:inline-flex;align-items:center;gap:9px;color:#fff;font-weight:700;font-size:14px;padding:13px 24px;border-radius:999px;white-space:nowrap}
+  .ctile .ccta svg{width:16px;height:16px;color:#fff}
+  .nyc2 .cev{color:#8fb6ff}.nyc2 .ccta{background:linear-gradient(180deg,#4f7df9,#2f5fe0);box-shadow:0 10px 26px rgba(47,95,224,.45)}
+  .mum2 .cev{color:#7fe9cf}.mum2 .ccta{background:linear-gradient(180deg,#5ee0c0,#33bfa0);box-shadow:0 10px 26px rgba(51,191,160,.45)}
+  .veg2 .cev{color:#ffb98a}.veg2 .ccta{background:linear-gradient(180deg,#ff9d64,#f07a2f);box-shadow:0 10px 26px rgba(240,122,47,.45)}
+  .lon2 .cev{color:#cdb3ff}.lon2 .ccta{background:linear-gradient(180deg,#c6a3ff,#a074ee);box-shadow:0 10px 26px rgba(160,116,238,.45)}
+  @media(max-width:720px){.ctiles{padding:0 16px;gap:18px}.ctile{height:400px}.ctile .cwm2{width:60%;max-width:250px}.ctile .cname{left:20px;bottom:auto;top:50%;transform:translateY(-40%);font-size:40px}.ctile .cclus{right:20px;left:20px;bottom:24px;align-items:center}}
 </style>
 </head>
 <body>
@@ -625,38 +650,36 @@
   <div class="wrap"><div class="sec-head center" style="margin-bottom:0"><h2 class="sec-title">2026 - 2027 Global Locations</h2></div></div>
 </section>
 
-<a class="city-sec" href="new-york.html">
-  <div class="city-img" style="background-image:url(ppw-assets/city-nyc-hi.jpg)"></div>
-  <div class="city-plate"><img class="cwm" src="ppw-assets/wm-nodate/wm-nyc.png" alt=""><div class="crule"></div><div class="clock"><img class="cfmc" src="ppw-assets/partners/fmc-notri.png"><span class="cplus">+</span><img class="cpartner" src="ppw-assets/partners/nab-ny-white.png"></div></div>
-  <div class="city-info"><div class="wrap city-row">
-    <div class="city-text"><div class="city-ev">at NAB Show New York</div><h2 class="city-h">Post|Production World New York</h2></div>
-    <div class="city-cta"><div class="city-date">Oct 20-21, 2026</div><span class="btn"><span class="bt">Explore New York</span> <svg class="ic"><use href="#i-arrow"/></svg></span></div>
-  </div></div>
-</a>
-<a class="city-sec" href="mumbai.html">
-  <div class="city-img" style="background-image:url(ppw-assets/city-mumbai-hi.jpg)"></div>
-  <div class="city-plate"><img class="cwm" src="ppw-assets/wm-nodate/wm-mumbai-sa.webp" alt=""><div class="crule"></div><div class="clock"><img class="cfmc" src="ppw-assets/partners/fmc-notri.png"><span class="cplus">+</span><img class="cpartner" src="ppw-assets/partners/bi-abis-white.png" style="height:19px"></div></div>
-  <div class="city-info"><div class="wrap city-row">
-    <div class="city-text"><div class="city-ev">at Broadcast India · Mumbai</div><h2 class="city-h">Post Production World • South Asia</h2></div>
-    <div class="city-cta"><div class="city-date">October 22-23, 2026</div><span class="btn"><span class="bt">Explore South Asia</span> <svg class="ic"><use href="#i-arrow"/></svg></span></div>
-  </div></div>
-</a>
-<a class="city-sec" href="vegas.html">
-  <div class="city-img" style="background-image:url(ppw-assets/city-vegas-hi.jpg)"></div>
-  <div class="city-plate"><img class="cwm" src="ppw-assets/wm-nodate/wm-vegas.png" alt=""><div class="crule"></div><div class="clock"><img class="cfmc" src="ppw-assets/partners/fmc-notri.png"><span class="cplus">+</span><img class="cpartner" src="ppw-assets/partners/nab-show-white.png"></div></div>
-  <div class="city-info"><div class="wrap city-row">
-    <div class="city-text"><div class="city-ev">at NAB Show · Las Vegas</div><h2 class="city-h">Post|Production World Las Vegas</h2></div>
-    <div class="city-cta"><div class="city-date">April 3-7, 2027</div><span class="btn"><span class="bt">Explore Las Vegas</span> <svg class="ic"><use href="#i-arrow"/></svg></span></div>
-  </div></div>
-</a>
-<a class="city-sec" href="london.html">
-  <div class="city-img" style="background-image:url(ppw-assets/city-london-hi.jpg)"></div>
-  <div class="city-plate"><img class="cwm" src="ppw-assets/wm-nodate/wm-london.png" alt=""><div class="crule"></div><div class="clock"><img class="cfmc" src="ppw-assets/partners/fmc-notri.png"><span class="cplus">+</span><img class="cpartner" src="ppw-assets/mpts-logo.webp" style="height:13px"></div></div>
-  <div class="city-info"><div class="wrap city-row">
-    <div class="city-text"><div class="city-ev">at MPTS · London</div><h2 class="city-h">Post Production Conference • Europe</h2></div>
-    <div class="city-cta"><div class="city-date">May 12-13, 2027</div><span class="btn"><span class="bt">Explore Europe</span> <svg class="ic"><use href="#i-arrow"/></svg></span></div>
-  </div></div>
-</a>
+<div class="ctiles">
+  <a class="ctile nyc2" href="new-york.html">
+    <div class="cimg" style="background-image:url(ppw-assets/tile-nyc.jpg)"></div><div class="csc"></div>
+    <div class="chead"><img class="cwm2" src="ppw-assets/wm-nodate/wm-nyc.png" alt="New York"><div class="cdiv"></div>
+      <div class="clk"><span class="cby">By</span><img class="cf" src="ppw-assets/partners/fmc-mark.png" alt="FMC"><span class="cp">+</span><img class="cpt" src="ppw-assets/partners/nab-show-white.png" alt=""></div></div>
+    <p class="cname"><span class="cev">at NAB Show New York</span>New York</p>
+    <div class="cclus"><span class="cdate">Oct 20–21, 2026</span><span class="ccta">Explore New York <svg class="ic"><use href="#i-arrow"/></svg></span></div>
+  </a>
+  <a class="ctile mum2" href="mumbai.html">
+    <div class="cimg" style="background-image:url(ppw-assets/tile-mumbai.jpg)"></div><div class="csc"></div>
+    <div class="chead"><img class="cwm2" src="ppw-assets/wm-nodate/wm-mumbai-sa.webp" alt="Mumbai"><div class="cdiv"></div>
+      <div class="clk"><span class="cby">By</span><img class="cf" src="ppw-assets/partners/fmc-mark.png" alt="FMC"><span class="cp">+</span><img class="cpt" src="ppw-assets/partners/bi-abis-white.png" alt="" style="height:19px"></div></div>
+    <p class="cname"><span class="cev">at Broadcast India · South Asia</span>Mumbai</p>
+    <div class="cclus"><span class="cdate">Oct 22–23, 2026</span><span class="ccta">Explore Mumbai <svg class="ic"><use href="#i-arrow"/></svg></span></div>
+  </a>
+  <a class="ctile veg2" href="vegas.html">
+    <div class="cimg" style="background-image:url(ppw-assets/tile-vegas.jpg)"></div><div class="csc"></div>
+    <div class="chead"><img class="cwm2" src="ppw-assets/wm-nodate/wm-vegas.png" alt="Las Vegas"><div class="cdiv"></div>
+      <div class="clk"><span class="cby">By</span><img class="cf" src="ppw-assets/partners/fmc-mark.png" alt="FMC"><span class="cp">+</span><img class="cpt" src="ppw-assets/partners/nab-show-white.png" alt=""></div></div>
+    <p class="cname"><span class="cev">at NAB Show</span>Las Vegas</p>
+    <div class="cclus"><span class="cdate">April 3–7, 2027</span><span class="ccta">Explore Las Vegas <svg class="ic"><use href="#i-arrow"/></svg></span></div>
+  </a>
+  <a class="ctile lon2" href="london.html">
+    <div class="cimg" style="background-image:url(ppw-assets/tile-london.jpg)"></div><div class="csc"></div>
+    <div class="chead"><img class="cwm2" src="ppw-assets/wm-nodate/wm-london.png" alt="London"><div class="cdiv"></div>
+      <div class="clk"><span class="cby">By</span><img class="cf" src="ppw-assets/partners/fmc-mark.png" alt="FMC"><span class="cp">+</span><img class="cpt" src="ppw-assets/mpts-logo.webp" alt="" style="height:13px"></div></div>
+    <p class="cname"><span class="cev">at MPTS · Europe</span>London</p>
+    <div class="cclus"><span class="cdate">May 12–13, 2027</span><span class="ccta">Explore London <svg class="ic"><use href="#i-arrow"/></svg></span></div>
+  </a>
+</div>
 
 <div class="loc-buffer"></div>
 
