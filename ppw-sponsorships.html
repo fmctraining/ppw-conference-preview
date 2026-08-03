@@ -331,6 +331,42 @@
   .org-cat li:first-child{border-top:0}
   .org-note{max-width:820px;margin:22px auto 0;text-align:center;color:var(--ink-faint);font-size:12px;line-height:1.5}
   @media(max-width:760px){body .deck-pillars .pillar+.pillar{border-left:0!important}}
+  /* tier table — Option 1 (tinted cols, Core hero right) + mobile cards */
+  .tier-desktop{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;font-size:14.5px}
+  .tier-desktop .corner{color:var(--ink-dim);font-weight:700;font-size:12.5px;text-transform:uppercase;letter-spacing:1px;text-align:left!important;vertical-align:bottom;padding:0 16px 16px!important;background:var(--panel-2)}
+  .tier-desktop thead th{background:var(--panel-2);padding:0;vertical-align:bottom}
+  .tier-desktop .thd{padding:16px 8px;display:flex;flex-direction:column;align-items:center;gap:2px}
+  .tier-desktop .tname{font-size:17px;font-weight:800}
+  .tier-desktop .ttag{font-size:11px;color:var(--ink-faint);font-weight:600;text-transform:none;letter-spacing:0}
+  .tier-desktop th,.tier-desktop td{padding:15px 16px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap}
+  .tier-desktop tbody th{text-align:left;font-weight:600;color:var(--ink-dim);min-width:250px;white-space:normal;font-size:15px}
+  .tier-desktop tbody tr:last-child th,.tier-desktop tbody tr:last-child td{border-bottom:0}
+  .n-core{background:var(--grad-blue,linear-gradient(100deg,#5bd,#7cf));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .n-plat{background:linear-gradient(180deg,#fff,#b9c4d8);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .n-gold{background:linear-gradient(180deg,#ffe6a6,#e0ab53);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .n-table{color:#c3ccdd}
+  .col-core{background:color-mix(in oklab,var(--a-core,#79d3ff) 8%,transparent)}
+  .col-plat{background:color-mix(in oklab,var(--a-plat,#cdd7ea) 8%,transparent)}
+  .col-gold{background:color-mix(in oklab,var(--a-gold,#e8c06a) 7%,transparent)}
+  .col-table{background:color-mix(in oklab,var(--a-table,#9fb0cc) 7%,transparent)}
+  .hero-th{position:relative}
+  .hero-th .thd{background:linear-gradient(180deg,color-mix(in oklab,var(--a-core,#79d3ff) 20%,transparent),transparent)}
+  .hero-cap{position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-blue,#5bd)}
+  .hero-col{background:color-mix(in oklab,var(--a-core,#79d3ff) 11%,transparent);box-shadow:inset 1px 0 0 color-mix(in oklab,var(--a-core,#79d3ff) 35%,transparent),inset -1px 0 0 color-mix(in oklab,var(--a-core,#79d3ff) 35%,transparent)}
+  .tier-desktop .ck{width:19px;height:19px;display:inline-block;vertical-align:-3px}
+  .tier-desktop .ck svg{width:100%;height:100%;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+  .ck.k-core svg{stroke:var(--a-core,#79d3ff)}.ck.k-plat svg{stroke:#dfe7f4}.ck.k-gold svg{stroke:#f0c368}.ck.k-table svg{stroke:#aab6cc}
+  .tier-desktop .no{color:var(--ink-faint)}.tier-desktop .val{font-weight:700;color:#fff;font-size:13.5px}
+  .tier-cards{display:none;flex-direction:column;gap:14px}
+  .tcard{border:1px solid var(--line);border-radius:18px;padding:24px 22px;background:var(--panel);position:relative;overflow:hidden}
+  .tcard .tname{font-size:20px;font-weight:800;margin-bottom:2px}
+  .tcard .price{color:var(--ink-faint);font-size:12.5px;margin-bottom:16px}
+  .tcard ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+  .tcard li{display:flex;gap:9px;align-items:flex-start;font-size:14px;color:var(--ink-dim);line-height:1.45}
+  .tcard li .ck{flex:none;width:17px;height:17px}.tcard li .ck svg{width:100%;height:100%;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+  .tcard.hero{background:linear-gradient(175deg,color-mix(in oklab,var(--a-core,#79d3ff) 16%,var(--panel)),var(--panel));border-color:color-mix(in oklab,var(--a-core,#79d3ff) 40%,var(--line))}
+  .tcard.hero::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-blue,#5bd)}
+  @media(max-width:760px){.tier-desktop{display:none}.tier-cards{display:flex}}
 </style>
 </head>
 <body>
@@ -468,31 +504,9 @@
       <h2 class="sec-title">What your partnership gets you</h2>
       <p class="sec-desc">Choose the level of visibility that fits your goals. Every tier scales your presence across the program, the platform, and the audience.</p>
     </div>
-    <div class="cmp-scroll">
-      <table class="cmp">
-        <colgroup><col><col class="c-core"><col class="c-plat"><col><col></colgroup>
-        <thead>
-          <tr><th></th><th class="core">Core</th><th class="plat">Platinum</th><th>Gold</th><th>Tabletop</th></tr>
-        </thead>
-        <tbody>
-          <tr><th>Logo on website, signage &amp; marketing campaigns</th>
-            <td><svg class="ic"><use href="#i-check"/></svg></td><td><svg class="ic"><use href="#i-check"/></svg></td><td><svg class="ic"><use href="#i-check"/></svg></td><td><svg class="ic"><use href="#i-check"/></svg></td></tr>
-          <tr><th>Complimentary VIP conference passes</th>
-            <td><svg class="ic"><use href="#i-check"/></svg></td><td><svg class="ic"><use href="#i-check"/></svg></td><td><svg class="ic"><use href="#i-check"/></svg></td><td><svg class="ic"><use href="#i-check"/></svg></td></tr>
-          <tr><th>Opt-in attendee database</th>
-            <td><span class="val">Ownership</span></td><td><span class="val">Ownership</span></td><td><span class="val">2× access</span></td><td><span class="val">1× access</span></td></tr>
-          <tr><th>Keynote session opportunity</th>
-            <td><svg class="ic"><use href="#i-check"/></svg></td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
-          <tr><th>Raffle prize contribution</th>
-            <td><svg class="ic"><use href="#i-check"/></svg></td><td><svg class="ic"><use href="#i-check"/></svg></td><td><svg class="ic"><use href="#i-check"/></svg></td><td><svg class="ic"><use href="#i-check"/></svg></td></tr>
-          <tr><th>Co-branded webinar session</th>
-            <td><svg class="ic"><use href="#i-check"/></svg></td><td><svg class="ic"><use href="#i-check"/></svg></td><td class="no">—</td><td class="no">—</td></tr>
-          <tr><th>30-second video ad before keynote &amp; networking</th>
-            <td><svg class="ic"><use href="#i-check"/></svg></td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
-          <tr><th>Exclusive “In association with / Made possible by” billing</th>
-            <td><svg class="ic"><use href="#i-check"/></svg></td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
-        </tbody>
-      </table>
+        <div class="tier-wrap">
+      <table class="cmp tier-desktop" id="tierTable"></table>
+      <div class="tier-cards" id="tierCards"></div>
     </div>
   </div>
 </section>
@@ -610,5 +624,27 @@
 
 <script>(function(){try{var els=[].slice.call(document.querySelectorAll("section.block .sec-head,.loc,.who,.fcard,.ai-wrap,.collage,.cta-strip,.pillar,.rcard,.extra,.cmp,.hero-stats"));els.forEach(function(el){el.classList.add("reveal");});function check(){var h=window.innerHeight||800;for(var i=els.length-1;i>=0;i--){if(els[i].getBoundingClientRect().top<h*0.9){els[i].classList.add("in");els.splice(i,1);}}}check();window.addEventListener("scroll",check,{passive:true});window.addEventListener("resize",check);setTimeout(check,250);setTimeout(function(){els.forEach(function(el){el.classList.add("in");});els=[];},2600);}catch(e){}})();</script>
 <script defer src="ppw-assets/site.js"></script>
+<script>
+(function(){
+var CK='<span class="ck K"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span>';
+var TIERS={core:{name:'Core',tag:'Exclusive \u00b7 single partner',cls:'core'},plat:{name:'Platinum',tag:'Premium presence',cls:'plat'},gold:{name:'Gold',tag:'Strong visibility',cls:'gold'},table:{name:'Tabletop',tag:'Entry presence',cls:'table'}};
+var ROWS=[
+ ['Logo on website, signage & marketing campaigns',{core:1,plat:1,gold:1,table:1}],
+ ['Complimentary VIP conference passes',{core:1,plat:1,gold:1,table:1}],
+ ['Opt-in attendee database',{core:'Ownership',plat:'Ownership',gold:'2\u00d7 access',table:'1\u00d7 access'}],
+ ['Keynote session opportunity',{core:1,plat:0,gold:0,table:0}],
+ ['Raffle prize contribution',{core:1,plat:1,gold:1,table:1}],
+ ['Co-branded webinar session',{core:1,plat:1,gold:0,table:0}],
+ ['30-second video ad before keynote & networking',{core:1,plat:0,gold:0,table:0}],
+ ['Exclusive \u201cIn association with / Made possible by\u201d billing',{core:1,plat:0,gold:0,table:0}]
+];
+function cell(v,k){if(v===1)return CK.replace('K','k-'+k);if(v===0)return '<span class="no">\u2014</span>';return '<span class="val">'+v+'</span>';}
+var order=['table','gold','plat','core'],hero='core';
+var head='<thead><tr><th class="corner">What\u2019s included</th>'+order.map(function(k){var t=TIERS[k],isH=k===hero;return '<th class="'+(isH?'hero-th ':'')+'col-'+t.cls+'">'+(isH?'<span class="hero-cap"></span>':'')+'<div class="thd"><span class="tname n-'+t.cls+'">'+t.name+'</span><span class="ttag">'+t.tag+'</span></div></th>';}).join('')+'</tr></thead>';
+var body='<tbody>'+ROWS.map(function(r){return '<tr><th>'+r[0]+'</th>'+order.map(function(k){var isH=k===hero;return '<td class="'+(isH?'hero-col ':'col-'+TIERS[k].cls)+'">'+cell(r[1][k],k)+'</td>';}).join('')+'</tr>';}).join('')+'</tbody>';
+var dt=document.getElementById('tierTable');if(dt)dt.innerHTML=head+body;
+var mc=document.getElementById('tierCards');if(mc)mc.innerHTML=order.map(function(k){var t=TIERS[k],isH=k===hero;var lis=ROWS.filter(function(r){return r[1][k]&&r[1][k]!==0;}).map(function(r){var v=r[1][k];var txt=(v===1)?r[0]:r[0]+' \u2014 <b style="color:#fff;font-weight:600">'+v+'</b>';return '<li>'+CK.replace('K','k-'+t.cls)+'<span>'+txt+'</span></li>';}).join('');return '<div class="tcard'+(isH?' hero':'')+'"><div class="tname n-'+t.cls+'">'+t.name+'</div><div class="price">'+t.tag+'</div><ul>'+lis+'</ul></div>';}).join('');
+})();
+</script>
 </body>
 </html>
