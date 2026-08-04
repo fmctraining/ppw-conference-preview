@@ -21,14 +21,14 @@ Internal design/review comps use an `_` prefix (e.g. `_hub.html`). They are not 
 
 ### Canonical URLs
 
-Each public page sets `<link rel="canonical">` to the matching URL on the live site ([ppw-conference.com](https://www.ppw-conference.com/)) when one exists:
+Each public page sets `<link rel="canonical">` to itself on [ppw-conference.com](https://ppw-conference.com/) (this site is the live host; paths match the HTML filename without `.html`):
 
-- `index.html` → `https://www.ppw-conference.com/`
-- `new-york.html` → `https://www.ppw-conference.com/nyc/`
-- `vegas.html` → `https://www.ppw-conference.com/las-vegas/`
-- `london.html` → `https://www.ppw-conference.com/london/`
-- `mumbai.html` → `https://www.ppw-conference.com/mumbai/`
-- `ppw-sponsorships.html` → `https://www.ppw-conference.com/` (no dedicated sponsorship page on the live site)
+- `index.html` → `https://ppw-conference.com/`
+- `new-york.html` → `https://ppw-conference.com/new-york`
+- `vegas.html` → `https://ppw-conference.com/vegas`
+- `london.html` → `https://ppw-conference.com/london`
+- `mumbai.html` → `https://ppw-conference.com/mumbai`
+- `ppw-sponsorships.html` → `https://ppw-conference.com/ppw-sponsorships`
 
 ### `.assetsignore`
 
