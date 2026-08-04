@@ -450,7 +450,7 @@
   .lb-overlay{position:fixed;inset:0;background:rgba(5,8,16,.86);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:300;padding:40px;cursor:zoom-out}
   .lb-overlay.open{display:flex}
   .lb-overlay img{max-width:min(1000px,92vw);max-height:86vh;border-radius:14px;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 30px 80px rgba(0,0,0,.65),0 0 70px rgba(124,58,237,.35);cursor:default}
-  .foot-inner > .foot-col:nth-child(2){transform:translateX(-42px)}
+  @media(min-width:761px){.foot-inner > .foot-col:nth-child(2){transform:translateX(-42px)}}
   /* Dan's wavy lines behind the sponsor wall, entering from left+right */
   .sponsors-light{background:linear-gradient(160deg,#13203c,#0c1424)!important;border-top:1px solid var(--line)!important;position:relative;overflow:hidden;padding:84px 0 84px!important}
   .sponsors-light::before{content:"";position:absolute;left:0;right:0;top:140px;aspect-ratio:2560/340;background:url(ppw-assets/wavy-lines.webp) center/100% 100% no-repeat;opacity:.7;pointer-events:none;z-index:0}
