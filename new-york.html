@@ -199,7 +199,7 @@
   .logo{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 26px;font-weight:800;color:var(--ink-dim);font-size:16px;letter-spacing:.5px}
   .logo.plat{font-size:20px;color:#fff;padding:22px 38px}
   /* ===== premium pass ===== */
-  section.block{border-top:1px solid var(--line);padding:69px 0;position:relative}
+  section.block{border-top:1px solid var(--line);padding:96px 0;position:relative}
   section.block:not(.sponsors-light):not(#ai)::before{content:"";position:absolute;top:0;left:0;right:0;height:340px;background:radial-gradient(640px 220px at 50% 0,rgba(99,102,241,.1),transparent 72%);pointer-events:none;z-index:0}
   section.block>.wrap{position:relative;z-index:1}
   .sec-title{font-size:clamp(26px,4vw,38px);margin:6px 0 0;font-weight:700;letter-spacing:-.5px;background:linear-gradient(180deg,#fff,#c9d5ee);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -356,6 +356,7 @@
   }
 
 p{letter-spacing:.2px}
+@media(max-width:600px){section.block{padding:58px 0}}
 </style>
 </head>
 <!-- DATE-DISCREPANCY (internal): P|PW uses Oct 20-21, 2026; NAB Show NY public site lists Oct 21-22, 2026. Preserving P|PW dates pending source-of-truth confirmation. -->

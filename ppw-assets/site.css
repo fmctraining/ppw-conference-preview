@@ -89,7 +89,7 @@ header.nav .btn{padding:10px 18px;font-size:13.5px;margin-left:10px}
 .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
 /* sections */
-section.block{padding:106px 0;border-top:1px solid var(--line)}
+section.block{padding:96px 0;border-top:1px solid var(--line)}
 .sec-head{margin-bottom:26px;max-width:760px}
 .sec-head.center{margin-inline:auto;text-align:center}
 .sec-kicker{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;background:linear-gradient(100deg in oklch,oklch(86% .10 225),oklch(80% .12 288));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700;margin-bottom:18px}
@@ -145,7 +145,7 @@ footer .small{color:var(--ink-faint);font-size:13px;line-height:1.6}
 
 
   /* ===== premium pass ===== */
-  section.block{padding:69px 0;position:relative}
+  section.block{padding:96px 0;position:relative}
   section.block:not(.sponsors-light):not(#ai)::before{content:"";position:absolute;top:0;left:0;right:0;height:340px;background:radial-gradient(640px 220px at 50% 0,rgba(99,102,241,.1),transparent 72%);pointer-events:none;z-index:0}
   section.block>.wrap{position:relative;z-index:1}
   .sec-title{background:linear-gradient(180deg,#fff,#c9d5ee);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -270,3 +270,5 @@ header.nav .btn{padding-top:10px;padding-bottom:10px}
 
 /* consistent body-copy tracking */
 p{letter-spacing:.2px}
+
+@media(max-width:600px){section.block{padding:58px 0}}
