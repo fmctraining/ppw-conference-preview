@@ -31,6 +31,7 @@
   h1,h2,h3{font-family:"Poppins",sans-serif;text-wrap:balance;margin:0}
   p,.sec-desc,.hero-sub{text-wrap:balance}
 .hero-emph{font-weight:600;color:#fff}
+.hero-sub:not(.hero-emph){max-width:512px;text-wrap:pretty}
   .ic{width:1em;height:1em;display:inline-block;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
   .proto-banner{background:linear-gradient(90deg,#19233c,#141d33);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--ink-dim);text-align:center;padding:8px 16px;letter-spacing:.2px}
   .proto-banner b{color:var(--ink)}
@@ -215,7 +216,7 @@
   .sec-kicker{text-transform:uppercase;background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700;font-size:14px!important;letter-spacing:3.5px!important;margin-bottom:3px}
   .deck-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(52% 56% at 50% 22%,rgba(124,58,237,.34),transparent 64%),radial-gradient(42% 52% at 10% 58%,rgba(45,212,255,.16),transparent 70%),radial-gradient(42% 52% at 90% 52%,rgba(244,114,182,.18),transparent 70%)}
   .deck-pillars{margin-top:52px}
-  .deck-pillars .pillar{background:none!important;border:0!important;box-shadow:none!important;border-radius:0!important;padding:0 44px}
+  .deck-pillars .pillar{background:none!important;border:0!important;box-shadow:none!important;border-radius:0!important;padding:0 28px}
   .deck-pillars .ring-icon{width:96px;height:96px}
   .deck-pillars .ring-icon svg{width:42px;height:42px}
   .touch-pills{grid-template-columns:repeat(3,1fr)!important;gap:16px;margin-top:50px;max-width:1000px;margin-inline:auto}
@@ -234,7 +235,7 @@
   .bonus .ic{stroke-width:1.9;width:42px;height:42px}
   .bonus h4{margin:2px 0 0;font-weight:700;font-size:17px}
   .bonus p{margin:0;color:rgba(255,255,255,.86);line-height:1.45;font-size:13.6px}
-  .deck-foot{text-align:center;color:#cdd4ea;max-width:880px;margin-inline:auto;text-wrap:pretty;font-size:16.5px;margin-top:42px;letter-spacing:0.25px}
+  .deck-foot{text-align:center;color:#cdd4ea;max-width:720px;margin-inline:auto;text-wrap:balance;font-size:16.5px;margin-top:42px;line-height:1.55;letter-spacing:0.2px}
   .extras{gap:22px;margin-top:8px}
   .extra{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;padding:0!important;text-align:center}
   .extra-body{padding:30px 32px 34px!important}
@@ -247,6 +248,7 @@
   .deck-b{background:linear-gradient(150deg,#3a1838,#241640 52%,#141633)}
   .deck-c{background:linear-gradient(160deg,#132a47,#16213f 54%,#121634)}
   .deck-d{background:linear-gradient(160deg,#341641,#221541 54%,#141633)}
+#room-reach,#lv-stats{padding-top:104px!important}
   .ring-png{width:66px;height:66px;display:block;margin:0 auto 18px;filter:drop-shadow(0 6px 18px rgba(90,150,240,.28))}
   /* dark cinematic deck backgrounds */
   .deck-bg{position:absolute;inset:0;background:url(ppw-assets/global-map.webp) center/cover;opacity:.42!important}
@@ -522,7 +524,7 @@ p{letter-spacing:.2px}
   </div>
 </section>
 
-<section class="block">
+<section class="block" id="room-reach">
   <div class="wrap">
     <div class="sec-head center"><div class="sec-kicker">The room you reach</div><h2 class="sec-title">Thousands of in-person creative professionals.</h2><p class="sec-desc sd-fit" style="margin-inline:auto">Every PPW edition puts your brand in a room of working editors, producers, motion designers, and AI creatives: practitioners who evaluate, adopt, and champion the tools they use every day.</p></div>
     <div class="sgallery">
