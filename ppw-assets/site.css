@@ -247,7 +247,7 @@ header.nav .btn{padding-top:10px;padding-bottom:10px}
 
 .cta-strip p{text-wrap:balance}
 
-.foot-inner > .foot-col:nth-child(2){transform:translateX(-53px)}
+@media(min-width:761px){.foot-inner > .foot-col:nth-child(2){transform:translateX(-53px)}}
 
 .spon-by{display:flex;align-items:center;justify-content:center;gap:0;margin:-14px auto 30px;color:var(--ink-dim);font-size:14px;font-weight:600;letter-spacing:.02em}
 .spon-by img{height:36px;width:auto;margin-left:-9px}
