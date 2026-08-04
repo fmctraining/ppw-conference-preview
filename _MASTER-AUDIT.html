@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PPW site — master audit &amp; action tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#080b12;--panel:#0e1524;--line:rgba(255,255,255,.1);--ink:#eef2fb;--dim:#aeb9d4;--faint:#7c8bab;--cyan:#87dffa}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.55}
+  .wrap{max-width:1000px;margin:0 auto;padding:40px 22px 90px}
+  h1{font-size:27px;font-weight:800;margin:0 0 6px}
+  .sub{color:var(--faint);font-size:14px;margin:0 0 22px}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+  .tag{font-size:11px;font-weight:800;letter-spacing:.3px;text-transform:uppercase;padding:4px 10px;border-radius:7px;white-space:nowrap}
+  .done{background:rgba(118,185,0,.16);color:#a6e05a;border:1px solid rgba(118,185,0,.4)}
+  .todo{background:rgba(135,223,250,.14);color:var(--cyan);border:1px solid rgba(135,223,250,.4)}
+  .verify{background:rgba(255,180,90,.14);color:#ffbe6e;border:1px solid rgba(255,180,90,.4)}
+  .opt{background:rgba(183,148,246,.16);color:#c9aeffc0;color:#cbb0f7;border:1px solid rgba(183,148,246,.4)}
+  .jordan{background:rgba(255,90,140,.14);color:#ff8fb0;border:1px solid rgba(255,90,140,.4)}
+  .wait{background:rgba(255,255,255,.08);color:var(--dim);border:1px solid var(--line)}
+  h2{font-size:18px;font-weight:800;margin:30px 0 6px;padding-top:18px;border-top:1px solid var(--line);color:#fff}
+  h2 .c{color:var(--faint);font-weight:600;font-size:13px;margin-left:8px}
+  ul{list-style:none;margin:0;padding:0}
+  li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:14px}
+  li .t{flex:none;margin-top:1px}
+  li .x{color:var(--dim)}
+  li b{color:#fff;font-weight:600}
+  .note{color:var(--faint);font-size:13px;font-style:italic}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0}
+  .box h3{margin:0 0 8px;font-size:15px;color:var(--cyan)}
+  .box p{margin:0 0 8px;font-size:13.5px;color:var(--dim)}
+  code{background:rgba(255,255,255,.08);padding:1px 6px;border-radius:5px;font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>PPW site — master audit &amp; action tracker</h1>
+  <p class="sub">Every open item, by page. This is our single source of truth so nothing gets missed. Updated 2026-08-04.</p>
+  <div class="legend">
+    <span class="tag done">✓ done this session</span>
+    <span class="tag todo">→ I'll fix (deterministic)</span>
+    <span class="tag opt">◇ needs options / preview</span>
+    <span class="tag verify">⚠ verify with team</span>
+    <span class="tag jordan">J Jordan verdict</span>
+    <span class="tag wait">… waiting on you</span>
+  </div>
+
+  <div class="box">
+    <h3>CTA buttons — the plan you asked for</h3>
+    <p><b>Quickest path to something Elise can show sponsors:</b> a small popup contact form wired with Web3Forms. mailto links are out (they dead-end in Safari), so a popup is the right call — and one popup pattern can serve <i>every</i> contact CTA (Request a proposal + Get in touch).</p>
+    <p><b>Bare minimum now:</b> wire the 2 key CTAs (Request a proposal → Megan, Get in touch → Elise). The form UI is basically already designed (preview exists).</p>
+    <p><b>Time:</b> once you paste a free Web3Forms key (~2 min at web3forms.com), wiring + polishing both forms is roughly <b>30–45 min</b> of us going back and forth. Reminder is already set for tomorrow.</p>
+    <p><b>Next round (make it pro):</b> success/error states, validation, subtle motion, and ideally HubSpot so submissions land in the CRM (Tyree's system).</p>
+  </div>
+
+  <h2>Global / cross-site <span class="c">applies to multiple pages</span></h2>
+  <ul>
+    <li><span class="tag todo t">→</span><span class="x">Nav <b>"Locations" arrow shrinks</b> on location pages — inline vs site.css icon sizing. Fix so it matches everywhere.</span></li>
+    <li><span class="tag todo t">→</span><span class="x"><b>Section padding audit, whole site</b> — normalize top+bottom for every section for consistent breathing room. <span class="note">Excluding heroes + the 2nd section of location pages (you fixed those).</span></span></li>
+    <li><span class="tag todo t">→</span><span class="x"><b>Networking party title line-break</b> on every location page → second line reads only "Networking Party" (e.g. "The Post Production World / Networking Party").</span></li>
+    <li><span class="tag verify t">⚠</span><span class="x"><b>Networking subtext consistency</b> — I'll check all pages and report which one differs.</span></li>
+    <li><span class="tag todo t">→</span><span class="x"><b>"Join us in [city]"</b> + every "join us" section → fill container with the hero image + dark overlay (same treatment as the sponsor page's "become a sponsor" section).</span></li>
+    <li><span class="tag opt t">◇</span><span class="x"><b>Background-image review</b> — I'll build a prototype page suggesting fresh backgrounds for sections that feel flat (starting with Mumbai "why it matters").</span></li>
+    <li><span class="tag verify t">⚠</span><span class="x"><b>"Trusted by the industry's best"</b> — London has it. Confirm NY / Vegas / Mumbai and add where missing.</span></li>
+  </ul>
+
+  <h2>Mumbai / South Asia</h2>
+  <ul>
+    <li><span class="tag done t">✓</span><span class="x">Gallery <b>"Inside PPW South Asia"</b> added (Elise's 7 picks) before networking.</span></li>
+    <li><span class="tag jordan t">J</span><span class="x"><b>"The launchpad for South Asia's creatives"</b> → Jordan said <b>delete it</b> ("go straight to the program"). I'll remove it and <b>log the copy</b> in case we reinstate.</span></li>
+    <li><span class="tag jordan t">J</span><span class="x">Hero copy "South Asia's premier professional-development event…" → <b>yes, that's Jordan's approved version</b> (he only removed the em-dash). I'll improve its wrapping.</span></li>
+    <li><span class="tag todo t">→</span><span class="x">"Reflects the latest trends and disruptions…" → make it fit <b>3 lines</b> (not 4). <span class="verify tag">⚠</span> confirming Jordan approved that whole section.</span></li>
+    <li><span class="tag opt t">◇</span><span class="x"><b>"WHY IT MATTERS" eyebrow</b> — you don't like it. Alternatives: <i>The opportunity · Built for the region · What sets it apart · Why PPW South Asia · The case for PPW</i>.</span></li>
+    <li><span class="tag todo t">→</span><span class="x"><b>Registration "coming soon" vs CTA contradiction</b> → button reads <b>"Register at Broadcast India"</b> (proper name) styled as-is, with a small note beneath: "Registration opening soon." Same fix for "Join us in Mumbai."</span></li>
+    <li><span class="tag todo t">→</span><span class="x"><b>"What past attendees say"</b> → match the New York testimonial treatment (same formatting).</span></li>
+  </ul>
+
+  <h2>London / Europe</h2>
+  <ul>
+    <li><span class="tag done t">✓</span><span class="x">Gallery <b>"Inside PPW Europe"</b> added (Elise's 7 picks) before networking.</span></li>
+    <li><span class="tag verify t">⚠</span><span class="x"><b>"The European edition" section</b> → Jordan said delete (like NY). <b>You want to run it by Ben &amp; Elise first.</b> If kept, it needs much better copy — flagging for someone to provide.</span></li>
+    <li><span class="tag todo t">→</span><span class="x">Networking party title line-break (second line = "Networking Party").</span></li>
+    <li><span class="tag done t">✓</span><span class="x">"Trusted by the industry's best" — confirmed present on London.</span></li>
+  </ul>
+
+  <h2>Las Vegas</h2>
+  <ul>
+    <li><span class="tag jordan t">J</span><span class="x"><b>"Where it all began"</b> → Jordan said <b>delete</b> ("go straight to program"). I'll remove + <b>log the copy</b> to reinstate.</span></li>
+    <li><span class="tag jordan t">J</span><span class="x"><b>"Five days · seven rooms · 180+ sessions"</b> → Jordan: make it <b>"Five days · Seven rooms"</b> (match NY). Plus improve wrapping and add <b>"Program grid coming soon."</b></span></li>
+    <li><span class="tag jordan t">J</span><span class="x">Hero "The flagship Post|Production World event inside NAB Show Las Vegas…" → Jordan-approved copy; I'll improve wrapping only.</span></li>
+    <li><span class="tag todo t">→</span><span class="x">"post production" ordering — put "production" before "post production" (locating exact spot).</span></li>
+    <li><span class="tag verify t">⚠</span><span class="x">Field-workshop copy "Take the training into the field…" → <b>Jordan did NOT review this line</b>, so it's unverified. Want me to flag it to him?</span></li>
+    <li><span class="tag todo t">→</span><span class="x">Networking gallery — <b>remove the photos you flagged, cut one row, reorder</b>, and I'll suggest replacements. <span class="note">Re-send / confirm which photos — I want to pull the right ones.</span></span></li>
+    <li><span class="tag opt t">◇</span><span class="x"><b>"FROM PAST CONFERENCES" eyebrow</b> — approved? Alternatives if not: <i>On the ground · From the floor · Scenes from P|PW · Past editions · Inside the room</i>.</span></li>
+    <li><span class="tag verify t">⚠</span><span class="x"><b>Vegas pricing</b> — verifying. Elise confirmed the full pass is <b>$1,459</b> in Slack; I'll re-confirm every number against the team before we call it done.</span></li>
+    <li><span class="tag wait t">…</span><span class="x"><b>"Inside P|PW" gallery</b> — you said you'd give instructions for this section.</span></li>
+    <li><span class="tag todo t">→</span><span class="x">"THE AUDIENCE / Who attends", "THE PROOF / Attendees love P|PW", "FROM PAST CONFERENCES" → padding top+bottom too small (part of the global padding pass).</span></li>
+    <li><span class="tag todo t">→</span><span class="x">"Attendees love P|PW" → testimonial treatment like NY; you sent the testimonial text — I'll drop it in.</span></li>
+    <li><span class="tag todo t">→</span><span class="x">"Join us in Las Vegas" → hero-image background + dark overlay.</span></li>
+  </ul>
+
+  <h2>New York</h2>
+  <ul>
+    <li><span class="tag done t">✓</span><span class="x">Blue "Get in touch" cards (<b>option A, blue outline</b>), monograms removed, fb-card role 11/600, "room" period removed, faculty padding, keynote → "The Future of Editing Begins in Premiere" + prominent ADOBE, pass + card wrapping cleaned.</span></li>
+    <li><span class="tag todo t">→</span><span class="x">Session titles → all fit <b>2 lines</b> (measuring the grid).</span></li>
+    <li><span class="tag todo t">→</span><span class="x">Regular grid cells (not under the day title) → more padding-top.</span></li>
+    <li><span class="tag todo t">→</span><span class="x">"Get in touch" section → slightly more padding below.</span></li>
+    <li><span class="tag todo t">→</span><span class="x">Networking party <b>bottom-right image</b> → better shot (I'll pull options).</span></li>
+    <li><span class="tag todo t">→</span><span class="x"><b>Jordan's pricing change</b> — move "what your pass covers" below the register button into one centered card. <b>Not yet applied</b> — I'll consolidate.</span></li>
+  </ul>
+
+  <h2>Sponsorship page</h2>
+  <ul>
+    <li><span class="tag done t">✓</span><span class="x">Tier top bars now <b>same 3px thickness</b> (kept colors).</span></li>
+    <li><span class="tag todo t">→</span><span class="x">Hero "From Las Vegas to London…" → you now want it on <b>3 lines</b> (it's 4 with "PPW Global" starting line 2). I'll reconcile.</span></li>
+    <li><span class="tag todo t">→</span><span class="x">Stats row: <b>restore the dark background treatment</b> (investigating what changed); label → just <b>"creative professionals"</b> (drop "unique"); <b>"and hundreds more"</b> → same style as "Figures from P|PW Las Vegas 2026." but <b>bold</b>.</span></li>
+    <li><span class="tag todo t">→</span><span class="x">Diagram: it's a bit <b>too big and clipping at the top</b> → scale down + add headroom. <b>Database Blast</b> icon too big, <b>Dedicated Webinars</b> icon too small. "co-produced by FMC and sponsor" on one line; make <b>"Dedicated Webinars" two lines</b> to mirror "Global Platinum Recognition." <span class="verify tag">⚠</span> I'll re-verify every label is correct.</span></li>
+    <li><span class="tag todo t">→</span><span class="x">"More ways to engage the audience" → slightly less padding below.</span></li>
+    <li><span class="tag todo t">→</span><span class="x">Section padding: "SPONSORSHIP TIERS" and "THE ROOM YOU REACH" (right top, wrong bottom) → part of the global padding pass.</span></li>
+    <li><span class="tag wait t">…</span><span class="x">"Thousands of in-person creative professionals" gallery → <b>picker is now interactive</b>; waiting on your selections.</span></li>
+  </ul>
+
+  <h2>Contact / CTA</h2>
+  <ul>
+    <li><span class="tag done t">✓</span><span class="x">Contact buttons → <b>option A (blue outline)</b> applied.</span></li>
+    <li><span class="tag wait t">…</span><span class="x">Popup forms → need your Web3Forms key (reminder set). See plan up top.</span></li>
+  </ul>
+</div>
+</body>
+</html>
