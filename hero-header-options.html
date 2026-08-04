@@ -3,86 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hero header treatments — 5 options</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<title>Hero header treatments — full-page</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#0a0e17;--ink:#eef2fb;--faint:#6b7b9e;--cyan:#2dd4ff;--cyan2:#87dffa;
+  :root{--bg:#080b12;--ink:#eef2fb;--accent2:#87dffa;
     --grad:linear-gradient(100deg in oklch,oklch(86% .10 225),oklch(80% .12 288))}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif}
-  .top{max-width:1000px;margin:0 auto;padding:44px 22px 4px}
-  h1.pt{font-size:26px;font-weight:800;margin:0 0 6px}
-  .top p{color:var(--faint);font-size:14px;margin:0;max-width:860px;line-height:1.6}
-  .opt{border-top:1px solid rgba(255,255,255,.08);padding:40px 22px 44px;max-width:1000px;margin:0 auto}
-  .lbl{display:inline-block;background:var(--cyan2);color:#04121a;font-weight:900;font-size:16px;text-transform:uppercase;padding:7px 16px;border-radius:10px;margin-bottom:6px}
-  .note{color:var(--faint);font-size:13.5px;margin:6px 0 26px;max-width:760px;line-height:1.6}
-  .pair{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
-  @media(max-width:760px){.pair{grid-template-columns:1fr}}
-  .demo{background:radial-gradient(700px 300px at 30% 0,rgba(59,130,246,.14),transparent 60%),#0b1120;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:40px 32px}
-  .cap{font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--faint);font-weight:700;margin-bottom:16px}
-  .h{font-weight:800;letter-spacing:-1.2px;line-height:1.12;margin:0}
-  .h.home{font-size:clamp(30px,4vw,46px)}
-  .h.spon{font-size:clamp(26px,3.4vw,38px)}
+  .banner{background:#0b1120;border-bottom:1px solid rgba(255,255,255,.1);padding:16px 22px;text-align:center;color:#9fb0d4;font-size:13.5px;position:sticky;top:0;z-index:20}
+  .banner b{color:#87dffa}
+  .hero{position:relative;overflow:hidden;min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:70px 22px}
+  .hero-bg{position:absolute;inset:0;background:url(ppw-assets/hero.jpg) center/cover;z-index:0}
+  .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(8,11,18,.55),rgba(8,11,18,.2) 22%,rgba(8,11,18,.35) 60%,rgba(8,11,18,.9))}
+  .in{position:relative;z-index:2;max-width:1000px}
+  .lbl{position:absolute;top:16px;left:16px;z-index:5;background:#87dffa;color:#04121a;font-weight:900;font-size:15px;text-transform:uppercase;padding:7px 15px;border-radius:10px}
+  .eyebrow{font-size:15px;letter-spacing:2.1px;text-transform:uppercase;font-weight:700;margin-bottom:22px;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+  .eyebrow .ny{color:#5b9dff}.eyebrow .mu{color:#43d9b8}.eyebrow .lv{color:#ff8a4c}.eyebrow .lo{color:#b794f6}.eyebrow .d{opacity:.6}
+  h1{font-family:"Poppins";font-weight:800;font-size:clamp(38px,6.4vw,66px);letter-spacing:-1.4px;line-height:1.1;margin:0 0 18px;padding-bottom:.08em}
+  .sub{font-size:clamp(17px,2vw,19px);color:#e4ebfa;font-weight:500;max-width:600px;margin:0 auto 30px;line-height:1.4;text-shadow:0 2px 16px rgba(0,0,0,.6)}
+  .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;padding:15px 26px;border-radius:999px;text-decoration:none;color:#fff}
+  .btn.gold{background:linear-gradient(180deg,#f6cf6a,#e0a92e);color:#1a1305}
+  .btn.ghost{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.45)}
+  .white{color:#fff}
+  .cy{color:#87dffa}
   .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .wg{background:linear-gradient(180deg,#fff,#c7d4ee);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .cy{color:var(--cyan2)}
-  /* 4 underline accent */
   .u{position:relative;color:#fff}
-  .u::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:4px;border-radius:3px;background:var(--grad)}
-  .foot{max-width:1000px;margin:0 auto;padding:30px 22px 90px;color:var(--faint);font-size:12.5px}
+  .u::after{content:"";position:absolute;left:6%;right:6%;bottom:-.12em;height:.09em;border-radius:99px;background:var(--grad)}
+  .sponsor-note{position:relative;z-index:2;text-align:center;color:#9fb0d4;font-size:13px;margin-top:22px}
+  .sponsor-note b{color:#fff}
 </style>
 </head>
 <body>
-<header class="top">
-  <h1 class="pt">Hero header treatments — 5 options</h1>
-  <p>Each option shows the homepage headline and the sponsorship headline with the same treatment, so we can make them consistent. Reply 1–5.</p>
-</header>
+<div class="banner">Full-page hero, exactly as it renders on the site. Only white+blue / white+gradient alternations. <b>Reply 1 / 2 / 3 / 4.</b></div>
 
-<!-- 1 two-tone -->
-<section class="opt"><span class="lbl">1 · two-tone (line/phrase in accent)</span>
-  <p class="note">First part white, key part in the cyan accent. Close to what the homepage does now. Clean, punchy.</p>
-  <div class="pair">
-    <div class="demo"><div class="cap">Homepage</div><h2 class="h home"><span class="wg">One Conference.</span><br><span class="cy">Four Major Regions.</span></h2></div>
-    <div class="demo"><div class="cap">Sponsorship</div><h2 class="h spon"><span class="wg">Your gateway to the</span> <span class="cy">global creative industry</span></h2></div>
+<!-- 1 white + cyan -->
+<section class="hero"><span class="lbl">1 · white + blue</span><div class="hero-bg"></div><div class="scrim"></div>
+  <div class="in">
+    <div class="eyebrow"><span class="ny">New York</span><span class="d"> · </span><span class="mu">Mumbai</span><span class="d"> · </span><span class="lv">Las Vegas</span><span class="d"> · </span><span class="lo">London</span></div>
+    <h1><span class="white">One Conference.</span><br><span class="cy">Four Major Regions.</span></h1>
+    <p class="sub">The world's premier training conference for video, TV, film, motion graphics and AI.</p>
+    <div class="cta"><a class="btn gold" href="#1">Explore Locations →</a><a class="btn ghost" href="#1">Who attends</a></div>
+    <div class="sponsor-note">Sponsor headline would read: <b>Your gateway to the <span class="cy">global creative industry</span></b></div>
   </div>
 </section>
 
-<!-- 2 full gradient -->
-<section class="opt"><span class="lbl">2 · full gradient fill</span>
-  <p class="note">The entire headline filled with the site's cyan-to-purple gradient. Boldest, most branded.</p>
-  <div class="pair">
-    <div class="demo"><div class="cap">Homepage</div><h2 class="h home g">One Conference.<br>Four Major Regions.</h2></div>
-    <div class="demo"><div class="cap">Sponsorship</div><h2 class="h spon g">Your gateway to the global creative industry</h2></div>
+<!-- 2 white + gradient -->
+<section class="hero"><span class="lbl">2 · white + gradient</span><div class="hero-bg"></div><div class="scrim"></div>
+  <div class="in">
+    <div class="eyebrow"><span class="ny">New York</span><span class="d"> · </span><span class="mu">Mumbai</span><span class="d"> · </span><span class="lv">Las Vegas</span><span class="d"> · </span><span class="lo">London</span></div>
+    <h1><span class="white">One Conference.</span><br><span class="g">Four Major Regions.</span></h1>
+    <p class="sub">The world's premier training conference for video, TV, film, motion graphics and AI.</p>
+    <div class="cta"><a class="btn gold" href="#2">Explore Locations →</a><a class="btn ghost" href="#2">Who attends</a></div>
+    <div class="sponsor-note">Sponsor headline would read: <b>Your gateway to the <span class="g">global creative industry</span></b></div>
   </div>
 </section>
 
-<!-- 3 white + gradient phrase -->
-<section class="opt"><span class="lbl">3 · white + gradient key phrase</span>
-  <p class="note">All white except one key phrase in the gradient. Directs the eye without being loud.</p>
-  <div class="pair">
-    <div class="demo"><div class="cap">Homepage</div><h2 class="h home" style="color:#fff">One Conference.<br><span class="g">Four Major Regions.</span></h2></div>
-    <div class="demo"><div class="cap">Sponsorship</div><h2 class="h spon" style="color:#fff">Your gateway to the <span class="g">global creative industry</span></h2></div>
+<!-- 3 white + gradient underline -->
+<section class="hero"><span class="lbl">3 · white + gradient underline</span><div class="hero-bg"></div><div class="scrim"></div>
+  <div class="in">
+    <div class="eyebrow"><span class="ny">New York</span><span class="d"> · </span><span class="mu">Mumbai</span><span class="d"> · </span><span class="lv">Las Vegas</span><span class="d"> · </span><span class="lo">London</span></div>
+    <h1 class="white">One Conference.<br><span class="u">Four Major Regions.</span></h1>
+    <p class="sub">The world's premier training conference for video, TV, film, motion graphics and AI.</p>
+    <div class="cta"><a class="btn gold" href="#3">Explore Locations →</a><a class="btn ghost" href="#3">Who attends</a></div>
+    <div class="sponsor-note">Sponsor headline would read: <b>Your gateway to the <span class="u">global creative industry</span></b></div>
   </div>
 </section>
 
-<!-- 4 white + gradient underline -->
-<section class="opt"><span class="lbl">4 · white + gradient underline</span>
-  <p class="note">Solid white headline with a gradient underline under the key phrase. Editorial, confident.</p>
-  <div class="pair">
-    <div class="demo"><div class="cap">Homepage</div><h2 class="h home" style="color:#fff">One Conference.<br><span class="u">Four Major Regions.</span></h2></div>
-    <div class="demo"><div class="cap">Sponsorship</div><h2 class="h spon" style="color:#fff">Your gateway to the <span class="u">global creative industry</span></h2></div>
+<!-- 4 alternating per word: white / blue / white / gradient -->
+<section class="hero"><span class="lbl">4 · alternating emphasis</span><div class="hero-bg"></div><div class="scrim"></div>
+  <div class="in">
+    <div class="eyebrow"><span class="ny">New York</span><span class="d"> · </span><span class="mu">Mumbai</span><span class="d"> · </span><span class="lv">Las Vegas</span><span class="d"> · </span><span class="lo">London</span></div>
+    <h1><span class="white">One </span><span class="cy">Conference.</span><br><span class="white">Four Major </span><span class="g">Regions.</span></h1>
+    <p class="sub">The world's premier training conference for video, TV, film, motion graphics and AI.</p>
+    <div class="cta"><a class="btn gold" href="#4">Explore Locations →</a><a class="btn ghost" href="#4">Who attends</a></div>
+    <div class="sponsor-note">Sponsor headline would read: <b>Your <span class="cy">gateway</span> to the <span class="g">global creative industry</span></b></div>
   </div>
 </section>
 
-<!-- 5 soft white gradient (monochrome premium) -->
-<section class="opt"><span class="lbl">5 · soft white gradient (monochrome)</span>
-  <p class="note">Whole headline in a subtle white-to-pale-blue gradient, no accent color. The most premium/understated.</p>
-  <div class="pair">
-    <div class="demo"><div class="cap">Homepage</div><h2 class="h home wg">One Conference.<br>Four Major Regions.</h2></div>
-    <div class="demo"><div class="cap">Sponsorship</div><h2 class="h spon wg">Your gateway to the global creative industry</h2></div>
-  </div>
-</section>
-
-<p class="foot">Internal preview — hero-header-options.html · reply 1 / 2 / 3 / 4 / 5</p>
 </body>
 </html>
