@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stats row — border options</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#080b12;--line:#212d49;--line-2:#2c3a5c;--ink-dim:#a3b2d2;--cyan:#87dffa;
+    --grad-blue:linear-gradient(100deg in oklch,oklch(86% .10 225),oklch(80% .12 288))}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:#eef2fb;font-family:"Poppins",sans-serif}
+  .banner{background:#0b1120;border-bottom:1px solid rgba(255,255,255,.1);padding:15px 22px;text-align:center;color:#9fb0d4;font-size:13.5px}
+  .banner b{color:var(--cyan)}
+  .grp{max-width:1040px;margin:40px auto 0;padding:0 22px}
+  .lbl{display:inline-block;background:var(--cyan);color:#04121a;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.4px;padding:6px 14px;border-radius:10px;margin-bottom:6px}
+  .cap{color:var(--ink-dim);font-size:13.5px;margin:2px 0 14px}
+  /* base stats row (separators now equal height) */
+  .aud-stats{display:flex;flex-wrap:wrap;align-items:stretch;max-width:1000px;margin:0 auto;position:relative;border-radius:20px;background:linear-gradient(165deg,rgba(20,30,52,.72),rgba(13,19,33,.6));box-shadow:0 24px 60px rgba(0,0,0,.32)}
+  .aud-tile{flex:1 1 200px;padding:34px 18px 30px;text-align:center;border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+  .aud-tile:last-child{border-right:0}
+  .aud-tile .n{font-weight:900;font-size:46px;letter-spacing:-1.5px;line-height:1;background:linear-gradient(180deg,#fff,#9fb4e6);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .aud-tile .l{color:var(--ink-dim);font-size:15px;margin-top:3px;line-height:1.35;max-width:200px}
+
+  /* A — top+bottom gradient lines, squared so they reach the corners */
+  .A .aud-stats{overflow:hidden;border:1px solid var(--line-2);border-radius:12px}
+  .A .aud-stats::before,.A .aud-stats::after{content:"";position:absolute;left:0;right:0;height:2px;background:var(--grad-blue);z-index:1}
+  .A .aud-stats::before{top:0}.A .aud-stats::after{bottom:0}
+
+  /* B — full gradient border around the whole outline */
+  .B .aud-stats{border-radius:20px}
+  .B .aud-stats::before{content:"";position:absolute;inset:0;border-radius:20px;padding:1.5px;background:var(--grad-blue);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:2}
+
+  /* C — full gradient border + soft outer glow, slightly rounder */
+  .C .aud-stats{border-radius:22px;box-shadow:0 24px 60px rgba(0,0,0,.32),0 0 34px -6px rgba(91,141,239,.45)}
+  .C .aud-stats::before{content:"";position:absolute;inset:0;border-radius:22px;padding:1.5px;background:var(--grad-blue);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:2}
+  .C .aud-tile{border-color:rgba(120,150,210,.18)}
+
+  .foot{max-width:1040px;margin:0 auto;padding:46px 22px 90px;color:#6b7b9e;font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="banner">Stats row — 3 border treatments. Separators are now equal height in all. <b>Reply A / B / C.</b></div>
+<div id="root"></div>
+<p class="foot">Internal preview — stats-border-options.html</p>
+<script>
+const TILES=[['1,496','unique post-production professionals'],['52','countries represented'],['15,256','total session badge scans'],['6','continents in the room']];
+const row=()=>`<div class="aud-stats">${TILES.map(([n,l])=>`<div class="aud-tile"><div class="n">${n}</div><div class="l">${l}</div></div>`).join('')}</div>`;
+const OPTS=[
+ ['A','Top + bottom lines (fixed)','Your current look, but squared just enough that the gradient lines reach the corners instead of getting clipped.'],
+ ['B','Full gradient outline','A single gradient border wrapping the entire panel. Clean, contained, on-brand.'],
+ ['C','Gradient outline + glow','Same full outline with a soft blue glow behind it, so the whole stat block feels like a highlighted centerpiece.'],
+];
+document.getElementById('root').innerHTML=OPTS.map(([id,name,desc])=>`<div class="grp ${id}"><span class="lbl">${id} · ${name}</span><div class="cap">${desc}</div>${row()}</div>`).join('');
+</script>
+</body>
+</html>
