@@ -3,70 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PPW — go-live status &amp; tomorrow list</title>
+<title>PPW — full audit (everything from today)</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#080b12;--panel:#0e1524;--line:rgba(255,255,255,.1);--ink:#eef2fb;--dim:#aeb9d4;--faint:#7c8bab;--cyan:#87dffa;--green:#a6e05a}
+  :root{--bg:#080b12;--panel:#0e1524;--line:rgba(255,255,255,.1);--ink:#eef2fb;--dim:#aeb9d4;--faint:#7c8bab;--cyan:#87dffa;--green:#a6e05a;--amber:#ffbe6e}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.55}
-  .wrap{max-width:1000px;margin:0 auto;padding:40px 22px 90px}
-  h1{font-size:27px;font-weight:800;margin:0 0 4px}
-  .sub{color:var(--faint);font-size:14px;margin:0 0 24px}
-  h2{font-size:17px;font-weight:800;margin:30px 0 8px;padding-top:18px;border-top:1px solid var(--line)}
-  .done h2{color:var(--green)} .todo h2{color:var(--cyan)}
+  .wrap{max-width:1000px;margin:0 auto;padding:38px 22px 90px}
+  h1{font-size:26px;font-weight:800;margin:0 0 4px}
+  .sub{color:var(--faint);font-size:13.5px;margin:0 0 22px}
+  h2{font-size:16px;font-weight:800;margin:26px 0 8px;padding-top:16px;border-top:1px solid var(--line);color:#fff}
+  h3{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:var(--cyan);margin:16px 0 6px}
   ul{list-style:none;margin:0;padding:0}
-  li{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:14px;display:flex;gap:10px}
+  li{padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13.5px;display:flex;gap:9px}
   li .m{flex:none}
   b{color:#fff;font-weight:600}
-  .who{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;padding:2px 8px;border-radius:6px;white-space:nowrap;flex:none;margin-top:1px}
-  .you{background:rgba(135,223,250,.14);color:var(--cyan);border:1px solid rgba(135,223,250,.4)}
-  .team{background:rgba(255,180,90,.14);color:#ffbe6e;border:1px solid rgba(255,180,90,.4)}
-  .me{background:rgba(183,148,246,.16);color:#cbb0f7;border:1px solid rgba(183,148,246,.4)}
-  .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:16px 0}
-  .box h3{margin:0 0 8px;font-size:15px;color:var(--cyan)}
-  .box p{margin:0 0 6px;font-size:13.5px;color:var(--dim)}
   a{color:var(--cyan)}
+  .must{background:linear-gradient(160deg,rgba(255,190,110,.12),rgba(255,190,110,.04));border:1px solid rgba(255,190,110,.4);border-radius:14px;padding:16px 20px;margin:14px 0}
+  .must h2{border:0;padding:0;margin:0 0 10px;color:var(--amber)}
+  .must li .m{color:var(--amber)}
+  .box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0;font-size:13px;color:var(--dim)}
+  .box b{color:var(--cyan)}
+  .who{font-size:10.5px;font-weight:800;text-transform:uppercase;padding:2px 7px;border-radius:5px;flex:none;margin-top:1px}
+  .you{background:rgba(135,223,250,.14);color:var(--cyan)} .team{background:rgba(255,190,110,.14);color:var(--amber)}
+  .pill{display:inline-block;font-size:11px;color:var(--green);font-weight:700}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>PPW — go-live status</h1>
-  <p class="sub">Updated overnight 2026-08-04. Site is live-deployable (push to main = ppw-conference.com). This is what's done and what's left for tomorrow.</p>
+  <h1>PPW — full audit of everything from today</h1>
+  <p class="sub">2026-08-04, overnight. Site is live &amp; deployable at ppw-conference.com. Nothing below is waiting on me unless it's in the amber box.</p>
 
-  <div class="done">
-  <h2>✓ Done overnight — live now</h2>
-  <ul>
-    <li><span class="m">✓</span><span><b>Section padding normalized site-wide</b> — every section 96px desktop / 58px mobile (was 69–112px chaos). Verified, no mobile overflow.</span></li>
-    <li><span class="m">✓</span><span><b>Jordan's section deletions</b> — Mumbai "launchpad" + Vegas "Where it all began" removed (copy logged in REMOVED-SECTIONS-LOG.md to reinstate).</span></li>
-    <li><span class="m">✓</span><span><b>Bonus diagram</b> — no longer clips at top; Database Blast icon smaller, Dedicated Webinars icon bigger + title on 2 lines (mirrors Global Platinum Recognition); slightly smaller overall.</span></li>
-    <li><span class="m">✓</span><span><b>Stats row</b> — darker panel restored, label → "creative professionals", "and hundreds more" bold.</span></li>
-    <li><span class="m">✓</span><span><b>Sponsor hero</b> → 3 balanced lines; hero-sub line-height 1.35.</span></li>
-    <li><span class="m">✓</span><span><b>Tier top bars</b> → same 3px thickness (kept colors).</span></li>
-    <li><span class="m">✓</span><span><b>Networking party</b> titles break to "Networking Party" on line 2 (all pages); subtext normalized (Vegas + London matched NY/Mumbai, London keeps "Europe").</span></li>
-    <li><span class="m">✓</span><span><b>Vegas</b> — "Five days · Seven rooms" + "Full program grid coming soon" + hero wrapping.</span></li>
-    <li><span class="m">✓</span><span><b>"Join us" sections</b> (Vegas/London/Mumbai) now use the city hero image with a dark subtle overlay (like the sponsor "become a sponsor" section).</span></li>
-    <li><span class="m">✓</span><span><b>Mumbai</b> — eyebrow → "What sets it apart"; removed the odd background; registration CTAs → "Register at Broadcast India" + "Registration opening soon" note; curriculum card trimmed.</span></li>
-    <li><span class="m">✓</span><span><b>New York</b> — pricing consolidated into one centered card with "what your pass covers" below the button (Jordan); session titles fit 2 lines + equal card heights; more cell + contact padding; blue "Get in touch" cards (outline); monograms removed; keynote → "The Future of Editing Begins in Premiere" + ADOBE.</span></li>
-    <li><span class="m">✓</span><span><b>Photo galleries</b> — "Inside PPW South Asia" (Mumbai) + "Inside PPW Europe" (London) from Elise's picks.</span></li>
-    <li><span class="m">✓</span><span><b>CTA mailto</b> stopgap — all contact buttons prefill subject + structured body (sponsorship→Megan, press→Tyree, general→Elise). Presentation-ready today.</span></li>
-    <li><span class="m">✓</span><span><b>Contact-forms mockup designed</b> — <a href="contact-forms-mockup.html">contact-forms-mockup.html</a> (ready to wire).</span></li>
-    <li><span class="m">✓</span><span><b>Nav "Locations" arrow</b> — measured 15px on both homepage and location pages; already consistent (earlier nav unification fixed it).</span></li>
-  </ul>
+  <div class="must">
+    <h2>⚠ Absolute must-dos tomorrow (only these need you)</h2>
+    <ul>
+      <li><span class="m">1</span><span><b>Send the two messages</b> below (Jordan + Elise) — both are written and ready to paste.</span></li>
+      <li><span class="m">2</span><span><b>Web3Forms key</b> (free, web3forms.com, ~2 min) → then I wire both popup forms live (~30 min). This is the only functional gap; mailto works fine meanwhile.</span></li>
+      <li><span class="m">3</span><span><b>Pick "room you reach" photos</b> — <a href="room-gallery-picker.html">room-gallery-picker.html</a> (now clickable). NY gallery I already built &amp; placed; glance at it if you want.</span></li>
+      <li><span class="m">4</span><span>When the <b>2025 NY download</b> finishes, say so — I'll fold those shots into the NY picker/gallery.</span></li>
+      <li><span class="m">5</span><span>Send me any <b>Vegas networking-gallery</b> photo swaps + your <b>"Inside P|PW"</b> gallery notes (I never got the specifics).</span></li>
+    </ul>
   </div>
 
-  <div class="todo">
-  <h2>→ Tomorrow — needs you or the team</h2>
+  <h2>✓ Done &amp; live — Sponsor page</h2>
   <ul>
-    <li><span class="who you">YOU</span><span><b>Approve the contact-forms mockup</b> + grab a free <b>Web3Forms key</b> (web3forms.com). Then ~30 min to wire both forms live. (Reminder set for 9am.)</span></li>
-    <li><span class="who you">YOU</span><span><b>Room-you-reach gallery</b> — pick from the now-clickable <a href="room-gallery-picker.html">picker</a>. And the <b>NY Dropbox photos</b> — sync them local and I'll build an NY picker.</span></li>
-    <li><span class="who you">YOU</span><span><b>Vegas networking gallery</b> — re-send which photos to remove/reorder (I lost the specifics) + your "Inside P|PW" gallery instructions.</span></li>
-    <li><span class="who team">BEN</span><span>Verified <b>attendee-company list</b> (+ that Netlify link)? · pull the <b>co-branded webinar</b> tier row? · approved <b>homepage stats</b>?</span></li>
-    <li><span class="who team">ELISE</span><span><b>Vegas pricing $1,459</b> correct to publish? · <b>London "European edition"</b> keep or cut? · <b>Broadcast India</b> CTA wording?</span></li>
-    <li><span class="who team">JORDAN</span><span>Approve Vegas <b>field-workshop</b> copy, the Mumbai <b>"What sets it apart"</b> section, and the <b>"FROM PAST CONFERENCES"</b> eyebrow (not in his review)?</span></li>
-    <li><span class="m">✓</span><span><b>Testimonials ported</b> — Mumbai + Vegas now match the NY dark-glass / italic treatment. Done &amp; live.</span></li>
-    <li><span class="who you">YOU</span><span><b>Background picks</b> — prototype rebuilt full-width, in context, with live image-swap: <a href="background-suggestions.html">background-suggestions.html</a>. Pick an image per section and I'll apply it.</span></li>
+    <li><span class="m">✓</span><span>Hero: "One partnership…" own bold line; sub 3 balanced lines, line-height 1.35, letter-spacing .25.</span></li>
+    <li><span class="m">✓</span><span>Pillars (both sections): <b>Option 1</b> — blue-gradient SVG icons (your pick over the originals), blue phrase on line 2, refined dividers; titles held to 2 lines.</span></li>
+    <li><span class="m">✓</span><span>"Amplified" icons normalized to one size; section-header gap +22px; deck-foot 2 lines.</span></li>
+    <li><span class="m">✓</span><span>Bonus diagram rebuilt (Poppins, no top-clip, DB-blast icon smaller, Dedicated Webinars bigger + 2-line title, uniform text gaps, <b>"PPW" center hub</b> replacing the random dot).</span></li>
+    <li><span class="m">✓</span><span>Tier table: corner → "Partnership Benefits"; top bars all same 3px thickness.</span></li>
+    <li><span class="m">✓</span><span>Stats: darker panel, "creative professionals" (one line), "and hundreds more" bold.</span></li>
+    <li><span class="m">✓</span><span>"More ways to engage" tighter padding below.</span></li>
   </ul>
+
+  <h2>✓ Done &amp; live — Location pages</h2>
+  <ul>
+    <li><span class="m">✓</span><span><b>Jordan deletions</b>: Mumbai "launchpad" + Vegas "Where it all began" removed (logged to reinstate).</span></li>
+    <li><span class="m">✓</span><span><b>Networking party</b>: title breaks to "Networking Party" line 2 everywhere; subtext normalized (London keeps "Europe").</span></li>
+    <li><span class="m">✓</span><span><b>"Join us" sections</b>: city skyline background (the <b>letter-free</b> versions) + dark overlay.</span></li>
+    <li><span class="m">✓</span><span><b>Vegas</b>: "Five days · Seven rooms" + "program grid coming soon"; hero wrapping; testimonials → NY dark-glass style.</span></li>
+    <li><span class="m">✓</span><span><b>Mumbai</b>: eyebrow reverted to "Why it matters" (Jordan to improve); odd background removed; hero split to 2 paragraphs; "Register at Broadcast India" + "Registration opening soon" note beneath the button; curriculum card trimmed.</span></li>
+    <li><span class="m">✓</span><span><b>London</b>: CTA "Register at MPTS" + "Registration opens 2027" note beneath.</span></li>
+    <li><span class="m">✓</span><span><b>New York</b>: pricing → one centered card (Jordan); session titles 2 lines; blue outline contact cards; more cell/contact padding; keynote ADOBE treatment.</span></li>
+    <li><span class="m">✓</span><span><b>Testimonials</b>: all pages now use curly quotation marks, consistent (my call — cleaner than mixed straight/curly).</span></li>
+  </ul>
+
+  <h2>✓ Done &amp; live — Photo galleries</h2>
+  <ul>
+    <li><span class="m">✓</span><span><b>Mumbai (South Asia)</b>: featured the strong wide-room shot; cut 3 weak ones (signage, redundant) → 4 strong varied.</span></li>
+    <li><span class="m">✓</span><span><b>London (Europe)</b>: reordered so no two speaker close-ups or room shots sit adjacent.</span></li>
+    <li><span class="m">✓</span><span><b>New York</b>: I curated 4 (podium+screen feature, presenter, workshop, audience — no portrait, non-redundant) and placed it before networking.</span></li>
+    <li><span class="m">✓</span><span>Pickers (interactive): <a href="room-gallery-picker.html">room-you-reach</a>, <a href="ny-gallery-picker.html">NY 2024</a>.</span></li>
+  </ul>
+
+  <h2>✓ Done &amp; live — Site-wide</h2>
+  <ul>
+    <li><span class="m">✓</span><span><b>Section padding audit</b>: every section 96px desktop / 58px mobile (was 69–112 chaos).</span></li>
+    <li><span class="m">✓</span><span>Full <b>mobile QA</b> all 6 pages — zero horizontal overflow.</span></li>
+    <li><span class="m">✓</span><span>Em-dashes clean (only in CSS comments); all <b>register CTAs verified real</b> (NAB / NAB / MPTS / Broadcast India); favicons present.</span></li>
+    <li><span class="m">✓</span><span>Nav "Locations" arrow measured 15px on all pages — consistent. "Trusted by the industry's best" confirmed on all 4 location pages.</span></li>
+    <li><span class="m">✓</span><span><b>Contact-forms mockup</b> designed &amp; refined: global lockup, greyed placeholders, light asterisks, subtexts blanked, option-B "Reaching [name]" line added: <a href="contact-forms-mockup.html">contact-forms-mockup.html</a>.</span></li>
+    <li><span class="m">✓</span><span><b>Background prototype</b> (full-width, in context, live image-swap): <a href="background-suggestions.html">background-suggestions.html</a> — awaiting your picks.</span></li>
+  </ul>
+
+  <h2>📩 Message to Jordan (ready to paste)</h2>
+  <div class="box">
+    1. Homepage eyebrow <b>"Why brands partner with PPW"</b> is too close to the logos section "Brands that partner with PPW" — keeping the logos one, what should the eyebrow become?<br>
+    2. <b>Mumbai "Why it matters"</b> section — did you review it? Keep or cut for scroll? If keep, better eyebrow than "Why it matters"? (And I don't want "Who attends" landing right after it.)<br>
+    3. <b>Mumbai intro copy</b> reads rough (2nd sentence esp.) — rewrite? "South Asia's premier professional-development event… brought to Indian creatives with localized relevance and internationally acclaimed instructors."<br>
+    4. <b>Vegas field-workshop copy</b> — approve as-is?<br>
+    5. <b>"FROM PAST CONFERENCES"</b> eyebrow — good or better?<br>
+    6. <b>Contact forms</b> (contact-forms-mockup.html): do the popups need subtext at all (each card already states its purpose)? Structure plan: each "Get in touch" card opens its own short form pre-addressed to that person (Megan/Tyree/Elise), no dropdown; sponsor "Request a proposal" is its own form → Megan. Make sense, or prefer one form with a "Regarding" dropdown? And keep or drop the "Reaching [name]" line?
   </div>
+
+  <h2>📩 Questions for Elise (ready to paste)</h2>
+  <div class="box">
+    1. <b>Vegas pricing $1,459</b> — OK to show publicly?<br>
+    2. <b>London "Registration opens 2027"</b> — right message, or firmer date?<br>
+    3. <b>Photo galleries</b> — honest strategic read: do they help sell the experience, or read as generic conference rooms without a real reason to attend? India/London feel weaker. Keep everywhere / only strongest pages / skip? (NY has no gallery as I write this; I'll add one if we say yes.)<br>
+    4. <b>"Trusted by the industry's best"</b> is on all 4 location pages (not homepage/sponsor) — keep it that way?<br>
+    5. Per Jordan I removed India "launchpad" + Vegas "Where it all began" for scroll — OK? And <b>London "The European edition"</b> is still up — keep or cut? (If keep, needs better copy.)
+  </div>
+
+  <h2>⏳ Waiting on team (answers will come in)</h2>
+  <ul>
+    <li><span class="who team">BEN</span><span>Verified attendee-company list + his Netlify link; pull the co-branded webinar tier row; approve homepage stats.</span></li>
+    <li><span class="who team">ELISE</span><span>The 5 questions above.</span></li>
+    <li><span class="who team">JORDAN</span><span>The 6 questions above.</span></li>
+    <li><span class="who you">YOU</span><span>Background image picks; contact form structure sign-off; London European-edition call (with Ben/Elise).</span></li>
+  </ul>
 </div>
 </body>
 </html>
