@@ -144,7 +144,8 @@
   .cell .spk .av{width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#3b4a72,#1c2742);font-size:9px;display:flex;align-items:center;justify-content:center;color:#cdd9f5;font-weight:800}
   .trk{display:block;font-size:14.5px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;padding:12px 15px;margin:-18px -19px 14px;color:#fff;border-radius:0;text-align:center}
   .cell.empty{background:transparent;border-style:dashed;border-left-width:1px;min-height:92px}
-  .keynote{grid-column:2 / -1;background:linear-gradient(180deg,rgba(167,139,250,.15),rgba(167,139,250,.05));border:1px solid rgba(167,139,250,.42);border-left:3px solid #a78bfa;border-right:3px solid #a78bfa;border-radius:10px;padding:18px 14px;display:flex;align-items:center;justify-content:center;gap:12px}
+  .keynote{grid-column:2 / -1;background:linear-gradient(180deg,rgba(167,139,250,.15),rgba(167,139,250,.05));border:1px solid rgba(167,139,250,.42);border-left:3px solid #a78bfa;border-right:3px solid #a78bfa;border-radius:10px;padding:16px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;text-align:center}
+  .keynote .ksp{font-weight:800;font-size:13px;letter-spacing:2.4px;text-transform:uppercase;color:#fff}
   .keynote .kx{font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#c4b5fd;background:rgba(167,139,250,.16);padding:4px 9px;border-radius:999px}
   .keynote .ktt{font-weight:800;font-size:15px;color:#fff}
   /* track color accents: solid band header + continuation top-edge */
@@ -439,7 +440,7 @@ p{letter-spacing:.2px}
 
 <section class="block" id="speakers">
   <div class="wrap">
-    <div class="sec-head center"><div class="sec-kicker">The faculty</div><h2 class="sec-title">Learn from the industry’s most trusted instructors</h2></div>
+    <div class="sec-head center" style="margin-bottom:44px"><div class="sec-kicker">The faculty</div><h2 class="sec-title">Learn from the industry’s most trusted instructors</h2></div>
     <div class="spk-grid">
       <div class="spk-card"><div class="spk-av"><img src="ppw-assets/people/eran.webp" alt="Eran Stern" loading="lazy"></div><div class="spk-name">Eran Stern</div><p class="spk-bio">Motion designer &amp; After Effects expert. 25+ years in post-production. Adobe Certified Instructor.</p></div>
       <div class="spk-card"><div class="spk-av"><img src="ppw-assets/people/rich.webp" alt="Rich Harrington" loading="lazy"></div><div class="spk-name">Rich Harrington</div><p class="spk-bio">Program Manager, P|PW. Author, educator, and one of the most recognized voices in video production training.</p></div>
@@ -453,7 +454,7 @@ p{letter-spacing:.2px}
 
 <section class="block fb-sec">
   <div class="wrap">
-    <div class="sec-head center"><div class="sec-kicker">What attendees say</div><h2 class="sec-title fb-title">Heard from the <span class="hl">room.</span></h2><p class="sec-desc" style="margin-inline:auto">Attendee feedback from P|PW Las Vegas 2026.</p></div>
+    <div class="sec-head center"><div class="sec-kicker">What attendees say</div><h2 class="sec-title fb-title">Heard from the <span class="hl">room</span></h2><p class="sec-desc" style="margin-inline:auto">Attendee feedback from P|PW Las Vegas 2026.</p></div>
     <div class="fb4">
       <div class="fb-top"><div class="fb-stat"><div class="fb-big">91.75<sup>%</sup></div><div class="fb-sl">attendee satisfaction on content &amp; presenters</div></div><div class="fb-card feat"><span class="fb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p class="q">"One of the best sessions that I attended at Post|Production World. Super useful information that was all new to me. Thank you!"</p><span class="role">Production-Safe AI session<span class="rloc">P|PW Las Vegas 2026</span></span></div></div>
       <div class="fb-two">
@@ -631,7 +632,7 @@ const DAYS = {
     {time:"11:30 – 12:30",ses:[
       {t:"Faster Motion Graphics Workflows for Editors using Maxon Tools",s:"Jeff Greenberg",k:"Post Production & Motion Graphics"},
       {t:"Blackmagic Session - TBA",s:"Blackmagic Design",k:"Production Craft"}]},
-    {time:"12:45 – 1:45",key:"Adobe Keynote, The Future of Editing Begins in Premiere"},
+    {time:"12:45 – 1:45",key:"The Future of Editing Begins in Premiere",sponsor:"ADOBE"},
     {time:"2:00 – 3:00",ses:[
       {t:"What Brands Want from Content Creators",s:"Rich Harrington",k:"Creator & Brand Content"},
       {t:"Collaborating with Clients: Translating Vision into Video",s:"Rachel Longman",k:"Corporate & Media Production"}]},
@@ -662,7 +663,7 @@ function renderDay(d, gridId){
   day.slots.forEach(sl=>{
     h += `<div class="time-cell">${sl.time}</div>`;
     if(sl.key){
-      h += `<div class="keynote"><span class="kx">Keynote</span><span class="ktt">${sl.key}</span></div>`;
+      h += `<div class="keynote"><span class="kx">Keynote</span><span class="ktt">${sl.key}</span>${sl.sponsor?`<span class="ksp">${sl.sponsor}</span>`:``}</div>`;
       prevTrack.fill(null);
     } else {
       for(let i=0;i<cols;i++){
