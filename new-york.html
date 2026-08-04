@@ -184,9 +184,9 @@
   .slot{margin-bottom:22px}
   .slot-time{display:flex;align-items:center;gap:10px;font-weight:800;font-size:14px;color:var(--ink);margin:0 0 11px;position:sticky;top:62px;background:var(--bg);padding:7px 0;z-index:5}
   .slot-time .ln{height:1px;flex:1;background:var(--line)}
-  .scard{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--line);border-radius:12px;padding:13px 14px;margin-bottom:10px}
+  .scard{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--line);border-radius:12px;padding:16px 14px 14px;margin-bottom:12px}
   .scard .room{font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:7px;text-align:center}
-  .scard .ttl{font-weight:700;font-size:15px;color:#fff;line-height:1.4;margin-bottom:11px;text-align:center;text-wrap:balance}
+  .scard .ttl{font-weight:700;font-size:14px;color:#fff;line-height:1.35;margin-bottom:11px;text-align:center;text-wrap:balance;min-height:2.7em;display:flex;align-items:center;justify-content:center}
   .scard .meta{display:flex;align-items:center;justify-content:space-between;gap:10px}
   .scard .spk{font-size:12.5px;color:var(--ink-dim);display:flex;align-items:center;gap:7px}
   .scard .av{width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#3b4a72,#1c2742);font-size:9.5px;display:flex;align-items:center;justify-content:center;color:#cdd9f5;font-weight:800}
@@ -357,6 +357,9 @@
 
 p{letter-spacing:.2px}
 @media(max-width:600px){section.block{padding:58px 0}}
+#contact{padding-bottom:118px}
+.tk-covers-inline{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);text-align:left}
+.tk-covers-inline h4{margin:0 0 12px;font-size:14px;font-weight:800;color:#fff}
 </style>
 </head>
 <!-- DATE-DISCREPANCY (internal): P|PW uses Oct 20-21, 2026; NAB Show NY public site lists Oct 21-22, 2026. Preserving P|PW dates pending source-of-truth confirmation. -->
@@ -470,7 +473,7 @@ p{letter-spacing:.2px}
 <section class="block" id="tickets">
   <div class="wrap">
     <div class="sec-head center"><div class="sec-kicker">Registration</div><h2 class="sec-title">One pass. Full access.</h2><p class="sec-desc" style="margin-inline:auto;text-wrap:balance">A single full-access pass gets you into every session, every workshop, and every room across both conference days. Discounted rates apply for NAB members, government, and students.</p></div>
-    <div class="tk-wrap">
+    <div class="tk-wrap" style="grid-template-columns:1fr;max-width:560px;margin:0 auto">
       <div class="tk-card primary">
         <div class="tk-name">P|PW Full Conference Pass</div>
         <div class="tk-price"><sup>$</sup>799</div>
@@ -483,15 +486,14 @@ p{letter-spacing:.2px}
           <li>Networking events and the P|PW Party.</li>
         </ul>
         <a class="tk-reg" href="https://www.nabshow.com/new-york/passes-and-pricing/#ppw" target="_blank" rel="noopener">Register at NAB Show</a>
-      </div>
-      <div class="tk-card tk-covers">
-        <h4>What your pass covers</h4>
-        <p>Your all-access pass is a full credential for the entire P|PW New York conference, every session, every room, both days. Discounted rates apply for NAB members, government, and students. Walk into any session on either day.</p>
-        <ul class="tk-list">
-          <li>All conference sessions &mdash; no pre-selection needed.</li>
-          <li>Access to all conference rooms on both event days.</li>
-          <li>NAB Show New York full floor access.</li>
-        </ul>
+        <div class="tk-covers-inline">
+          <h4>What your pass covers</h4>
+          <ul class="tk-list">
+            <li>All conference sessions, no pre-selection needed.</li>
+            <li>Access to all conference rooms on both event days.</li>
+            <li>NAB Show New York full floor access.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
