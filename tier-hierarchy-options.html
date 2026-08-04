@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tier hierarchy — 4 ways</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#080b12;--panel:#121b2e;--panel-2:#172138;--line:#212d49;--ink:#eef2fb;--ink-dim:#a3b2d2;--ink-faint:#6b7b9e;--cyan:#87dffa;
+    --grad-blue:linear-gradient(100deg in oklch,oklch(86% .10 225),oklch(80% .12 288));--a-core:#79d3ff}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",sans-serif;line-height:1.5}
+  .top{max-width:960px;margin:0 auto;padding:44px 22px 6px}
+  h1{font-size:24px;font-weight:800;margin:0 0 8px}
+  .top p{color:var(--ink-faint);font-size:14px;margin:0;line-height:1.6}
+  .grp{max-width:960px;margin:40px auto 0;padding:0 22px}
+  .lbl{display:inline-block;background:var(--cyan);color:#04121a;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.4px;padding:6px 14px;border-radius:10px;margin-bottom:5px}
+  .cap{color:var(--ink-dim);font-size:13.5px;margin:2px 0 12px;max-width:640px;line-height:1.55}
+  .tbl{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel)}
+  .hrow{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr}
+  .corner{padding:0 16px;display:flex;align-items:flex-end;padding-bottom:14px;color:var(--ink-dim);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1px;background:var(--panel-2)}
+  .th{padding:16px 8px 14px;display:flex;flex-direction:column;align-items:center;gap:3px;position:relative;border-left:1px solid var(--line)}
+  .tname{font-size:19px;font-weight:800}
+  .ttag{font-size:11px;color:var(--ink-faint);font-weight:600}
+  /* body hint */
+  .brow{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr;border-top:1px solid var(--line)}
+  .brow .rl{padding:11px 16px;color:var(--ink-dim);font-size:13px}
+  .brow .rv{padding:11px 8px;text-align:center;color:var(--ink-dim);font-size:13px;border-left:1px solid var(--line)}
+  .brow .rv svg{width:16px;height:16px;stroke:#6f7f9e;fill:none;stroke-width:2}
+
+  /* name color variants */
+  .n-core{background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .n-plat{background:linear-gradient(180deg,#fff,#b9c4d8);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .n-gold{background:linear-gradient(180deg,#ffe6a6,#e0ab53);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .n-table{color:#c3ccdd}
+
+  /* ---- Option A: luminance ladder (recolor so brightness = rank) ---- */
+  .A .n-core{background:linear-gradient(180deg,#b8ecff,#87dffa);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .A .n-plat{background:linear-gradient(180deg,#ffffff,#dbe4f2);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .A .n-gold{background:linear-gradient(180deg,#d7bd8e,#b28a52);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .A .n-table{color:#9aa6bd}
+
+  /* ---- Option B: rank pips under each tier ---- */
+  .pips{display:flex;gap:4px;margin-top:3px}
+  .pips i{width:6px;height:6px;border-radius:50%;background:#33415f}
+  .pips i.on{background:var(--cyan)}
+
+  /* ---- Option C: neutral names + scaled accent bar ---- */
+  .C .tname{color:#eef2fb!important;-webkit-text-fill-color:#eef2fb!important;background:none!important}
+  .C .th::before{content:"";position:absolute;top:0;left:14%;right:14%;border-radius:0 0 4px 4px}
+  .C .th.core::before{height:5px;background:var(--grad-blue);box-shadow:0 0 16px 1px rgba(120,200,255,.55)}
+  .C .th.plat::before{height:4px;background:linear-gradient(90deg,#fff,#c4cfe0)}
+  .C .th.gold::before{height:3px;background:linear-gradient(90deg,#e9cd93,#caa15c)}
+  .C .th.table::before{height:2px;background:#5a6884}
+
+  /* ---- Option D: featured Core + muted Gold ---- */
+  .D .th.core{background:linear-gradient(180deg,rgba(121,211,255,.20),rgba(121,211,255,.05));box-shadow:inset 0 0 0 1px rgba(121,211,255,.4)}
+  .D .th.core .ribbon{position:absolute;top:-1px;left:50%;transform:translate(-50%,-50%);background:var(--grad-blue);color:#04121a;font-size:9.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:3px 10px;border-radius:99px;white-space:nowrap}
+  .D .n-gold{background:linear-gradient(180deg,#d7bd8e,#b28a52);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .spacer{height:14px}
+  .foot{max-width:960px;margin:0 auto;padding:44px 22px 90px;color:var(--ink-faint);font-size:12.5px}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Tier hierarchy — 4 ways to stop Gold out-shouting Platinum</h1>
+  <p>Same table format, same 4 tiers (Core is the top / hero tier). Only the header treatment changes so rank reads correctly. Reply A / B / C / D (mix welcome).</p>
+</header>
+<div id="root"></div>
+<p class="foot">Internal preview — tier-hierarchy-options.html</p>
+
+<script>
+const TIERS=[
+ {k:'core', name:'Core', tag:'Exclusive · single partner', rank:4},
+ {k:'plat', name:'Platinum', tag:'Premium presence', rank:3},
+ {k:'gold', name:'Gold', tag:'Strong visibility', rank:2},
+ {k:'table',name:'Tabletop', tag:'Entry presence', rank:1},
+];
+const check='<svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>';
+function pips(r){return '<div class="pips">'+[1,2,3,4].map(i=>`<i class="${i<=r?'on':''}"></i>`).join('')+'</div>';}
+function header(opt){
+  return `<div class="hrow">
+    <div class="corner">Partnership Benefits</div>
+    ${TIERS.map(t=>{
+      const ribbon = (opt==='D'&&t.k==='core')?'<span class="ribbon">Most exclusive</span>':'';
+      const pip = (opt==='B')?pips(t.rank):'';
+      return `<div class="th ${t.k}">${ribbon}<span class="tname n-${t.k}">${t.name}</span><span class="ttag">${t.tag}</span>${pip}</div>`;
+    }).join('')}
+  </div>`;
+}
+function bodyHint(){
+  const rows=[['Logo on website & signage',[1,1,1,1]],['VIP conference passes',[1,1,1,1]],['Keynote opportunity',[1,0,0,0]]];
+  return rows.map(([label,vals])=>`<div class="brow"><div class="rl">${label}</div>${vals.map(v=>`<div class="rv">${v?check:'—'}</div>`).join('')}</div>`).join('');
+}
+const OPTS=[
+ ['A','Luminance ladder','Recolor so brightness descends with rank: Platinum goes bright white (reads most premium after Core), Gold is muted to a soft bronze so it recedes. No badges, pure color fix.'],
+ ['B','Rank pips','Keep the current colors, add four little pips under each tier showing its level (Core ●●●●, Tabletop ●○○○). Rank becomes explicit no matter which color pops.'],
+ ['C','Neutral names + accent bar','All tier names one neutral white. Rank shown by a top accent bar whose thickness + glow scales with the tier. Removes the color competition entirely.'],
+ ['D','Featured Core + muted Gold','Keep the colors but elevate the real top tier: Core column gets a soft glow, tint and a "Most exclusive" tab, and Gold is toned down so the eye lands on Core first.'],
+];
+document.getElementById('root').innerHTML=OPTS.map(([id,name,desc])=>`
+  <div class="grp ${id}"><span class="lbl">${id} · ${name}</span>
+    <div class="cap">${desc}</div>
+    <div class="tbl">${header(id)}${bodyHint()}</div>
+  </div>`).join('');
+</script>
+</body>
+</html>
