@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NY 2024 photo picker</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#080b12;--cyan:#87dffa;--line:rgba(255,255,255,.12)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:#eef2fb;font-family:"Poppins",sans-serif;padding-bottom:96px}
+  .top{max-width:1180px;margin:0 auto;padding:40px 22px 6px}
+  h1{font-size:24px;font-weight:800;margin:0 0 8px}
+  .top p{color:#8493b3;font-size:14px;margin:0;line-height:1.6}
+  .top b{color:var(--cyan)}
+  .grid{max-width:1180px;margin:24px auto 0;padding:0 22px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:620px){.grid{grid-template-columns:repeat(2,1fr)}}
+  .card{position:relative;border:2px solid var(--line);border-radius:14px;overflow:hidden;background:#0d1424;cursor:pointer;transition:border-color .15s,transform .12s}
+  .card:hover{transform:translateY(-2px)}
+  .card.top{box-shadow:0 0 0 1px rgba(135,223,250,.4)}
+  .card.selected{border-color:var(--cyan);box-shadow:0 0 0 2px var(--cyan),0 12px 30px rgba(135,223,250,.22)}
+  .card img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;pointer-events:none}
+  .meta{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;font-size:12.5px;color:#aeb9d4}
+  .fn{font-weight:600;color:#dbe3f4}
+  .badge{position:absolute;top:10px;left:10px;background:var(--cyan);color:#04121a;font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.4px;padding:4px 9px;border-radius:8px}
+  .check{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;background:rgba(4,18,26,.6);border:2px solid rgba(255,255,255,.4);display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:900}
+  .card.selected .check{background:var(--cyan);border-color:var(--cyan);color:#04121a}
+  .card:not(.selected) .check span{display:none}
+  .bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:#0b1120;border-top:1px solid var(--line);padding:12px 22px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .bar .count{font-weight:800;color:var(--cyan);white-space:nowrap}
+  .bar input{flex:1;min-width:200px;background:#0d1424;border:1px solid var(--line);border-radius:8px;color:#eef2fb;font-size:13px;padding:9px 12px;font-family:inherit}
+  .bar button{background:var(--cyan);color:#04121a;font-weight:800;border:0;border-radius:8px;padding:9px 16px;cursor:pointer;font-family:inherit;font-size:13px}
+  .bar .clr{background:transparent;color:#8493b3;border:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="top">
+  <h1>NY 2024 — tap to pick your gallery photos</h1>
+  <p><b>Click the shots you want</b> (click again to deselect). Badged = my top picks. Aim for ~5 (1 featured + 4). Hit <b>Copy</b> and paste the list back, or just tell me. <b>2025 photos coming</b> once that download finishes, I'll add them here.</p>
+</div>
+<div class="grid" id="root"></div>
+<div class="bar">
+  <span class="count" id="count">0 selected</span>
+  <input id="out" readonly placeholder="Your selections will appear here…">
+  <button onclick="copyList()">Copy</button>
+  <button class="clr" onclick="clearAll()">Clear</button>
+</div>
+<script>
+const TOP={'ny-7.jpg':'Feature','ny-2.jpg':'Top pick','ny-6.jpg':'Top pick','ny-4.jpg':'Top pick','ny-8.jpg':'Top pick'};
+const FILES=['ny-1.jpg','ny-2.jpg','ny-3.jpg','ny-4.jpg','ny-5.jpg','ny-6.jpg','ny-7.jpg','ny-8.jpg','ny-9.jpg','ny-10.jpg'];
+const sel=new Set();
+document.getElementById('root').innerHTML=FILES.map(f=>{const t=TOP[f];
+  return `<div class="card ${t?'top':''}" data-f="${f}">${t?`<span class="badge">${t}</span>`:''}
+    <div class="check"><span>&#10003;</span></div>
+    <img src="ppw-assets/gallery-ny-pick/${f}" loading="lazy" alt="">
+    <div class="meta"><span class="fn">${f}</span>${t?`<span style="color:var(--cyan);font-weight:800">★</span>`:'<span></span>'}</div></div>`;
+}).join('');
+function refresh(){const arr=[...sel];document.getElementById('count').textContent=arr.length+' selected';document.getElementById('out').value=arr.join(', ');}
+document.querySelectorAll('.card').forEach(c=>c.addEventListener('click',()=>{const f=c.dataset.f;if(sel.has(f)){sel.delete(f);c.classList.remove('selected');}else{sel.add(f);c.classList.add('selected');}refresh();}));
+function copyList(){const o=document.getElementById('out');o.select();document.execCommand('copy');const b=event.target,t=b.textContent;b.textContent='Copied!';setTimeout(()=>b.textContent=t,1200);}
+function clearAll(){sel.clear();document.querySelectorAll('.card').forEach(c=>c.classList.remove('selected'));refresh();}
+</script>
+</body>
+</html>
