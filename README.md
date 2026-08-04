@@ -1,7 +1,7 @@
-# PPW Conference Preview
-https://ppw-conference-preview.fmctraining.workers.dev/
+# PPW Conference
+https://ppw-conference.com/
 
-Static HTML preview of the Post Production World conference site. Hand-authored pages (no build step) plus assets in `ppw-assets/`.
+Static HTML of the Post Production World conference site. Hand-authored pages (no build step) plus assets in `ppw-assets/`.
 
 ### Local preview (as served by Cloudflare)
 
