@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brand-leaders pillars — 5 treatments</title>
+<title>Option 1 · refined dividers — both icon sections</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#080b12;--ink:#eef2fb;--dim:#cdd4ea;--faint:#8493b3;
-    --line:rgba(255,255,255,.13);--line2:rgba(255,255,255,.16);
-    /* the site's blue gradient */
+    --line:rgba(255,255,255,.13);
     --grad-blue:linear-gradient(100deg in oklch,oklch(86% .10 225),oklch(80% .12 288));
     --cyan:#87dffa;
   }
@@ -18,74 +17,33 @@
   .banner{background:#0b1120;border-bottom:1px solid rgba(255,255,255,.1);padding:16px 22px;text-align:center;color:#9fb0d4;font-size:13.5px;position:sticky;top:0;z-index:30}
   .banner b{color:var(--cyan)}
   .sec{position:relative;padding:78px 22px 84px;border-bottom:1px solid rgba(255,255,255,.06)}
-  .lbl{position:absolute;top:16px;left:16px;z-index:5;background:var(--cyan);color:#04121a;font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:.4px;padding:7px 15px;border-radius:10px}
-  .note{position:absolute;top:20px;right:18px;z-index:5;color:#7c8bab;font-size:12.5px;max-width:230px;text-align:right;line-height:1.45}
+  .lbl{position:absolute;top:16px;left:16px;z-index:5;background:var(--cyan);color:#04121a;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.4px;padding:6px 14px;border-radius:10px}
   .wrap{max-width:1040px;margin:0 auto}
-  .sec-head{text-align:center;margin-bottom:44px}
+  .sec-head{text-align:center;margin-bottom:46px}
   .sec-kicker{display:inline-block;background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:14.5px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700}
   .sec-title{font-size:clamp(27px,3.8vw,40px);margin-top:22px;font-weight:700;letter-spacing:-.8px;line-height:1.24;background:linear-gradient(180deg,#fff,#c9d5ee);-webkit-background-clip:text;background-clip:text;color:transparent}
 
-  .pillars{display:grid;grid-template-columns:repeat(3,1fr)}
+  /* Option 1 — refined dividers */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}
+  .pillar{padding:0 18px}
+  .pillar+.pillar{border-left:1px solid var(--line)}
+  .ico{width:64px;height:64px;margin:0 auto 18px;filter:drop-shadow(0 6px 18px rgba(90,150,240,.28))}
   .pic{width:100%;height:100%}
+  .pillar h3{color:#fff;font-weight:600;font-size:21px;line-height:1.3;letter-spacing:-.2px;margin:0 auto 10px}
+  .pillar h3 b{display:block;background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600}
   .pillar p{color:var(--dim);margin:0;font-size:14.8px;line-height:1.6}
-  .pillar h3{color:#fff;font-weight:600;font-size:21px;line-height:1.28;text-wrap:balance}
-  .pillar h3 b{background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600}
-
-  /* ---------- Option 1 — refined dividers (evolution of current) ---------- */
-  .o1 .pillars{text-align:center}
-  .o1 .pillar{padding:0 30px}
-  .o1 .pillar+.pillar{border-left:1px solid var(--line)}
-  .o1 .ico{width:64px;height:64px;margin:0 auto 18px;filter:drop-shadow(0 6px 18px rgba(90,150,240,.28))}
-  .o1 .pillar h3{margin:0 auto 9px;max-width:230px}
-
-  /* ---------- Option 2 — glass chip icon ---------- */
-  .o2 .pillars{text-align:center;gap:20px}
-  .o2 .pillar{padding:0 22px}
-  .o2 .chip{width:76px;height:76px;margin:0 auto 20px;border-radius:19px;display:grid;place-items:center;
-    background:linear-gradient(160deg,rgba(120,180,240,.16),rgba(120,150,240,.05));
-    border:1px solid rgba(140,190,250,.32);box-shadow:0 10px 30px rgba(40,90,180,.22),inset 0 1px 0 rgba(255,255,255,.14)}
-  .o2 .ico{width:38px;height:38px}
-  .o2 .pillar h3{margin:0 auto 9px;max-width:230px}
-
-  /* ---------- Option 3 — circular gradient ring ---------- */
-  .o3 .pillars{text-align:center;gap:18px}
-  .o3 .pillar{padding:0 22px}
-  .o3 .ring{width:88px;height:88px;margin:0 auto 20px;border-radius:50%;display:grid;place-items:center;position:relative;
-    background:radial-gradient(circle at 50% 40%,rgba(120,175,240,.14),transparent 70%)}
-  .o3 .ring::before{content:"";position:absolute;inset:0;border-radius:50%;padding:2px;
-    background:var(--grad-blue);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
-    -webkit-mask-composite:xor;mask-composite:exclude}
-  .o3 .ico{width:40px;height:40px}
-  .o3 .pillar h3{margin:0 auto 9px;max-width:220px}
-
-  /* ---------- Option 4 — left-aligned cards, top accent ---------- */
-  .o4 .pillars{gap:16px}
-  .o4 .pillar{position:relative;text-align:left;padding:26px 24px 24px;border-radius:16px;
-    background:linear-gradient(165deg,rgba(20,30,52,.7),rgba(11,18,32,.55));border:1px solid var(--line2);overflow:hidden}
-  .o4 .pillar::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-blue)}
-  .o4 .sq{width:52px;height:52px;border-radius:13px;display:grid;place-items:center;margin-bottom:16px;
-    background:linear-gradient(160deg,rgba(120,180,240,.18),rgba(120,150,240,.05));border:1px solid rgba(140,190,250,.28)}
-  .o4 .ico{width:28px;height:28px}
-  .o4 .pillar h3{margin:0 0 10px;max-width:230px}
-
-  /* ---------- Option 5 — big icon, numbered, airy ---------- */
-  .o5 .pillars{text-align:center;gap:26px}
-  .o5 .pillar{padding:0 26px}
-  .o5 .num{font-size:12.5px;letter-spacing:2.4px;font-weight:800;background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:12px}
-  .o5 .ico{width:78px;height:78px;margin:0 auto 20px;filter:drop-shadow(0 8px 22px rgba(80,140,235,.32))}
-  .o5 .pillar h3{margin:0 auto 10px;max-width:232px;font-size:22px}
 
   @media(max-width:760px){
-    .pillars{grid-template-columns:1fr!important;gap:34px!important}
-    .o1 .pillar+.pillar{border-left:0}
-    .note{display:none}
+    .pillars{grid-template-columns:1fr;gap:36px}
+    .pillar{padding:0}
+    .pillar+.pillar{border-left:0}
   }
 </style>
 </head>
 <body>
-<div class="banner">The three "brand leaders" pillars, 5 ways. Blue-gradient icons (matches the site gradient), titles held to 2 lines. <b>Reply 1 / 2 / 3 / 4 / 5.</b></div>
+<div class="banner">Option 1 · refined dividers — blue phrase now sits on line 2 of every header. Shown on <b>both</b> icon sections of the sponsor page.</div>
 
-<!-- shared icon symbols + the site's blue gradient sampled to sRGB stops -->
+<!-- shared blue-gradient + icon symbols -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -95,40 +53,39 @@
   <symbol id="ic-star" viewBox="0 0 24 24"><path fill="url(#bg)" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></symbol>
   <symbol id="ic-cap" viewBox="0 0 24 24"><path fill="url(#bg)" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm-6.82 6L12 12.72 18.82 9 12 5.28 5.18 9zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></symbol>
   <symbol id="ic-mega" viewBox="0 0 24 24"><path fill="url(#bg)" d="M18 11v2h4v-2h-4zm-1.5 6.6c.71.53 1.63 1.24 2.4 1.85l1.2-1.6c-.77-.61-1.69-1.32-2.4-1.85l-1.2 1.6zm3.6-13.15c-.77.61-1.69 1.32-2.4 1.85l1.2 1.6c.77-.61 1.69-1.32 2.4-1.85l-1.2-1.6zM4 9c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h1v4h2v-4h1l5 3V6L8 9H4zm11.5 3c0-1.33-.58-2.53-1.5-3.35v6.69c.92-.81 1.5-2.01 1.5-3.34z"/></symbol>
+  <symbol id="ic-pin" viewBox="0 0 24 24"><path fill="url(#bg)" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></symbol>
+  <symbol id="ic-net" viewBox="0 0 24 24"><path fill="url(#bg)" d="M17 16l-4-4V8.82C14.16 8.4 15 7.3 15 6c0-1.66-1.34-3-3-3S9 4.34 9 6c0 1.3.84 2.4 2 2.82V12l-4 4H3v5h5v-3.05l4-4.2 4 4.2V21h5v-5h-4z"/></symbol>
+  <symbol id="ic-brain" viewBox="0 0 24 24"><path fill="url(#bg)" d="M8.5 3A3.5 3.5 0 0 0 5 6.5c0 .3 0 .6.1.9A3.5 3.5 0 0 0 3 10.5c0 1 .4 1.9 1 2.5-.6.6-1 1.5-1 2.5A3.5 3.5 0 0 0 6.5 19c.3 0 .6 0 .9-.1A3.5 3.5 0 0 0 11 21V5a2 2 0 0 0-2-2zm7 0a2 2 0 0 0-2 2v16a3.5 3.5 0 0 0 3.6-2.1c.3.1.6.1.9.1a3.5 3.5 0 0 0 3.5-3.5c0-1-.4-1.9-1-2.5.6-.6 1-1.5 1-2.5a3.5 3.5 0 0 0-2.1-3.1c.1-.3.1-.6.1-.9A3.5 3.5 0 0 0 15.5 3z"/></symbol>
 </svg>
 
 <div id="root"></div>
 
-<p style="max-width:1040px;margin:0 auto;padding:40px 22px 90px;color:#7c8bab;font-size:12.5px">Internal preview — pillar-options.html · reply 1 / 2 / 3 / 4 / 5 (mix welcome). Whichever you pick gets applied to both this section and "Amplified across four continents" so they match.</p>
+<p style="max-width:1040px;margin:0 auto;padding:40px 22px 90px;color:#7c8bab;font-size:12.5px">Internal preview — pillar-options.html · Option 1. If this looks right, say "apply it" and I'll put it on both sections of the live sponsor page.</p>
 
 <script>
-const P=[
+const BRAND=[
  {ic:'ic-star', lead:'Establish', key:'Global Brand Leadership', d:'Gain unparalleled, year-round visibility and position your company as a recognized industry leader.'},
  {ic:'ic-cap',  lead:'Partner with', key:'World-Class Training', d:"Showcase your brand alongside top-tier instruction from FMC's Certified Instructors and presenters."},
  {ic:'ic-mega', lead:'Reach a', key:'Premium Creative Audience', d:'Promote your latest software and solutions to a highly targeted, engaged global demographic.'},
 ];
-const svg=id=>`<svg class="pic ico"><use href="#${id}"/></svg>`;
-const title=p=>`<h3>${p.lead} <b>${p.key}</b></h3>`;
+const AMP=[
+ {ic:'ic-pin',   title:'Regional Campaigns', d:'Extensive local marketing driven by NAB Show in the U.S., MPTS in London, and Broadcast India in Asia, each engaging its own vibrant community.'},
+ {ic:'ic-net',   title:'Integrated Marketing', d:'Global PR, social, and email campaigns powered by FMC amplify every regional effort with unified press, newsletters, and creative partnerships.'},
+ {ic:'ic-brain', title:'Premium Engagement', d:'Year-round exposure, unified branding, AI-driven analytics, and direct engagement with decision-makers worldwide.'},
+];
+const svg=id=>`<svg class="pic"><use href="#${id}"/></svg>`;
+const brandPillar=p=>`<div class="pillar"><div class="ico">${svg(p.ic)}</div><h3>${p.lead} <b>${p.key}</b></h3><p>${p.d}</p></div>`;
+const ampPillar=p=>`<div class="pillar"><div class="ico">${svg(p.ic)}</div><h3>${p.title}</h3><p>${p.d}</p></div>`;
 
-// per-option pillar renderers (icon wrapper differs)
-const R={
- 1:p=>`<div class="pillar"><div class="ico">${svg(p.ic)}</div>${title(p)}<p>${p.d}</p></div>`,
- 2:p=>`<div class="pillar"><div class="chip">${svg(p.ic)}</div>${title(p)}<p>${p.d}</p></div>`,
- 3:p=>`<div class="pillar"><div class="ring">${svg(p.ic)}</div>${title(p)}<p>${p.d}</p></div>`,
- 4:p=>`<div class="pillar"><div class="sq">${svg(p.ic)}</div>${title(p)}<p>${p.d}</p></div>`,
- 5:p=>`<div class="pillar"><div class="num">0${P.indexOf(p)+1}</div><div class="ico">${svg(p.ic)}</div>${title(p)}<p>${p.d}</p></div>`,
-};
-const NAMES={1:'refined dividers',2:'glass chip icon',3:'gradient ring',4:'left-aligned cards',5:'big icon · numbered'};
-let H='';
-for(let n=1;n<=5;n++){
-  H+=`<section class="sec o${n}"><span class="lbl">${n} · ${NAMES[n]}</span>
-    <span class="note">Icons: blue gradient (same as the site's blue gradient). Titles: 2 lines.</span>
-    <div class="wrap">
-      <div class="sec-head"><div class="sec-kicker">Why Partner with PPW</div><h2 class="sec-title">A platform built for brand leaders</h2></div>
-      <div class="pillars">${P.map(R[n]).join('')}</div>
-    </div></section>`;
-}
-document.getElementById('root').innerHTML=H;
+document.getElementById('root').innerHTML=`
+  <section class="sec"><span class="lbl">Section 1</span><div class="wrap">
+    <div class="sec-head"><div class="sec-kicker">Why Partner with PPW</div><h2 class="sec-title">A platform built for brand leaders</h2></div>
+    <div class="pillars">${BRAND.map(brandPillar).join('')}</div>
+  </div></section>
+  <section class="sec"><span class="lbl">Section 2</span><div class="wrap">
+    <div class="sec-head"><div class="sec-kicker">Marketing &amp; Audience Reach</div><h2 class="sec-title">Amplified across four continents</h2></div>
+    <div class="pillars">${AMP.map(ampPillar).join('')}</div>
+  </div></section>`;
 </script>
 </body>
 </html>
