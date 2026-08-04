@@ -298,7 +298,7 @@
   .fb-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .fb-two .fb-card{padding:26px 26px;text-align:center;display:flex;flex-direction:column;align-items:center}
   .fb-two .q{font-size:20px;line-height:1.5;margin:12px 0 10px;color:#eaf1ff;font-style:italic;text-wrap:pretty}
-  .fb-card .role{font-size:10.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-faint)}
+  .fb-card .role{font-size:11px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-faint)}
   .fb-card .role .rloc{display:block;margin-top:3px}
   .fb-stars{color:#f5c451;font-size:19px;letter-spacing:3px}
   .fb-card.feat .fb-stars{font-size:24px;letter-spacing:5px}
@@ -329,17 +329,17 @@
   /* get in touch */
   .git-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1040px;margin:0 auto}
   @media(max-width:820px){.git-grid{grid-template-columns:1fr}}
-  .git-card{background:var(--panel);border:1px solid var(--line);border-top:3px solid #f0862f;border-radius:14px;padding:24px 26px 28px;text-align:center;display:flex;flex-direction:column;align-items:center}
+  .git-card{background:var(--panel);border:1px solid var(--line);border-top:3px solid #5b9dff;border-radius:14px;padding:24px 26px 28px;text-align:center;display:flex;flex-direction:column;align-items:center}
   .reg-btn{background:linear-gradient(180deg,#6ba6ff,#4a82e6)!important;box-shadow:0 8px 20px rgba(74,130,230,.4)!important}
-  .git-card.spon{border-top-color:#f0862f}
+  .git-card.spon{border-top-color:#5b9dff}
   .git-av{width:74px;height:74px;border-radius:50%;overflow:hidden;border:1.5px solid var(--line-2);margin-bottom:16px}
   .git-av img{width:100%;height:100%;object-fit:cover;display:block}
   .git-kick{font-size:10px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px}
   .git-name{font-family:"Poppins",sans-serif;font-weight:800;font-size:16px;color:#fff;margin:0}
-  .git-role{color:#f6a25a;font-size:12.5px;font-weight:600;margin:3px 0 12px}
+  .git-role{color:#6ba6ff;font-size:12.5px;font-weight:600;margin:3px 0 12px}
   .git-desc{color:var(--ink-dim);font-size:13px;line-height:1.5;margin:0 0 16px;flex:1}
-  .git-email{font-size:12px;font-weight:800;letter-spacing:.3px;color:#f6a25a;text-decoration:none;border:1.5px solid rgba(240,134,47,.6);border-radius:8px;padding:10px 16px;text-transform:uppercase}
-  .git-card.spon .git-email{color:#f6a25a;border-color:rgba(240,134,47,.35)}
+  .git-email{font-size:12px;font-weight:800;letter-spacing:.3px;color:#6ba6ff;text-decoration:none;background:rgba(91,141,239,.14);border:1px solid rgba(91,141,239,.35);border-radius:8px;padding:10px 16px;text-transform:uppercase}
+  .git-card.spon .git-email{color:#6ba6ff;border-color:rgba(91,141,239,.45)}
   /* ===== mobile-only surgical refinements ===== */
   @media(max-width:600px){
     .chip{font-size:15px;padding:13px 17px;gap:10px}
@@ -467,7 +467,7 @@ p{letter-spacing:.2px}
 
 <section class="block" id="tickets">
   <div class="wrap">
-    <div class="sec-head center"><div class="sec-kicker">Registration</div><h2 class="sec-title">One pass. Full access.</h2><p class="sec-desc" style="margin-inline:auto">A single full-access pass gets you into every session, every workshop, and every room across both conference days. Discounted rates apply for NAB members, government, and students.</p></div>
+    <div class="sec-head center"><div class="sec-kicker">Registration</div><h2 class="sec-title">One pass. Full access.</h2><p class="sec-desc" style="margin-inline:auto;text-wrap:balance">A single full-access pass gets you into every session, every workshop, and every room across both conference days. Discounted rates apply for NAB members, government, and students.</p></div>
     <div class="tk-wrap">
       <div class="tk-card primary">
         <div class="tk-name">P|PW Full Conference Pass</div>
@@ -552,7 +552,7 @@ p{letter-spacing:.2px}
         <div class="git-kick">General Inquiries</div>
         <div class="git-name">Elise O'Brien</div>
         <div class="git-role">Senior Director, Global Events &amp; Operations</div>
-        <p class="git-desc">All other questions &mdash; registration, group rates, speaker inquiries, accessibility, and event logistics.</p>
+        <p class="git-desc">All other questions: registration, group rates, speaker inquiries, accessibility, and event logistics.</p>
         <a class="git-email" href="mailto:eliseo@fmctraining.com">eliseo@fmctraining.com</a>
       </div>
     </div>
@@ -649,7 +649,7 @@ function cellHTML(se, showBand){
   return `<div class="cell t-${tk.c}${cls}">
     ${band}
     <div class="ttl">${se.t}</div>
-    <div class="spk"><span class="av">${initials(se.s)}</span>${se.s}</div>
+    <div class="spk">${se.s}</div>
   </div>`;
 }
 function renderDay(d, gridId){
@@ -681,7 +681,7 @@ function renderStack(d, stackId){
   day.slots.forEach(sl=>{
     if(sl.key){ h+=`<div class="scard key"><div class="room">${sl.time} \u00b7 Keynote</div><div class="ttl">${sl.key}</div></div>`; }
     else { sl.ses.forEach((se,i)=>{ if(!se) return; const tk=TRACK[se.k]; const col=TCOLOR[tk.c]||'#5b8def';
-      h+=`<div class="scard" style="border-left-color:${col}"><div class="room">${sl.time} \u00b7 ${day.rooms[i]}</div><div class="ttl">${se.t}</div><div class="meta"><span class="spk"><span class="av">${initials(se.s)}</span>${se.s}</span><span class="strk" style="color:${col}">${tk.s}</span></div></div>`; }); }
+      h+=`<div class="scard" style="border-left-color:${col}"><div class="room">${sl.time} \u00b7 ${day.rooms[i]}</div><div class="ttl">${se.t}</div><div class="meta"><span class="spk">${se.s}</span><span class="strk" style="color:${col}">${tk.s}</span></div></div>`; }); }
   });
   stack.innerHTML=h;
 }
