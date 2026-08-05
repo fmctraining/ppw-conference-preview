@@ -272,7 +272,7 @@
   .spk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:0 auto}
   @media(max-width:900px){.spk-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:520px){.spk-grid{grid-template-columns:1fr}}
-  .spk-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px 22px 22px;display:flex;flex-direction:column;align-items:center;text-align:center}
+  .spk-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px 22px 22px;display:flex;flex-direction:column;align-items:center;text-align:center}
   .spk-av{width:78px;height:78px;border-radius:50%;overflow:hidden;border:1.5px solid var(--accent-2);margin-bottom:16px;flex:none}
   .spk-av img{width:100%;height:100%;object-fit:cover;display:block}
   .spk-name{font-family:"Poppins",sans-serif;font-weight:800;font-size:16px;color:#fff;margin:0 0 8px}
@@ -289,11 +289,11 @@
   .fb4{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
   .fb-top{display:grid;grid-template-columns:.72fr 1.45fr;gap:14px;align-items:stretch}
   @media(max-width:760px){.fb-top{grid-template-columns:1fr}}
-  .fb-stat{border:1px solid rgba(255,255,255,.12);border-radius:14px;background:radial-gradient(120% 92% at 50% 0,rgba(96,165,250,.13),transparent 62%),rgba(8,12,22,.62);backdrop-filter:blur(3px);padding:30px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  .fb-stat{border:1px solid rgba(255,255,255,.12);border-radius:16px;background:radial-gradient(120% 92% at 50% 0,rgba(96,165,250,.13),transparent 62%),rgba(8,12,22,.62);backdrop-filter:blur(3px);padding:30px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
   .fb-big{font-family:"Poppins";font-weight:900;font-size:60px;line-height:.95;letter-spacing:-2px;background:linear-gradient(100deg in oklch,oklch(86% .10 225),oklch(80% .12 288));-webkit-background-clip:text;background-clip:text;color:transparent}
   .fb-big sup{font-size:27px;vertical-align:13px;margin-left:1px}
   .fb-sl{color:#e6edfb;font-weight:600;font-size:15.5px;margin-top:10px;max-width:200px;line-height:1.4}
-  .fb-card{background:rgba(8,12,22,.62);backdrop-filter:blur(3px);border:1px solid rgba(255,255,255,.09);border-radius:14px}
+  .fb-card{background:rgba(8,12,22,.62);backdrop-filter:blur(3px);border:1px solid rgba(255,255,255,.09);border-radius:16px}
   .fb-card.feat{padding:36px 40px;text-align:center;display:flex;flex-direction:column;align-items:center}
   .fb-card.feat .q{font-size:22px;line-height:1.42;font-weight:400;margin:16px 0 14px;color:#fff;font-style:italic;text-wrap:pretty}
   .fb-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -314,7 +314,7 @@
   .tk-price{font-family:"Poppins",sans-serif;font-weight:800;font-size:52px;color:var(--accent-2);line-height:1;margin:8px 0 2px;letter-spacing:-1px;text-align:center}
   .tk-price sup{font-size:24px;vertical-align:super;margin-right:2px}
   .tk-sub{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:18px;text-align:center}
-  .tk-list{list-style:none;margin:0;padding:0;display:inline-block;text-align:left}
+  .tk-list{list-style:none;margin:25px 0 0;padding:0;display:inline-block;text-align:left}.tk-list li b.lead-inline{display:inline}
   .tk-list li{position:relative;padding-left:26px;font-size:13.5px;line-height:1.55;color:var(--ink-dim);text-wrap:pretty}
   .tk-list li + li{margin-top:11px}
   .tk-list li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--accent-2);font-weight:800}
@@ -330,7 +330,7 @@
   /* get in touch */
   .git-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1040px;margin:0 auto}
   @media(max-width:820px){.git-grid{grid-template-columns:1fr}}
-  .git-card{background:var(--panel);border:1px solid var(--line);border-top:3px solid #5b9dff;border-radius:14px;padding:24px 26px 28px;text-align:center;display:flex;flex-direction:column;align-items:center}
+  .git-card{background:var(--panel);border:1px solid var(--line);border-top:3px solid #5b9dff;border-radius:16px;padding:24px 26px 28px;text-align:center;display:flex;flex-direction:column;align-items:center}
   .reg-btn{background:linear-gradient(180deg,#6ba6ff,#4a82e6)!important;box-shadow:0 8px 20px rgba(74,130,230,.4)!important}
   .git-card.spon{border-top-color:#5b9dff}
   .git-av{width:74px;height:74px;border-radius:50%;overflow:hidden;border:1.5px solid var(--line-2);margin-bottom:16px}
@@ -362,6 +362,7 @@ p{letter-spacing:.2px}
 .tk-covers-inline h4{margin:0 0 12px;font-size:14px;font-weight:800;color:#fff}
 .cta-strip{position:relative;overflow:hidden;text-align:center;background:linear-gradient(160deg,rgba(12,17,30,.9),rgba(9,13,24,.93)),url(ppw-assets/tile-nyc.jpg) center/cover no-repeat;border:1px solid var(--line-2);border-radius:26px;padding:60px 30px}.cta-strip .glow{position:absolute;inset:0;background:radial-gradient(600px 240px at 50% 0,rgba(45,212,255,.14),transparent 70%)}.cta-strip h2{position:relative;font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.6px;margin-bottom:14px;color:#fff}.cta-strip p{position:relative;color:#dbe3f4;max-width:580px;margin:0 auto 30px;font-size:16.5px}.cta-strip .hero-cta{position:relative;display:flex;justify-content:center}.cta-strip .reg-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,#4f7df9,#2f5fe0);color:#fff;font-weight:700;font-size:15px;padding:15px 26px;border-radius:999px;text-decoration:none;box-shadow:0 8px 20px rgba(47,95,224,.32)}
 @media(max-width:600px){.partner-note a{display:block;margin-left:0;margin-top:4px}}
+@media(max-width:600px){.spk-card{padding:30px 22px 14px}}
 </style>
 </head>
 <!-- DATE-DISCREPANCY (internal): P|PW uses Oct 20-21, 2026; NAB Show NY public site lists Oct 21-22, 2026. Preserving P|PW dates pending source-of-truth confirmation. -->
@@ -482,7 +483,7 @@ p{letter-spacing:.2px}
         <div class="tk-sub">Standard rate · per person · both days</div>
         <div class="tk-rates"><span class="rt">NAB members &amp; Government <b>$749</b></span><span class="rt">Students <b>$399</b></span></div>
         <ul class="tk-list">
-          <li><b>Complete access to the full P|PW New York program</b>with no add-ons required.</li>
+          <li><b class="lead-inline">Complete access to the full P|PW New York program</b>, with no add-ons required.</li>
           <li><b>All workshop tracks</b>Editing, AI &amp; Emerging Tech, Color &amp; Motion, Audio, Photography &amp; Video, VR/Immersive, Business &amp; Career.</li>
           <li><b>NAB Show New York floor access</b>Included with your P|PW registration.</li>
           <li><b>Networking events and the P|PW Party.</b></li>
