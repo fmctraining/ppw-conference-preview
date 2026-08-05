@@ -280,3 +280,6 @@ p{letter-spacing:.2px}
   .host-mod .host-logo{margin:0 auto 4px!important;height:30px!important}
   .host-text{min-width:0!important;text-align:center}
 }
+
+.net3{max-width:490px}
+@media(max-width:600px){.net3{font-size:12px;line-height:1.5;max-width:320px}}

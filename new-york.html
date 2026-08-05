@@ -139,7 +139,7 @@
   .time-cell{display:flex;align-items:center;justify-content:flex-end;font-size:13px;font-weight:700;color:var(--ink-dim);padding:10px 12px;white-space:nowrap}
   .cell{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 19px 14px;min-height:92px;display:flex;flex-direction:column;gap:7px;overflow:hidden}
   .cell.cont{border-top:3px solid var(--tc,#a78bfa);padding-top:15px}
-  .cell .ttl{font-weight:600;font-size:16px;line-height:1.38;color:#fff;text-wrap:balance;overflow-wrap:break-word;hyphens:none;text-align:center;min-height:2.76em;display:flex;align-items:center;justify-content:center}
+  .cell .ttl{font-weight:600;font-size:16px;line-height:1.38;color:#fff;text-wrap:balance;overflow-wrap:break-word;hyphens:none;text-align:center;min-height:2.76em;display:flex;align-items:center;justify-content:center;max-width:22ch;margin-inline:auto}
   .cell .spk{font-size:12.5px;color:var(--ink-dim);margin-top:auto;padding-top:4px;display:flex;align-items:center;justify-content:center;gap:6px}
   .cell .spk .av{width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,#3b4a72,#1c2742);font-size:9px;display:flex;align-items:center;justify-content:center;color:#cdd9f5;font-weight:800}
   .trk{display:block;font-size:14.5px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;padding:12px 15px;margin:-18px -19px 14px;color:#fff;border-radius:0;text-align:center}
@@ -186,7 +186,7 @@
   .slot-time .ln{height:1px;flex:1;background:var(--line)}
   .scard{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--line);border-radius:12px;padding:16px 14px 14px;margin-bottom:12px}
   .scard .room{font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:7px;text-align:center}
-  .scard .ttl{font-weight:700;font-size:14px;color:#fff;line-height:1.35;margin-bottom:11px;text-align:center;text-wrap:balance;min-height:2.7em;display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:30ch;margin-inline:auto}
+  .scard .ttl{font-weight:700;font-size:15.5px;color:#fff;line-height:1.35;margin-bottom:11px;text-align:center;text-wrap:balance;min-height:2.7em;display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:30ch;margin-inline:auto}
   .scard .meta{display:flex;align-items:center;justify-content:space-between;gap:10px}
   .scard .spk{font-size:12.5px;color:var(--ink-dim);display:flex;align-items:center;gap:7px}
   .scard .av{width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#3b4a72,#1c2742);font-size:9.5px;display:flex;align-items:center;justify-content:center;color:#cdd9f5;font-weight:800}
@@ -272,7 +272,7 @@
   .spk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:0 auto}
   @media(max-width:900px){.spk-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:520px){.spk-grid{grid-template-columns:1fr}}
-  .spk-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px 22px 22px;display:flex;flex-direction:column;align-items:center;text-align:center}
+  .spk-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:34px 22px 22px;display:flex;flex-direction:column;align-items:center;text-align:center}
   .spk-av{width:78px;height:78px;border-radius:50%;overflow:hidden;border:1.5px solid var(--accent-2);margin-bottom:16px;flex:none}
   .spk-av img{width:100%;height:100%;object-fit:cover;display:block}
   .spk-name{font-family:"Poppins",sans-serif;font-weight:800;font-size:16px;color:#fff;margin:0 0 8px}
@@ -314,7 +314,7 @@
   .tk-price{font-family:"Poppins",sans-serif;font-weight:800;font-size:52px;color:var(--accent-2);line-height:1;margin:8px 0 2px;letter-spacing:-1px;text-align:center}
   .tk-price sup{font-size:24px;vertical-align:super;margin-right:2px}
   .tk-sub{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:18px;text-align:center}
-  .tk-list{list-style:none;margin:25px 0 0;padding:0;display:inline-block;text-align:left}.tk-list li b.lead-inline{display:inline}
+  .tk-list{list-style:none;margin:25px 0 0;padding:0;display:inline-block;text-align:left}@media(min-width:601px){.tk-list{text-align:center}}.tk-list li b.lead-inline{display:inline}
   .tk-list li{position:relative;padding-left:26px;font-size:13.5px;line-height:1.55;color:var(--ink-dim);text-wrap:pretty}
   .tk-list li + li{margin-top:11px}
   .tk-list li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--accent-2);font-weight:800}
@@ -362,8 +362,9 @@ p{letter-spacing:.2px}
 .tk-covers-inline h4{margin:0 0 12px;font-size:14px;font-weight:800;color:#fff}
 .cta-strip{position:relative;overflow:hidden;text-align:center;background:linear-gradient(160deg,rgba(12,17,30,.9),rgba(9,13,24,.93)),url(ppw-assets/tile-nyc.jpg) center/cover no-repeat;border:1px solid var(--line-2);border-radius:26px;padding:60px 30px}.cta-strip .glow{position:absolute;inset:0;background:radial-gradient(600px 240px at 50% 0,rgba(45,212,255,.14),transparent 70%)}.cta-strip h2{position:relative;font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.6px;margin-bottom:14px;color:#fff}.cta-strip p{position:relative;color:#dbe3f4;max-width:580px;margin:0 auto 30px;font-size:16.5px}.cta-strip .hero-cta{position:relative;display:flex;justify-content:center}.cta-strip .reg-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,#4f7df9,#2f5fe0);color:#fff;font-weight:700;font-size:15px;padding:15px 26px;border-radius:999px;text-decoration:none;box-shadow:0 8px 20px rgba(47,95,224,.32)}
 @media(max-width:600px){.partner-note a{display:block;margin-left:0;margin-top:4px}}
-@media(max-width:600px){.spk-card{padding:30px 22px 14px}}
+@media(max-width:600px){.spk-card{padding:40px 22px 14px}}
 @media(max-width:600px){.tk-list li+li{margin-top:16px}.tk-reg{margin-top:32px}}
+.net3{max-width:490px}@media(max-width:600px){.net3{font-size:12px;line-height:1.5;max-width:320px}}
 </style>
 </head>
 <!-- DATE-DISCREPANCY (internal): P|PW uses Oct 20-21, 2026; NAB Show NY public site lists Oct 21-22, 2026. Preserving P|PW dates pending source-of-truth confirmation. -->
@@ -504,7 +505,7 @@ p{letter-spacing:.2px}
 
 <section class="block" id="networking">
   <div class="wrap">
-    <div class="sec-head center" style="margin-bottom:20px"><div class="sec-kicker">After hours</div><h2 class="sec-title">The Post|Production World<br>Networking Party</h2><p class="sec-desc" style="margin-inline:auto;max-width:470px;text-wrap:balance">Join us in the evening for the industry's favorite social gathering. Build and strengthen connections with creatives, instructors, and partner brands from around the world.</p></div>
+    <div class="sec-head center" style="margin-bottom:20px"><div class="sec-kicker">After hours</div><h2 class="sec-title">The Post|Production World<br>Networking Party</h2><p class="sec-desc net3" style="margin-inline:auto;text-wrap:balance">Join us in the evening for the industry's favorite social gathering. Build and strengthen connections with creatives, instructors, and partner brands from around the world.</p></div>
     <div class="spon-by"><span>Sponsored by</span><img src="ppw-assets/spon-adobe.webp" alt="Adobe"></div>
     <div class="collage">
       <a class="big" href="ppw-assets/g-net-banner.webp" target="_blank"><img src="ppw-assets/g-net-banner.webp" alt="P|PW networking party" loading="lazy"></a>
