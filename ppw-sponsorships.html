@@ -458,7 +458,7 @@ p{letter-spacing:.2px}
     <p class="hero-sub">From <span style="color:#ff8a4c">Las Vegas</span> to <span style="color:#b794f6">London</span>, <span style="color:#43d9b8">Mumbai</span> to <span style="color:#5b9dff">New York</span>, PPW Global puts your brand in front of the professionals who shape what the industry creates and buys.</p>
     <p class="hero-sub hero-emph" style="margin-top:10px;margin-bottom:36px">One partnership. Year-round, worldwide visibility.</p>
     <div class="hero-cta">
-      <a class="btn gold" href="mailto:meganb@fmctraining.com?subject=Post%7CProduction%20World%20Sponsorship%20Proposal%20Request&body=Hi%20Megan%2C%0D%0A%0D%0AI%27d%20like%20to%20explore%20sponsorship%20for%20Post%7CProduction%20World.%0D%0A%0D%0ACompany%3A%0D%0AName%20/%20role%3A%0D%0AEmail%3A%0D%0ARegions%20of%20interest%20%28Las%20Vegas%20/%20New%20York%20/%20London%20/%20Mumbai%29%3A%0D%0AGoals%3A%0D%0A%0D%0AThank%20you%21"><span class="bt">Request sponsorship details</span> <svg class="ic"><use href="#i-arrow"/></svg></a>
+      <a class="btn gold" href="mailto:meganb@fmctraining.com?subject=Post%7CProduction%20World%20Sponsorship%20Proposal%20Request&body=Hi%20Megan%2C%0D%0A%0D%0AI%27d%20like%20to%20explore%20sponsorship%20for%20Post%7CProduction%20World.%0D%0A%0D%0ACompany%3A%0D%0AName%20/%20role%3A%0D%0AEmail%3A%0D%0ARegions%20of%20interest%20%28Las%20Vegas%20/%20New%20York%20/%20London%20/%20Mumbai%29%3A%0D%0AGoals%3A%0D%0A%0D%0AThank%20you%21" data-contact="proposal"><span class="bt">Request sponsorship details</span> <svg class="ic"><use href="#i-arrow"/></svg></a>
       <a class="btn ghost" href="#tiers"><span class="bt">View benefits</span></a>
     </div>
     <div class="hero-stats" style="display:none">
@@ -622,7 +622,7 @@ p{letter-spacing:.2px}
       <h2>Let's build something global together.</h2>
       <p>Tell us about your goals and markets, and we'll send a tailored proposal. Platinum and Core positions are limited.</p>
       <div class="hero-cta">
-        <a class="btn gold" href="mailto:meganb@fmctraining.com?subject=Post%7CProduction%20World%20Sponsorship%20Proposal%20Request&body=Hi%20Megan%2C%0D%0A%0D%0AI%27d%20like%20to%20explore%20sponsorship%20for%20Post%7CProduction%20World.%0D%0A%0D%0ACompany%3A%0D%0AName%20/%20role%3A%0D%0AEmail%3A%0D%0ARegions%20of%20interest%20%28Las%20Vegas%20/%20New%20York%20/%20London%20/%20Mumbai%29%3A%0D%0AGoals%3A%0D%0A%0D%0AThank%20you%21"><span class="bt">Request a proposal</span> <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn gold" href="mailto:meganb@fmctraining.com?subject=Post%7CProduction%20World%20Sponsorship%20Proposal%20Request&body=Hi%20Megan%2C%0D%0A%0D%0AI%27d%20like%20to%20explore%20sponsorship%20for%20Post%7CProduction%20World.%0D%0A%0D%0ACompany%3A%0D%0AName%20/%20role%3A%0D%0AEmail%3A%0D%0ARegions%20of%20interest%20%28Las%20Vegas%20/%20New%20York%20/%20London%20/%20Mumbai%29%3A%0D%0AGoals%3A%0D%0A%0D%0AThank%20you%21" data-contact="proposal"><span class="bt">Request a proposal</span> <svg class="ic"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </div>
@@ -680,5 +680,6 @@ var dt=document.getElementById('tierTable');if(dt)dt.innerHTML=head+body;
 var mc=document.getElementById('tierCards');if(mc)mc.innerHTML=order.map(function(k){var t=TIERS[k],isH=k===hero;var lis=ROWS.filter(function(r){return r[1][k]&&r[1][k]!==0;}).map(function(r){var v=r[1][k];var txt=(v===1)?r[0]:r[0]+' \u2014 <b style="color:#fff;font-weight:600">'+v+'</b>';return '<li>'+CK.replace('K','k-'+t.cls)+'<span>'+txt+'</span></li>';}).join('');return '<div class="tcard'+(isH?' hero':'')+'"><div class="tname n-'+t.cls+'">'+t.name+'</div><div class="price">'+t.tag+'</div><ul>'+lis+'</ul></div>';}).join('');
 })();
 </script>
+<script src="contact-modal.js" defer></script>
 </body>
 </html>
