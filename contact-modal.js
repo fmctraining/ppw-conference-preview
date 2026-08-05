@@ -73,7 +73,7 @@ const PEOPLE = {
           <input type="hidden" name="regions"></div>`:''}
         <div class="cm-f"><label>Message <span class="o">(optional)</span></label><textarea name="message" placeholder="${isProp?'What are you hoping to achieve?':'How can we help?'}"></textarea></div>
         <input type="hidden" name="access_key" value="${keyFor(who)}">
-        <input type="hidden" name="subject" value="PPW ${p.title} — via ppw-conference.com">
+        <input type="hidden" name="subject" value="PPW ${p.title} · via ppw-conference.com">
         <input type="hidden" name="from_name" value="PPW Website">
         <button class="cm-send" type="submit">${isProp?'Send proposal request':'Send message'}</button>
       </form>`;
@@ -86,7 +86,7 @@ const PEOPLE = {
       try{
         const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)});
         const j=await r.json();
-        if(j.success){ card.innerHTML=`<div class="cm-x">&times;</div><div class="cm-ok"><div class="t">Thanks — message sent.</div><div class="s">${p.name} will be in touch soon.</div></div>`; card.querySelector('.cm-x').onclick=close; }
+        if(j.success){ card.innerHTML=`<div class="cm-x">&times;</div><div class="cm-ok"><div class="t">Thanks, message sent.</div><div class="s">${p.name} will be in touch soon.</div></div>`; card.querySelector('.cm-x').onclick=close; }
         else throw new Error(j.message||'failed');
       }catch(err){ btn.disabled=false; btn.textContent='Try again'; }
     };
