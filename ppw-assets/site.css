@@ -274,3 +274,9 @@ p{letter-spacing:.2px}
 @media(max-width:600px){section.block{padding:58px 0}}
 
 @media(max-width:600px){.partner-note a{display:block;margin-left:0;margin-top:4px}}
+
+@media(max-width:600px){
+  .host-mod{flex-direction:column;text-align:center;align-items:center;padding:34px 22px 24px}
+  .host-mod .host-logo{margin:0 auto 4px!important;height:30px!important}
+  .host-text{min-width:0!important;text-align:center}
+}
