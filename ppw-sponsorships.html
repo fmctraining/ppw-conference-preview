@@ -378,8 +378,8 @@
   .tcard ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
   .tcard li{display:flex;gap:9px;align-items:flex-start;font-size:14px;color:var(--ink-dim);line-height:1.45}
   .tcard li .ck{flex:none;width:17px;height:17px}.tcard li .ck svg{width:100%;height:100%;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
-  .tcard.hero{background:linear-gradient(175deg,color-mix(in oklab,var(--a-core,#79d3ff) 16%,var(--panel)),var(--panel));border-color:color-mix(in oklab,var(--a-core,#79d3ff) 40%,var(--line))}
-  .tcard.hero::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad-blue,#5bd);border-radius:18px 18px 0 0}
+  .tcard.feat{background:linear-gradient(175deg,color-mix(in oklab,var(--a-core,#79d3ff) 16%,var(--panel)),var(--panel));border-color:color-mix(in oklab,var(--a-core,#79d3ff) 40%,var(--line))}
+  .tcard.feat::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad-blue,#5bd);border-radius:18px 18px 0 0}
   @media(max-width:760px){.tier-desktop{display:none}.tier-cards{display:flex}}
   @media(max-width:600px){
     .tp-card{padding:26px 22px 24px!important}
@@ -694,7 +694,7 @@ var order=['table','gold','plat','core'],hero='core';
 var head='<thead><tr><th class="corner">Partnership Benefits</th>'+order.map(function(k){var t=TIERS[k],isH=k===hero;return '<th class="'+(isH?'hero-th ':'')+'col-'+t.cls+'">'+(isH?'<span class="hero-cap"></span>':'')+'<div class="thd"><span class="tname n-'+t.cls+'">'+t.name+'</span><span class="ttag">'+t.tag+'</span></div></th>';}).join('')+'</tr></thead>';
 var body='<tbody>'+ROWS.map(function(r){return '<tr><th>'+r[0]+'</th>'+order.map(function(k){var isH=k===hero;return '<td class="'+(isH?'hero-col ':'col-'+TIERS[k].cls)+'">'+cell(r[1][k],k)+'</td>';}).join('')+'</tr>';}).join('')+'</tbody>';
 var dt=document.getElementById('tierTable');if(dt)dt.innerHTML=head+body;
-var mc=document.getElementById('tierCards');if(mc)mc.innerHTML=order.map(function(k){var t=TIERS[k],isH=k===hero;var lis=ROWS.filter(function(r){return r[1][k]&&r[1][k]!==0;}).map(function(r){var v=r[1][k];var txt=(v===1)?r[0]:r[0]+' \u2014 <b style="color:#fff;font-weight:600">'+v+'</b>';return '<li>'+CK.replace('K','k-'+t.cls)+'<span>'+txt+'</span></li>';}).join('');return '<div class="tcard'+(isH?' hero':'')+'"><div class="tname n-'+t.cls+'">'+t.name+'</div><div class="price">'+t.tag+'</div><ul>'+lis+'</ul></div>';}).join('');
+var mc=document.getElementById('tierCards');if(mc)mc.innerHTML=order.map(function(k){var t=TIERS[k],isH=k===hero;var lis=ROWS.filter(function(r){return r[1][k]&&r[1][k]!==0;}).map(function(r){var v=r[1][k];var txt=(v===1)?r[0]:r[0]+' \u2014 <b style="color:#fff;font-weight:600">'+v+'</b>';return '<li>'+CK.replace('K','k-'+t.cls)+'<span>'+txt+'</span></li>';}).join('');return '<div class="tcard'+(isH?' feat':'')+'"><div class="tname n-'+t.cls+'">'+t.name+'</div><div class="price">'+t.tag+'</div><ul>'+lis+'</ul></div>';}).join('');
 })();
 </script>
 <script src="contact-modal.js" defer></script>
