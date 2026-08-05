@@ -59,3 +59,15 @@ Removed per Jordan's review 2026-08-04 (go straight to program, reduce scroll). 
   </div>
 </section>
 ```
+
+## London — 'The European edition' — cut per Jordan template logic (Syvonne confirmed)
+```html
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head center">
+      <h2 class="sec-title">The European edition</h2>
+      <p class="sec-desc">Post Production World Europe is the continent&rsquo;s premier professional-development event for content creators working across film, television, video, digital media, and design. Modeled after the globally recognized PPW conferences in Las Vegas and New York, it brings localized relevance and internationally acclaimed instructors to the UK and Europe.</p>
+    </div>
+  </div>
+</section>
+```
