@@ -441,7 +441,7 @@
   /* AI: full-width section-level cover, crop dark photo edge */
   #ai::before{content:"";position:absolute;inset:0;z-index:0;left:50%!important;right:auto!important;transform:translateX(-50%)!important;width:100vw!important;top:0!important;bottom:0!important;background:url(ppw-assets/ai-bg.jpg) center/cover!important;opacity:1!important;display:none!important}
   .ai-wrap{background:transparent!important;border:0!important;backdrop-filter:none!important;box-shadow:none!important}
-  .nav-links{gap:52px!important}
+  @media(min-width:901px){.nav-links{gap:52px!important}}
   .dd-menu{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%) translateY(8px);background:var(--panel-2);border:1px solid var(--line-2);border-radius:16px;padding:8px;opacity:0;visibility:hidden;transition:.18s ease;box-shadow:var(--shadow);z-index:70;min-width:340px!important}
   .dd-menu .c{font-weight:700;font-size:14px;color:var(--ink);white-space:nowrap!important}
   .wall.plat .tile img[alt="Adobe"]{height:22px!important;max-width:135px!important}
