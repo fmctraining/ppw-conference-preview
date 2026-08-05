@@ -299,7 +299,7 @@
   @media(max-width:820px){.aud-tile{flex-basis:50%;border-bottom:1px solid var(--line)}.aud-tile:nth-child(odd){border-right:1px solid var(--line)}.aud-tile:nth-child(even){border-right:0}.aud-tile:nth-last-child(-n+2){border-bottom:0}}
   .room-band{text-align:center;max-width:840px;margin:8px auto 0}
   .room-eyebrow{display:inline-block;background:var(--grad-blue);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:18.5px;letter-spacing:1.8px;text-transform:uppercase;font-weight:700;margin-bottom:1px}
-  .room-names{color:#dbe3f4;font-size:17px;font-weight:500;line-height:1.75;letter-spacing:.5px;text-wrap:balance;margin-bottom:10px}
+  .room-names{color:#dbe3f4;font-size:17px;font-weight:500;letter-spacing:.5px;margin-bottom:10px;display:flex;flex-wrap:wrap;justify-content:center;gap:7px 0}.room-names .co{white-space:nowrap}.room-names .co:not(:first-child)::before{content:"·";margin:0 13px;color:#87dffa;opacity:.55}.room-names .co.nl::before{display:none}
   .room-more{color:#cfa598;font-size:14.5px;font-weight:400;margin:16px 0 0;letter-spacing:.3px}
   .rooms7{max-width:900px;margin:22px auto 0}
   .band2{display:flex;align-items:center;gap:18px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}
@@ -383,8 +383,8 @@
   @media(max-width:760px){.tier-desktop{display:none}.tier-cards{display:flex}}
   @media(max-width:600px){
     .tp-card{padding:26px 22px 24px!important}
-    .tp-ttl{font-size:18px;line-height:1.3;text-wrap:balance}
-    .tp-sub{font-size:13.5px}
+    .tp-ttl{font-size:17px;line-height:1.3;white-space:nowrap}
+    .tp-sub{font-size:13px;white-space:nowrap}
     .deck-b .touch-pills{margin-top:22px!important}
   }
 
@@ -611,7 +611,7 @@ p{letter-spacing:.2px}
     </div>
     <div class="room-band">
       <div class="room-eyebrow">In the room in 2026</div>
-      <p class="room-names">Disney &nbsp;·&nbsp; Amazon Prime Video &nbsp;·&nbsp; Apple &nbsp;·&nbsp; NHK &nbsp;·&nbsp; MLB Network &nbsp;·&nbsp; Sony &nbsp;·&nbsp; Walmart &nbsp;·&nbsp; Deloitte &nbsp;·&nbsp; Best Buy</p>
+      <p class="room-names"><span class="co">Disney</span><span class="co">Amazon Prime Video</span><span class="co">Apple</span><span class="co">NHK</span><span class="co">MLB Network</span><span class="co">Sony</span><span class="co">Walmart</span><span class="co">Deloitte</span><span class="co">Best Buy</span></p>
       <p class="room-more">and hundreds more</p>
     </div>
   </div>
@@ -698,5 +698,6 @@ var mc=document.getElementById('tierCards');if(mc)mc.innerHTML=order.map(functio
 })();
 </script>
 <script src="contact-modal.js" defer></script>
+<script>(function(){function fx(){var c=document.querySelectorAll(".room-names .co"),lt=null;c.forEach(function(e){var t=e.offsetTop;e.classList.toggle("nl",lt!==null&&t>lt+2);lt=t;});}window.addEventListener("load",fx);window.addEventListener("resize",fx);setTimeout(fx,300);})();</script>
 </body>
 </html>
