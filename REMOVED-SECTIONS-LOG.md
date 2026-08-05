@@ -42,3 +42,20 @@ Removed per Jordan's review 2026-08-04 (go straight to program, reduce scroll). 
   </div>
 </section>
 ```
+
+## Vegas — 'On the show floor at P|PW Las Vegas' (From past conferences) — Jordan: duplicate of 'Inside P|PW', removed
+```html
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head center"><div class="sec-kicker">From past conferences</div><h2 class="sec-title">On the show floor at P|PW Las Vegas</h2></div>
+    <div class="photo-grid">
+      <a class="photo-shot" href="ppw-assets/conf-g5.jpg" target="_blank"><img src="ppw-assets/conf-g5.jpg" alt="P|PW Las Vegas show floor" loading="lazy"></a>
+      <a class="photo-shot" href="ppw-assets/lab-109.webp" target="_blank"><img src="ppw-assets/lab-109.webp" alt="P|PW Las Vegas session" loading="lazy"></a>
+      <a class="photo-shot" href="ppw-assets/lab-105.webp" target="_blank"><img src="ppw-assets/lab-105.webp" alt="P|PW Las Vegas session" loading="lazy"></a>
+      <a class="photo-shot" href="ppw-assets/lab-106.webp" target="_blank"><img src="ppw-assets/lab-106.webp" alt="P|PW Las Vegas session" loading="lazy"></a>
+      <a class="photo-shot" href="ppw-assets/lab-112.webp" target="_blank"><img src="ppw-assets/lab-112.webp" alt="P|PW Las Vegas show floor" loading="lazy"></a>
+      <a class="photo-shot" href="ppw-assets/lab-113.webp" target="_blank"><img src="ppw-assets/lab-113.webp" alt="P|PW Las Vegas session" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+```
