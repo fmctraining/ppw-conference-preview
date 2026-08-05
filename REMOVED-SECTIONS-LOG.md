@@ -27,3 +27,18 @@ Removed per Jordan's review 2026-08-04 (go straight to program, reduce scroll). 
 </section>
 ```
 
+
+## Mumbai — 'What makes PPW South Asia unique' (#unique-section) — Jordan said cut (straight to program like NY)
+```html
+<section class="block" id="unique-section">
+  <div class="wrap">
+    <div class="sec-head center"><div class="sec-kicker">Why it matters</div><h2 class="sec-title">What makes PPW South Asia unique</h2></div>
+    <div class="cards4">
+      <div class="fcard"><div class="ibox"><svg class="ic"><use href="#i-spark"/></svg></div><h3>Cutting-Edge Curriculum</h3><p>Reflects the latest trends and disruptions in content and post-production.</p></div>
+      <div class="fcard"><div class="ibox"><svg class="ic"><use href="#i-grad"/></svg></div><h3>World-Class Faculty</h3><p>Sessions delivered by top professionals and thought leaders from around the globe.</p></div>
+      <div class="fcard"><div class="ibox"><svg class="ic"><use href="#i-trend"/></svg></div><h3>Career Sustainability</h3><p>Learn how creatives can adapt to new techniques and a fast-changing industry.</p></div>
+      <div class="fcard"><div class="ibox"><svg class="ic"><use href="#i-pin"/></svg></div><h3>Asia Access Point</h3><p>A regional gateway offering global-quality education and networking.</p></div>
+    </div>
+  </div>
+</section>
+```

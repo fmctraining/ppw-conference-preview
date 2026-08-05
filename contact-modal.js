@@ -76,7 +76,6 @@ const PEOPLE = {
         <input type="hidden" name="subject" value="PPW ${p.title} — via ppw-conference.com">
         <input type="hidden" name="from_name" value="PPW Website">
         <button class="cm-send" type="submit">${isProp?'Send proposal request':'Send message'}</button>
-        <div class="cm-route">Reaching ${p.name} · ${p.role}</div>
       </form>`;
     card.querySelector('.cm-x').onclick=close;
     card.querySelectorAll('.cm-chip').forEach(c=>c.onclick=()=>{c.classList.toggle('on');
