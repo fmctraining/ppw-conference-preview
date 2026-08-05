@@ -186,7 +186,7 @@
   .slot-time .ln{height:1px;flex:1;background:var(--line)}
   .scard{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--line);border-radius:12px;padding:16px 14px 14px;margin-bottom:12px}
   .scard .room{font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:7px;text-align:center}
-  .scard .ttl{font-weight:700;font-size:14px;color:#fff;line-height:1.35;margin-bottom:11px;text-align:center;text-wrap:balance;min-height:2.7em;display:flex;align-items:center;justify-content:center}
+  .scard .ttl{font-weight:700;font-size:14px;color:#fff;line-height:1.35;margin-bottom:11px;text-align:center;text-wrap:balance;min-height:2.7em;display:flex;flex-direction:column;align-items:center;justify-content:center;max-width:20ch;margin-inline:auto}
   .scard .meta{display:flex;align-items:center;justify-content:space-between;gap:10px}
   .scard .spk{font-size:12.5px;color:var(--ink-dim);display:flex;align-items:center;gap:7px}
   .scard .av{width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#3b4a72,#1c2742);font-size:9.5px;display:flex;align-items:center;justify-content:center;color:#cdd9f5;font-weight:800}
@@ -314,7 +314,7 @@
   .tk-price{font-family:"Poppins",sans-serif;font-weight:800;font-size:52px;color:var(--accent-2);line-height:1;margin:8px 0 2px;letter-spacing:-1px;text-align:center}
   .tk-price sup{font-size:24px;vertical-align:super;margin-right:2px}
   .tk-sub{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:18px;text-align:center}
-  .tk-list{list-style:none;margin:0;padding:0}
+  .tk-list{list-style:none;margin:0;padding:0;display:inline-block;text-align:left}
   .tk-list li{position:relative;padding-left:26px;font-size:13.5px;line-height:1.55;color:var(--ink-dim);text-wrap:pretty}
   .tk-list li + li{margin-top:11px}
   .tk-list li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--accent-2);font-weight:800}
@@ -480,10 +480,10 @@ p{letter-spacing:.2px}
         <div class="tk-sub">Standard rate · per person · both days</div>
         <div class="tk-rates"><span class="rt">NAB members &amp; Government <b>$749</b></span><span class="rt">Students <b>$399</b></span></div>
         <ul class="tk-list">
-          <li><b>All sessions, all rooms, all days</b>complete access to the full P|PW New York program with no add-ons required.</li>
+          <li><b>Complete access to the full P|PW New York program</b>with no add-ons required.</li>
           <li><b>All workshop tracks</b>Editing, AI &amp; Emerging Tech, Color &amp; Motion, Audio, Photography &amp; Video, VR/Immersive, Business &amp; Career.</li>
           <li><b>NAB Show New York floor access</b>Included with your P|PW registration.</li>
-          <li>Networking events and the P|PW Party.</li>
+          <li><b>Networking events and the P|PW Party.</b></li>
         </ul>
         <a class="tk-reg" href="https://www.nabshow.com/new-york/passes-and-pricing/#ppw" target="_blank" rel="noopener">Register at NAB Show</a>
         <div class="tk-covers-inline">
@@ -508,7 +508,7 @@ p{letter-spacing:.2px}
 
 <section class="block" id="networking">
   <div class="wrap">
-    <div class="sec-head center" style="margin-bottom:20px"><div class="sec-kicker">After hours</div><h2 class="sec-title">The Post|Production World<br>Networking Party</h2><p class="sec-desc" style="margin-inline:auto">Join us in the evening for the industry's favorite social gathering. Build and strengthen connections with creatives, instructors, and partner brands from around the world.</p></div>
+    <div class="sec-head center" style="margin-bottom:20px"><div class="sec-kicker">After hours</div><h2 class="sec-title">The Post|Production World<br>Networking Party</h2><p class="sec-desc" style="margin-inline:auto;max-width:470px;text-wrap:balance">Join us in the evening for the industry's favorite social gathering. Build and strengthen connections with creatives, instructors, and partner brands from around the world.</p></div>
     <div class="spon-by"><span>Sponsored by</span><img src="ppw-assets/spon-adobe.webp" alt="Adobe"></div>
     <div class="collage">
       <a class="big" href="ppw-assets/g-net-banner.webp" target="_blank"><img src="ppw-assets/g-net-banner.webp" alt="P|PW networking party" loading="lazy"></a>
@@ -575,7 +575,7 @@ p{letter-spacing:.2px}
   <div class="wrap foot-inner">
     <div class="foot-brand">
       <img class="foot-ppw" src="ppw-assets/ppw-logo.webp" alt="Post|Production World Conference">
-      <p>The global standard in media training. Four locations. One community.</p>
+      <p>The global standard in media training.<br>Four locations. One community.</p>
       <a class="fb-link" href="https://www.facebook.com/groups/ppwconference" target="_blank" rel="noopener"><img src="ppw-assets/fb-group.svg" alt="Join the Facebook Group"></a>
     </div>
     <div class="foot-col">
