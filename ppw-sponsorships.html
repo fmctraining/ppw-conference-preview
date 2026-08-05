@@ -373,13 +373,13 @@
   .tier-desktop .no{color:var(--ink-faint)}.tier-desktop .val{font-weight:700;color:#fff;font-size:13.5px}
   .tier-cards{display:none;flex-direction:column;gap:14px}
   .tcard{border:1px solid var(--line);border-radius:18px;padding:24px 22px;background:var(--panel);position:relative;overflow:hidden}
-  .tcard .tname{font-size:20px;font-weight:800;margin-bottom:2px}
+  .tcard .tname{font-size:20px;font-weight:800;margin-bottom:2px;color:#eef2fb!important;-webkit-text-fill-color:#eef2fb!important;background:none!important}
   .tcard .price{color:var(--ink-faint);font-size:12.5px;margin-bottom:16px}
   .tcard ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
   .tcard li{display:flex;gap:9px;align-items:flex-start;font-size:14px;color:var(--ink-dim);line-height:1.45}
   .tcard li .ck{flex:none;width:17px;height:17px}.tcard li .ck svg{width:100%;height:100%;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
   .tcard.hero{background:linear-gradient(175deg,color-mix(in oklab,var(--a-core,#79d3ff) 16%,var(--panel)),var(--panel));border-color:color-mix(in oklab,var(--a-core,#79d3ff) 40%,var(--line))}
-  .tcard.hero::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-blue,#5bd)}
+  .tcard.hero::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad-blue,#5bd);border-radius:18px 18px 0 0}
   @media(max-width:760px){.tier-desktop{display:none}.tier-cards{display:flex}}
   @media(max-width:600px){
     .tp-card{padding:26px 22px 24px!important}
