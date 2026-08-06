@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PPW — Ghost button options</title>
+<style>
+  :root{--ink:#eef2fb}
+  *{box-sizing:border-box}
+  body{margin:0;background:#0a0e1a;color:var(--ink);font-family:"Poppins",system-ui,Arial,sans-serif;padding:34px 28px 90px}
+  h1{font-size:25px;margin:0 0 6px;font-weight:800}
+  .sub{color:#9fb0cf;font-size:14.5px;margin:0 0 30px;max-width:820px;line-height:1.6}
+  .sub b{color:#87dffa}
+  .row{display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));gap:20px}
+  .card{border:1px solid rgba(255,255,255,.12);border-radius:16px;overflow:hidden;background:#0d1424}
+  .stage{position:relative;padding:44px 30px;background:
+      radial-gradient(120% 140% at 20% 0%,rgba(79,125,249,.28),transparent 60%),
+      radial-gradient(120% 140% at 100% 100%,rgba(135,223,250,.16),transparent 55%),
+      linear-gradient(180deg,#141d31,#0b1120)}
+  .stage .ey{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#9fb0cf;margin:0 0 8px}
+  .stage h3{margin:0 0 20px;font-size:22px;font-weight:800;letter-spacing:-.3px}
+  .btns{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .meta{padding:14px 18px 18px;border-top:1px solid rgba(255,255,255,.08)}
+  .tag{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;color:#04121a;background:#87dffa;border-radius:999px;padding:4px 11px;margin-bottom:9px}
+  .desc{color:#c3cee4;font-size:13.5px;line-height:1.55;margin:0 0 8px}
+  code{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:#9fb0cf;display:block;white-space:pre-wrap;line-height:1.5}
+
+  /* shared primary + base */
+  .b{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:14px;padding:14px 28px;border-radius:999px;white-space:nowrap;line-height:1;border:1.5px solid transparent;cursor:pointer;transition:.18s}
+  .b.primary{background:linear-gradient(180deg,#4f7df9,#2f5fe0);color:#fff;box-shadow:0 8px 20px rgba(47,95,224,.32),inset 0 1px 0 rgba(255,255,255,.32)}
+  .b.arrow::after{content:"→";font-weight:600}
+
+  /* ---- current states (for reference) ---- */
+  .cur-home{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.45);color:#fff}
+  .cur-spon{background:transparent;border:1.5px solid rgba(255,255,255,.12);color:#eef2fb;padding:13px 22px}
+
+  /* ---- OPTION A · glass ---- */
+  .A{background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.5);color:#fff;backdrop-filter:blur(8px)}
+  .A:hover{background:rgba(255,255,255,.22)}
+  /* ---- OPTION B · hairline outline ---- */
+  .B{background:transparent;border:1.5px solid rgba(255,255,255,.34);color:#fff}
+  .B:hover{border-color:rgba(255,255,255,.75);background:rgba(255,255,255,.08)}
+  /* ---- OPTION C · strong outline → invert ---- */
+  .C{background:transparent;border:2px solid rgba(255,255,255,.72);color:#fff}
+  .C:hover{background:#fff;color:#0d1424;border-color:#fff}
+  /* ---- OPTION D · soft frost ---- */
+  .D{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.26);color:#fff;backdrop-filter:blur(6px)}
+  .D:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.4)}
+</style></head>
+<body>
+  <h1>PPW — matching the two ghost buttons</h1>
+  <p class="sub">Both sit next to the blue primary button on a dark hero. Right now the homepage “Who attends” is a <b>translucent white pill</b> and the sponsor “Sponsorship Benefits” is a <b>faint transparent outline</b> — different sizes too. Below: the current pair, then 4 unified options (hover each). Tell me a letter and I'll apply it to <b>both</b> buttons on both pages.</p>
+
+  <div class="row">
+    <div class="card">
+      <div class="stage"><p class="ey">Current — as live now</p><h3>They don't match</h3>
+        <div class="btns"><a class="b primary arrow">Explore Locations</a><a class="b cur-home">Who attends</a><a class="b cur-spon">Sponsorship Benefits</a></div></div>
+      <div class="meta"><p class="desc">Left = homepage treatment, right = sponsor treatment. Different fill, border, text color, and size.</p></div>
+    </div>
+
+    <div class="card">
+      <div class="stage"><p class="ey">Option A</p><h3>Glass pill</h3>
+        <div class="btns"><a class="b primary arrow">Primary</a><a class="b A">Who attends</a><a class="b A">Sponsorship Benefits</a></div></div>
+      <div class="meta"><span class="tag">Recommended</span><p class="desc">Frosted translucent white, crisp 50% white border, pure white text. Premium and clearly a “second” button. Closest to the homepage look, cleaned up.</p><code>background:rgba(255,255,255,.12); border:1.5px solid rgba(255,255,255,.5); color:#fff; backdrop-filter:blur(8px)</code></div>
+    </div>
+
+    <div class="card">
+      <div class="stage"><p class="ey">Option B</p><h3>Hairline outline</h3>
+        <div class="btns"><a class="b primary arrow">Primary</a><a class="b B">Who attends</a><a class="b B">Sponsorship Benefits</a></div></div>
+      <div class="meta"><p class="desc">Transparent with a clean 34% white outline that brightens and lightly fills on hover. Minimal, lets the blue primary dominate.</p><code>background:transparent; border:1.5px solid rgba(255,255,255,.34); color:#fff</code></div>
+    </div>
+
+    <div class="card">
+      <div class="stage"><p class="ey">Option C</p><h3>Strong outline → invert</h3>
+        <div class="btns"><a class="b primary arrow">Primary</a><a class="b C">Who attends</a><a class="b C">Sponsorship Benefits</a></div></div>
+      <div class="meta"><p class="desc">Bold 72% white border; on hover it fills solid white with dark text. High-contrast and confident, more assertive as a secondary.</p><code>background:transparent; border:2px solid rgba(255,255,255,.72); color:#fff; hover→ solid white</code></div>
+    </div>
+
+    <div class="card">
+      <div class="stage"><p class="ey">Option D</p><h3>Soft frost</h3>
+        <div class="btns"><a class="b primary arrow">Primary</a><a class="b D">Who attends</a><a class="b D">Sponsorship Benefits</a></div></div>
+      <div class="meta"><p class="desc">Barely-there 7% fill + faint border. The quietest option — recedes most next to the primary.</p><code>background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.26); color:#fff; backdrop-filter:blur(6px)</code></div>
+    </div>
+  </div>
+</body></html>

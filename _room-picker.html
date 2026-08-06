@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PPW — Room photo options</title>
+<style>
+  :root{--bg:#0a0e1a;--panel:#121a2c;--line:rgba(255,255,255,.12);--ink:#eef2fb;--dim:#9fb0cf;--accent:#87dffa;--go:#76e0a3}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",system-ui,Arial,sans-serif;padding:34px 30px 90px}
+  h1{font-size:26px;margin:0 0 6px;font-weight:800}
+  .sub{color:var(--dim);font-size:15px;margin:0 0 8px;max-width:820px;line-height:1.6}
+  .sub b{color:var(--accent)}
+  .legend{color:var(--dim);font-size:13.5px;margin:0 0 26px}
+  .legend .go{color:var(--go);font-weight:700}
+  h2{font-size:15px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin:40px 0 14px;font-weight:700}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+  .tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;position:relative}
+  .tile.pick{border-color:var(--go);box-shadow:0 0 0 1px var(--go)}
+  .tile img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;background:#05070d}
+  .cap{padding:9px 12px;font-size:13px;color:var(--dim);display:flex;justify-content:space-between;gap:8px;align-items:center}
+  .cap .id{color:var(--ink);font-weight:600}
+  .badge{position:absolute;top:10px;left:10px;font-size:11px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;padding:5px 9px;border-radius:999px;background:var(--go);color:#04121a}
+  .badge.now{background:var(--accent)}
+</style></head>
+<body>
+  <h1>PPW — Room photo options</h1>
+  <p class="sub">Candidates for the “Thousands of in-person creative professionals” gallery on the sponsor page. Pick the ones that read as a <b>full room of people</b>. Tell me the labels (e.g. “<b>c8</b> for featured, <b>c3</b> and <b>m4</b> in the grid”) and I’ll place them.</p>
+  <p class="legend"><span class="go">■ green = my picks (true full rooms)</span> &nbsp;·&nbsp; <span style="color:var(--accent)">■ blue badge = already placed on the page</span></p>
+
+  <h2>Full-room standouts — recommended</h2>
+  <div class="grid" id="g-top"></div>
+
+  <h2>Other conference candidates (panels / podium / demo)</h2>
+  <div class="grid" id="g-other"></div>
+
+  <h2>who-more</h2>
+  <div class="grid" id="g-more"></div>
+
+  <h2>who-options</h2>
+  <div class="grid" id="g-opt"></div>
+
+  <h2>Vegas crowd + conf / audience</h2>
+  <div class="grid" id="g-misc"></div>
+
+<script>
+  const tile=(path,label,{pick,badge}={})=>`<div class="tile${pick?' pick':''}">${badge?`<span class="badge${badge==='On page now'?' now':''}">${badge}</span>`:''}<img loading="lazy" src="ppw-assets/${path}" alt="${label}"><div class="cap"><span class="id">${label}</span></div></div>`;
+  document.getElementById('g-top').innerHTML=[
+    tile('room-c8.webp','c8 — full room + PPW banner',{pick:true,badge:'Best for featured'}),
+    tile('room-c4.webp','c4 — full room + sponsor banner',{pick:true,badge:'On page now'}),
+    tile('room-c3.webp','c3 — full session audience',{pick:true}),
+    tile('room-c2.webp','c2 — busy demo cluster',{pick:true}),
+  ].join('');
+  document.getElementById('g-other').innerHTML=[
+    ['room-c1.webp','c1 — Apple panel (stage)'],['room-c5.webp','c5 — panel (same set)'],
+    ['room-c7.webp','c7 — solo podium'],['room-c6.webp','c6 — portrait']
+  ].map(([p,l])=>tile(p,l)).join('');
+  document.getElementById('g-more').innerHTML=['m1','m2','m3','m4','m5','m6','m7','m8','m9','m10'].map(n=>tile('who-more/'+n+'.webp','who-more / '+n)).join('');
+  document.getElementById('g-opt').innerHTML=['opt-1','opt-2','opt-3','opt-4','opt-5','opt-6','opt-7','opt-8','opt-9','opt-10','wa-A','wa-B','wa-C','pdf-classroom'].map(n=>tile('who-options/'+n+'.webp','who-options / '+n, n==='opt-8'?{badge:'Section bg now'}:{})).join('');
+  document.getElementById('g-misc').innerHTML=[
+    ['aud-crowd.webp','aud-crowd (in grid now)'],['conf-g2.jpg','conf-g2 (featured now)'],['conf-g1.jpg','conf-g1'],['conf-g3.jpg','conf-g3'],['conf-g4.jpg','conf-g4'],['conf-g5.jpg','conf-g5'],
+    ['lab-106.webp','lab-106 (in grid now)'],['conf-a.webp','conf-a'],['conf-b.webp','conf-b'],['conf-c.webp','conf-c'],['conf-d.webp','conf-d (was last)'],
+    ['gallery-vegas-final/718A6291.jpg','vegas 6291'],['gallery-vegas-final/718A6604.jpg','vegas 6604'],['gallery-vegas-final/PPW2024_by_Syvonne_K_Photography_228.jpg','vegas 228']
+  ].map(([p,l])=>tile(p,l)).join('');
+</script>
+</body></html>

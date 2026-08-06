@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PPW NY — Registration section · 7 designs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0e17;--bg-2:#0f1626;--panel:#131c30;--panel-2:#18223a;--line:#243150;--line-2:#2c3a5c;--ink:#eaf0ff;--ink-dim:#9fb0d4;--ink-faint:#6c7c9e;--accent:#3b82f6;--accent-2:#22d3ee;--gold:#f5c451}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.45;-webkit-font-smoothing:antialiased}
+.psec{position:relative;padding:78px 30px 84px;border-bottom:1px solid rgba(255,255,255,.05)}
+.psec::before{content:"";position:absolute;top:0;left:0;right:0;height:300px;background:radial-gradient(640px 220px at 50% 0,rgba(99,102,241,.10),transparent 72%);pointer-events:none}
+.wrap{max-width:1040px;margin:0 auto;position:relative}
+.vlabel{font-family:"Space Grotesk",monospace;font-size:12.5px;color:var(--accent-2);letter-spacing:2px;text-transform:uppercase;margin:0 0 30px;display:flex;align-items:center;gap:12px}
+.vlabel span{color:var(--ink-faint);text-transform:none;letter-spacing:.3px;font-size:12.5px}
+.vlabel::before{content:"";width:26px;height:26px;border:1px solid var(--line-2);border-radius:7px;display:inline-flex;align-items:center;justify-content:center;color:var(--ink);font-weight:700}
+.shead{text-align:center;max-width:680px;margin:0 auto 34px}
+.eyebrow{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;background:linear-gradient(100deg in oklch,oklch(86% .10 225),oklch(80% .12 288));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700;margin:0 0 14px}
+.stitle{font-size:clamp(28px,4vw,38px);margin:0;font-weight:700;letter-spacing:-.6px;background:linear-gradient(180deg,#fff,#c9d5ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sdesc{color:var(--ink-dim);max-width:600px;margin:14px auto 0;font-size:15.5px;line-height:1.6}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(180deg,#6ba6ff,#4a82e6);color:#fff;font-weight:700;font-size:14.5px;letter-spacing:.2px;padding:15px 26px;border-radius:999px;text-decoration:none;box-shadow:0 10px 26px rgba(74,130,230,.4);border:0;cursor:pointer}
+.cta.full{display:flex;width:100%}
+.cta::after{content:"→"}
+.chk{flex:none;width:21px;height:21px;border-radius:50%;background:linear-gradient(150deg,#6ba6ff,#4a82e6);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 8px rgba(74,130,230,.35)}
+
+/* ============ V1 · Boarding pass ============ */
+.v1{display:flex;max-width:920px;margin:0 auto;background:var(--panel);border:1px solid var(--line-2);border-radius:18px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+.v1 .stub{flex:0 0 34%;background:linear-gradient(180deg,#16223c,#101a30);padding:36px 30px;text-align:center;position:relative;display:flex;flex-direction:column;justify-content:center}
+.v1 .stub::after{content:"";position:absolute;top:0;right:-1px;bottom:0;width:2px;background-image:radial-gradient(circle,var(--bg) 2.4px,transparent 2.6px);background-size:2px 15px;background-repeat:repeat-y}
+.v1 .notch{position:absolute;right:-11px;width:20px;height:20px;border-radius:50%;background:var(--panel)}
+.v1 .kick{font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px}
+.v1 .big{font-family:"Poppins";font-weight:800;font-size:60px;line-height:1;color:var(--accent-2);letter-spacing:-1.5px}
+.v1 .big sup{font-size:26px;vertical-align:super}
+.v1 .psub{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-faint);margin:8px 0 18px}
+.v1 .rate{font-size:12.5px;color:var(--ink-dim);margin:3px 0}.v1 .rate b{color:#fff}
+.v1 .body{flex:1;padding:36px 38px}
+.v1 .pname{font-family:"Poppins";font-weight:800;font-size:19px;margin:0 0 20px}
+.v1 li{list-style:none;display:flex;gap:12px;align-items:flex-start;margin:0 0 15px;font-size:13.5px;color:var(--ink-dim);line-height:1.5}
+.v1 li b{display:block;color:#fff;font-weight:700;margin-bottom:1px;font-size:13.5px}
+.v1 ul{margin:0 0 26px;padding:0}
+
+/* ============ V2 · Split buy / value ============ */
+.v2{display:grid;grid-template-columns:.86fr 1.14fr;max-width:940px;margin:0 auto;border:1px solid var(--line-2);border-radius:18px;overflow:hidden}
+.v2 .buy{background:linear-gradient(170deg,#182948,#0f1a30);padding:44px 36px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.v2 .pname{font-weight:700;font-size:15px;color:var(--ink-dim);margin:0 0 12px}
+.v2 .big{font-family:"Poppins";font-weight:800;font-size:64px;line-height:1;color:#fff;letter-spacing:-2px}
+.v2 .big sup{font-size:28px;vertical-align:super;color:var(--accent-2)}
+.v2 .psub{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-faint);margin:10px 0 20px}
+.v2 .rates{border-top:1px solid rgba(255,255,255,.1);padding-top:16px;margin-bottom:24px}
+.v2 .rate{display:flex;justify-content:space-between;font-size:13px;color:var(--ink-dim);margin:6px 0}.v2 .rate b{color:#fff}
+.v2 .value{background:var(--panel);padding:40px 40px}
+.v2 .vh{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--accent-2);margin:0 0 22px;font-weight:700}
+.v2 li{list-style:none;display:flex;gap:13px;align-items:flex-start;margin:0 0 18px;font-size:13.5px;color:var(--ink-dim);line-height:1.5}
+.v2 li b{display:block;color:#fff;font-weight:700;margin-bottom:1px}
+.v2 ul{margin:0;padding:0}
+
+/* ============ V3 · Centered inset panel ============ */
+.v3{max-width:560px;margin:0 auto;background:var(--panel);border:1px solid var(--accent-2);box-shadow:0 0 0 1px rgba(34,211,238,.2),0 30px 70px rgba(0,0,0,.4);border-radius:18px;padding:38px 40px}
+.v3 .pname{font-weight:800;font-size:18px;text-align:center;margin:0 0 6px}
+.v3 .big{font-family:"Poppins";font-weight:800;font-size:54px;line-height:1;color:var(--accent-2);text-align:center;letter-spacing:-1.5px;margin:6px 0 2px}
+.v3 .big sup{font-size:24px;vertical-align:super}
+.v3 .psub{font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);text-align:center;margin-bottom:16px}
+.v3 .rates{display:flex;justify-content:center;gap:20px;font-size:13px;color:var(--ink-dim);margin-bottom:22px}.v3 .rates b{color:#fff}
+.v3 .panel{background:rgba(255,255,255,.04);border:1px solid var(--line-2);border-radius:14px;padding:22px 22px 20px;margin-bottom:24px}
+.v3 li{list-style:none;display:flex;gap:12px;align-items:flex-start;margin:0 0 15px;font-size:13.5px;color:var(--ink-dim);line-height:1.5}
+.v3 li:last-child{margin-bottom:0}
+.v3 li b{display:block;color:#fff;font-weight:700;margin-bottom:1px}
+.v3 ul{margin:0;padding:0}
+
+/* ============ V4 · Big-number rail ============ */
+.v4{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center;max-width:960px;margin:0 auto;background:var(--panel);border:1px solid var(--line-2);border-radius:18px;padding:44px 46px}
+.v4 .num{text-align:center;border-right:1px solid var(--line);padding-right:40px}
+.v4 .big{font-family:"Poppins";font-weight:900;font-size:112px;line-height:.9;color:#fff;letter-spacing:-5px}
+.v4 .big sup{font-size:40px;vertical-align:super;color:var(--accent-2);letter-spacing:0}
+.v4 .psub{font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);margin:14px 0 16px}
+.v4 .rate{font-size:12.5px;color:var(--ink-dim);margin:4px 0}.v4 .rate b{color:#fff}
+.v4 .pname{font-weight:800;font-size:17px;margin:0 0 18px;color:#fff}
+.v4 li{list-style:none;display:flex;gap:12px;align-items:flex-start;margin:0 0 14px;font-size:13.5px;color:var(--ink-dim);line-height:1.5}
+.v4 li b{display:block;color:#fff;font-weight:700;margin-bottom:1px}
+.v4 ul{margin:0 0 24px;padding:0}
+
+/* ============ V5 · Itemized ledger ============ */
+.v5{max-width:520px;margin:0 auto;background:var(--panel);border:1px solid var(--line-2);border-radius:16px;padding:38px 40px;font-family:"Space Grotesk","Poppins",sans-serif}
+.v5 .pname{font-weight:700;font-size:16px;letter-spacing:.3px;margin:0 0 4px;color:#fff}
+.v5 .tag{font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);margin-bottom:24px}
+.v5 .item{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-bottom:1px dashed var(--line);font-size:13.5px;color:var(--ink-dim);line-height:1.45}
+.v5 .item .t{color:#fff;font-weight:600}
+.v5 .item .d{font-size:12.5px;color:var(--ink-dim);margin-top:2px}
+.v5 .ledger{margin:22px 0 24px}
+.v5 .lrow{display:flex;justify-content:space-between;align-items:baseline;font-size:13.5px;color:var(--ink-dim);padding:7px 0}
+.v5 .lrow b{color:#fff}
+.v5 .lrow.total{border-top:1px solid var(--line-2);margin-top:6px;padding-top:14px;font-size:15px}
+.v5 .lrow.total .amt{font-family:"Poppins";font-weight:800;font-size:30px;color:var(--accent-2);letter-spacing:-1px}
+.v5 .lrow .amt{font-weight:700;font-size:16px;color:#fff}
+
+/* ============ V6 · Glass spotlight ============ */
+.v6{position:relative;max-width:600px;margin:0 auto;border-radius:22px;padding:48px 44px;text-align:center;background:linear-gradient(180deg,rgba(30,42,70,.7),rgba(15,24,44,.85));border:1px solid rgba(120,160,255,.25);box-shadow:0 40px 90px rgba(0,0,0,.5);backdrop-filter:blur(10px);overflow:hidden}
+.v6::before{content:"";position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:520px;height:520px;background:radial-gradient(circle,rgba(34,211,238,.28),transparent 60%);pointer-events:none}
+.v6 .in{position:relative}
+.v6 .pname{font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--accent-2);margin:0 0 14px}
+.v6 .big{font-family:"Poppins";font-weight:800;font-size:78px;line-height:1;color:#fff;letter-spacing:-2.5px;text-shadow:0 0 40px rgba(34,211,238,.5)}
+.v6 .big sup{font-size:32px;vertical-align:super}
+.v6 .psub{font-size:11.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-dim);margin:12px 0 6px}
+.v6 .rates{font-size:13px;color:var(--ink-dim);margin-bottom:30px}.v6 .rates b{color:#fff}
+.v6 .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;text-align:left;margin-bottom:32px}
+.v6 .cell{display:flex;gap:11px;align-items:flex-start;font-size:13px;color:var(--ink-dim);line-height:1.45}
+.v6 .cell b{display:block;color:#fff;font-weight:700;margin-bottom:1px;font-size:13px}
+
+/* ============ V7 · Framed editorial ============ */
+.v7{max-width:900px;margin:0 auto;background:var(--panel);border:1px solid var(--line-2);border-radius:16px;padding:14px}
+.v7 .frame{border:1px solid var(--line);border-radius:11px;padding:34px 38px}
+.v7 .band{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:26px}
+.v7 .band .l .pname{font-family:"Poppins";font-weight:800;font-size:22px;margin:0 0 4px}
+.v7 .band .l .psub{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--ink-faint)}
+.v7 .band .big{font-family:"Poppins";font-weight:800;font-size:52px;line-height:.9;color:var(--accent-2);letter-spacing:-1.5px;text-align:right}
+.v7 .band .big sup{font-size:22px;vertical-align:super}
+.v7 .band .rate{font-size:12px;color:var(--ink-dim);text-align:right;margin-top:6px}.v7 .band .rate b{color:#fff}
+.v7 .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 30px;margin-bottom:28px}
+.v7 .cell{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:var(--ink-dim);line-height:1.5}
+.v7 .cell .chk{background:none;box-shadow:none;color:var(--tc,#22d3ee);border:1.5px solid var(--tc,#22d3ee);width:20px;height:20px}
+.v7 .cell b{display:block;color:#fff;font-weight:700;margin-bottom:1px}
+
+.pagehead{max-width:1040px;margin:0 auto;padding:40px 30px 6px}
+.pagehead h1{font-size:23px;font-weight:800;margin:0 0 6px}
+.pagehead p{color:var(--ink-dim);font-size:14.5px;margin:0;max-width:760px;line-height:1.6}
+.pagehead b{color:var(--accent-2)}
+</style></head>
+<body>
+<div class="pagehead"><h1>“One pass. Full access.” — 7 registration designs</h1>
+<p>All rendered on the <b>real New York page fonts</b> (Poppins) and <b>exact color tokens</b>, at desktop width. Same section header on each; the card is what changes. Tell me a number (mix-and-match welcome, e.g. “V2 layout with V6's glow”).</p></div>
+<div id="root"></div>
+<script>
+const C={price:'799',name:'P|PW Full Conference Pass',sub:'Standard rate · per person · both days',
+ rates:[['NAB members & Government','749'],['Students','399']],
+ feats:[['Complete program access','The full P|PW New York program, no add-ons required.'],
+        ['All seven workshop tracks','Editing, AI &amp; Emerging Tech, Color &amp; Motion, Audio, Photography &amp; Video, VR/Immersive, and Business &amp; Career.'],
+        ['NAB Show New York floor access','Included with your registration.'],
+        ['Networking events and the P|PW Party','Included with every full pass.']],
+ cta:'Register at NAB Show'};
+const P=`<sup>$</sup>${C.price}`;
+const feLi=cls=>C.feats.map(f=>`<li><span class="chk">✓</span><span><b>${f[0]}</b>${f[1]}</span></li>`).join('');
+const feCell=()=>C.feats.map(f=>`<div class="cell"><span class="chk">✓</span><span><b>${f[0]}</b>${f[1]}</span></div>`).join('');
+const rateInline=()=>C.rates.map(r=>`${r[0]} <b>$${r[1]}</b>`).join(' · ');
+const head=`<div class="shead"><div class="eyebrow">Registration</div><h2 class="stitle">One pass. Full access.</h2><p class="sdesc">A single full-access pass gets you into every session, every workshop, and every room across both conference days. Discounted rates apply for NAB members, government, and students.</p></div>`;
+
+const V={
+ 1:`<div class="v1"><div class="stub"><span class="notch" style="top:-10px"></span><span class="notch" style="bottom:-10px"></span>
+      <div class="kick">Full Conference Pass</div><div class="big">${P}</div><div class="psub">per person · both days</div>
+      <div class="rate">NAB &amp; Gov <b>$749</b></div><div class="rate">Students <b>$399</b></div></div>
+    <div class="body"><div class="pname">Everything included</div><ul>${feLi()}</ul><a class="cta full">${C.cta}</a></div></div>`,
+
+ 2:`<div class="v2"><div class="buy"><div class="pname">${C.name}</div><div class="big">${P}</div><div class="psub">per person · both days</div>
+      <div class="rates">${C.rates.map(r=>`<div class="rate"><span>${r[0]}</span><b>$${r[1]}</b></div>`).join('')}</div><a class="cta full">${C.cta}</a></div>
+    <div class="value"><div class="vh">What's included</div><ul>${feLi()}</ul></div></div>`,
+
+ 3:`<div class="v3"><div class="pname">${C.name}</div><div class="big">${P}</div><div class="psub">Standard rate · per person · both days</div>
+      <div class="rates"><span>NAB &amp; Gov <b>$749</b></span><span>Students <b>$399</b></span></div>
+      <div class="panel"><ul>${feLi()}</ul></div><a class="cta full">${C.cta}</a></div>`,
+
+ 4:`<div class="v4"><div class="num"><div class="big">${P}</div><div class="psub">per person · both days</div>
+      <div class="rate">NAB &amp; Gov <b>$749</b></div><div class="rate">Students <b>$399</b></div></div>
+    <div><div class="pname">${C.name}</div><ul>${feLi()}</ul><a class="cta">${C.cta}</a></div></div>`,
+
+ 5:`<div class="v5"><div class="pname">${C.name}</div><div class="tag">What's included</div>
+     ${C.feats.map(f=>`<div class="item"><span class="chk">✓</span><span><span class="t">${f[0]}</span><div class="d">${f[1]}</div></span></div>`).join('')}
+     <div class="ledger"><div class="lrow"><span>Standard rate</span><span class="amt">$799</span></div>
+       <div class="lrow"><span>NAB members &amp; Government</span><b class="amt">$749</b></div>
+       <div class="lrow"><span>Students</span><b class="amt">$399</b></div>
+       <div class="lrow total"><span>Your pass, both days</span><span class="amt">${P}</span></div></div>
+     <a class="cta full">${C.cta}</a></div>`,
+
+ 6:`<div class="v6"><div class="in"><div class="pname">${C.name}</div><div class="big">${P}</div>
+      <div class="psub">Standard rate · per person · both days</div><div class="rates">NAB &amp; Gov <b>$749</b> &nbsp;·&nbsp; Students <b>$399</b></div>
+      <div class="grid">${feCell()}</div><a class="cta full">${C.cta}</a></div></div>`,
+
+ 7:`<div class="v7"><div class="frame"><div class="band"><div class="l"><div class="pname">${C.name}</div><div class="psub">Standard rate · per person · both days</div></div>
+      <div class="r"><div class="big">${P}</div><div class="rate">NAB &amp; Gov <b>$749</b> · Students <b>$399</b></div></div></div>
+      <div class="grid">${feCell()}</div><a class="cta full">${C.cta}</a></div></div>`
+};
+const names={1:'Boarding pass',2:'Split · buy / value',3:'Centered inset panel',4:'Big-number rail',5:'Itemized ledger',6:'Glass spotlight',7:'Framed editorial'};
+const only=new URLSearchParams(location.search).get('only');
+let html='';
+for(let i=1;i<=7;i++){if(only&&String(i)!==only)continue;html+=`<section class="psec"><div class="wrap"><div class="vlabel" style="--n:'${i}'"><span style="color:var(--accent-2);font-weight:700">V${i}</span><span>${names[i]}</span></div>${head}${V[i]}</div></section>`;}
+document.getElementById('root').innerHTML=html;
+if(only){document.querySelector('.pagehead').style.display='none';}
+</script>
+</body></html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PPW NY — Glass round</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0e17;--bg-2:#0f1626;--panel:#131c30;--panel-2:#18223a;--line:#243150;--line-2:#2c3a5c;--ink:#eaf0ff;--ink-dim:#9fb0d4;--ink-faint:#6c7c9e;--accent:#3b82f6;--accent-2:#22d3ee;--gold:#f5c451}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.45;-webkit-font-smoothing:antialiased}
+.psec{position:relative;padding:74px 30px 80px;border-bottom:1px solid rgba(255,255,255,.05)}
+.psec::before{content:"";position:absolute;top:0;left:0;right:0;height:280px;background:radial-gradient(620px 200px at 50% 0,rgba(99,102,241,.08),transparent 72%);pointer-events:none}
+.wrap{max-width:1040px;margin:0 auto;position:relative}
+.vlabel{font-family:"Space Grotesk",monospace;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;margin:0 0 28px;display:flex;align-items:center;gap:12px}
+.vlabel .n{color:var(--accent-2);font-weight:700}.vlabel .nm{color:var(--ink-faint);text-transform:none;letter-spacing:.3px}
+.vlabel::before{content:"";width:26px;height:26px;border:1px solid var(--line-2);border-radius:7px}
+.shead{text-align:center;max-width:660px;margin:0 auto 32px}
+.eyebrow{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;background:linear-gradient(100deg in oklch,oklch(86% .10 225),oklch(80% .12 288));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700;margin:0 0 14px}
+.stitle{font-size:clamp(28px,4vw,38px);margin:0;font-weight:700;letter-spacing:-.6px;background:linear-gradient(180deg,#fff,#c9d5ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sdesc{color:var(--ink-dim);max-width:600px;margin:14px auto 0;font-size:15.5px;line-height:1.6}
+/* normal site-width button (matches hero buttons) */
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(180deg,#6ba6ff,#4a82e6);color:#fff;font-weight:700;font-size:14px;letter-spacing:.2px;padding:14px 28px;border-radius:999px;text-decoration:none;box-shadow:0 8px 20px rgba(74,130,230,.34);border:0;cursor:pointer}
+.cta::after{content:"→"}
+.center{text-align:center}
+.chk{flex:none;width:20px;height:20px;border-radius:50%;background:linear-gradient(150deg,#6ba6ff,#4a82e6);color:#fff;font-size:10.5px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(74,130,230,.3)}
+/* track chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.chip{font-size:12px;font-weight:600;color:#cdd8ef;background:rgba(255,255,255,.05);border:1px solid var(--line-2);border-radius:999px;padding:6px 13px;white-space:nowrap}
+.tracklab{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--ink-faint);font-weight:700;margin-bottom:12px;text-align:center}
+/* shared glass shell (SUBTLE glow) */
+.glass{position:relative;margin:0 auto;border-radius:20px;padding:42px 44px;background:linear-gradient(180deg,rgba(26,37,62,.6),rgba(14,22,40,.8));border:1px solid rgba(120,160,255,.18);box-shadow:0 30px 70px rgba(0,0,0,.45);backdrop-filter:blur(10px);overflow:hidden}
+.glass::before{content:"";position:absolute;top:-34%;left:50%;transform:translateX(-50%);width:420px;height:360px;background:radial-gradient(circle,rgba(34,211,238,.12),transparent 65%);pointer-events:none}
+.glass>*{position:relative}
+.pname{font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--accent-2);font-weight:700;text-align:center;margin:0 0 12px}
+.big{font-family:"Poppins";font-weight:800;font-size:52px;line-height:1;color:#fff;letter-spacing:-1.5px;text-align:center}
+.big sup{font-size:22px;vertical-align:super;color:var(--accent-2)}
+.psub{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);text-align:center;margin:10px 0 4px}
+.rates{font-size:13px;color:var(--ink-dim);text-align:center;margin-bottom:26px}.rates b{color:#fff}
+
+/* A · glass + chip tracks (3 checks 2-col, tracks chips full width) */
+.A{max-width:600px}
+.A .g2{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;text-align:left;margin-bottom:22px}
+.A .cell{display:flex;gap:11px;align-items:flex-start;font-size:13px;color:var(--ink-dim);line-height:1.45}
+.A .cell b{display:block;color:#fff;font-weight:700;margin-bottom:1px;font-size:13px}
+.A .trackbox{border-top:1px solid var(--line);padding-top:20px;margin-bottom:26px}
+
+/* B · glass single column */
+.B{max-width:560px}
+.B ul{list-style:none;margin:0 0 26px;padding:0}
+.B li{display:flex;gap:12px;align-items:flex-start;margin:0 0 16px;font-size:13.5px;color:var(--ink-dim);line-height:1.5;text-align:left}
+.B li:last-child{margin-bottom:0}
+.B li b{display:block;color:#fff;font-weight:700;margin-bottom:1px}
+
+/* C · glass split (V9 refined) */
+.C{display:grid;grid-template-columns:.92fr 1.08fr;max-width:930px;border-radius:20px;overflow:hidden;border:1px solid rgba(120,160,255,.18);box-shadow:0 30px 70px rgba(0,0,0,.45);margin:0 auto}
+.C .buy{position:relative;padding:44px 36px;background:linear-gradient(170deg,rgba(27,41,72,.85),rgba(13,22,40,.92));display:flex;flex-direction:column;justify-content:center;text-align:center;overflow:hidden}
+.C .buy::before{content:"";position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:300px;height:280px;background:radial-gradient(circle,rgba(34,211,238,.13),transparent 64%)}
+.C .buy>*{position:relative}
+.C .buy .ratelines{border-top:1px solid rgba(255,255,255,.1);padding-top:14px;margin:6px 0 22px}
+.C .rl{display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-dim);margin:5px 0}.C .rl b{color:#fff}
+.C .value{background:var(--panel);padding:40px 38px}
+.C .vh{font-size:11.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-faint);font-weight:700;margin:0 0 20px}
+.C ul{list-style:none;margin:0;padding:0}
+.C li{display:flex;gap:12px;align-items:flex-start;margin:0 0 16px;font-size:13px;color:var(--ink-dim);line-height:1.45}
+.C li b{display:block;color:#fff;font-weight:700;margin-bottom:1px}
+
+/* D · quiet premium (V12 refined) */
+.D{max-width:470px;background:linear-gradient(180deg,#101a2e,#0c1424);border:1px solid var(--line);border-radius:20px;padding:44px 44px;text-align:center;margin:0 auto}
+.D .big{position:relative;display:inline-block}
+.D .big::after{content:"";position:absolute;left:24%;right:24%;bottom:-11px;height:3px;border-radius:3px;background:var(--accent-2)}
+.D .divider{height:1px;background:var(--line);margin:24px 0 22px}
+.D ul{list-style:none;margin:0 0 20px;padding:0;display:inline-block;text-align:left}
+.D li{display:flex;gap:11px;align-items:center;margin:0 0 13px;font-size:14px;color:#e6ecf7;font-weight:500}
+.D li .tik{color:var(--accent-2);font-weight:800}
+.D .trackbox{margin-bottom:26px}
+
+/* E · glass, tracks-forward (chips are the centerpiece) */
+.E{max-width:640px;text-align:center}
+.E .lead{font-size:13px;color:var(--ink-dim);margin:0 0 18px}
+.E .bigchips .chip{font-size:12.5px;padding:8px 15px;background:rgba(34,211,238,.08);border-color:rgba(34,211,238,.28);color:#bfeefb}
+.E .row3{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin:26px 0 26px;border-top:1px solid var(--line);padding-top:22px}
+.E .mini{display:flex;gap:9px;align-items:center;font-size:13px;color:#fff;font-weight:600}
+.E .mini .chk{width:18px;height:18px}
+
+/* F · glass balanced 2-col (even cells, tracks chips below) */
+.F{max-width:620px}
+.F .g2{display:grid;grid-template-columns:auto auto;justify-content:center;gap:16px 46px;text-align:left;margin-bottom:22px}
+.F .cell{display:flex;gap:11px;align-items:center;font-size:13.5px;color:#fff;font-weight:600}
+.F .cell .chk{width:19px;height:19px}
+.F .trackbox{border-top:1px solid var(--line);padding-top:20px;margin-bottom:26px}
+</style></head>
+<body>
+<div class="pagehead" style="max-width:1040px;margin:0 auto;padding:40px 30px 6px"><h1 style="font-size:22px;margin:0 0 6px">Glass spotlight — refined (subtle glow · normal button · moderate price · tracks solved)</h1></div>
+<div id="root"></div>
+<script>
+const C={price:'799',
+ threeFeats:[['Complete program access','The full P|PW New York program, no add-ons.'],
+             ['NAB Show New York floor access','Included with your registration.'],
+             ['Networking events and the P|PW Party','Included with every full pass.']],
+ fourFeats:[['Complete program access','The full P|PW New York program, no add-ons required.'],
+            ['All seven workshop tracks','Editing, AI & Emerging Tech, Color & Motion, Audio, Photography & Video, VR/Immersive, and Business & Career.'],
+            ['NAB Show New York floor access','Included with your registration.'],
+            ['Networking events and the P|PW Party','Included with every full pass.']],
+ shorts:['Full program access','All seven workshop tracks','NAB Show NY floor access','Networking + the P|PW Party'],
+ tracks:['Editing','AI & Emerging Tech','Color & Motion','Audio','Photography & Video','VR/Immersive','Business & Career'],
+ cta:'Register at NAB Show'};
+const P=`<sup>$</sup>${C.price}`;
+const priceBlock=`<div class="pname">P|PW Full Conference Pass</div><div class="big">${P}</div><div class="psub">Standard rate · per person · both days</div><div class="rates">NAB &amp; Gov <b>$749</b> &nbsp;·&nbsp; Students <b>$399</b></div>`;
+const chipRow=cls=>`<div class="chips ${cls||''}">${C.tracks.map(t=>`<span class="chip">${t}</span>`).join('')}</div>`;
+const cell3=()=>C.threeFeats.map(f=>`<div class="cell"><span class="chk">✓</span><span><b>${f[0]}</b>${f[1]}</span></div>`).join('');
+const head=`<div class="shead"><div class="eyebrow">Registration</div><h2 class="stitle">One pass. Full access.</h2><p class="sdesc">A single full-access pass gets you into every session, every workshop, and every room across both conference days. Discounted rates apply for NAB members, government, and students.</p></div>`;
+
+const V={
+ A:`<div class="glass A">${priceBlock}<div class="g2">${cell3()}</div>
+     <div class="trackbox"><div class="tracklab">All seven workshop tracks</div>${chipRow()}</div>
+     <div class="center"><a class="cta">${C.cta}</a></div></div>`,
+
+ B:`<div class="glass B">${priceBlock}<ul>${C.fourFeats.map(f=>`<li><span class="chk">✓</span><span><b>${f[0]}</b>${f[1]}</span></li>`).join('')}</ul>
+     <div class="center"><a class="cta">${C.cta}</a></div></div>`,
+
+ C:`<div class="C"><div class="buy"><div class="pname">Full Conference Pass</div><div class="big">${P}</div><div class="psub">per person · both days</div>
+       <div class="ratelines"><div class="rl"><span>NAB &amp; Gov</span><b>$749</b></div><div class="rl"><span>Students</span><b>$399</b></div></div>
+       <div class="center"><a class="cta">${C.cta}</a></div></div>
+     <div class="value"><div class="vh">What's included</div><ul>${C.fourFeats.map(f=>`<li><span class="chk">✓</span><span><b>${f[0]}</b>${f[1]}</span></li>`).join('')}</ul></div></div>`,
+
+ D:`<div class="D"><div class="pname" style="color:var(--ink-faint);letter-spacing:3px">Full Conference Pass</div><div class="big">${P}</div>
+     <div class="psub">per person · both days</div><div class="rates">NAB &amp; Gov <b>$749</b> · Students <b>$399</b></div>
+     <div class="divider"></div>
+     <ul>${C.shorts.filter((_,i)=>i!==1).map(s=>`<li><span class="tik">✓</span>${s}</li>`).join('')}<li><span class="tik">✓</span>All seven workshop tracks</li></ul>
+     <div class="trackbox">${chipRow()}</div>
+     <a class="cta">${C.cta}</a></div>`,
+
+ E:`<div class="glass E">${priceBlock}<div class="lead">All seven workshop tracks, included:</div>
+     <div class="bigchips">${chipRow('bigchips')}</div>
+     <div class="row3">${C.threeFeats.map(f=>`<div class="mini"><span class="chk">✓</span>${f[0]}</div>`).join('')}</div>
+     <a class="cta">${C.cta}</a></div>`,
+
+ F:`<div class="glass F">${priceBlock}<div class="g2">${C.shorts.map(s=>`<div class="cell"><span class="chk">✓</span>${s}</div>`).join('')}</div>
+     <div class="trackbox"><div class="tracklab">Workshop tracks</div>${chipRow()}</div>
+     <div class="center"><a class="cta">${C.cta}</a></div></div>`
+};
+const names={A:'Glass · track chips',B:'Glass · single column',C:'Glass split (V9)',D:'Quiet premium (V12)',E:'Glass · tracks-forward',F:'Glass · balanced 2-col'};
+const order=['A','B','C','D','E','F'];
+const only=new URLSearchParams(location.search).get('only');
+let html='';
+order.forEach(k=>{if(only&&k!==only)return;html+=`<section class="psec"><div class="wrap"><div class="vlabel"><span class="n">${k}</span><span class="nm">${names[k]}</span></div>${head}${V[k]}</div></section>`;});
+document.getElementById('root').innerHTML=html;
+if(only){document.querySelector('.pagehead').style.display='none';}
+</script>
+</body></html>

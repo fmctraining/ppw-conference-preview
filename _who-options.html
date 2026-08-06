@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PPW — Who's in the room · photo options</title>
+<style>
+  :root{--bg:#0a0e1a;--panel:#121a2c;--line:rgba(255,255,255,.12);--ink:#eef2fb;--dim:#9fb0cf;--accent:#87dffa;--go:#76e0a3}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Poppins",system-ui,Arial,sans-serif;padding:32px 28px 100px}
+  h1{font-size:26px;margin:0 0 6px;font-weight:800}
+  .sub{color:var(--dim);font-size:15px;margin:0 0 4px;max-width:860px;line-height:1.6}
+  .sub b{color:var(--accent)}
+  .count{color:var(--go);font-weight:700}
+  h2{font-size:15px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin:40px 0 4px;font-weight:700}
+  .h2note{color:var(--dim);font-size:13px;margin:0 0 14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+  .tile{background:var(--panel);border:1px solid var(--line);border-radius:11px;overflow:hidden;position:relative}
+  .tile img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;background:#05070d}
+  .cap{padding:7px 11px;font-size:13px;color:var(--ink);font-weight:600;font-family:ui-monospace,Menlo,monospace}
+  .top{position:sticky;top:0;background:linear-gradient(180deg,var(--bg) 70%,transparent);padding-bottom:10px;z-index:2}
+</style></head>
+<body>
+  <div class="top">
+    <h1>PPW — “Who's in the room” · photo options</h1>
+    <p class="sub"><span class="count">130 options</span> pulled from every PPW photo dump (Vegas sessions, branded-stage/sponsor shots, hands-on labs, Elise's edited selections, and both “My Favorites” sets). Each has a code under it. Just list the codes you want (e.g. <b>“sess-04 featured, elise-12, favA-08, stage-03”</b>) and I'll place them and web-optimize the full-res originals.</p>
+  </div>
+
+  <h2>Sessions &amp; classroom</h2><p class="h2note">Audience / full-room shots — most on-target for “who's in the room”.</p>
+  <div class="grid" id="g-sess"></div>
+
+  <h2>Branded stage &amp; sponsors</h2><p class="h2note">Stage + sponsor-banner shots — strong for this page specifically.</p>
+  <div class="grid" id="g-stage"></div>
+
+  <h2>Elise's edited selections</h2><p class="h2note">The 38 she hand-picked and color-graded.</p>
+  <div class="grid" id="g-elise"></div>
+
+  <h2>My Favorites — set A</h2>
+  <div class="grid" id="g-favA"></div>
+
+  <h2>My Favorites — set B</h2>
+  <div class="grid" id="g-favB"></div>
+
+  <h2>Hands-on lab</h2><p class="h2note">People at workstations — rooms full of working pros.</p>
+  <div class="grid" id="g-lab"></div>
+
+<script>
+  const tile=code=>`<div class="tile"><img loading="lazy" src="_room-options/${code}.webp" alt="${code}"><div class="cap">${code}</div></div>`;
+  const fill=(id,prefix,n)=>{let h='';for(let i=1;i<=n;i++){h+=tile(prefix+'-'+String(i).padStart(2,'0'));}document.getElementById(id).innerHTML=h;};
+  fill('g-sess','sess',12);
+  fill('g-stage','stage',10);
+  fill('g-elise','elise',38);
+  fill('g-favA','favA',25);
+  fill('g-favB','favB',33);
+  fill('g-lab','lab',12);
+</script>
+</body></html>
