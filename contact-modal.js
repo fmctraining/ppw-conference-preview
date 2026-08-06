@@ -4,10 +4,10 @@
    - Route to each person: also set KEYS.megan / KEYS.tyree / KEYS.elise (a separate free key per email).
    Until at least KEYS.default is set, the buttons keep working as normal mailto links (no change for visitors). */
 const KEYS = {
-  default: "27e761cd-a9a3-49c5-9b3f-4b4d6e0e1ccf",   // PPW (syvonnek@fmctraining.com)
-  megan:   "",   // optional — meganb@fmctraining.com key
-  tyree:   "",   // optional — tyreep@fmctraining.com key
-  elise:   ""    // optional — eliseo@fmctraining.com key
+  default: "27e761cd-a9a3-49c5-9b3f-4b4d6e0e1ccf",   // PPW central inbox (syvonnek@fmctraining.com)
+  megan:   "998d74ea-3685-4785-85d4-1d40f2166d3a",   // meganb@fmctraining.com  (sponsorship / proposal)
+  tyree:   "",                                        // tyreep@fmctraining.com  key pending (back Aug 17)
+  elise:   "751dffcf-bedf-458d-8d0f-d833484717e5"    // eliseo@fmctraining.com  (general get in touch)
 };
 
 const PEOPLE = {
