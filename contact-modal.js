@@ -86,7 +86,7 @@ const PEOPLE = {
       try{
         const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)});
         const j=await r.json();
-        if(j.success){ card.innerHTML=`<div class="cm-x">&times;</div><div class="cm-ok"><div class="t">Thanks, message sent.</div><div class="s">${p.name} will be in touch soon.</div></div>`; card.querySelector('.cm-x').onclick=close; }
+        if(j.success){ card.innerHTML=`<div class="cm-x">&times;</div><div class="cm-ok"><div class="t">Your message has been successfully submitted.</div></div>`; card.querySelector('.cm-x').onclick=close; }
         else throw new Error(j.message||'failed');
       }catch(err){ btn.disabled=false; btn.textContent='Try again'; }
     };
