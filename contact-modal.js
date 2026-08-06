@@ -65,13 +65,13 @@ const PEOPLE = {
       <img class="cm-logo" src="ppw-assets/ppw-global-logo.webp" alt="Post Production World Conference">
       <h3>${p.title}</h3>
       <form class="cm-form">
-        <div class="cm-f"><label>Name <i>*</i></label><input name="name" required placeholder="Your name"></div>
-        ${isProp?'<div class="cm-f"><label>Company <i>*</i></label><input name="company" required placeholder="Company / organization"></div>':''}
-        <div class="cm-f"><label>Email <i>*</i></label><input type="email" name="email" required placeholder="you@email.com"></div>
+        <div class="cm-f"><label>Name <i>*</i></label><input name="name" required></div>
+        ${isProp?'<div class="cm-f"><label>Company <i>*</i></label><input name="company" required></div>':''}
+        <div class="cm-f"><label>Email <i>*</i></label><input type="email" name="email" required></div>
         ${isProp?`<div class="cm-f"><label>Regions of interest <span class="o">(optional)</span></label>
           <div class="cm-chips">${['Las Vegas','New York','London','Mumbai','All / Global'].map(r=>`<span class="cm-chip" data-r="${r}">${r}</span>`).join('')}</div>
           <input type="hidden" name="regions"></div>`:''}
-        <div class="cm-f"><label>Message <span class="o">(optional)</span></label><textarea name="message" placeholder="${isProp?'What are you hoping to achieve?':'How can we help?'}"></textarea></div>
+        <div class="cm-f"><label>Message <span class="o">(optional)</span></label><textarea name="message"></textarea></div>
         <input type="hidden" name="access_key" value="${keyFor(who)}">
         <input type="hidden" name="subject" value="PPW ${p.title} · via ppw-conference.com">
         <input type="hidden" name="from_name" value="PPW Website">

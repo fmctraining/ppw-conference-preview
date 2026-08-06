@@ -281,3 +281,5 @@ p{letter-spacing:.2px}
   .host-text{min-width:0!important;text-align:center}
 }
 
+
+@media(max-width:600px){.dbr{display:none}}
