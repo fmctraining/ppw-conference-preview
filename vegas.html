@@ -102,6 +102,21 @@
   #iglb img{max-width:96vw;max-height:92vh;border-radius:8px;box-shadow:0 30px 90px rgba(0,0,0,.6)}
   #iglb .x{position:fixed;top:16px;right:20px;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;font-size:26px;display:flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid rgba(255,255,255,.28)}
 .cta-strip{background:linear-gradient(160deg,rgba(12,17,30,.9),rgba(9,13,24,.93)),url(ppw-assets/tile-vegas.jpg) center/cover no-repeat!important}.cta-strip p{color:#dbe3f4!important}
+
+/* Vegas pricing card — NY glass style, orange accents */
+.vegP{position:relative;max-width:620px;margin:0 auto;border-radius:20px;padding:55px 81px;background:linear-gradient(180deg,rgba(26,37,62,.6),rgba(14,22,40,.8));border:1px solid rgba(120,160,255,.18);box-shadow:0 30px 70px rgba(0,0,0,.45);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);overflow:hidden}
+.vegP::before{content:"";position:absolute;top:-34%;left:50%;transform:translateX(-50%);width:420px;height:360px;background:radial-gradient(circle,rgba(245,150,90,.16),transparent 65%);pointer-events:none}
+.vegP>*{position:relative}
+.vegP .pname{font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:#f2a267;font-weight:700;text-align:center;margin:0 0 12px}
+.vegP .big{font-family:"Poppins",sans-serif;font-weight:800;font-size:52px;line-height:1;color:#fff;letter-spacing:-1.5px;text-align:center;margin:0}
+.vegP .big sup{font-size:22px;vertical-align:super;color:#f2a267}
+.vegP .g2{display:grid;grid-template-columns:auto;justify-content:center;gap:15px 0;text-align:left;margin:30px 0 30px}
+.vegP .fcell{display:flex;gap:11px;align-items:center;font-size:13.5px;color:#fff;font-weight:600}
+.vegP .chk{flex:none;width:19px;height:19px;border-radius:50%;background:linear-gradient(150deg,#ff9d64,#f07a2f);color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(240,122,47,.34)}
+.vegP .center{text-align:center}
+.vegP .vegPcta{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(180deg,#ff9d64,#f07a2f);color:#fff;font-weight:700;font-size:14px;padding:12px 25px 14px 28px;border-radius:999px;text-decoration:none;box-shadow:0 8px 20px rgba(240,122,47,.4)}
+.vegP .vegPcta::after{content:"\2192";margin-left:2px}
+@media(max-width:600px){.vegP{padding:34px 20px}.vegP .big{font-size:46px}}
 </style>
 </head>
 <body>
@@ -246,10 +261,6 @@
       <a href="ppw-assets/pty-025.webp" target="_blank"><img src="ppw-assets/pty-025.webp" alt="P|PW Las Vegas networking party" loading="lazy"></a>
       <a href="ppw-assets/pty-118.webp" target="_blank"><img src="ppw-assets/pty-118.webp" alt="P|PW Las Vegas networking party" loading="lazy"></a>
       <a href="ppw-assets/pty-029.webp" target="_blank"><img src="ppw-assets/pty-029.webp" alt="P|PW Las Vegas networking party" loading="lazy"></a>
-      <a href="ppw-assets/pty-032.webp" target="_blank"><img src="ppw-assets/pty-032.webp" alt="P|PW Las Vegas networking party" loading="lazy"></a>
-      <a href="ppw-assets/pty-049.webp" target="_blank"><img src="ppw-assets/pty-049.webp" alt="P|PW Las Vegas networking party" loading="lazy"></a>
-      <a href="ppw-assets/g-net-08.webp" target="_blank"><img src="ppw-assets/g-net-08.webp" alt="P|PW Las Vegas networking party" loading="lazy"></a>
-      <a href="ppw-assets/pty-031.webp" target="_blank"><img src="ppw-assets/pty-031.webp" alt="P|PW Las Vegas networking party" loading="lazy"></a>
     </div>
   </div>
 </section>
@@ -257,16 +268,16 @@
 <section class="block">
   <div class="wrap">
     <div class="sec-head center"><div class="sec-kicker">Pricing</div><h2 class="sec-title">Full Conference Pass</h2></div>
-    <div class="pricing-card">
-      <div class="plabel">Post|Production World Las Vegas</div>
-      <div class="price">$1,459</div>
-      <ul>
-        <li><svg><use href="#i-check"/></svg>Access to any session on the grid</li>
-        <li><svg><use href="#i-check"/></svg>The keynote session</li>
-        <li><svg><use href="#i-check"/></svg>A networking party ticket</li>
-        <li><svg><use href="#i-check"/></svg>NAB Show floor access</li>
-      </ul>
-      <a class="btn reg-btn" href="https://www.nabshow.com/las-vegas/conferences-and-workshops/post-production-world/" target="_blank" rel="noopener"><span class="bt">Register at NAB Show</span> <svg class="ic"><use href="#i-arrow"/></svg></a>
+    <div class="vegP">
+      <div class="pname">Post|Production World Las Vegas</div>
+      <div class="big"><sup>$</sup>1,459</div>
+      <div class="g2">
+        <div class="fcell"><span class="chk">&#10003;</span>Access to any session on the grid</div>
+        <div class="fcell"><span class="chk">&#10003;</span>The keynote session</div>
+        <div class="fcell"><span class="chk">&#10003;</span>A networking party ticket</div>
+        <div class="fcell"><span class="chk">&#10003;</span>NAB Show floor access</div>
+      </div>
+      <div class="center"><a class="vegPcta" href="https://www.nabshow.com/las-vegas/conferences-and-workshops/post-production-world/" target="_blank" rel="noopener">Register at NAB Show</a></div>
     </div>
   </div>
 </section>
