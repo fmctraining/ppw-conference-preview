@@ -1,4 +1,3 @@
-node_modules
-.DS_Store
-.wrangler
-pnpm-lock.yaml
+_*.html
+_pricing-shots/
+_room-options/
