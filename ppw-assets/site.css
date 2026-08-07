@@ -93,7 +93,7 @@ section.block{padding:96px 0;border-top:1px solid var(--line)}
 .sec-head{margin-bottom:26px;max-width:760px}
 .sec-head.center{margin-inline:auto;text-align:center}
 .sec-kicker{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;background:linear-gradient(100deg in oklch,oklch(86% .10 225),oklch(80% .12 288));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700;margin-bottom:18px}
-.sec-title{font-size:clamp(27px,3.8vw,40px);margin-top:18px;font-weight:700;letter-spacing:-.8px;line-height:1.24;padding-bottom:.14em}
+.sec-title{font-size:clamp(27px,3.8vw,40px);margin-top:4px;font-weight:700;letter-spacing:-.8px;line-height:1.24;padding-bottom:.14em}
 .sec-desc{color:var(--ink-dim);margin-top:14px;font-size:16.5px;line-height:1.6}
 .sec-head.center .sec-desc{max-width:600px;margin-inline:auto;text-wrap:balance}
 
