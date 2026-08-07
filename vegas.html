@@ -116,6 +116,14 @@
 .vegP .center{text-align:center}
 .vegP .vegPcta{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(180deg,#ff9d64,#f07a2f);color:#fff;font-weight:700;font-size:14px;padding:12px 25px 14px 28px;border-radius:999px;text-decoration:none;box-shadow:0 8px 20px rgba(240,122,47,.4)}
 .vegP .vegPcta::after{content:"\2192";margin-left:2px}
+.vegP-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1040px;margin:0 auto;align-items:stretch}
+.vegP-grid .vegP{max-width:none;margin:0;padding:46px 44px;display:flex;flex-direction:column}
+.vegP-grid .vegP .g2{margin:26px 0 26px}
+.vegP-grid .vegP .center{margin-top:auto}
+.vegP .tba{font-family:"Poppins",sans-serif;font-weight:800;font-size:29px;line-height:1;color:#fff;letter-spacing:-.5px;text-align:center;margin:6px 0 2px}
+.veg-soon{display:inline-block;color:#f2a267;font-weight:700;font-size:12.5px;letter-spacing:.6px;text-transform:uppercase;border:1px solid rgba(242,162,103,.45);border-radius:999px;padding:12px 22px}
+@media(max-width:820px){.vegP-grid{grid-template-columns:1fr}.vegP-grid .vegP{padding:34px 24px}}
+
 @media(max-width:600px){.vegP{padding:34px 20px}.vegP .big{font-size:46px}}
 </style>
 </head>
@@ -257,10 +265,6 @@
       <a href="ppw-assets/pty-028.webp" target="_blank"><img src="ppw-assets/pty-028.webp" alt="P|PW Las Vegas networking party" loading="lazy"></a>
       <a href="ppw-assets/pty-027.webp" target="_blank"><img src="ppw-assets/pty-027.webp" alt="P|PW Las Vegas networking party" loading="lazy"></a>
       <a href="ppw-assets/pty-030.webp" target="_blank"><img src="ppw-assets/pty-030.webp" alt="P|PW Las Vegas networking party" loading="lazy"></a>
-      <a href="ppw-assets/pty-033.webp" target="_blank"><img src="ppw-assets/pty-033.webp" alt="P|PW Las Vegas networking party" loading="lazy"></a>
-      <a href="ppw-assets/pty-025.webp" target="_blank"><img src="ppw-assets/pty-025.webp" alt="P|PW Las Vegas networking party" loading="lazy"></a>
-      <a href="ppw-assets/pty-118.webp" target="_blank"><img src="ppw-assets/pty-118.webp" alt="P|PW Las Vegas networking party" loading="lazy"></a>
-      <a href="ppw-assets/pty-029.webp" target="_blank"><img src="ppw-assets/pty-029.webp" alt="P|PW Las Vegas networking party" loading="lazy"></a>
     </div>
   </div>
 </section>
@@ -268,15 +272,28 @@
 <section class="block">
   <div class="wrap">
     <div class="sec-head center"><h2 class="sec-title">Registration</h2></div>
-    <div class="vegP">
-      <div class="pname">P|PW World Las Vegas Conference Pass</div>
-      <div class="big"><sup>$</sup>1,459</div>
-      <div class="g2">
-        <div class="fcell"><span class="chk">&#10003;</span>Access to every session across 5 days</div>
-        <div class="fcell"><span class="chk">&#10003;</span>NAB Show floor access</div>
-        <div class="fcell"><span class="chk">&#10003;</span>P|PW Networking Party ticket</div>
+    <div class="vegP-grid">
+      <div class="vegP">
+        <div class="pname">P|PW World Las Vegas Conference Pass</div>
+        <div class="big"><sup>$</sup>1,459</div>
+        <div class="g2">
+          <div class="fcell"><span class="chk">&#10003;</span>Access to every session across 5 days</div>
+          <div class="fcell"><span class="chk">&#10003;</span>NAB Show floor access</div>
+          <div class="fcell"><span class="chk">&#10003;</span>P|PW Networking Party ticket</div>
+        </div>
+        <div class="center"><a class="vegPcta" href="https://www.nabshow.com/las-vegas/conferences-and-workshops/post-production-world/" target="_blank" rel="noopener">Register at NAB Show</a></div>
       </div>
-      <div class="center"><a class="vegPcta" href="https://www.nabshow.com/las-vegas/conferences-and-workshops/post-production-world/" target="_blank" rel="noopener">Register at NAB Show</a></div>
+      <div class="vegP">
+        <div class="pname">Field Workshops</div>
+        <div class="tba">Price to be announced</div>
+        <div class="g2">
+          <div class="fcell"><span class="chk">&#10003;</span>Full day off-site workshop of your choice</div>
+          <div class="fcell"><span class="chk">&#10003;</span>Focused content for in-depth training</div>
+          <div class="fcell"><span class="chk">&#10003;</span>Small group environment for hands-on experience</div>
+          <div class="fcell"><span class="chk">&#10003;</span>More details to be announced</div>
+        </div>
+        <div class="center"><span class="veg-soon">Details coming soon</span></div>
+      </div>
     </div>
   </div>
 </section>
