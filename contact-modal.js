@@ -71,7 +71,7 @@ const PEOPLE = {
         ${isProp?`<div class="cm-f"><label>Regions of interest <span class="o">(optional)</span></label>
           <div class="cm-chips">${['Las Vegas','New York','London','Mumbai','All / Global'].map(r=>`<span class="cm-chip" data-r="${r}">${r}</span>`).join('')}</div>
           <input type="hidden" name="regions"></div>`:''}
-        <div class="cm-f"><label>Message <span class="o">(optional)</span></label><textarea name="message"></textarea></div>
+        <div class="cm-f"><label>Message ${isProp?'<span class="o">(optional)</span>':'<i>*</i>'}</label><textarea name="message" ${isProp?'':'required'}></textarea></div>
         <input type="hidden" name="access_key" value="${keyFor(who)}">
         <input type="hidden" name="subject" value="PPW ${p.title} · via ppw-conference.com">
         <input type="hidden" name="from_name" value="PPW Website">
